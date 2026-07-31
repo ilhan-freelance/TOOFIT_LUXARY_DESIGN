@@ -1,0 +1,1406 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOOFIT | Online Customized Suits & Royal Menswear | Suit Atelier</title>
+    <meta name="description" content="Toofit offers custom tailored solutions for men. Discover bespoke suits, sherwanis, jodhpuris, tuxedos, shirts & wedding packages in Jaipur, Kota & Dubai. Perfect fit guaranteed.">
+    
+    <!-- Fonts: Inter / Montserrat for modern UI + Playfair Display for luxury headers -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200;0,6..72,300;0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;0,6..96,700;1,6..96,400;1,6..96,600&family=Prata&family=Cinzel:wght@600;700;800;900&family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&family=Jost:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        mpfNavy: '#0A192F',
+                        mpfDarkSlate: '#1E293B',
+                        mpfOrange: '#E27217',
+                        mpfGold: '#D4AF37',
+                        mpfBg: '#FAF9F6',
+                        mpfLightGray: '#F8F9FA',
+                        mpfBorder: '#E2E8F0',
+                    },
+                    fontFamily: {
+                        sans: ['"Inter"', 'sans-serif'],
+                        serif: ['"Playfair Display"', 'Georgia', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- GSAP for Smooth Reveal & Carousel Interactions -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        
+        body { 
+            background-color: #FAF6F0; 
+            color: #231B15; 
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ===== SLICK CAROUSEL HIDE SCROLLBAR ===== */
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+        /* ===== MPF BUTTON HOVER ===== */
+        .btn-primary-mpf {
+            background-color: #8B3A2B;
+            color: #FAF6F0;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 14px rgba(139, 58, 43, 0.25);
+        }
+        .btn-primary-mpf:hover {
+            background-color: #6e2c20;
+            transform: translateY(-1px);
+            box-shadow: 0 6px 20px rgba(139, 58, 43, 0.38);
+        }
+
+        .btn-secondary-mpf {
+            border: 1.5px solid #231B15;
+            color: #231B15;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        .btn-secondary-mpf:hover {
+            background-color: #231B15;
+            color: #FAF6F0;
+        }
+
+        /* ===== CARD HOVER ANIMATION ===== */
+        .mpf-card {
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+        .mpf-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 40px rgba(35, 27, 21, 0.12);
+        }
+
+        /* ===== WHATSAPP FAB PULSE ===== */
+        @keyframes fabPulse {
+            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6); }
+            70% { box-shadow: 0 0 0 16px rgba(37, 211, 102, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        }
+        .wa-fab { animation: fabPulse 2.5s infinite; }
+
+        /* ===== GSAP REVEAL ===== */
+        .gs-reveal {
+            visibility: hidden;
+            opacity: 0;
+        }
+
+        /* ========================================== */
+        /*   LUXURY NAVBAR STYLES — TOOFIT ATELIER   */
+        /* ========================================== */
+
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Bodoni+Moda:ital,opsz,wght@0,6..96,600;0,6..96,700;0,6..96,800&family=Jost:wght@400;500;600;700&display=swap');
+
+        #toofit-nav {
+            background-color: #FFFFFF !important;
+            border-bottom: 1px solid rgba(139, 58, 43, 0.12);
+            position: sticky;
+            top: 0;
+            z-index: 9999;
+            width: 100%;
+            box-shadow: 0 4px 20px rgba(35, 27, 21, 0.04);
+        }
+
+        /* Navbar Header Container: 3-column flex layout (Mathematical Exact Center) */
+        .tf-brand-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 8px 36px 4px;
+            position: relative;
+            background-color: #FFFFFF !important;
+            min-height: 64px;
+        }
+
+        /* ── Center: Brand Title + Aligned Suit Atelier + Faded Line + Prominent Since 1969 ── */
+        .tf-brand-center {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+        }
+
+        /* ── Top Left: Standalone Logo ── */
+        .tf-logo-container {
+            display: flex;
+            align-items: center;
+            flex: 1;
+            justify-content: flex-start;
+        }
+
+        .tf-logo-link {
+            display: inline-flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .tf-standalone-logo-img {
+            height: 60px;
+            width: auto;
+            max-width: 170px;
+            object-fit: contain;
+            background: transparent !important;
+            border: none !important;
+            box-shadow: none !important;
+            outline: none !important;
+            filter: contrast(1.15) saturate(1.2);
+            transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        .tf-logo-link:hover .tf-standalone-logo-img {
+            transform: scale(1.05);
+        }
+
+
+
+        .tf-brand-row-wrapper {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* TOOFIT + SUIT ATELIER Column */
+        .tf-toofit-column {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .tf-brand-name-link {
+            text-decoration: none;
+            display: block;
+            line-height: 1;
+        }
+
+        .tf-brand-name {
+            font-family: 'Newsreader', serif;
+            font-weight: 500;
+            font-size: 34px;
+            letter-spacing: 0.18em;
+            color: #2D0A0F;
+            background-color: transparent;
+            text-transform: none;
+            text-decoration: none;
+            text-align: center;
+            line-height: 1;
+            transition: all 0.3s ease;
+        }
+
+        .tf-brand-name-link:hover .tf-brand-name {
+            color: #4A1017;
+            transform: translateY(-1px);
+        }
+
+        /* SUIT ATELIER with faded color tone and elegant text shadow */
+        .tf-brand-caption {
+            font-family: 'Jost', 'Inter', sans-serif;
+            font-weight: 500;
+            font-size: 0.58rem;
+            letter-spacing: 0.42em;
+            color: #9E7B56;
+            text-shadow: 0 1px 4px rgba(139, 58, 43, 0.25);
+            text-transform: uppercase;
+            text-align: center;
+            margin-top: 2px;
+            width: 100%;
+            opacity: 0.9;
+        }
+
+        /* Faded vertical divider line */
+        .tf-faded-vdivider {
+            display: inline-block;
+            width: 1px;
+            height: 28px;
+            background: linear-gradient(to bottom, transparent, rgba(139, 58, 43, 0.45), transparent);
+            margin: 0 16px;
+            align-self: center;
+        }
+
+        /* Large & Highly Visible "since 1969" */
+        .tf-since-column {
+            display: flex;
+            align-items: center;
+        }
+
+        .tf-since-text {
+            font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+            font-style: italic;
+            font-weight: 700;
+            font-size: 1.05rem;
+            letter-spacing: 0.14em;
+            color: #A38350;
+            line-height: 1;
+            white-space: nowrap;
+            text-shadow: 0 1px 2px rgba(163, 131, 80, 0.15);
+        }
+
+        /* ── Right: Header Actions (CTA + Mobile menu) ── */
+        .tf-nav-right {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            flex: 1;
+        }
+
+        /* Separator Style A: Faded Gradient Hairline */
+        .tf-separator-a {
+            height: 1px;
+            background: linear-gradient(to right, transparent, rgba(139, 58, 43, 0.25), transparent);
+            margin: 1px 48px 2px;
+        }
+
+        /* Bottom row: nav links perfectly centered */
+        .tf-nav-row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            text-align: center;
+            padding: 6px 0 8px;
+            position: relative;
+            background-color: #FFFFFF !important;
+        }
+
+        .tf-nav-links {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 52px;
+            list-style: none;
+            margin: 0 auto;
+            padding: 0;
+            text-align: center;
+        }
+
+        .tf-nav-links li {
+            opacity: 1;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .tf-nav-links li a {
+            font-family: 'Jost', 'Inter', sans-serif;
+            font-weight: 500;
+            font-size: 0.7rem;
+            letter-spacing: 0.2em;
+            color: #231B15;
+            text-transform: uppercase;
+            text-decoration: none;
+            position: relative;
+            padding-bottom: 4px;
+            transition: color 0.4s ease, text-shadow 0.4s ease;
+        }
+
+        .tf-nav-links li a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 1.5px;
+            background: linear-gradient(to right, transparent, #8B3A2B, transparent);
+            transition: width 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .tf-nav-links li a:hover {
+            color: #8B3A2B;
+            text-shadow: 0 0 12px rgba(139, 58, 43, 0.18);
+        }
+
+        .tf-nav-links li a:hover::after {
+            width: 100%;
+        }
+
+        /* === LUXURY FLUID LIQUID BUTTON === */
+        .tf-liquid-btn {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            font-family: 'Jost', 'Inter', sans-serif;
+            font-weight: 600;
+            font-size: 0.72rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #FFFFFF !important;
+            background: rgba(26, 20, 16, 0.65);
+            border: 1.5px solid rgba(255, 255, 255, 0.25);
+            padding: 12px 32px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.4s ease;
+            isolation: isolate;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+        }
+
+        .tf-liquid-btn::before {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: -10%;
+            width: 120%;
+            height: 200%;
+            background: linear-gradient(135deg, #7A281A 0%, #8B3A2B 60%, #B89248 100%);
+            border-radius: 50% 50% 0 0 / 30% 30% 0 0;
+            transition: top 0.5s cubic-bezier(0.33, 1, 0.68, 1),
+                        border-radius 0.5s cubic-bezier(0.33, 1, 0.68, 1);
+            z-index: 1;
+        }
+
+        .tf-liquid-btn:hover::before {
+            top: -50%;
+            border-radius: 0 0 50% 50% / 0 0 30% 30%;
+        }
+
+        .tf-liquid-btn:hover {
+            border-color: #FAF6F0;
+            box-shadow: 0 6px 24px rgba(212, 175, 55, 0.5);
+            transform: translateY(-2px);
+        }
+
+        .tf-liquid-btn span {
+            position: relative;
+            z-index: 2;
+            color: #FFFFFF !important;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            text-shadow: 0 1px 4px rgba(0, 0, 0, 0.9);
+            font-weight: 600;
+        }
+
+        .tf-liquid-btn:hover span {
+            color: #FFFFFF !important;
+        }
+
+        /* thin line under nav */
+        .tf-nav-divider {
+            height: 1px;
+            background: linear-gradient(to right, transparent, rgba(139, 58, 43, 0.18), transparent);
+            margin: 0 52px;
+        }
+
+        /* Hamburger (mobile) */
+        .tf-hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 4px;
+        }
+        .tf-hamburger span {
+            display: block;
+            width: 24px;
+            height: 1.2px;
+            background: #231B15;
+            transition: all 0.35s ease;
+            transform-origin: center;
+        }
+        .tf-hamburger.open span:nth-child(1) { transform: translateY(6.2px) rotate(45deg); }
+        .tf-hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+        .tf-hamburger.open span:nth-child(3) { transform: translateY(-6.2px) rotate(-45deg); }
+
+        /* Mobile drawer */
+        .tf-mobile-drawer {
+            display: none;
+            flex-direction: column;
+            gap: 0;
+            background: #FAF6F0;
+            border-top: 1px solid rgba(139, 58, 43, 0.1);
+            overflow: hidden;
+            max-height: 0;
+            transition: max-height 0.5s cubic-bezier(0.33, 1, 0.68, 1);
+        }
+        .tf-mobile-drawer.open {
+            max-height: 400px;
+        }
+        .tf-mobile-drawer a {
+            font-family: 'Jost', 'Inter', sans-serif;
+            font-size: 0.78rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #231B15;
+            text-decoration: none;
+            padding: 14px 32px;
+            border-bottom: 1px solid rgba(139, 58, 43, 0.06);
+            transition: background 0.25s, color 0.25s;
+        }
+        .tf-mobile-drawer a:hover {
+            background: rgba(139, 58, 43, 0.06);
+            color: #8B3A2B;
+        }
+        .tf-mobile-drawer .tf-liquid-btn {
+            margin: 16px 32px;
+            width: calc(100% - 64px);
+            justify-content: center;
+        }
+
+        @media (max-width: 900px) {
+            .tf-brand-header {
+                padding: 10px 16px 6px;
+            }
+            .tf-brand-name {
+                font-size: 18px;
+                letter-spacing: 0.18em;
+            }
+            .tf-since-text {
+                font-size: 0.95rem;
+            }
+            .tf-faded-vdivider {
+                height: 24px;
+                margin: 0 12px;
+            }
+            .tf-standalone-logo-img {
+                height: 50px;
+            }
+            .tf-nav-links { display: none; }
+            .tf-liquid-btn.desktop-only { display: none; }
+            .tf-hamburger { display: flex; }
+            .tf-mobile-drawer { display: flex; }
+            .tf-nav-row { padding: 6px 20px 10px; }
+            .tf-separator-a { margin: 2px 20px 4px; }
+            .tf-nav-divider { margin: 0 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ============================================ -->
+    <!-- LUXURY NAVBAR — TOOFIT SUIT ATELIER          -->
+    <!-- ============================================ -->
+    <nav id="toofit-nav" aria-label="Main Navigation">
+
+        <!-- ── Brand Header Row (3 Columns: Standalone Big Logo Top-Left, Company Name + Aligned Suit Atelier + Faded Line + Since 1969 Center, CTA Right) ── -->
+        <div class="tf-brand-header">
+            
+            <!-- Top-Left Corner: Pure Transparent Logo (Direct on Navbar) -->
+            <div class="tf-logo-container">
+                <a href="#" class="tf-logo-link" title="TOOFIT Bespoke Atelier">
+                    <img src="assets/logo_crimson_gold.png" alt="TOOFIT Monogram Logo" class="tf-standalone-logo-img">
+                </a>
+            </div>
+
+            <!-- Center: TOOFIT + SUIT ATELIER (Column) | Faded Line | since 1969 -->
+            <div class="tf-brand-center">
+                <div class="tf-brand-row-wrapper">
+                    
+                    <!-- TOOFIT & SUIT ATELIER stacked together for perfect alignment -->
+                    <div class="tf-toofit-column">
+                        <a href="#" class="tf-brand-name-link">
+                            <span class="tf-brand-name">TOOFIT</span>
+                        </a>
+                        <div class="tf-brand-caption">SUIT ATELIER</div>
+                    </div>
+
+                    <!-- Faded vertical divider line -->
+                    <span class="tf-faded-vdivider"></span>
+
+                    <!-- Prominent since 1969 -->
+                    <div class="tf-since-column">
+                        <span class="tf-since-text">since 1969</span>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Right: CTA Button & Mobile Hamburger -->
+            <div class="tf-nav-right">
+                <a href="#book" class="tf-liquid-btn desktop-only" id="book-consultant-btn">
+                    <span>Book Consultant</span>
+                </a>
+                <button class="tf-hamburger" id="tf-hamburger" aria-label="Toggle Menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+
+        </div>
+
+        <!-- ── Separator: Faded Hairline ── -->
+        <div class="tf-separator-a"></div>
+
+        <!-- ── Nav Links Row ── -->
+        <div class="tf-nav-row">
+            <ul class="tf-nav-links">
+                <li><a href="#story">Our Story</a></li>
+                <li><a href="#bespoke">Bespoke</a></li>
+                <li><a href="#wedding">Wedding</a></li>
+                <li><a href="#corporate">Co&#8209;operate</a></li>
+            </ul>
+        </div>
+
+        <!-- thin decorative line -->
+        <div class="tf-nav-divider"></div>
+
+        <!-- ── Mobile Drawer ── -->
+        <div class="tf-mobile-drawer" id="tf-mobile-drawer">
+            <a href="#story">Our Story</a>
+            <a href="#bespoke">Bespoke</a>
+            <a href="#wedding">Wedding</a>
+            <a href="#corporate">Co&#8209;operate</a>
+            <a href="#book" class="tf-liquid-btn" style="margin:16px 24px;text-align:center;">
+                <span>Book Consultant</span>
+            </a>
+        </div>
+
+    </nav>
+
+    <script>
+        // Mobile hamburger toggle
+        (function() {
+            var btn = document.getElementById('tf-hamburger');
+            var drawer = document.getElementById('tf-mobile-drawer');
+            if (btn && drawer) {
+                btn.addEventListener('click', function() {
+                    btn.classList.toggle('open');
+                    drawer.classList.toggle('open');
+                });
+                // Close drawer on link click
+                drawer.querySelectorAll('a').forEach(function(a) {
+                    a.addEventListener('click', function() {
+                        btn.classList.remove('open');
+                        drawer.classList.remove('open');
+                    });
+                });
+            }
+        })();
+    </script>
+
+
+    <!-- ============================================ -->
+    <!-- 1. FULL-WIDTH HERO SECTION — AUTO SLIDESHOW   -->
+    <!-- ============================================ -->
+    <section class="relative w-full min-h-[85vh] md:min-h-[88vh] lg:min-h-[90vh] flex items-end justify-start overflow-hidden bg-[#1D1714]" id="hero">
+        
+        <!-- Slide 1: Bespoke Suits Lounge photoshoot -->
+        <div class="tf-hero-slide absolute inset-0 w-full h-full opacity-100 transition-opacity duration-1000 ease-in-out z-0" id="tf-slide-1">
+            <img src="assets/hero_lounge_suits_4k.jpg" alt="TOOFIT Bespoke Suits Atelier" class="w-full h-full object-cover" style="object-position: top center;">
+        </div>
+
+        <!-- Slide 2: Royal Sherwani Palace photoshoot (User Provided Image) -->
+        <div class="tf-hero-slide absolute inset-0 w-full h-full opacity-0 transition-opacity duration-1000 ease-in-out z-0" id="tf-slide-2">
+            <img src="assets/hero_sherwani_palace_4k.jpg" alt="TOOFIT Royal Sherwani & Indo-Western Collection" class="w-full h-full object-cover" style="object-position: top center;">
+        </div>
+
+        <!-- Slide 3: 3-Piece Luxury Tuxedo Mansion photoshoot (User Provided Image) -->
+        <div class="tf-hero-slide absolute inset-0 w-full h-full opacity-0 transition-opacity duration-1000 ease-in-out z-0" id="tf-slide-3">
+            <img src="assets/hero_mansion_suit_4k.jpg" alt="TOOFIT 3-Piece Luxury Bespoke Tuxedos" class="w-full h-full object-cover" style="object-position: top center;">
+        </div>
+
+        <!-- Lightened Subtle Gradient Overlay for Crisp Text Contrast -->
+        <div class="absolute inset-0 bg-gradient-to-r from-[#161210]/55 via-[#161210]/20 to-transparent z-1 pointer-events-none"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-[#161210]/65 via-[#161210]/20 to-transparent z-1 pointer-events-none"></div>
+
+        <!-- Hero Content Overlay (Positioned in Bottom-Left Corner) -->
+        <div class="relative z-10 w-full max-w-[1400px] ml-0 sm:ml-4 md:ml-8 lg:ml-12 px-6 md:px-10 pb-10 md:pb-16 pt-24 flex flex-col items-start justify-end space-y-5 text-left">
+            
+            <!-- Category Line (Exact from 2nd SS) -->
+            <div class="inline-flex items-center justify-start gap-3 text-white/95 text-xs md:text-sm font-sans tracking-[0.28em] uppercase font-light drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
+                <span>SUITS</span>
+                <span class="text-[#D4AF37]">|</span>
+                <span>SHERWANIS</span>
+                <span class="text-[#D4AF37]">|</span>
+                <span>JODHPURIS</span>
+                <span class="text-[#D4AF37]">|</span>
+                <span>TROUSERS</span>
+            </div>
+
+            <!-- Main Headline -->
+            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white font-serif font-light leading-[1.08] tracking-tight drop-shadow-[0_4px_12px_rgba(0,0,0,0.85)] text-left" style="font-family: 'Newsreader', 'Cormorant Garamond', serif;">
+                Custom Outfits, <br>
+                <span class="italic font-serif font-normal text-[#FAF6F0]" style="font-family: 'Cormorant Garamond', 'Playfair Display', serif;">Crafted For You</span>
+            </h1>
+
+            <!-- Subtitle Description -->
+            <p class="text-[#FAF6F0] text-base sm:text-lg md:text-xl font-light tracking-wide max-w-xl leading-relaxed pt-1 drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)] text-left" style="font-family: 'Jost', sans-serif;">
+                Premium master-stitched men's wear tailored to your exact measurements and refined taste.
+            </p>
+
+            <!-- CTA Buttons -->
+            <div class="flex flex-wrap items-center justify-start gap-5 pt-4">
+                
+                <!-- Button 1: Explore Bespoke (Fluid Glassmorphic Liquid Button - Matching Call us) -->
+                <a href="#bespoke" class="tf-liquid-btn" style="padding: 13px 36px; font-size: 0.72rem; letter-spacing: 0.22em; border-color: rgba(255,255,255,0.6); background: rgba(255,255,255,0.08); backdrop-filter: blur(4px);">
+                    <span class="text-white flex items-center gap-2">
+                        <svg class="w-3.5 h-3.5 text-[#D4AF37]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                        Explore Bespoke
+                    </span>
+                </a>
+
+                <!-- Button 2: Call us (Fluid Glassmorphic Liquid Button) -->
+                <a href="tel:+919829000000" class="tf-liquid-btn" style="padding: 13px 34px; font-size: 0.72rem; letter-spacing: 0.22em; border-color: rgba(255,255,255,0.6); background: rgba(255,255,255,0.08); backdrop-filter: blur(4px);">
+                    <span class="text-white flex items-center gap-2">
+                        <svg class="w-3.5 h-3.5 text-[#D4AF37]" fill="currentColor" viewBox="0 0 24 24"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                        Call us
+                    </span>
+                </a>
+
+            </div>
+
+        </div>
+
+        <!-- Slide Indicators & Controls (Bottom Right) -->
+        <div class="absolute bottom-6 right-8 md:right-16 z-20 flex items-center gap-3 bg-black/40 backdrop-blur-md border border-white/20 px-4 py-2 rounded-full">
+            <button onclick="setHeroSlide(0)" id="tf-slide-dot-0" class="w-3 h-3 rounded-full bg-[#D4AF37] transition-all duration-300 transform scale-110" aria-label="Slide 1: Bespoke Suits"></button>
+            <button onclick="setHeroSlide(1)" id="tf-slide-dot-1" class="w-3 h-3 rounded-full bg-white/40 hover:bg-white transition-all duration-300" aria-label="Slide 2: Royal Sherwanis"></button>
+            <button onclick="setHeroSlide(2)" id="tf-slide-dot-2" class="w-3 h-3 rounded-full bg-white/40 hover:bg-white transition-all duration-300" aria-label="Slide 3: Mansion Tuxedo"></button>
+        </div>
+
+    </section>
+
+    <!-- Auto-Scroll Slideshow JS Script -->
+    <script>
+        (function() {
+            var currentSlide = 0;
+            var totalSlides = 3;
+            var slideTimer = null;
+
+            window.setHeroSlide = function(index) {
+                currentSlide = index;
+                for (var i = 0; i < totalSlides; i++) {
+                    var slideEl = document.getElementById('tf-slide-' + (i + 1));
+                    var dotEl = document.getElementById('tf-slide-dot-' + i);
+                    if (slideEl && dotEl) {
+                        if (i === index) {
+                            slideEl.style.opacity = '1';
+                            dotEl.className = 'w-3 h-3 rounded-full bg-[#D4AF37] transition-all duration-300 transform scale-110 shadow-lg';
+                        } else {
+                            slideEl.style.opacity = '0';
+                            dotEl.className = 'w-3 h-3 rounded-full bg-white/40 hover:bg-white transition-all duration-300';
+                        }
+                    }
+                }
+                resetTimer();
+            };
+
+            function nextSlide() {
+                var next = (currentSlide + 1) % totalSlides;
+                setHeroSlide(next);
+            }
+
+            function resetTimer() {
+                if (slideTimer) clearInterval(slideTimer);
+                slideTimer = setInterval(nextSlide, 5000);
+            }
+
+            resetTimer();
+        })();
+    </script>
+
+    <!-- JS Switcher Script for Hero Media Reel -->
+    <script>
+        function switchHeroMedia(type, src, btnElement) {
+            var videoEl = document.getElementById('tf-hero-video');
+            var imgEl = document.getElementById('tf-hero-img');
+            
+            // Highlight active button
+            var buttons = document.querySelectorAll('.tf-media-btn');
+            buttons.forEach(function(b) {
+                b.classList.remove('bg-[#8B3A2B]', 'text-[#FAF6F0]');
+                b.classList.add('text-[#231B15]');
+            });
+            btnElement.classList.add('bg-[#8B3A2B]', 'text-[#FAF6F0]');
+            btnElement.classList.remove('text-[#231B15]');
+
+            if (type === 'video') {
+                imgEl.classList.add('hidden');
+                videoEl.classList.remove('hidden');
+                videoEl.src = src;
+                videoEl.play();
+            } else {
+                videoEl.pause();
+                videoEl.classList.add('hidden');
+                imgEl.classList.remove('hidden');
+                imgEl.src = src;
+            }
+        }
+    </script>
+
+
+
+
+
+    <!-- ============================================ -->
+    <!-- BRAND MANIFESTO ATELIER SECTION              -->
+    <!-- ============================================ -->
+    <section class="py-14 sm:py-16 md:py-20 px-4 sm:px-6 md:px-10 bg-[#FAF8F5] border-b border-[#E8DFD5]/60" id="brand-manifesto">
+        <div class="max-w-[1240px] mx-auto flex flex-col items-center">
+            
+            <!-- Framed Minimal Image Container (Not Full Width) -->
+            <div class="relative w-full rounded-2xl overflow-hidden shadow-xl border border-[#E3D9CD] bg-white transition-all duration-500 hover:shadow-2xl">
+                <img src="assets/brand_manifesto_studio_4k.jpg" alt="TOOFIT Studio - Crafted With Passion Defined By Excellence" class="w-full h-auto object-cover rounded-2xl block">
+            </div>
+
+            <!-- Underlined "Our Story" Button at bottom of section -->
+            <div class="mt-8 md:mt-10 text-center">
+                <a href="#story" class="group inline-flex items-center gap-2.5 text-xs md:text-sm font-sans uppercase font-medium tracking-[0.28em] text-[#2D0A0F] hover:text-[#8B3A2B] underline underline-offset-8 decoration-1 decoration-[#8B3A2B]/60 hover:decoration-[#8B3A2B] transition-all duration-300 py-1">
+                    <span>Our Story</span>
+                    <svg class="w-4 h-4 text-[#8B3A2B] transition-transform duration-300 group-hover:translate-x-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ============================================ -->
+    <!-- 2. SHOP BY PRODUCT / CATEGORIES (CAROUSEL)   -->
+    <!-- ============================================ -->
+    <section class="py-20 px-6 md:px-10" id="categories">
+        <div class="max-w-[1400px] mx-auto space-y-12">
+            
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-end gap-4 gs-reveal">
+                <div>
+                    <span class="text-xs font-bold text-mpfOrange uppercase tracking-widest block mb-2">EXPLORE CATEGORIES</span>
+                    <h2 class="text-3xl md:text-4xl font-serif font-bold text-mpfNavy">Shop By Product</h2>
+                </div>
+                <div class="flex gap-3">
+                    <button onclick="scrollCat(-350)" class="w-10 h-10 rounded-full border border-mpfNavy text-mpfNavy hover:bg-mpfNavy hover:text-white transition-colors flex items-center justify-center font-bold">
+                        &larr;
+                    </button>
+                    <button onclick="scrollCat(350)" class="w-10 h-10 rounded-full border border-mpfNavy text-mpfNavy hover:bg-mpfNavy hover:text-white transition-colors flex items-center justify-center font-bold">
+                        &rarr;
+                    </button>
+                </div>
+            </div>
+
+            <!-- Product Cards Carousel -->
+            <div class="flex gap-6 overflow-x-auto no-scrollbar pb-6 scroll-smooth" id="cat-carousel">
+                
+                <!-- Card 1: Sherwani -->
+                <div class="min-w-[280px] md:min-w-[320px] bg-white rounded-2xl border border-mpfBorder overflow-hidden shadow-sm mpf-card group cursor-pointer">
+                    <div class="h-[380px] relative overflow-hidden">
+                        <img src="assets/new_gen/collection_royal_sherwani_1785415487568.png" alt="Custom Wedding Sherwanis" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                        <span class="absolute top-4 left-4 bg-mpfNavy text-mpfOrange text-[10px] font-bold px-3 py-1 rounded-md uppercase">WEDDING COLLECTION</span>
+                    </div>
+                    <div class="p-6 space-y-3">
+                        <h3 class="text-xl font-serif font-bold text-mpfNavy group-hover:text-mpfOrange transition-colors">Royal Sherwanis</h3>
+                        <p class="text-xs text-slate-500 font-normal">Hand-embroidered zardozi & silk velvet ensembles</p>
+                        <div class="flex justify-between items-center pt-2">
+                            <span class="text-xs font-bold text-mpfNavy">Starting ₹12,999/-</span>
+                            <a href="#book" class="text-xs font-bold text-mpfOrange hover:underline">Customize &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2: Bespoke Suits -->
+                <div class="min-w-[280px] md:min-w-[320px] bg-white rounded-2xl border border-mpfBorder overflow-hidden shadow-sm mpf-card group cursor-pointer">
+                    <div class="h-[380px] relative overflow-hidden">
+                        <img src="assets/new_gen/collection_bespoke_suit_1785415499376.png" alt="Bespoke Suits & Tuxedos" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                        <span class="absolute top-4 left-4 bg-mpfNavy text-mpfOrange text-[10px] font-bold px-3 py-1 rounded-md uppercase">ITALIAN CUT</span>
+                    </div>
+                    <div class="p-6 space-y-3">
+                        <h3 class="text-xl font-serif font-bold text-mpfNavy group-hover:text-mpfOrange transition-colors">Bespoke Suits & Tuxedos</h3>
+                        <p class="text-xs text-slate-500 font-normal">Super 150s Merino Wool double-breasted tuxedos</p>
+                        <div class="flex justify-between items-center pt-2">
+                            <span class="text-xs font-bold text-mpfNavy">Starting ₹8,999/-</span>
+                            <a href="#book" class="text-xs font-bold text-mpfOrange hover:underline">Customize &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3: Jodhpuri & Band Gala -->
+                <div class="min-w-[280px] md:min-w-[320px] bg-white rounded-2xl border border-mpfBorder overflow-hidden shadow-sm mpf-card group cursor-pointer">
+                    <div class="h-[380px] relative overflow-hidden">
+                        <img src="assets/new_gen/collection_jodhpuri_bandgala_1785415513261.png" alt="Jodhpuri & Band Gala" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                        <span class="absolute top-4 left-4 bg-mpfNavy text-mpfOrange text-[10px] font-bold px-3 py-1 rounded-md uppercase">HERITAGE CLASSIC</span>
+                    </div>
+                    <div class="p-6 space-y-3">
+                        <h3 class="text-xl font-serif font-bold text-mpfNavy group-hover:text-mpfOrange transition-colors">Jodhpuri & Band Gala</h3>
+                        <p class="text-xs text-slate-500 font-normal">Royal velvet structured jackets with antique brass buttons</p>
+                        <div class="flex justify-between items-center pt-2">
+                            <span class="text-xs font-bold text-mpfNavy">Starting ₹9,499/-</span>
+                            <a href="#book" class="text-xs font-bold text-mpfOrange hover:underline">Customize &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4: Shirts & Sadris -->
+                <div class="min-w-[280px] md:min-w-[320px] bg-white rounded-2xl border border-mpfBorder overflow-hidden shadow-sm mpf-card group cursor-pointer">
+                    <div class="h-[380px] relative overflow-hidden">
+                        <img src="assets/new_gen/collection_silk_shirt_sadri_1785415524750.png" alt="Custom Shirts & Sadri" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                        <span class="absolute top-4 right-4 bg-mpfNavy text-mpfOrange text-[10px] font-bold px-3 py-1 rounded-md uppercase">ESSENTIALS</span>
+                    </div>
+                    <div class="p-6 space-y-3">
+                        <h3 class="text-xl font-serif font-bold text-mpfNavy group-hover:text-mpfOrange transition-colors">Shirts, Trousers & Sadri</h3>
+                        <p class="text-xs text-slate-500 font-normal">100% Giza cotton shirts & silk brocade vests</p>
+                        <div class="flex justify-between items-center pt-2">
+                            <span class="text-xs font-bold text-mpfNavy">Starting ₹3,499/-</span>
+                            <a href="#book" class="text-xs font-bold text-mpfOrange hover:underline">Customize &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 5: Indo Western -->
+                <div class="min-w-[280px] md:min-w-[320px] bg-white rounded-2xl border border-mpfBorder overflow-hidden shadow-sm mpf-card group cursor-pointer">
+                    <div class="h-[380px] relative overflow-hidden">
+                        <img src="assets/hero_wedding.png" alt="Indo Western Fusion" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                        <span class="absolute top-4 left-4 bg-mpfNavy text-mpfOrange text-[10px] font-bold px-3 py-1 rounded-md uppercase">FUSION STYLE</span>
+                    </div>
+                    <div class="p-6 space-y-3">
+                        <h3 class="text-xl font-serif font-bold text-mpfNavy group-hover:text-mpfOrange transition-colors">Indo Western Outfits</h3>
+                        <p class="text-xs text-slate-500 font-normal">Asymmetric cuts for Sangeet, Reception & Cocktail</p>
+                        <div class="flex justify-between items-center pt-2">
+                            <span class="text-xs font-bold text-mpfNavy">Starting ₹10,999/-</span>
+                            <a href="#book" class="text-xs font-bold text-mpfOrange hover:underline">Customize &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ============================================ -->
+    <!-- 3. SHOP BY OCCASION (MY PERFECT FIT MATCH)  -->
+    <!-- ============================================ -->
+    <section class="py-16 bg-mpfLightGray border-y border-mpfBorder" id="occasions">
+        <div class="max-w-[1400px] mx-auto px-6 md:px-10 space-y-10">
+            
+            <div class="text-center space-y-2 max-w-xl mx-auto gs-reveal">
+                <span class="text-xs font-bold text-mpfOrange uppercase tracking-widest">CURATED LOOKS</span>
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-mpfNavy">Shop By Occasion</h2>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                
+                <div class="relative rounded-xl overflow-hidden h-[240px] group cursor-pointer shadow-sm">
+                    <img src="assets/wedding_groom.png" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-mpfNavy/90 via-mpfNavy/30 to-transparent flex items-end p-6">
+                        <div>
+                            <span class="text-xs font-bold text-mpfOrange uppercase block">WEDDING & GROOM</span>
+                            <h4 class="text-lg font-bold text-white font-serif">Sherwanis & Tuxedos</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative rounded-xl overflow-hidden h-[240px] group cursor-pointer shadow-sm">
+                    <img src="assets/new_gen/journey_consultation_1785415537739.png" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-mpfNavy/90 via-mpfNavy/30 to-transparent flex items-end p-6">
+                        <div>
+                            <span class="text-xs font-bold text-mpfOrange uppercase block">SANGEET & HALDI</span>
+                            <h4 class="text-lg font-bold text-white font-serif">Kurtas & Sadris</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative rounded-xl overflow-hidden h-[240px] group cursor-pointer shadow-sm">
+                    <img src="assets/everyday_shirt_trouser.png" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-mpfNavy/90 via-mpfNavy/30 to-transparent flex items-end p-6">
+                        <div>
+                            <span class="text-xs font-bold text-mpfOrange uppercase block">FORMAL BUSINESS</span>
+                            <h4 class="text-lg font-bold text-white font-serif">Suits & Shirts</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative rounded-xl overflow-hidden h-[240px] group cursor-pointer shadow-sm">
+                    <img src="assets/new_gen/journey_fitting_1785415588645.png" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-mpfNavy/90 via-mpfNavy/30 to-transparent flex items-end p-6">
+                        <div>
+                            <span class="text-xs font-bold text-mpfOrange uppercase block">COCKTAIL & PARTY</span>
+                            <h4 class="text-lg font-bold text-white font-serif">Jodhpuris & Blazers</h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ============================================ -->
+    <!-- 4. WHY CHOOSE US ("CHANGING THE WAY MEN SHOP")-->
+    <!-- ============================================ -->
+    <section class="py-20 px-6 md:px-10 bg-white" id="experience">
+        <div class="max-w-[1400px] mx-auto space-y-16">
+            
+            <div class="text-center space-y-3 max-w-3xl mx-auto gs-reveal">
+                <span class="text-xs font-bold text-mpfOrange uppercase tracking-widest">THE TOOFIT ADVANTAGE</span>
+                <h2 class="text-3xl md:text-5xl font-serif font-bold text-mpfNavy">Changing The Way Men Shop</h2>
+                <p class="text-slate-600 text-base">Discover a whole new bespoke experience — tailored exclusively for your style, fit and skin tone.</p>
+            </div>
+
+            <!-- 3 Value Pillars -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                
+                <!-- Pillar 1 -->
+                <div class="bg-mpfLightGray p-8 rounded-2xl border border-mpfBorder space-y-4 shadow-sm text-center">
+                    <div class="w-16 h-16 rounded-2xl bg-mpfOrange/10 text-mpfOrange flex items-center justify-center text-3xl mx-auto font-bold">
+                        👔
+                    </div>
+                    <h3 class="text-xl font-serif font-bold text-mpfNavy">Great Fabrics & Latest Designs</h3>
+                    <p class="text-sm text-slate-600 font-normal leading-relaxed">
+                        Curated collection of high-thread-count Super 150s Merino wools, Giza cottons, cashmeres and hand-woven Banarasi silk zaris.
+                    </p>
+                </div>
+
+                <!-- Pillar 2 -->
+                <div class="bg-mpfLightGray p-8 rounded-2xl border border-mpfBorder space-y-4 shadow-sm text-center">
+                    <div class="w-16 h-16 rounded-2xl bg-mpfOrange/10 text-mpfOrange flex items-center justify-center text-3xl mx-auto font-bold">
+                        📐
+                    </div>
+                    <h3 class="text-xl font-serif font-bold text-mpfNavy">100% Bespoke Experience</h3>
+                    <p class="text-sm text-slate-600 font-normal leading-relaxed">
+                        Custom master-stitched to your exact 30+ body measurements, posture, occasion context and skin tone.
+                    </p>
+                </div>
+
+                <!-- Pillar 3 -->
+                <div class="bg-mpfLightGray p-8 rounded-2xl border border-mpfBorder space-y-4 shadow-sm text-center">
+                    <div class="w-16 h-16 rounded-2xl bg-mpfOrange/10 text-mpfOrange flex items-center justify-center text-3xl mx-auto font-bold">
+                        🌟
+                    </div>
+                    <h3 class="text-xl font-serif font-bold text-mpfNavy">Elite Stylist Guidance</h3>
+                    <p class="text-sm text-slate-600 font-normal leading-relaxed">
+                        One-on-one consultation with senior personal stylists from garment design to final doorstep fitting trial.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ============================================ -->
+    <!-- 5. THE BESPOKE PROCESS (HOW IT WORKS TABS)   -->
+    <!-- ============================================ -->
+    <section class="py-20 bg-mpfNavy text-white px-6 md:px-10" id="process">
+        <div class="max-w-[1400px] mx-auto space-y-12">
+            
+            <div class="text-center space-y-3 max-w-2xl mx-auto gs-reveal">
+                <span class="text-xs font-bold text-mpfOrange uppercase tracking-widest">TRANSPARENT CRAFT PROTOCOL</span>
+                <h2 class="text-3xl md:text-5xl font-serif font-bold text-white">Our 4-Step Bespoke Process</h2>
+                <p class="text-white/80 text-sm">Four seamless stages to turn your outfit vision into a master-stitched reality.</p>
+            </div>
+
+            <!-- Process Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                
+                <!-- Step 1 -->
+                <div class="bg-white/5 p-8 rounded-2xl border border-white/10 space-y-4 text-center">
+                    <span class="inline-block w-12 h-12 rounded-full bg-mpfOrange text-white font-bold text-lg leading-[48px] mx-auto shadow-lg">1</span>
+                    <div class="h-44 rounded-xl overflow-hidden border border-white/10">
+                        <img src="assets/new_gen/journey_consultation_1785415537739.png" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-xl font-serif font-bold text-white">Style Consultation</h3>
+                    <p class="text-xs text-white/70 font-normal leading-relaxed">Discuss event requirements, skin tone match, and fabric options with expert stylists.</p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="bg-white/5 p-8 rounded-2xl border border-white/10 space-y-4 text-center">
+                    <span class="inline-block w-12 h-12 rounded-full bg-mpfOrange text-white font-bold text-lg leading-[48px] mx-auto shadow-lg">2</span>
+                    <div class="h-44 rounded-xl overflow-hidden border border-white/10">
+                        <img src="assets/new_gen/journey_measurement_1785415548196.png" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-xl font-serif font-bold text-white">30+ Measurements</h3>
+                    <p class="text-xs text-white/70 font-normal leading-relaxed">Detailed anatomical mapping at our atelier showroom or at your doorstep.</p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="bg-white/5 p-8 rounded-2xl border border-white/10 space-y-4 text-center">
+                    <span class="inline-block w-12 h-12 rounded-full bg-mpfOrange text-white font-bold text-lg leading-[48px] mx-auto shadow-lg">3</span>
+                    <div class="h-44 rounded-xl overflow-hidden border border-white/10">
+                        <img src="assets/new_gen/journey_handcrafting_1785415561867.png" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-xl font-serif font-bold text-white">Karigar Crafting</h3>
+                    <p class="text-xs text-white/70 font-normal leading-relaxed">Over 100 hours of hand-cutting paper patterns, lapel stitching & zardozi embroidery.</p>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="bg-white/5 p-8 rounded-2xl border border-white/10 space-y-4 text-center">
+                    <span class="inline-block w-12 h-12 rounded-full bg-mpfOrange text-white font-bold text-lg leading-[48px] mx-auto shadow-lg">4</span>
+                    <div class="h-44 rounded-xl overflow-hidden border border-white/10">
+                        <img src="assets/new_gen/journey_fitting_1785415588645.png" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-xl font-serif font-bold text-white">Trial & Guaranteed Fit</h3>
+                    <p class="text-xs text-white/70 font-normal leading-relaxed">Final fitting session with free alteration guarantee until you are 100% satisfied.</p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ============================================ -->
+    <!-- 6. REALS GROOMS & REVIEWS (MY PERFECT FIT)   -->
+    <!-- ============================================ -->
+    <section class="py-20 px-6 md:px-10 bg-white" id="reviews">
+        <div class="max-w-[1400px] mx-auto space-y-14">
+            
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 gs-reveal">
+                <div class="space-y-2">
+                    <span class="text-xs font-bold text-mpfOrange uppercase tracking-widest block">CLIENT STORIES</span>
+                    <h2 class="text-3xl md:text-4xl font-serif font-bold text-mpfNavy">Our Dapper Patrons</h2>
+                </div>
+                <div class="flex items-center gap-4 text-xs font-bold text-slate-600 bg-mpfLightGray px-4 py-2 rounded-lg border border-mpfBorder">
+                    <span class="text-amber-500 font-bold text-sm">★ 4.8 / 5.0</span>
+                    <span>Most Loved Custom Clothing Brand</span>
+                </div>
+            </div>
+
+            <!-- Client Reviews Slider Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Review 1 -->
+                <div class="bg-mpfLightGray p-8 rounded-2xl border border-mpfBorder space-y-4 shadow-sm">
+                    <div class="flex items-center gap-1 text-amber-500 text-sm font-bold">
+                        ★ ★ ★ ★ ★ <span class="text-xs text-slate-500 ml-2 font-semibold">Google Review</span>
+                    </div>
+                    <p class="text-xs text-slate-700 leading-relaxed font-normal italic">
+                        "Got my wedding Sherwani & Tuxedo customized from Toofit. The fitting was absolute perfection right from the first trial! The master Karigars paid attention to every single detail."
+                    </p>
+                    <div class="flex items-center gap-3 pt-2">
+                        <div class="w-10 h-10 rounded-full bg-mpfNavy text-mpfOrange font-bold flex items-center justify-center text-sm">
+                            RJ
+                        </div>
+                        <div>
+                            <span class="block text-sm font-bold text-mpfNavy">Rohan Joshi</span>
+                            <span class="text-[10px] text-slate-500 uppercase font-semibold">Groom &bull; Jaipur Atelier</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="bg-mpfLightGray p-8 rounded-2xl border border-mpfBorder space-y-4 shadow-sm">
+                    <div class="flex items-center gap-1 text-amber-500 text-sm font-bold">
+                        ★ ★ ★ ★ ★ <span class="text-xs text-slate-500 ml-2 font-semibold">WedMeGood Review</span>
+                    </div>
+                    <p class="text-xs text-slate-700 leading-relaxed font-normal italic">
+                        "The personal stylist recommendation saved me so much time. They matched the Sherwani fabric with my skin tone and event venue lighting. Unmatched bespoke service!"
+                    </p>
+                    <div class="flex items-center gap-3 pt-2">
+                        <div class="w-10 h-10 rounded-full bg-mpfNavy text-mpfOrange font-bold flex items-center justify-center text-sm">
+                            SK
+                        </div>
+                        <div>
+                            <span class="block text-sm font-bold text-mpfNavy">Shahamat Khan</span>
+                            <span class="text-[10px] text-slate-500 uppercase font-semibold">Groom &bull; Dubai Trunk Show</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="bg-mpfLightGray p-8 rounded-2xl border border-mpfBorder space-y-4 shadow-sm">
+                    <div class="flex items-center gap-1 text-amber-500 text-sm font-bold">
+                        ★ ★ ★ ★ ★ <span class="text-xs text-slate-500 ml-2 font-semibold">Justdial Review</span>
+                    </div>
+                    <p class="text-xs text-slate-700 leading-relaxed font-normal italic">
+                        "Been getting my business suits and cotton shirts stitched here for 5 years. Fabric quality of Super 150s merino wool is top notch. Guaranteed fit every single time."
+                    </p>
+                    <div class="flex items-center gap-3 pt-2">
+                        <div class="w-10 h-10 rounded-full bg-mpfNavy text-mpfOrange font-bold flex items-center justify-center text-sm">
+                            VS
+                        </div>
+                        <div>
+                            <span class="block text-sm font-bold text-mpfNavy">Vikram Singhania</span>
+                            <span class="text-[10px] text-slate-500 uppercase font-semibold">Regular Client &bull; Kota Showroom</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ============================================ -->
+    <!-- 7. BOOK APPOINTMENT & LOCATIONS FORM        -->
+    <!-- ============================================ -->
+    <section class="py-20 bg-mpfBg border-t border-mpfBorder px-6 md:px-10" id="locations">
+        <div class="max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16" id="book">
+            
+            <!-- Left Info & Store Cards -->
+            <div class="lg:col-span-5 space-y-8 gs-reveal">
+                <div class="space-y-3">
+                    <span class="text-xs font-bold text-mpfOrange uppercase tracking-widest">VISIT OR BOOK ATELIER</span>
+                    <h2 class="text-3xl md:text-5xl font-serif font-bold text-mpfNavy">Our Atelier Showrooms</h2>
+                    <p class="text-slate-600 text-sm">Visit our stores or book a private fitting consultation.</p>
+                </div>
+
+                <div class="space-y-4">
+                    <!-- Jaipur -->
+                    <div class="bg-white p-6 rounded-xl border border-mpfBorder shadow-sm space-y-2 border-l-4 border-l-mpfOrange">
+                        <div class="flex justify-between items-center">
+                            <h4 class="text-lg font-bold text-mpfNavy font-serif">Jaipur Flagship Store</h4>
+                            <span class="text-[10px] font-bold text-mpfOrange bg-mpfOrange/10 px-2 py-0.5 rounded">RAJASTHAN</span>
+                        </div>
+                        <p class="text-xs text-slate-600">MI Road, Opp. Heritage Palace, Jaipur, Rajasthan 302001</p>
+                        <p class="text-xs font-semibold text-mpfNavy">Ph: +91 98290 XXXXX</p>
+                    </div>
+
+                    <!-- Dubai -->
+                    <div class="bg-white p-6 rounded-xl border border-mpfBorder shadow-sm space-y-2 border-l-4 border-l-mpfNavy">
+                        <div class="flex justify-between items-center">
+                            <h4 class="text-lg font-bold text-mpfNavy font-serif">Dubai International Atelier</h4>
+                            <span class="text-[10px] font-bold text-mpfNavy bg-mpfNavy/10 px-2 py-0.5 rounded">UAE</span>
+                        </div>
+                        <p class="text-xs text-slate-600">International Trunk Shows & Private Hotel Suite Fittings (By Appointment)</p>
+                        <p class="text-xs font-semibold text-mpfNavy">Ph: +971 50 XXXXXXX</p>
+                    </div>
+
+                    <!-- Kota -->
+                    <div class="bg-white p-6 rounded-xl border border-mpfBorder shadow-sm space-y-2 border-l-4 border-l-mpfNavy">
+                        <div class="flex justify-between items-center">
+                            <h4 class="text-lg font-bold text-mpfNavy font-serif">Kota Heritage Showroom</h4>
+                            <span class="text-[10px] font-bold text-mpfNavy bg-mpfNavy/10 px-2 py-0.5 rounded">RAJASTHAN</span>
+                        </div>
+                        <p class="text-xs text-slate-600">Gumanpura Heritage Circle, Kota, Rajasthan 324007</p>
+                        <p class="text-xs font-semibold text-mpfNavy">Ph: +91 7442 XXXXXX</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Book Appointment Form -->
+            <div class="lg:col-span-7 gs-reveal">
+                <div class="bg-white p-8 md:p-12 rounded-2xl border border-mpfBorder shadow-xl space-y-6">
+                    
+                    <div class="space-y-2 text-center md:text-left">
+                        <span class="text-xs font-bold text-mpfOrange uppercase tracking-widest">SCHEDULE PRIVATE SESSION</span>
+                        <h3 class="text-3xl font-serif font-bold text-mpfNavy">Book An Appointment</h3>
+                        <p class="text-xs text-slate-500">Fill in your requirements below and our personal stylist will connect with you.</p>
+                    </div>
+
+                    <form class="space-y-6 pt-2" onsubmit="event.preventDefault(); alert('Thank you! Your appointment request has been received by Toofit Atelier.');">
+                        
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 uppercase mb-2">First Name</label>
+                                <input type="text" class="w-full border border-slate-300 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-mpfOrange" placeholder="e.g. Maharana" required>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 uppercase mb-2">Last Name</label>
+                                <input type="text" class="w-full border border-slate-300 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-mpfOrange" placeholder="e.g. Singh" required>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 uppercase mb-2">Phone / WhatsApp</label>
+                                <input type="tel" class="w-full border border-slate-300 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-mpfOrange" placeholder="+91 98290 XXXXX" required>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 uppercase mb-2">Who Are You?</label>
+                                <select class="w-full border border-slate-300 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-mpfOrange" required>
+                                    <option value="Groom">Groom</option>
+                                    <option value="Father of Groom/Bride">Father of Groom/Bride</option>
+                                    <option value="Wedding Guest">Wedding Guest</option>
+                                    <option value="Business Formal">Business Formal Client</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Customized Dropdown Menu requested by user -->
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 uppercase mb-2">Service Required / Garment</label>
+                            <select class="w-full border border-slate-300 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-mpfOrange" required>
+                                <option value="" disabled selected>Select a garment category</option>
+                                <option value="Sherwani">Sherwani</option>
+                                <option value="Jodhpuri">Jodhpuri</option>
+                                <option value="Shirts">Shirts</option>
+                                <option value="Suits">Suits</option>
+                                <option value="Trousers">Trousers</option>
+                                <option value="Sadri">Sadri</option>
+                                <option value="Indo Western">Indo Western</option>
+                                <option value="Wedding package">Wedding package</option>
+                                <option value="Band Gala">Band Gala</option>
+                            </select>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 uppercase mb-2">Preferred Location / Mode</label>
+                                <select class="w-full border border-slate-300 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-mpfOrange" required>
+                                    <option value="Jaipur">Jaipur Flagship Store</option>
+                                    <option value="Dubai">Dubai Trunk Show</option>
+                                    <option value="Kota">Kota Showroom</option>
+                                    <option value="Doorstep">Doorstep Trial / Virtual Video</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 uppercase mb-2">Preferred Date</label>
+                                <input type="date" class="w-full border border-slate-300 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-mpfOrange" required>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="w-full btn-primary-mpf py-4 text-sm font-bold uppercase tracking-wider rounded-lg">
+                            CONFIRM APPOINTMENT REQUEST &rarr;
+                        </button>
+
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ============================================ -->
+    <!-- 8. TRUST GUARANTEES BANNER (MY PERFECT FIT) -->
+    <!-- ============================================ -->
+    <section class="bg-mpfNavy text-white py-12 border-t border-white/10">
+        <div class="max-w-[1400px] mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+            
+            <div class="space-y-2">
+                <div class="text-mpfOrange text-3xl font-bold">✨</div>
+                <h4 class="text-base font-bold font-serif">Designed By Stylists</h4>
+                <p class="text-xs text-white/70">Personal stylist curated specifically for your look & occasion</p>
+            </div>
+
+            <div class="space-y-2">
+                <div class="text-mpfOrange text-3xl font-bold">📏</div>
+                <h4 class="text-base font-bold font-serif">Perfect Fit Guaranteed</h4>
+                <p class="text-xs text-white/70">Free alterations service until you are 100% satisfied</p>
+            </div>
+
+            <div class="space-y-2">
+                <div class="text-mpfOrange text-3xl font-bold">🚚</div>
+                <h4 class="text-base font-bold font-serif">Guaranteed On-Time Delivery</h4>
+                <p class="text-xs text-white/70">Delivered within 7-10 days straight to your doorstep</p>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ============================================ -->
+    <!-- 9. FOOTER (MY PERFECT FIT MATCH)            -->
+    <!-- ============================================ -->
+    <footer class="bg-slate-950 text-slate-300 py-16 px-6 md:px-10 border-t border-slate-800">
+        <div class="max-w-[1400px] mx-auto space-y-12">
+            
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10 text-xs">
+                
+                <!-- Col 1: Brand Info -->
+                <div class="space-y-4">
+                    <div class="flex items-center gap-2">
+                        <div class="bg-mpfOrange text-white font-serif font-bold text-xl w-8 h-8 rounded flex items-center justify-center">T</div>
+                        <span class="text-2xl font-serif font-bold text-white tracking-wider">TOOFIT</span>
+                    </div>
+                    <p class="text-slate-400 leading-relaxed">
+                        India's premier custom menswear brand offering bespoke suits, sherwanis, kurtas, jodhpuris, tuxedos and accessories. Founded in 1969.
+                    </p>
+                    <p class="text-mpfOrange font-semibold">Jaipur &bull; Kota &bull; Dubai</p>
+                </div>
+
+                <!-- Col 2: Categories -->
+                <div class="space-y-3">
+                    <h5 class="text-sm font-bold text-white font-serif uppercase">Shop Categories</h5>
+                    <ul class="space-y-2 text-slate-400">
+                        <li><a href="#categories" class="hover:text-mpfOrange transition-colors">Royal Sherwanis</a></li>
+                        <li><a href="#categories" class="hover:text-mpfOrange transition-colors">Bespoke Suits & Tuxedos</a></li>
+                        <li><a href="#categories" class="hover:text-mpfOrange transition-colors">Jodhpuri & Band Gala</a></li>
+                        <li><a href="#categories" class="hover:text-mpfOrange transition-colors">Crafted Shirts & Trousers</a></li>
+                        <li><a href="#categories" class="hover:text-mpfOrange transition-colors">Indo Western Outfits</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Useful Links -->
+                <div class="space-y-3">
+                    <h5 class="text-sm font-bold text-white font-serif uppercase">Toofit Atelier</h5>
+                    <ul class="space-y-2 text-slate-400">
+                        <li><a href="#experience" class="hover:text-mpfOrange transition-colors">Why Choose Us</a></li>
+                        <li><a href="#process" class="hover:text-mpfOrange transition-colors">How it Works</a></li>
+                        <li><a href="#reviews" class="hover:text-mpfOrange transition-colors">Client Testimonials</a></li>
+                        <li><a href="#locations" class="hover:text-mpfOrange transition-colors">Store Locations</a></li>
+                        <li><a href="#book" class="hover:text-mpfOrange transition-colors">Book Appointment</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4: Newsletter -->
+                <div class="space-y-4">
+                    <h5 class="text-sm font-bold text-white font-serif uppercase">Newsletter</h5>
+                    <p class="text-slate-400">Receive updates on new fabric arrivals & wedding styling guides.</p>
+                    <form class="flex gap-2" onsubmit="event.preventDefault(); alert('Subscribed to Toofit Atelier newsletter!');">
+                        <input type="email" placeholder="Your Email Address" class="bg-slate-900 border border-slate-800 rounded px-3 py-2 text-xs w-full text-white focus:outline-none focus:border-mpfOrange" required>
+                        <button type="submit" class="bg-mpfOrange text-white font-bold px-4 py-2 rounded text-xs hover:bg-orange-600 transition-colors">
+                            Subscribe
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+
+            <div class="pt-8 border-t border-slate-800 text-center text-[11px] text-slate-500 flex flex-col sm:flex-row justify-between items-center gap-4">
+                <span>&copy; 2026 TOOFIT TAILORS & FABRICS. ALL RIGHTS RESERVED.</span>
+                <span>JAIPUR &bull; KOTA &bull; DUBAI</span>
+            </div>
+
+        </div>
+    </footer>
+
+
+    <!-- ============================================ -->
+    <!-- FLOATING WHATSAPP FAB BUTTON                -->
+    <!-- ============================================ -->
+    <a href="https://wa.me/919829000000" target="_blank" rel="noopener" class="fixed bottom-6 right-6 z-50 bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:scale-110 transition-transform duration-300 flex items-center justify-center wa-fab" aria-label="Chat on WhatsApp">
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 16 16">
+            <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c-.003 1.396.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c.003-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
+        </svg>
+    </a>
+
+
+    <!-- INTERACTIVE JAVASCRIPT LOGIC -->
+    <script>
+        function scrollCat(amount) {
+            document.getElementById('cat-carousel').scrollBy({ left: amount, behavior: 'smooth' });
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            gsap.registerPlugin(ScrollTrigger);
+
+            gsap.utils.toArray('.gs-reveal').forEach((elem) => {
+                gsap.fromTo(elem, 
+                    { autoAlpha: 0, y: 40 }, 
+                    { 
+                        duration: 1, 
+                        autoAlpha: 1, 
+                        y: 0, 
+                        ease: "power2.out",
+                        scrollTrigger: {
+                            trigger: elem,
+                            start: "top 88%", 
+                            toggleActions: "play none none reverse"
+                        }
+                    }
+                );
+            });
+        });
+    </script>
+
+</body>
+</html>
