@@ -81,11 +81,10 @@
 
         /* ===== CARD HOVER ANIMATION ===== */
         .mpf-card {
-            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            transition: box-shadow 0.4s ease;
         }
         .mpf-card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 20px 40px rgba(35, 27, 21, 0.12);
+            box-shadow: 0 10px 25px rgba(35, 27, 21, 0.08);
         }
 
         /* ===== WHATSAPP FAB PULSE ===== */
@@ -787,104 +786,118 @@
     <section class="py-20 px-6 md:px-10" id="categories">
         <div class="max-w-[1400px] mx-auto space-y-12">
             
-            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-end gap-4 gs-reveal">
-                <div>
-                    <span class="text-xs font-bold text-mpfOrange uppercase tracking-widest block mb-2">EXPLORE CATEGORIES</span>
-                    <h2 class="text-3xl md:text-4xl font-serif font-bold text-mpfNavy">Shop By Product</h2>
-                </div>
-                <div class="flex gap-3">
-                    <button onclick="scrollCat(-350)" class="w-10 h-10 rounded-full border border-mpfNavy text-mpfNavy hover:bg-mpfNavy hover:text-white transition-colors flex items-center justify-center font-bold">
-                        &larr;
-                    </button>
-                    <button onclick="scrollCat(350)" class="w-10 h-10 rounded-full border border-mpfNavy text-mpfNavy hover:bg-mpfNavy hover:text-white transition-colors flex items-center justify-center font-bold">
-                        &rarr;
-                    </button>
-                </div>
+            <div class="flex flex-col items-center justify-center text-center gs-reveal">
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight" style="font-family: PolySans, 'Helvetica Neue', Arial, sans-serif;">
+                    <span class="text-black">Signature</span> 
+                    <span class="relative inline-block ml-1.5 text-[#8B3A2B] font-semibold px-3 py-0.5">
+                        <span class="absolute inset-0 bg-[#F5E6D3] border border-[#E8D4C1] rounded-lg -z-10 transform -rotate-1 scale-105 shadow-sm"></span>
+                        Styles
+                    </span>
+                </h2>
             </div>
 
-            <!-- Product Cards Carousel -->
-            <div class="flex gap-6 overflow-x-auto no-scrollbar pb-6 scroll-smooth" id="cat-carousel">
-                
-                <!-- Card 1: Sherwani -->
-                <div class="min-w-[280px] md:min-w-[320px] bg-white rounded-2xl border border-mpfBorder overflow-hidden shadow-sm mpf-card group cursor-pointer">
-                    <div class="h-[380px] relative overflow-hidden">
-                        <img src="assets/new_gen/collection_royal_sherwani_1785415487568.png" alt="Custom Wedding Sherwanis" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-                        <span class="absolute top-4 left-4 bg-mpfNavy text-mpfOrange text-[10px] font-bold px-3 py-1 rounded-md uppercase">WEDDING COLLECTION</span>
-                    </div>
-                    <div class="p-6 space-y-3">
-                        <h3 class="text-xl font-serif font-bold text-mpfNavy group-hover:text-mpfOrange transition-colors">Royal Sherwanis</h3>
-                        <p class="text-xs text-slate-500 font-normal">Hand-embroidered zardozi & silk velvet ensembles</p>
-                        <div class="flex justify-between items-center pt-2">
-                            <span class="text-xs font-bold text-mpfNavy">Starting ₹12,999/-</span>
-                            <a href="#book" class="text-xs font-bold text-mpfOrange hover:underline">Customize &rarr;</a>
+            <!-- Product Cards Carousel (Drag to move & 7-second auto scroll) -->
+            <!-- Product Cards Carousel (2 Frames - 4 Cards per Frame) -->
+            <div class="relative overflow-hidden select-none cursor-grab active:cursor-grabbing" id="cat-carousel">
+                <div class="flex transition-transform duration-700 ease-in-out gap-6" id="cat-frames-track">
+                    
+                    <!-- FRAME 1 (Cards 1 - 4) -->
+                    <div class="min-w-full grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-5 md:gap-6 shrink-0">
+                        
+                        <!-- Card 1: SUITS -->
+                        <div class="relative h-[360px] sm:h-[420px] md:h-[460px] rounded-2xl overflow-hidden shadow-md group cursor-pointer select-none">
+                            <img src="assets/card_suits.jpg" alt="SUITS" draggable="false" class="w-full h-full object-cover pointer-events-none select-none transition-transform duration-700 group-hover:scale-105">
+                            <div class="absolute inset-0 bg-black/35 group-hover:bg-black/45 transition-colors flex items-center justify-center p-4">
+                                <h3 class="text-white text-sm sm:text-base md:text-lg font-bold uppercase tracking-widest font-sans text-center drop-shadow">
+                                    SUITS
+                                </h3>
+                            </div>
                         </div>
+
+                        <!-- Card 2: SADRI -->
+                        <div class="relative h-[360px] sm:h-[420px] md:h-[460px] rounded-2xl overflow-hidden shadow-md group cursor-pointer select-none">
+                            <img src="assets/card_sadri.png" alt="SADRI" draggable="false" class="w-full h-full object-cover pointer-events-none select-none transition-transform duration-700 group-hover:scale-105">
+                            <div class="absolute inset-0 bg-black/35 group-hover:bg-black/45 transition-colors flex items-center justify-center p-4">
+                                <h3 class="text-white text-sm sm:text-base md:text-lg font-bold uppercase tracking-widest font-sans text-center drop-shadow">
+                                    SADRI
+                                </h3>
+                            </div>
+                        </div>
+
+                        <!-- Card 3: SHIRT -->
+                        <div class="relative h-[360px] sm:h-[420px] md:h-[460px] rounded-2xl overflow-hidden shadow-md group cursor-pointer select-none">
+                            <img src="assets/card_shirt.png" alt="SHIRT" draggable="false" class="w-full h-full object-cover pointer-events-none select-none transition-transform duration-700 group-hover:scale-105">
+                            <div class="absolute inset-0 bg-black/35 group-hover:bg-black/45 transition-colors flex items-center justify-center p-4">
+                                <h3 class="text-white text-sm sm:text-base md:text-lg font-bold uppercase tracking-widest font-sans text-center drop-shadow">
+                                    SHIRT
+                                </h3>
+                            </div>
+                        </div>
+
+                        <!-- Card 4: INDO-WESTERN -->
+                        <div class="relative h-[360px] sm:h-[420px] md:h-[460px] rounded-2xl overflow-hidden shadow-md group cursor-pointer select-none">
+                            <img src="assets/card_indowestern.png" alt="INDO-WESTERN" draggable="false" class="w-full h-full object-cover pointer-events-none select-none transition-transform duration-700 group-hover:scale-105">
+                            <div class="absolute inset-0 bg-black/35 group-hover:bg-black/45 transition-colors flex items-center justify-center p-4">
+                                <h3 class="text-white text-sm sm:text-base md:text-lg font-bold uppercase tracking-widest font-sans text-center drop-shadow">
+                                    INDO-WESTERN
+                                </h3>
+                            </div>
+                        </div>
+
                     </div>
+
+                    <!-- FRAME 2 (Cards 5 - 8) -->
+                    <div class="min-w-full grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-5 md:gap-6 shrink-0">
+                        
+                        <!-- Card 5: SHERWANI -->
+                        <div class="relative h-[360px] sm:h-[420px] md:h-[460px] rounded-2xl overflow-hidden shadow-md group cursor-pointer select-none">
+                            <img src="assets/card_sherwani.jpg" alt="SHERWANI" draggable="false" class="w-full h-full object-cover pointer-events-none select-none transition-transform duration-700 group-hover:scale-105">
+                            <div class="absolute inset-0 bg-black/35 group-hover:bg-black/45 transition-colors flex items-center justify-center p-4">
+                                <h3 class="text-white text-sm sm:text-base md:text-lg font-bold uppercase tracking-widest font-sans text-center drop-shadow">
+                                    SHERWANI
+                                </h3>
+                            </div>
+                        </div>
+
+                        <!-- Card 6: TROUSERS -->
+                        <div class="relative h-[360px] sm:h-[420px] md:h-[460px] rounded-2xl overflow-hidden shadow-md group cursor-pointer select-none">
+                            <img src="assets/card_trousers.png" alt="TROUSERS" draggable="false" class="w-full h-full object-cover pointer-events-none select-none transition-transform duration-700 group-hover:scale-105">
+                            <div class="absolute inset-0 bg-black/35 group-hover:bg-black/45 transition-colors flex items-center justify-center p-4">
+                                <h3 class="text-white text-sm sm:text-base md:text-lg font-bold uppercase tracking-widest font-sans text-center drop-shadow">
+                                    TROUSERS
+                                </h3>
+                            </div>
+                        </div>
+
+                        <!-- Card 7: JODHPURI -->
+                        <div class="relative h-[360px] sm:h-[420px] md:h-[460px] rounded-2xl overflow-hidden shadow-md group cursor-pointer select-none">
+                            <img src="assets/card_jodhpuri.png" alt="JODHPURI" draggable="false" class="w-full h-full object-cover pointer-events-none select-none transition-transform duration-700 group-hover:scale-105">
+                            <div class="absolute inset-0 bg-black/35 group-hover:bg-black/45 transition-colors flex items-center justify-center p-4">
+                                <h3 class="text-white text-sm sm:text-base md:text-lg font-bold uppercase tracking-widest font-sans text-center drop-shadow">
+                                    JODHPURI
+                                </h3>
+                            </div>
+                        </div>
+
+                        <!-- Card 8: PANTS -->
+                        <div class="relative h-[360px] sm:h-[420px] md:h-[460px] rounded-2xl overflow-hidden shadow-md group cursor-pointer select-none">
+                            <img src="assets/card_pants.jpg" alt="PANTS" draggable="false" class="w-full h-full object-cover pointer-events-none select-none transition-transform duration-700 group-hover:scale-105">
+                            <div class="absolute inset-0 bg-black/35 group-hover:bg-black/45 transition-colors flex items-center justify-center p-4">
+                                <h3 class="text-white text-sm sm:text-base md:text-lg font-bold uppercase tracking-widest font-sans text-center drop-shadow">
+                                    PANTS
+                                </h3>
+                            </div>
+                        </div>
+
+                    </div>
+
                 </div>
 
-                <!-- Card 2: Bespoke Suits -->
-                <div class="min-w-[280px] md:min-w-[320px] bg-white rounded-2xl border border-mpfBorder overflow-hidden shadow-sm mpf-card group cursor-pointer">
-                    <div class="h-[380px] relative overflow-hidden">
-                        <img src="assets/new_gen/collection_bespoke_suit_1785415499376.png" alt="Bespoke Suits & Tuxedos" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-                        <span class="absolute top-4 left-4 bg-mpfNavy text-mpfOrange text-[10px] font-bold px-3 py-1 rounded-md uppercase">ITALIAN CUT</span>
-                    </div>
-                    <div class="p-6 space-y-3">
-                        <h3 class="text-xl font-serif font-bold text-mpfNavy group-hover:text-mpfOrange transition-colors">Bespoke Suits & Tuxedos</h3>
-                        <p class="text-xs text-slate-500 font-normal">Super 150s Merino Wool double-breasted tuxedos</p>
-                        <div class="flex justify-between items-center pt-2">
-                            <span class="text-xs font-bold text-mpfNavy">Starting ₹8,999/-</span>
-                            <a href="#book" class="text-xs font-bold text-mpfOrange hover:underline">Customize &rarr;</a>
-                        </div>
-                    </div>
+                <!-- Frame Indicators (Pagination Dots) -->
+                <div class="flex justify-center gap-2 pt-6">
+                    <button onclick="goToFrame(0)" id="dot-frame-0" class="w-7 h-2.5 rounded-full bg-[#8B3A2B] transition-all" aria-label="Frame 1"></button>
+                    <button onclick="goToFrame(1)" id="dot-frame-1" class="w-2.5 h-2.5 rounded-full bg-[#231B15]/20 hover:bg-[#8B3A2B]/60 transition-all" aria-label="Frame 2"></button>
                 </div>
-
-                <!-- Card 3: Jodhpuri & Band Gala -->
-                <div class="min-w-[280px] md:min-w-[320px] bg-white rounded-2xl border border-mpfBorder overflow-hidden shadow-sm mpf-card group cursor-pointer">
-                    <div class="h-[380px] relative overflow-hidden">
-                        <img src="assets/new_gen/collection_jodhpuri_bandgala_1785415513261.png" alt="Jodhpuri & Band Gala" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-                        <span class="absolute top-4 left-4 bg-mpfNavy text-mpfOrange text-[10px] font-bold px-3 py-1 rounded-md uppercase">HERITAGE CLASSIC</span>
-                    </div>
-                    <div class="p-6 space-y-3">
-                        <h3 class="text-xl font-serif font-bold text-mpfNavy group-hover:text-mpfOrange transition-colors">Jodhpuri & Band Gala</h3>
-                        <p class="text-xs text-slate-500 font-normal">Royal velvet structured jackets with antique brass buttons</p>
-                        <div class="flex justify-between items-center pt-2">
-                            <span class="text-xs font-bold text-mpfNavy">Starting ₹9,499/-</span>
-                            <a href="#book" class="text-xs font-bold text-mpfOrange hover:underline">Customize &rarr;</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card 4: Shirts & Sadris -->
-                <div class="min-w-[280px] md:min-w-[320px] bg-white rounded-2xl border border-mpfBorder overflow-hidden shadow-sm mpf-card group cursor-pointer">
-                    <div class="h-[380px] relative overflow-hidden">
-                        <img src="assets/new_gen/collection_silk_shirt_sadri_1785415524750.png" alt="Custom Shirts & Sadri" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-                        <span class="absolute top-4 right-4 bg-mpfNavy text-mpfOrange text-[10px] font-bold px-3 py-1 rounded-md uppercase">ESSENTIALS</span>
-                    </div>
-                    <div class="p-6 space-y-3">
-                        <h3 class="text-xl font-serif font-bold text-mpfNavy group-hover:text-mpfOrange transition-colors">Shirts, Trousers & Sadri</h3>
-                        <p class="text-xs text-slate-500 font-normal">100% Giza cotton shirts & silk brocade vests</p>
-                        <div class="flex justify-between items-center pt-2">
-                            <span class="text-xs font-bold text-mpfNavy">Starting ₹3,499/-</span>
-                            <a href="#book" class="text-xs font-bold text-mpfOrange hover:underline">Customize &rarr;</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card 5: Indo Western -->
-                <div class="min-w-[280px] md:min-w-[320px] bg-white rounded-2xl border border-mpfBorder overflow-hidden shadow-sm mpf-card group cursor-pointer">
-                    <div class="h-[380px] relative overflow-hidden">
-                        <img src="assets/hero_wedding.png" alt="Indo Western Fusion" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-                        <span class="absolute top-4 left-4 bg-mpfNavy text-mpfOrange text-[10px] font-bold px-3 py-1 rounded-md uppercase">FUSION STYLE</span>
-                    </div>
-                    <div class="p-6 space-y-3">
-                        <h3 class="text-xl font-serif font-bold text-mpfNavy group-hover:text-mpfOrange transition-colors">Indo Western Outfits</h3>
-                        <p class="text-xs text-slate-500 font-normal">Asymmetric cuts for Sangeet, Reception & Cocktail</p>
-                        <div class="flex justify-between items-center pt-2">
-                            <span class="text-xs font-bold text-mpfNavy">Starting ₹10,999/-</span>
-                            <a href="#book" class="text-xs font-bold text-mpfOrange hover:underline">Customize &rarr;</a>
-                        </div>
-                    </div>
-                </div>
-
             </div>
 
         </div>
@@ -1386,10 +1399,6 @@
 
     <!-- INTERACTIVE JAVASCRIPT LOGIC -->
     <script>
-        function scrollCat(amount) {
-            document.getElementById('cat-carousel').scrollBy({ left: amount, behavior: 'smooth' });
-        }
-
         document.addEventListener("DOMContentLoaded", () => {
             gsap.registerPlugin(ScrollTrigger);
 
@@ -1409,6 +1418,96 @@
                     }
                 );
             });
+
+            // ===============================================
+            // SIGNATURE STYLES CAROUSEL: 2 FRAMES CONTROL
+            // ===============================================
+            const carousel = document.getElementById('cat-carousel');
+            const track = document.getElementById('cat-frames-track');
+            const dot0 = document.getElementById('dot-frame-0');
+            const dot1 = document.getElementById('dot-frame-1');
+
+            if (carousel && track) {
+                let currentFrame = 0;
+                let autoScrollTimer = null;
+                let isDown = false;
+                let startX = 0;
+
+                window.goToFrame = (index) => {
+                    currentFrame = index;
+                    track.style.transform = `translateX(-${currentFrame * 100}%)`;
+                    if (dot0 && dot1) {
+                        dot0.className = currentFrame === 0 
+                            ? "w-7 h-2.5 rounded-full bg-[#8B3A2B] transition-all cursor-pointer" 
+                            : "w-2.5 h-2.5 rounded-full bg-[#231B15]/20 hover:bg-[#8B3A2B]/60 transition-all cursor-pointer";
+                        dot1.className = currentFrame === 1 
+                            ? "w-7 h-2.5 rounded-full bg-[#8B3A2B] transition-all cursor-pointer" 
+                            : "w-2.5 h-2.5 rounded-full bg-[#231B15]/20 hover:bg-[#8B3A2B]/60 transition-all cursor-pointer";
+                    }
+                };
+
+                const nextFrame = () => {
+                    currentFrame = (currentFrame === 0) ? 1 : 0;
+                    goToFrame(currentFrame);
+                };
+
+                const startAutoScroll = () => {
+                    stopAutoScroll();
+                    autoScrollTimer = setInterval(nextFrame, 5000);
+                };
+
+                const stopAutoScroll = () => {
+                    if (autoScrollTimer) {
+                        clearInterval(autoScrollTimer);
+                        autoScrollTimer = null;
+                    }
+                };
+
+                // Prevent native image dragging
+                carousel.addEventListener('dragstart', (e) => e.preventDefault());
+
+                // Mouse Drag / Swipe Events
+                carousel.addEventListener('mousedown', (e) => {
+                    isDown = true;
+                    startX = e.pageX;
+                    stopAutoScroll();
+                });
+
+                carousel.addEventListener('mouseleave', () => {
+                    isDown = false;
+                    startAutoScroll();
+                });
+
+                carousel.addEventListener('mouseup', (e) => {
+                    if (!isDown) return;
+                    isDown = false;
+                    const diff = e.pageX - startX;
+                    if (diff < -50) goToFrame(1);
+                    else if (diff > 50) goToFrame(0);
+                    startAutoScroll();
+                });
+
+                // Touch swipe support
+                let touchStartX = 0;
+                carousel.addEventListener('touchstart', (e) => {
+                    touchStartX = e.touches[0].clientX;
+                    stopAutoScroll();
+                }, { passive: true });
+
+                carousel.addEventListener('touchend', (e) => {
+                    const diff = e.changedTouches[0].clientX - touchStartX;
+                    if (diff < -40) goToFrame(1);
+                    else if (diff > 40) goToFrame(0);
+                    startAutoScroll();
+                }, { passive: true });
+
+                // Pause auto scroll on mouse enter
+                carousel.addEventListener('mouseenter', stopAutoScroll);
+
+                // Init Frame 0 & Timer
+                goToFrame(0);
+                startAutoScroll();
+            }
         });
     </script>
 
