@@ -906,8 +906,8 @@
     <!-- ============================================ -->
     <!-- 3. SHOP BY OCCASION (MY PERFECT FIT MATCH)  -->
     <!-- ============================================ -->
-    <section class="py-20 px-6 md:px-10 bg-[#F5EFE6]" id="occasions">
-        <div class="max-w-[1400px] mx-auto space-y-10">
+    <section class="py-20 px-6 md:px-10 bg-[#FAF5EF]" id="occasions">
+        <div class="max-w-[1400px] mx-auto space-y-12">
             
             <div class="flex flex-col items-center justify-center text-center gs-reveal">
                 <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight" style="font-family: PolySans, 'Helvetica Neue', Arial, sans-serif;">
@@ -919,49 +919,107 @@
                 </h2>
             </div>
 
-            <!-- Occasion Cards Grid (4 Cards in One Frame - Reference Design) -->
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-5 md:gap-6">
-                
-                <!-- Card 1: MEHNDI -->
-                <div class="relative h-[360px] sm:h-[420px] md:h-[460px] rounded-2xl overflow-hidden shadow-md group cursor-pointer select-none">
-                    <img src="assets/occasion_mehndi.jpg" alt="MEHNDI" draggable="false" class="w-full h-full object-cover pointer-events-none select-none transition-transform duration-700 group-hover:scale-105">
-                    <div class="absolute inset-0 bg-black/35 group-hover:bg-black/45 transition-colors flex items-center justify-center p-4">
-                        <h3 class="text-white text-base sm:text-lg md:text-xl font-serif italic font-bold uppercase tracking-widest text-center drop-shadow transform -skew-x-6">
-                            MEHNDI
-                        </h3>
+            <!-- Occasion Cards Carousel (2 Frames - 4 Cards per Frame) -->
+            <div class="relative overflow-hidden select-none cursor-grab active:cursor-grabbing" id="occ-carousel">
+                <div class="flex transition-transform duration-700 ease-in-out gap-6" id="occ-frames-track">
+                    
+                    <!-- FRAME 1 (Cards 1 - 4) -->
+                    <div class="min-w-full grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-5 md:gap-6 shrink-0">
+                        
+                        <!-- Card 1: MEHNDI -->
+                        <div class="relative h-[360px] sm:h-[420px] md:h-[460px] rounded-2xl overflow-hidden shadow-md group cursor-pointer select-none">
+                            <img src="assets/occasion_mehndi.jpg" alt="MEHNDI" draggable="false" class="w-full h-full object-cover pointer-events-none select-none transition-transform duration-700 group-hover:scale-105">
+                            <div class="absolute inset-0 bg-black/35 group-hover:bg-black/45 transition-colors flex items-center justify-center p-4">
+                                <h3 class="text-white text-base sm:text-lg md:text-xl font-serif italic font-bold uppercase tracking-widest text-center drop-shadow transform -skew-x-6">
+                                    MEHNDI
+                                </h3>
+                            </div>
+                        </div>
+
+                        <!-- Card 2: SANGEET -->
+                        <div class="relative h-[360px] sm:h-[420px] md:h-[460px] rounded-2xl overflow-hidden shadow-md group cursor-pointer select-none">
+                            <img src="assets/occasion_sangeet.jpg" alt="SANGEET" draggable="false" class="w-full h-full object-cover pointer-events-none select-none transition-transform duration-700 group-hover:scale-105">
+                            <div class="absolute inset-0 bg-black/35 group-hover:bg-black/45 transition-colors flex items-center justify-center p-4">
+                                <h3 class="text-white text-base sm:text-lg md:text-xl font-serif italic font-bold uppercase tracking-widest text-center drop-shadow transform -skew-x-6">
+                                    SANGEET
+                                </h3>
+                            </div>
+                        </div>
+
+                        <!-- Card 3: HALDI -->
+                        <div class="relative h-[360px] sm:h-[420px] md:h-[460px] rounded-2xl overflow-hidden shadow-md group cursor-pointer select-none">
+                            <img src="assets/occasion_haldi.jpg" alt="HALDI" draggable="false" class="w-full h-full object-cover pointer-events-none select-none transition-transform duration-700 group-hover:scale-105">
+                            <div class="absolute inset-0 bg-black/35 group-hover:bg-black/45 transition-colors flex items-center justify-center p-4">
+                                <h3 class="text-white text-base sm:text-lg md:text-xl font-serif italic font-bold uppercase tracking-widest text-center drop-shadow transform -skew-x-6">
+                                    HALDI
+                                </h3>
+                            </div>
+                        </div>
+
+                        <!-- Card 4: WEDDING -->
+                        <div class="relative h-[360px] sm:h-[420px] md:h-[460px] rounded-2xl overflow-hidden shadow-md group cursor-pointer select-none">
+                            <img src="assets/occasion_wedding.jpg" alt="WEDDING" draggable="false" class="w-full h-full object-cover pointer-events-none select-none transition-transform duration-700 group-hover:scale-105">
+                            <div class="absolute inset-0 bg-black/35 group-hover:bg-black/45 transition-colors flex items-center justify-center p-4">
+                                <h3 class="text-white text-base sm:text-lg md:text-xl font-serif italic font-bold uppercase tracking-widest text-center drop-shadow transform -skew-x-6">
+                                    WEDDING
+                                </h3>
+                            </div>
+                        </div>
+
                     </div>
+
+                    <!-- FRAME 2 (Cards 5 - 8) -->
+                    <div class="min-w-full grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-5 md:gap-6 shrink-0">
+                        
+                        <!-- Card 5: ENGAGEMENT -->
+                        <div class="relative h-[360px] sm:h-[420px] md:h-[460px] rounded-2xl overflow-hidden shadow-md group cursor-pointer select-none">
+                            <img src="assets/occasion_engagement.png" alt="ENGAGEMENT" draggable="false" class="w-full h-full object-cover pointer-events-none select-none transition-transform duration-700 group-hover:scale-105">
+                            <div class="absolute inset-0 bg-black/35 group-hover:bg-black/45 transition-colors flex items-center justify-center p-4">
+                                <h3 class="text-white text-base sm:text-lg md:text-xl font-serif italic font-bold uppercase tracking-widest text-center drop-shadow transform -skew-x-6">
+                                    ENGAGEMENT
+                                </h3>
+                            </div>
+                        </div>
+
+                        <!-- Card 6: PARTY WEAR -->
+                        <div class="relative h-[360px] sm:h-[420px] md:h-[460px] rounded-2xl overflow-hidden shadow-md group cursor-pointer select-none">
+                            <img src="assets/occasion_partywear.png" alt="PARTY WEAR" draggable="false" class="w-full h-full object-cover pointer-events-none select-none transition-transform duration-700 group-hover:scale-105">
+                            <div class="absolute inset-0 bg-black/35 group-hover:bg-black/45 transition-colors flex items-center justify-center p-4">
+                                <h3 class="text-white text-base sm:text-lg md:text-xl font-serif italic font-bold uppercase tracking-widest text-center drop-shadow transform -skew-x-6">
+                                    PARTY WEAR
+                                </h3>
+                            </div>
+                        </div>
+
+                        <!-- Card 7: CASUAL WEAR -->
+                        <div class="relative h-[360px] sm:h-[420px] md:h-[460px] rounded-2xl overflow-hidden shadow-md group cursor-pointer select-none">
+                            <img src="assets/occasion_casualwear.png" alt="CASUAL WEAR" draggable="false" class="w-full h-full object-cover pointer-events-none select-none transition-transform duration-700 group-hover:scale-105">
+                            <div class="absolute inset-0 bg-black/35 group-hover:bg-black/45 transition-colors flex items-center justify-center p-4">
+                                <h3 class="text-white text-base sm:text-lg md:text-xl font-serif italic font-bold uppercase tracking-widest text-center drop-shadow transform -skew-x-6">
+                                    CASUAL WEAR
+                                </h3>
+                            </div>
+                        </div>
+
+                        <!-- Card 8: SEMI FORMAL -->
+                        <div class="relative h-[360px] sm:h-[420px] md:h-[460px] rounded-2xl overflow-hidden shadow-md group cursor-pointer select-none">
+                            <img src="assets/occasion_semiformal.png" alt="SEMI FORMAL" draggable="false" class="w-full h-full object-cover pointer-events-none select-none transition-transform duration-700 group-hover:scale-105">
+                            <div class="absolute inset-0 bg-black/35 group-hover:bg-black/45 transition-colors flex items-center justify-center p-4">
+                                <h3 class="text-white text-base sm:text-lg md:text-xl font-serif italic font-bold uppercase tracking-widest text-center drop-shadow transform -skew-x-6">
+                                    SEMI FORMAL
+                                </h3>
+                            </div>
+                        </div>
+
+                    </div>
+
                 </div>
 
-                <!-- Card 2: SANGEET -->
-                <div class="relative h-[360px] sm:h-[420px] md:h-[460px] rounded-2xl overflow-hidden shadow-md group cursor-pointer select-none">
-                    <img src="assets/occasion_sangeet.jpg" alt="SANGEET" draggable="false" class="w-full h-full object-cover pointer-events-none select-none transition-transform duration-700 group-hover:scale-105">
-                    <div class="absolute inset-0 bg-black/35 group-hover:bg-black/45 transition-colors flex items-center justify-center p-4">
-                        <h3 class="text-white text-base sm:text-lg md:text-xl font-serif italic font-bold uppercase tracking-widest text-center drop-shadow transform -skew-x-6">
-                            SANGEET
-                        </h3>
-                    </div>
+                <!-- Frame Indicators (Pagination Dots) -->
+                <div class="flex justify-center gap-2 pt-6">
+                    <button onclick="goToOccasionFrame(0)" id="occ-dot-frame-0" class="w-7 h-2.5 rounded-full bg-[#8B3A2B] transition-all cursor-pointer" aria-label="Frame 1"></button>
+                    <button onclick="goToOccasionFrame(1)" id="occ-dot-frame-1" class="w-2.5 h-2.5 rounded-full bg-[#231B15]/20 hover:bg-[#8B3A2B]/60 transition-all cursor-pointer" aria-label="Frame 2"></button>
                 </div>
-
-                <!-- Card 3: HALDI -->
-                <div class="relative h-[360px] sm:h-[420px] md:h-[460px] rounded-2xl overflow-hidden shadow-md group cursor-pointer select-none">
-                    <img src="assets/occasion_haldi.jpg" alt="HALDI" draggable="false" class="w-full h-full object-cover pointer-events-none select-none transition-transform duration-700 group-hover:scale-105">
-                    <div class="absolute inset-0 bg-black/35 group-hover:bg-black/45 transition-colors flex items-center justify-center p-4">
-                        <h3 class="text-white text-base sm:text-lg md:text-xl font-serif italic font-bold uppercase tracking-widest text-center drop-shadow transform -skew-x-6">
-                            HALDI
-                        </h3>
-                    </div>
-                </div>
-
-                <!-- Card 4: ENGAGEMENT & WEDDING -->
-                <div class="relative h-[360px] sm:h-[420px] md:h-[460px] rounded-2xl overflow-hidden shadow-md group cursor-pointer select-none">
-                    <img src="assets/occasion_wedding.jpg" alt="ENGAGEMENT & WEDDING" draggable="false" class="w-full h-full object-cover pointer-events-none select-none transition-transform duration-700 group-hover:scale-105">
-                    <div class="absolute inset-0 bg-black/35 group-hover:bg-black/45 transition-colors flex items-center justify-center p-4">
-                        <h3 class="text-white text-base sm:text-lg md:text-xl font-serif italic font-bold uppercase tracking-widest text-center drop-shadow transform -skew-x-6">
-                            ENGAGEMENT & WEDDING
-                        </h3>
-                    </div>
-                </div>
-
             </div>
 
         </div>
@@ -1512,6 +1570,96 @@
                 // Init Frame 0 & Timer
                 goToFrame(0);
                 startAutoScroll();
+            }
+
+            // ===============================================
+            // MADE FOR EVERY OCCASION CAROUSEL: 2 FRAMES CONTROL
+            // ===============================================
+            const occCarousel = document.getElementById('occ-carousel');
+            const occTrack = document.getElementById('occ-frames-track');
+            const occDot0 = document.getElementById('occ-dot-frame-0');
+            const occDot1 = document.getElementById('occ-dot-frame-1');
+
+            if (occCarousel && occTrack) {
+                let currentOccFrame = 0;
+                let autoOccScrollTimer = null;
+                let isOccDown = false;
+                let occStartX = 0;
+
+                window.goToOccasionFrame = (index) => {
+                    currentOccFrame = index;
+                    occTrack.style.transform = `translateX(-${currentOccFrame * 100}%)`;
+                    if (occDot0 && occDot1) {
+                        occDot0.className = currentOccFrame === 0 
+                            ? "w-7 h-2.5 rounded-full bg-[#8B3A2B] transition-all cursor-pointer" 
+                            : "w-2.5 h-2.5 rounded-full bg-[#231B15]/20 hover:bg-[#8B3A2B]/60 transition-all cursor-pointer";
+                        occDot1.className = currentOccFrame === 1 
+                            ? "w-7 h-2.5 rounded-full bg-[#8B3A2B] transition-all cursor-pointer" 
+                            : "w-2.5 h-2.5 rounded-full bg-[#231B15]/20 hover:bg-[#8B3A2B]/60 transition-all cursor-pointer";
+                    }
+                };
+
+                const nextOccFrame = () => {
+                    currentOccFrame = (currentOccFrame === 0) ? 1 : 0;
+                    goToOccasionFrame(currentOccFrame);
+                };
+
+                const startOccAutoScroll = () => {
+                    stopOccAutoScroll();
+                    autoOccScrollTimer = setInterval(nextOccFrame, 5000);
+                };
+
+                const stopOccAutoScroll = () => {
+                    if (autoOccScrollTimer) {
+                        clearInterval(autoOccScrollTimer);
+                        autoOccScrollTimer = null;
+                    }
+                };
+
+                // Prevent native image dragging
+                occCarousel.addEventListener('dragstart', (e) => e.preventDefault());
+
+                // Mouse Drag / Swipe Events
+                occCarousel.addEventListener('mousedown', (e) => {
+                    isOccDown = true;
+                    occStartX = e.pageX;
+                    stopOccAutoScroll();
+                });
+
+                occCarousel.addEventListener('mouseleave', () => {
+                    isOccDown = false;
+                    startOccAutoScroll();
+                });
+
+                occCarousel.addEventListener('mouseup', (e) => {
+                    if (!isOccDown) return;
+                    isOccDown = false;
+                    const diff = e.pageX - occStartX;
+                    if (diff < -50) goToOccasionFrame(1);
+                    else if (diff > 50) goToOccasionFrame(0);
+                    startOccAutoScroll();
+                });
+
+                // Touch swipe support
+                let touchOccStartX = 0;
+                occCarousel.addEventListener('touchstart', (e) => {
+                    touchOccStartX = e.touches[0].clientX;
+                    stopOccAutoScroll();
+                }, { passive: true });
+
+                occCarousel.addEventListener('touchend', (e) => {
+                    const diff = e.changedTouches[0].clientX - touchOccStartX;
+                    if (diff < -40) goToOccasionFrame(1);
+                    else if (diff > 40) goToOccasionFrame(0);
+                    startOccAutoScroll();
+                }, { passive: true });
+
+                // Pause auto scroll on mouse enter
+                occCarousel.addEventListener('mouseenter', stopOccAutoScroll);
+
+                // Init Frame 0 & Timer
+                goToOccasionFrame(0);
+                startOccAutoScroll();
             }
         });
     </script>
