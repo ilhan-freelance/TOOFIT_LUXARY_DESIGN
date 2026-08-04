@@ -1,226 +1,234 @@
 <!-- ========================================================= -->
-<!-- CLIENT TESTIMONIALS SECTION — WITH GOOGLE REVIEWS FEEDER   -->
+<!-- CLIENT TESTIMONIALS SECTION — REFINED LUXURY LAYOUT       -->
 <!-- ========================================================= -->
 <section id="testimonials" class="py-14 md:py-20 bg-[#F9F8F6] relative overflow-hidden border-t border-slate-200">
   
-  <!-- Ambient Glow -->
+  <!-- Subtle Ambient Background Glow -->
   <div class="absolute -top-32 -left-32 w-96 h-96 rounded-full bg-[radial-gradient(circle,_rgba(242,208,169,0.25)_0%,_transparent_70%)] blur-3xl pointer-events-none"></div>
 
-  <!-- SINGLE MAIN HEADING AT TOP -->
-  <div class="max-w-[1380px] mx-auto px-6 md:px-10 mb-12 text-center relative z-10 space-y-3">
-    
-    <!-- Google Business Rating Header Badge -->
-    <div class="inline-flex items-center gap-2.5 bg-white px-5 py-2 rounded-full shadow-sm border border-slate-200/80 mb-1">
-      <!-- Official Google 'G' Color Icon -->
-      <svg class="w-4 h-4" viewBox="0 0 24 24">
-        <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
-        <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
-        <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/>
-        <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/>
-      </svg>
-      <span class="text-amber-500 font-bold text-xs tracking-wider">★ 4.9 Rating</span>
-      <span class="text-slate-300 text-xs">•</span>
-      <span class="text-slate-700 text-xs font-bold">150+ Google Reviews</span>
-      <span class="text-slate-300 text-xs">•</span>
-      <a href="https://www.google.com/maps/search/?api=1&query=TOOFIT+Tailors+%26+Fabrics+-+Raymond+Fabric+Store,+Kota" target="_blank" rel="noopener" class="text-[#8B3A2B] hover:underline text-[11px] font-bold">
-        Write a Review &rarr;
-      </a>
-    </div>
-
+  <!-- SINGLE MAIN SECTION TITLE (CLEAN: NO GOOGLE RATING BADGE) -->
+  <div class="max-w-[1380px] mx-auto px-6 md:px-10 mb-12 text-center relative z-10 space-y-2">
     <h2 class="text-3xl sm:text-4xl md:text-5xl font-serif font-extrabold text-[#0F172A] tracking-tight">
       Client <span class="italic font-normal text-[#8B3A2B]">Testimonials</span>
     </h2>
-    <div class="w-12 h-0.5 bg-[#8B3A2B] mx-auto mt-2 rounded-full opacity-80"></div>
+    <div class="w-12 h-0.5 bg-[#8B3A2B] mx-auto mt-3 rounded-full opacity-80"></div>
   </div>
 
-  <div class="max-w-[1380px] mx-auto px-4 sm:px-6 md:px-10 relative z-10 space-y-12">
+  <div class="max-w-[1380px] mx-auto px-4 sm:px-6 md:px-10 relative z-10 space-y-16">
     
-    <!-- ── 1. VIDEO REVIEWS SUB-BLOCK ── -->
-    <div class="space-y-4">
-      <div class="flex items-center justify-between border-b border-slate-200/80 pb-2">
+    <!-- ── 1. VIDEO REVIEWS SUB-SECTION (STAGGERED MODERN LUXURY CAROUSEL) ── -->
+    <div class="space-y-6">
+      <div class="flex items-center justify-between border-b border-slate-200/80 pb-3">
         <span class="text-xs font-bold uppercase tracking-[0.25em] text-[#8B3A2B]">Video Reviews</span>
-        <span class="text-[10px] text-slate-400 font-bold uppercase tracking-wider">Real Grooms & Patrons</span>
+        <div class="flex items-center gap-2">
+          <button onclick="scrollVideoTrack(-1)" class="w-8 h-8 rounded-full bg-white border border-slate-200 hover:bg-slate-100 text-slate-700 flex items-center justify-center text-sm font-bold shadow-sm transition-all">‹</button>
+          <button onclick="scrollVideoTrack(1)" class="w-8 h-8 rounded-full bg-white border border-slate-200 hover:bg-slate-100 text-slate-700 flex items-center justify-center text-sm font-bold shadow-sm transition-all">›</button>
+        </div>
       </div>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-        
-        <!-- Video Reel 1 -->
-        <div class="bg-slate-950 rounded-3xl overflow-hidden shadow-xl border border-slate-800 flex flex-col group">
-          <div class="relative w-full aspect-[9/14] bg-black overflow-hidden">
-            <video id="v-tvid-1" class="w-full h-full object-cover" src="assets/video_consultation.mp4" muted playsinline loop></video>
-            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent pointer-events-none"></div>
-            <button onclick="toggleVidPlay('v-tvid-1', 'v-btn-1')" id="v-btn-1" class="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/10 transition-colors">
-              <span class="w-14 h-14 rounded-full bg-[#8B3A2B] text-white flex items-center justify-center shadow-2xl text-xl transform group-hover:scale-110 transition-transform">▶</span>
-            </button>
-            <div class="absolute bottom-0 inset-x-0 p-5 text-white">
-              <span class="bg-[#8B3A2B] text-[9px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded">Wedding Fitting</span>
-              <h4 class="font-serif font-bold text-base mt-1">Rohan Joshi</h4>
-              <p class="text-xs text-slate-300 italic font-serif">"First trial fitting was 100% perfect!"</p>
+      <!-- Modern Video Reel Track -->
+      <div class="overflow-x-auto no-scrollbar py-2" id="video-reels-container" style="scroll-behavior: smooth;">
+        <div class="flex gap-6 min-w-max md:min-w-0 md:grid md:grid-cols-4">
+          
+          <!-- Video Card 1 -->
+          <div class="w-[260px] sm:w-[280px] md:w-auto bg-slate-950 rounded-3xl overflow-hidden shadow-xl border border-slate-800 flex flex-col group transform hover:-translate-y-1.5 transition-all duration-300">
+            <div class="relative w-full aspect-[9/14] bg-black overflow-hidden">
+              <video id="v-tvid-1" class="w-full h-full object-cover" src="assets/video_consultation.mp4" muted playsinline loop></video>
+              <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent pointer-events-none"></div>
+              <button onclick="toggleVidPlay('v-tvid-1', 'v-btn-1')" id="v-btn-1" class="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/10 transition-colors">
+                <span class="w-14 h-14 rounded-full bg-[#8B3A2B] text-white flex items-center justify-center shadow-2xl text-xl transform group-hover:scale-110 transition-transform">▶</span>
+              </button>
+              <div class="absolute bottom-0 inset-x-0 p-5 text-white">
+                <span class="bg-[#8B3A2B] text-[9px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded">Wedding Fitting</span>
+                <h4 class="font-serif font-bold text-base mt-1">Rohan Joshi</h4>
+                <p class="text-xs text-slate-300 italic font-serif">"First trial fitting was 100% perfect!"</p>
+              </div>
             </div>
           </div>
-        </div>
 
-        <!-- Video Reel 2 -->
-        <div class="bg-slate-950 rounded-3xl overflow-hidden shadow-xl border border-slate-800 flex flex-col group">
-          <div class="relative w-full aspect-[9/14] bg-black overflow-hidden">
-            <video id="v-tvid-2" class="w-full h-full object-cover" src="assets/video_measurements.mp4" muted playsinline loop></video>
-            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent pointer-events-none"></div>
-            <button onclick="toggleVidPlay('v-tvid-2', 'v-btn-2')" id="v-btn-2" class="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/10 transition-colors">
-              <span class="w-14 h-14 rounded-full bg-[#8B3A2B] text-white flex items-center justify-center shadow-2xl text-xl transform group-hover:scale-110 transition-transform">▶</span>
-            </button>
-            <div class="absolute bottom-0 inset-x-0 p-5 text-white">
-              <span class="bg-[#B87333] text-[9px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded">3D Body Measure</span>
-              <h4 class="font-serif font-bold text-base mt-1">Dr. Anirudh Verma</h4>
-              <p class="text-xs text-slate-300 italic font-serif">"The suit drape was incredible."</p>
+          <!-- Video Card 2 -->
+          <div class="w-[260px] sm:w-[280px] md:w-auto bg-slate-950 rounded-3xl overflow-hidden shadow-xl border border-slate-800 flex flex-col group transform hover:-translate-y-1.5 transition-all duration-300">
+            <div class="relative w-full aspect-[9/14] bg-black overflow-hidden">
+              <video id="v-tvid-2" class="w-full h-full object-cover" src="assets/video_measurements.mp4" muted playsinline loop></video>
+              <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent pointer-events-none"></div>
+              <button onclick="toggleVidPlay('v-tvid-2', 'v-btn-2')" id="v-btn-2" class="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/10 transition-colors">
+                <span class="w-14 h-14 rounded-full bg-[#8B3A2B] text-white flex items-center justify-center shadow-2xl text-xl transform group-hover:scale-110 transition-transform">▶</span>
+              </button>
+              <div class="absolute bottom-0 inset-x-0 p-5 text-white">
+                <span class="bg-[#B87333] text-[9px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded">3D Body Measure</span>
+                <h4 class="font-serif font-bold text-base mt-1">Dr. Anirudh Verma</h4>
+                <p class="text-xs text-slate-300 italic font-serif">"The suit drape was incredible."</p>
+              </div>
             </div>
           </div>
-        </div>
 
-        <!-- Video Reel 3 -->
-        <div class="bg-slate-950 rounded-3xl overflow-hidden shadow-xl border border-slate-800 flex flex-col group">
-          <div class="relative w-full aspect-[9/14] bg-black overflow-hidden">
-            <video id="v-tvid-3" class="w-full h-full object-cover" src="assets/video_crafting.mp4" muted playsinline loop></video>
-            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent pointer-events-none"></div>
-            <button onclick="toggleVidPlay('v-tvid-3', 'v-btn-3')" id="v-btn-3" class="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/10 transition-colors">
-              <span class="w-14 h-14 rounded-full bg-[#8B3A2B] text-white flex items-center justify-center shadow-2xl text-xl transform group-hover:scale-110 transition-transform">▶</span>
-            </button>
-            <div class="absolute bottom-0 inset-x-0 p-5 text-white">
-              <span class="bg-[#43385C] text-[9px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded">Karigar Crafting</span>
-              <h4 class="font-serif font-bold text-base mt-1">Yashvardhan Rathore</h4>
-              <p class="text-xs text-slate-300 italic font-serif">"Hand-padded lapel roll is amazing."</p>
+          <!-- Video Card 3 -->
+          <div class="w-[260px] sm:w-[280px] md:w-auto bg-slate-950 rounded-3xl overflow-hidden shadow-xl border border-slate-800 flex flex-col group transform hover:-translate-y-1.5 transition-all duration-300">
+            <div class="relative w-full aspect-[9/14] bg-black overflow-hidden">
+              <video id="v-tvid-3" class="w-full h-full object-cover" src="assets/video_crafting.mp4" muted playsinline loop></video>
+              <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent pointer-events-none"></div>
+              <button onclick="toggleVidPlay('v-tvid-3', 'v-btn-3')" id="v-btn-3" class="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/10 transition-colors">
+                <span class="w-14 h-14 rounded-full bg-[#8B3A2B] text-white flex items-center justify-center shadow-2xl text-xl transform group-hover:scale-110 transition-transform">▶</span>
+              </button>
+              <div class="absolute bottom-0 inset-x-0 p-5 text-white">
+                <span class="bg-[#43385C] text-[9px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded">Karigar Crafting</span>
+                <h4 class="font-serif font-bold text-base mt-1">Yashvardhan Rathore</h4>
+                <p class="text-xs text-slate-300 italic font-serif">"Hand-padded lapel roll is amazing."</p>
+              </div>
             </div>
           </div>
-        </div>
 
-        <!-- Video Reel 4 -->
-        <div class="bg-slate-950 rounded-3xl overflow-hidden shadow-xl border border-slate-800 flex flex-col group">
-          <div class="relative w-full aspect-[9/14] bg-black overflow-hidden">
-            <video id="v-tvid-4" class="w-full h-full object-cover" src="assets/video_finalfitting.mp4" muted playsinline loop></video>
-            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent pointer-events-none"></div>
-            <button onclick="toggleVidPlay('v-tvid-4', 'v-btn-4')" id="v-btn-4" class="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/10 transition-colors">
-              <span class="w-14 h-14 rounded-full bg-[#8B3A2B] text-white flex items-center justify-center shadow-2xl text-xl transform group-hover:scale-110 transition-transform">▶</span>
-            </button>
-            <div class="absolute bottom-0 inset-x-0 p-5 text-white">
-              <span class="bg-[#0F172A] text-[9px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded">Final Reception Fit</span>
-              <h4 class="font-serif font-bold text-base mt-1">Shahamat Khan</h4>
-              <p class="text-xs text-slate-300 italic font-serif">"Best tuxedo in Jaipur & Dubai!"</p>
+          <!-- Video Card 4 -->
+          <div class="w-[260px] sm:w-[280px] md:w-auto bg-slate-950 rounded-3xl overflow-hidden shadow-xl border border-slate-800 flex flex-col group transform hover:-translate-y-1.5 transition-all duration-300">
+            <div class="relative w-full aspect-[9/14] bg-black overflow-hidden">
+              <video id="v-tvid-4" class="w-full h-full object-cover" src="assets/video_finalfitting.mp4" muted playsinline loop></video>
+              <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent pointer-events-none"></div>
+              <button onclick="toggleVidPlay('v-tvid-4', 'v-btn-4')" id="v-btn-4" class="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/10 transition-colors">
+                <span class="w-14 h-14 rounded-full bg-[#8B3A2B] text-white flex items-center justify-center shadow-2xl text-xl transform group-hover:scale-110 transition-transform">▶</span>
+              </button>
+              <div class="absolute bottom-0 inset-x-0 p-5 text-white">
+                <span class="bg-[#0F172A] text-[9px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded">Final Reception Fit</span>
+                <h4 class="font-serif font-bold text-base mt-1">Shahamat Khan</h4>
+                <p class="text-xs text-slate-300 italic font-serif">"Best tuxedo in Jaipur & Dubai!"</p>
+              </div>
             </div>
           </div>
-        </div>
 
+        </div>
       </div>
     </div>
 
 
-    <!-- ── 2. GOOGLE VERIFIED WRITTEN REVIEWS SUB-BLOCK ── -->
-    <div class="space-y-4 pt-4">
-      <div class="flex items-center justify-between border-b border-slate-200/80 pb-2">
+    <!-- ── 2. GOOGLE VERIFIED WRITTEN REVIEWS (TIME-LAPSE AUTO SCROLL + RIGHT CTA BUTTON) ── -->
+    <div class="space-y-6 pt-4">
+      
+      <!-- Header Row with Right-Aligned Compact 'Write a Review on Google Maps' Button -->
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between border-b border-slate-200/80 pb-3 gap-3">
         <div class="flex items-center gap-2">
-          <!-- Google Icon -->
-          <svg class="w-4 h-4" viewBox="0 0 24 24">
-            <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
-            <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
-            <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/>
-            <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/>
-          </svg>
+          <svg class="w-4 h-4" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/></svg>
           <span class="text-xs font-bold uppercase tracking-[0.25em] text-[#8B3A2B]">Google Verified Reviews</span>
         </div>
-        <a href="https://www.google.com/maps/search/?api=1&query=TOOFIT+Tailors+%26+Fabrics+-+Raymond+Fabric+Store,+Kota" target="_blank" rel="noopener" class="text-[10px] text-slate-500 hover:text-[#8B3A2B] font-bold uppercase tracking-wider transition-colors">
-          View All on Google Maps &nearr;
-        </a>
-      </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
-        
-        <!-- Google Review Card 1 -->
-        <div class="bg-white rounded-3xl p-7 shadow-[0_10px_30px_rgba(0,0,0,0.04)] border border-slate-200/80 space-y-4 hover:shadow-xl transition-all relative">
-          <div class="flex items-center justify-between">
-            <div class="flex items-center gap-1 text-amber-500 font-bold text-sm">
-              ★ ★ ★ ★ ★
-            </div>
-            <div class="flex items-center gap-1.5 bg-blue-50 px-2.5 py-1 rounded-full border border-blue-100">
-              <svg class="w-3 h-3" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/></svg>
-              <span class="text-[9px] font-bold text-blue-700 uppercase tracking-wider">Google Verified</span>
-            </div>
-          </div>
-          <p class="text-xs sm:text-sm text-slate-700 leading-relaxed font-serif italic">
-            "Got my wedding Sherwani & Tuxedo customized from Toofit Raymond Store. The fitting was absolute perfection right from the first trial! The master Karigars paid attention to every single detail of shoulder padding and silk lining."
-          </p>
-          <div class="flex items-center justify-between pt-3 border-t border-slate-100">
-            <div class="flex items-center gap-3">
-              <div class="w-10 h-10 rounded-full bg-[#4285F4] text-white font-bold flex items-center justify-center text-xs shadow-sm">
-                RJ
-              </div>
-              <div>
-                <h4 class="text-xs font-bold text-[#0F172A]">Rohan Joshi</h4>
-                <span class="text-[10px] text-slate-400 font-semibold">2 days ago &bull; Google Maps</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Google Review Card 2 -->
-        <div class="bg-white rounded-3xl p-7 shadow-[0_10px_30px_rgba(0,0,0,0.04)] border border-slate-200/80 space-y-4 hover:shadow-xl transition-all relative">
-          <div class="flex items-center justify-between">
-            <div class="flex items-center gap-1 text-amber-500 font-bold text-sm">
-              ★ ★ ★ ★ ★
-            </div>
-            <div class="flex items-center gap-1.5 bg-blue-50 px-2.5 py-1 rounded-full border border-blue-100">
-              <svg class="w-3 h-3" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/></svg>
-              <span class="text-[9px] font-bold text-blue-700 uppercase tracking-wider">Google Verified</span>
-            </div>
-          </div>
-          <p class="text-xs sm:text-sm text-slate-700 leading-relaxed font-serif italic">
-            "The personal stylist recommendation saved me so much time. They matched my Sherwani fabric with my bride's lehenga color and event lighting. Unmatched bespoke service in Kota!"
-          </p>
-          <div class="flex items-center justify-between pt-3 border-t border-slate-100">
-            <div class="flex items-center gap-3">
-              <div class="w-10 h-10 rounded-full bg-[#EA4335] text-white font-bold flex items-center justify-center text-xs shadow-sm">
-                SK
-              </div>
-              <div>
-                <h4 class="text-xs font-bold text-[#0F172A]">Shahamat Khan</h4>
-                <span class="text-[10px] text-slate-400 font-semibold">1 week ago &bull; Google Maps</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Google Review Card 3 -->
-        <div class="bg-white rounded-3xl p-7 shadow-[0_10px_30px_rgba(0,0,0,0.04)] border border-slate-200/80 space-y-4 hover:shadow-xl transition-all relative">
-          <div class="flex items-center justify-between">
-            <div class="flex items-center gap-1 text-amber-500 font-bold text-sm">
-              ★ ★ ★ ★ ★
-            </div>
-            <div class="flex items-center gap-1.5 bg-blue-50 px-2.5 py-1 rounded-full border border-blue-100">
-              <svg class="w-3 h-3" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/></svg>
-              <span class="text-[9px] font-bold text-blue-700 uppercase tracking-wider">Google Verified</span>
-            </div>
-          </div>
-          <p class="text-xs sm:text-sm text-slate-700 leading-relaxed font-serif italic">
-            "Been getting my business suits and Raymond cotton shirts stitched here for 5 years. Fabric quality of Super 150s merino wool is top notch. Guaranteed fit every single time."
-          </p>
-          <div class="flex items-center justify-between pt-3 border-t border-slate-100">
-            <div class="flex items-center gap-3">
-              <div class="w-10 h-10 rounded-full bg-[#34A853] text-white font-bold flex items-center justify-center text-xs shadow-sm">
-                VS
-              </div>
-              <div>
-                <h4 class="text-xs font-bold text-[#0F172A]">Vikram Singhania</h4>
-                <span class="text-[10px] text-slate-400 font-semibold">2 weeks ago &bull; Google Maps</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- WRITE A REVIEW ON GOOGLE MAPS CTA -->
-      <div class="text-center pt-6">
-        <a href="https://www.google.com/maps/search/?api=1&query=TOOFIT+Tailors+%26+Fabrics+-+Raymond+Fabric+Store,+Kota" target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 bg-[#4285F4] hover:bg-[#3367D6] text-white text-xs font-bold uppercase tracking-wider px-8 py-3.5 rounded-full shadow-lg hover:shadow-xl transition-all cursor-pointer">
-          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+        <!-- Compact Right-Aligned CTA Button -->
+        <a href="https://www.google.com/maps/search/?api=1&query=TOOFIT+Tailors+%26+Fabrics+-+Raymond+Fabric+Store,+Kota" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-[#4285F4] hover:bg-[#3367D6] text-white text-[11px] font-bold uppercase tracking-wider px-4 py-2 rounded-full shadow-sm hover:shadow-md transition-all self-start sm:self-auto cursor-pointer">
+          <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
           <span>Write a Review on Google Maps</span>
         </a>
+      </div>
+
+      <!-- Modern Time-Lapse Auto Scroll Track (Infinite Smooth Marquee) -->
+      <div class="relative overflow-hidden py-2 group">
+        <div class="flex gap-6 animate-timelapse-scroll hover:[animation-play-state:paused]" id="text-reviews-marquee">
+          
+          <!-- Review 1 -->
+          <div class="w-[320px] sm:w-[380px] shrink-0 bg-white rounded-3xl p-6 sm:p-7 shadow-[0_10px_30px_rgba(0,0,0,0.04)] border border-slate-200/80 space-y-4 hover:shadow-xl transition-all">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-1 text-amber-500 font-bold text-sm">
+                ★ ★ ★ ★ ★
+              </div>
+              <div class="flex items-center gap-1.5 bg-blue-50 px-2.5 py-1 rounded-full border border-blue-100">
+                <svg class="w-3 h-3" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/></svg>
+                <span class="text-[9px] font-bold text-blue-700 uppercase tracking-wider">Google Verified</span>
+              </div>
+            </div>
+            <p class="text-xs sm:text-sm text-slate-700 leading-relaxed font-serif italic">
+              "Got my wedding Sherwani & Tuxedo customized from Toofit Raymond Store. The fitting was absolute perfection right from the first trial! The master Karigars paid attention to every single detail of shoulder padding and silk lining."
+            </p>
+            <div class="flex items-center justify-between pt-3 border-t border-slate-100">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-[#4285F4] text-white font-bold flex items-center justify-center text-xs shadow-sm">
+                  RJ
+                </div>
+                <div>
+                  <h4 class="text-xs font-bold text-[#0F172A]">Rohan Joshi</h4>
+                  <span class="text-[10px] text-slate-400 font-semibold">2 days ago &bull; Google Maps</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review 2 -->
+          <div class="w-[320px] sm:w-[380px] shrink-0 bg-white rounded-3xl p-6 sm:p-7 shadow-[0_10px_30px_rgba(0,0,0,0.04)] border border-slate-200/80 space-y-4 hover:shadow-xl transition-all">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-1 text-amber-500 font-bold text-sm">
+                ★ ★ ★ ★ ★
+              </div>
+              <div class="flex items-center gap-1.5 bg-blue-50 px-2.5 py-1 rounded-full border border-blue-100">
+                <svg class="w-3 h-3" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/></svg>
+                <span class="text-[9px] font-bold text-blue-700 uppercase tracking-wider">Google Verified</span>
+              </div>
+            </div>
+            <p class="text-xs sm:text-sm text-slate-700 leading-relaxed font-serif italic">
+              "The personal stylist recommendation saved me so much time. They matched my Sherwani fabric with my bride's lehenga color and event lighting. Unmatched bespoke service in Kota!"
+            </p>
+            <div class="flex items-center justify-between pt-3 border-t border-slate-100">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-[#EA4335] text-white font-bold flex items-center justify-center text-xs shadow-sm">
+                  SK
+                </div>
+                <div>
+                  <h4 class="text-xs font-bold text-[#0F172A]">Shahamat Khan</h4>
+                  <span class="text-[10px] text-slate-400 font-semibold">1 week ago &bull; Google Maps</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review 3 -->
+          <div class="w-[320px] sm:w-[380px] shrink-0 bg-white rounded-3xl p-6 sm:p-7 shadow-[0_10px_30px_rgba(0,0,0,0.04)] border border-slate-200/80 space-y-4 hover:shadow-xl transition-all">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-1 text-amber-500 font-bold text-sm">
+                ★ ★ ★ ★ ★
+              </div>
+              <div class="flex items-center gap-1.5 bg-blue-50 px-2.5 py-1 rounded-full border border-blue-100">
+                <svg class="w-3 h-3" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/></svg>
+                <span class="text-[9px] font-bold text-blue-700 uppercase tracking-wider">Google Verified</span>
+              </div>
+            </div>
+            <p class="text-xs sm:text-sm text-slate-700 leading-relaxed font-serif italic">
+              "Been getting my business suits and Raymond cotton shirts stitched here for 5 years. Fabric quality of Super 150s merino wool is top notch. Guaranteed fit every single time."
+            </p>
+            <div class="flex items-center justify-between pt-3 border-t border-slate-100">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-[#34A853] text-white font-bold flex items-center justify-center text-xs shadow-sm">
+                  VS
+                </div>
+                <div>
+                  <h4 class="text-xs font-bold text-[#0F172A]">Vikram Singhania</h4>
+                  <span class="text-[10px] text-slate-400 font-semibold">2 weeks ago &bull; Google Maps</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review 4 (Duplicate for seamless loop) -->
+          <div class="w-[320px] sm:w-[380px] shrink-0 bg-white rounded-3xl p-6 sm:p-7 shadow-[0_10px_30px_rgba(0,0,0,0.04)] border border-slate-200/80 space-y-4 hover:shadow-xl transition-all">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-1 text-amber-500 font-bold text-sm">
+                ★ ★ ★ ★ ★
+              </div>
+              <div class="flex items-center gap-1.5 bg-blue-50 px-2.5 py-1 rounded-full border border-blue-100">
+                <svg class="w-3 h-3" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/></svg>
+                <span class="text-[9px] font-bold text-blue-700 uppercase tracking-wider">Google Verified</span>
+              </div>
+            </div>
+            <p class="text-xs sm:text-sm text-slate-700 leading-relaxed font-serif italic">
+              "Best luxury menswear tailoring store in Kota. The fitting of my reception Jodhpuri suit was unmatched!"
+            </p>
+            <div class="flex items-center justify-between pt-3 border-t border-slate-100">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-[#8B3A2B] text-white font-bold flex items-center justify-center text-xs shadow-sm">
+                  AD
+                </div>
+                <div>
+                  <h4 class="text-xs font-bold text-[#0F172A]">Aditya Dev</h4>
+                  <span class="text-[10px] text-slate-400 font-semibold">3 weeks ago &bull; Google Maps</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
       </div>
 
     </div>
@@ -228,7 +236,19 @@
   </div>
 </section>
 
-<!-- VIDEO PLAYBACK SCRIPT -->
+<!-- MARQUEE ANIMATION STYLES & CONTROLLERS -->
+<style>
+@keyframes timelapsescroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.animate-timelapse-scroll {
+  display: flex;
+  width: max-content;
+  animation: timelapsescroll 28s linear infinite;
+}
+</style>
+
 <script>
 function toggleVidPlay(vidId, btnId) {
   const vid = document.getElementById(vidId);
@@ -241,6 +261,13 @@ function toggleVidPlay(vidId, btnId) {
   } else {
     vid.pause();
     if(btn) btn.style.opacity = '1';
+  }
+}
+
+function scrollVideoTrack(dir) {
+  const container = document.getElementById('video-reels-container');
+  if(container) {
+    container.scrollBy({ left: dir * 300, behavior: 'smooth' });
   }
 }
 </script>
