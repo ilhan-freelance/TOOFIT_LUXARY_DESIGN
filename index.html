@@ -5225,57 +5225,60 @@ function toggleVidPlay(vidId, btnId) {
 <!-- ========================================================= -->
 <!-- LUXURY FOOTER — OFFICIAL LOGO, DIFFERENT BACKGROUND & CONTACTS -->
 <!-- ========================================================= -->
-<footer class="relative bg-slate-950 text-white overflow-hidden border-t border-amber-900/30">
+<!-- ========================================================= -->
+<!-- LIGHT LUXURY FOOTER — REAL CLOTHES BACKDROP & CENTERED   -->
+<!-- ========================================================= -->
+<footer class="relative bg-[#FDFBF7] text-[#0F172A] overflow-hidden border-t border-slate-200/80">
   
-  <!-- 1. BLURRED LUXURY BACKGROUND IMAGE (NEW FABRIC/ROYAL IMAGE) -->
+  <!-- 1. LIGHT BLURRED REAL CLOTHES BACKGROUND IMAGE -->
   <div class="absolute inset-0 z-0 pointer-events-none">
-    <img src="assets/hero_sherwani_palace_4k.jpg" class="w-full h-full object-cover object-center filter blur-xl scale-110 opacity-30">
-    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/90 to-slate-950/85"></div>
+    <img src="assets/wedding_groom.png" class="w-full h-full object-cover object-center filter blur-2xl scale-110 opacity-20">
+    <div class="absolute inset-0 bg-gradient-to-b from-[#FDFBF7]/90 via-[#FDFBF7]/95 to-[#FDFBF7]"></div>
   </div>
 
-  <!-- Ambient Golden Glow -->
-  <div class="absolute -top-32 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-[radial-gradient(circle,_rgba(242,208,169,0.15)_0%,_transparent_70%)] blur-3xl pointer-events-none"></div>
+  <!-- Ambient Subtle Glow -->
+  <div class="absolute -top-32 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-[radial-gradient(circle,_rgba(242,208,169,0.3)_0%,_transparent_70%)] blur-3xl pointer-events-none"></div>
 
-  <div class="max-w-[1280px] mx-auto px-6 md:px-10 pt-16 pb-12 relative z-10 space-y-14 text-center">
+  <div class="max-w-[1280px] mx-auto px-6 md:px-10 pt-16 pb-12 relative z-10 space-y-12 text-center flex flex-col items-center">
     
-    <!-- ── 2. TOP BRAND ESSENCE & LOCATIONS ONLY ── -->
-    <div class="space-y-4 max-w-2xl mx-auto">
-      <p class="text-xs sm:text-sm uppercase tracking-[0.3em] text-[#F2D0A9] font-bold">
+    <!-- ── 2. TOP BRAND ESSENCE & LOCATIONS (CENTERED) ── -->
+    <div class="space-y-3 max-w-2xl mx-auto flex flex-col items-center text-center">
+      <p class="text-xs sm:text-sm uppercase tracking-[0.3em] text-[#8B3A2B] font-bold">
         Bespoke Tailoring & Raymond Fabrics
       </p>
       
       <!-- Locations Only Names -->
-      <div class="flex items-center justify-center gap-3 sm:gap-6 text-slate-300 font-serif text-sm sm:text-base tracking-widest pt-2">
-        <span class="flex items-center gap-2"><span>📍</span><span>Kota</span></span>
-        <span class="text-amber-500/60">•</span>
-        <span class="flex items-center gap-2"><span>📍</span><span>Jaipur</span></span>
-        <span class="text-amber-500/60">•</span>
-        <span class="flex items-center gap-2"><span>📍</span><span>Dubai</span></span>
+      <div class="flex items-center justify-center gap-3 sm:gap-6 text-slate-700 font-serif text-sm sm:text-base tracking-widest pt-2">
+        <span class="flex items-center gap-2"><span>📍</span><span class="font-bold">Kota</span></span>
+        <span class="text-[#8B3A2B]/40">•</span>
+        <span class="flex items-center gap-2"><span>📍</span><span class="font-bold">Jaipur</span></span>
+        <span class="text-[#8B3A2B]/40">•</span>
+        <span class="flex items-center gap-2"><span>📍</span><span class="font-bold">Dubai</span></span>
       </div>
     </div>
 
 
-    <!-- ── 3. CONTACT INFORMATION (PHONE, EMAIL, SHOWROOM) ── -->
-    <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-4xl mx-auto py-8 border-y border-white/10 text-slate-300 text-xs sm:text-sm">
+    <!-- ── 3. CONTACT INFORMATION (CENTERED GRID) ── -->
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 w-full max-w-4xl mx-auto py-8 border-y border-slate-200/80 text-slate-700 text-xs sm:text-sm text-center">
       
       <!-- Phone & WhatsApp -->
-      <div class="space-y-1">
-        <span class="text-[10px] font-bold uppercase tracking-widest text-[#F2D0A9]">Phone & WhatsApp</span>
-        <p class="font-medium text-white text-sm">+91 98290 00000</p>
-        <p class="text-xs text-slate-400">+91 744 2360000</p>
+      <div class="space-y-1.5 flex flex-col items-center justify-center text-center">
+        <span class="text-[10px] font-bold uppercase tracking-widest text-[#8B3A2B]">Phone & WhatsApp</span>
+        <p class="font-bold text-[#0F172A] text-sm">+91 98290 00000</p>
+        <p class="text-xs text-slate-500">+91 744 2360000</p>
       </div>
 
       <!-- Email Inquiry -->
-      <div class="space-y-1">
-        <span class="text-[10px] font-bold uppercase tracking-widest text-[#F2D0A9]">Email Inquiry</span>
-        <p class="font-medium text-white text-sm">contact@toofittailors.com</p>
-        <p class="text-xs text-slate-400">support@toofittailors.com</p>
+      <div class="space-y-1.5 flex flex-col items-center justify-center text-center">
+        <span class="text-[10px] font-bold uppercase tracking-widest text-[#8B3A2B]">Email Inquiry</span>
+        <p class="font-bold text-[#0F172A] text-sm">contact@toofittailors.com</p>
+        <p class="text-xs text-slate-500">support@toofittailors.com</p>
       </div>
 
       <!-- Showroom Address -->
-      <div class="space-y-1">
-        <span class="text-[10px] font-bold uppercase tracking-widest text-[#F2D0A9]">Flagship Store</span>
-        <p class="font-medium text-white text-xs leading-relaxed">
+      <div class="space-y-1.5 flex flex-col items-center justify-center text-center">
+        <span class="text-[10px] font-bold uppercase tracking-widest text-[#8B3A2B]">Flagship Store</span>
+        <p class="font-medium text-[#0F172A] text-xs leading-relaxed max-w-xs">
           Aerodrome Circle, near Bank of Baroda, Gumanpura, Kota, Rajasthan 324007
         </p>
       </div>
@@ -5283,34 +5286,34 @@ function toggleVidPlay(vidId, btnId) {
     </div>
 
 
-    <!-- ── 4. LEGAL & POLICY LINKS (NO NAV LINKS) ── -->
-    <div class="flex flex-wrap items-center justify-center gap-6 sm:gap-10 text-xs font-semibold uppercase tracking-widest text-slate-400">
-      <a href="#privacy" class="hover:text-[#F2D0A9] transition-colors">Privacy Policy</a>
-      <span class="text-slate-700">•</span>
-      <a href="#terms" class="hover:text-[#F2D0A9] transition-colors">Terms & Conditions</a>
-      <span class="text-slate-700">•</span>
-      <a href="#faq" class="hover:text-[#F2D0A9] transition-colors">FAQ</a>
+    <!-- ── 4. LEGAL & POLICY LINKS (CENTERED, NO NAV LINKS) ── -->
+    <div class="flex flex-wrap items-center justify-center gap-6 sm:gap-10 text-xs font-bold uppercase tracking-widest text-slate-600">
+      <a href="#privacy" class="hover:text-[#8B3A2B] transition-colors">Privacy Policy</a>
+      <span class="text-slate-300">•</span>
+      <a href="#terms" class="hover:text-[#8B3A2B] transition-colors">Terms & Conditions</a>
+      <span class="text-slate-300">•</span>
+      <a href="#faq" class="hover:text-[#8B3A2B] transition-colors">FAQ</a>
     </div>
 
 
-    <!-- ── 5. GRAND ENDING WITH OFFICIAL TOP LOGO & TITLE ── -->
-    <div class="pt-8 space-y-4 border-t border-white/10">
+    <!-- ── 5. GRAND ENDING WITH TOP MONOGRAM LOGO & TITLE (CENTERED) ── -->
+    <div class="pt-8 space-y-4 border-t border-slate-200/80 w-full flex flex-col items-center text-center">
       
       <!-- Official Top Monogram Logo inside Radiating Crest -->
       <div class="w-24 h-24 mx-auto flex items-center justify-center relative group">
         <!-- Sunburst Radiating Rays SVG -->
-        <svg class="w-28 h-28 absolute text-amber-500/35 animate-pulse" viewBox="0 0 100 100" fill="none">
+        <svg class="w-28 h-28 absolute text-[#8B3A2B]/25 animate-pulse" viewBox="0 0 100 100" fill="none">
           <circle cx="50" cy="50" r="45" stroke="currentColor" stroke-width="0.5" stroke-dasharray="2 4"/>
           <path d="M50 5 L50 95 M5 50 L95 50 M18 18 L82 82 M18 82 L82 18" stroke="currentColor" stroke-width="0.5"/>
         </svg>
         <!-- Official Logo Image from Top Navbar -->
-        <div class="w-16 h-16 rounded-full bg-slate-900/90 border border-amber-400/40 p-2 flex items-center justify-center shadow-2xl">
-          <img src="assets/logo_crimson_gold.png" alt="TOOFIT Official Logo" class="w-full h-full object-contain filter contrast-125">
+        <div class="w-16 h-16 rounded-full bg-white border border-[#8B3A2B]/30 p-2 flex items-center justify-center shadow-lg">
+          <img src="assets/logo_crimson_gold.png" alt="TOOFIT Official Logo" class="w-full h-full object-contain">
         </div>
       </div>
 
       <!-- Large Grand Typography Title: T O O F I T -->
-      <h1 class="text-4xl sm:text-6xl md:text-7xl font-serif font-black tracking-[0.35em] text-[#F2D0A9] drop-shadow-2xl">
+      <h1 class="text-4xl sm:text-6xl md:text-7xl font-serif font-black tracking-[0.35em] text-[#0F172A] drop-shadow-sm">
         TOOFIT
       </h1>
 
