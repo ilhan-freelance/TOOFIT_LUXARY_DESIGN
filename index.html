@@ -1237,10 +1237,10 @@
     <!-- ============================================ -->
     <!-- 5B. BESPOKE CRAFTSMANSHIP ANATOMY (HORIZONTAL PINNED SCROLL & 3D MANNEQUIN HEAD) -->
     <!-- ============================================ -->
-    <section id="bespoke-anatomy-section" class="relative w-full bg-[#FAF6F0] text-[#231B15] border-y border-[#8B3A2B]/15 h-screen overflow-hidden">
+    <section id="bespoke-anatomy-section" style="position: relative; width: 100%; height: 100vh; overflow: hidden; background-color: #FAF6F0;" class="text-[#231B15] border-y border-[#8B3A2B]/15">
         
         <!-- STICKY VIEWPORT CONTAINER -->
-        <div id="anatomy-sticky-viewport" class="relative w-full h-full flex flex-col justify-between py-6 px-4 sm:px-8 md:px-12 overflow-hidden">
+        <div id="anatomy-sticky-viewport" style="position: relative; width: 100vw; height: 100vh; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between;" class="py-6 px-4 sm:px-8 md:px-12">
             
             <!-- CLEAN SECTION HEADER -->
             <div class="relative z-30 flex justify-between items-center max-w-[1400px] mx-auto w-full pt-2">
@@ -1264,20 +1264,22 @@
             </div>
 
             <!-- 3D CURSOR-FOLLOWING MANNEQUIN HEAD (POSITIONED AT NECK TOP) -->
-            <div class="absolute inset-0 pointer-events-none z-20 flex justify-center items-center">
+            <div class="absolute inset-0 pointer-events-none z-30 flex justify-center items-center">
                 <div class="relative w-full max-w-[1400px] h-full flex justify-center items-center">
-                    <div class="absolute top-[14%] sm:top-[15%] md:top-[16%] w-[150px] h-[160px] sm:w-[170px] sm:h-[180px] pointer-events-none">
+                    <div class="absolute top-[13%] sm:top-[14%] md:top-[15%] w-[160px] h-[170px] sm:w-[170px] sm:h-[180px] pointer-events-none">
                         <canvas id="mannequin-3d-head" class="w-full h-full"></canvas>
                     </div>
                 </div>
             </div>
 
-            <!-- SLIDING HORIZONTAL TRACK (400% WIDTH, 4 CLEAN PANELS) -->
-            <div class="relative z-10 w-full flex-1 overflow-hidden my-2 flex items-center">
-                <div id="anatomy-track" class="flex h-full w-[400%] transition-transform duration-700 ease-out will-change-transform">
+            <!-- SLIDING HORIZONTAL TRACK VIEWPORT -->
+            <div style="position: relative; width: 100vw; flex: 1; overflow: hidden; display: flex; align-items: center;" class="my-2">
+                
+                <!-- TRACK: 400vw width ensures EXACTLY 1 FRAME (100vw) is shown at a time -->
+                <div id="anatomy-track" style="display: flex; flex-direction: row; width: 400vw; min-width: 400vw; height: 100%; transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1); will-change: transform;">
                     
                     <!-- ── FRAME 1: BESPOKE CRAFTSMANSHIP ── -->
-                    <div class="w-1/4 h-full flex-shrink-0 relative flex items-center justify-center px-4 md:px-12">
+                    <div style="width: 100vw; min-width: 100vw; max-width: 100vw; height: 100%; flex-shrink: 0; position: relative; display: flex; align-items: center; justify-content: center;" class="px-4 md:px-12">
                         <!-- Pointer SVG Lines (Desktop) -->
                         <svg class="absolute inset-0 w-full h-full pointer-events-none z-10 hidden md:block">
                             <!-- Left Top -> Shoulder -->
@@ -1304,26 +1306,26 @@
                         </div>
 
                         <!-- Left Callouts -->
-                        <div class="absolute left-4 md:left-12 lg:left-24 top-[24%] max-w-[220px] sm:max-w-[260px] bg-white/90 backdrop-blur-md p-3.5 rounded-xl border border-[#8B3A2B]/20 shadow-md">
+                        <div class="absolute left-6 md:left-16 lg:left-32 top-[24%] max-w-[220px] sm:max-w-[260px] bg-white/90 backdrop-blur-md p-3.5 rounded-xl border border-[#8B3A2B]/20 shadow-md z-20">
                             <div class="text-[10px] font-bold text-[#8B3A2B] uppercase tracking-wider mb-0.5">01. SHOULDER FALL</div>
                             <h4 class="font-serif font-bold text-sm text-[#0F172A] mb-1">Natural Roped Shoulder</h4>
                             <p class="text-[11px] text-slate-600 leading-snug">Handset soft shoulder padding creating a natural, elegant fall.</p>
                         </div>
 
-                        <div class="absolute left-4 md:left-12 lg:left-24 bottom-[20%] max-w-[220px] sm:max-w-[260px] bg-white/90 backdrop-blur-md p-3.5 rounded-xl border border-[#8B3A2B]/20 shadow-md">
+                        <div class="absolute left-6 md:left-16 lg:left-32 bottom-[20%] max-w-[220px] sm:max-w-[260px] bg-white/90 backdrop-blur-md p-3.5 rounded-xl border border-[#8B3A2B]/20 shadow-md z-20">
                             <div class="text-[10px] font-bold text-[#8B3A2B] uppercase tracking-wider mb-0.5">02. CUFF DETAILS</div>
                             <h4 class="font-serif font-bold text-sm text-[#0F172A] mb-1">Surgeon's Working Cuffs</h4>
                             <p class="text-[11px] text-slate-600 leading-snug">Functional sleeve buttons with hand-stitched silk buttonholes.</p>
                         </div>
 
                         <!-- Right Callouts -->
-                        <div class="absolute right-4 md:right-12 lg:right-24 top-[26%] max-w-[220px] sm:max-w-[260px] bg-white/90 backdrop-blur-md p-3.5 rounded-xl border border-[#8B3A2B]/20 shadow-md">
+                        <div class="absolute right-6 md:right-16 lg:right-32 top-[26%] max-w-[220px] sm:max-w-[260px] bg-white/90 backdrop-blur-md p-3.5 rounded-xl border border-[#8B3A2B]/20 shadow-md z-20">
                             <div class="text-[10px] font-bold text-[#8B3A2B] uppercase tracking-wider mb-0.5">03. LAPEL CRAFT</div>
                             <h4 class="font-serif font-bold text-sm text-[#0F172A] mb-1">Hand-Rolled Lapels</h4>
                             <p class="text-[11px] text-slate-600 leading-snug">Hand-stitched canvas roll ensuring graceful 3D lapel curvature.</p>
                         </div>
 
-                        <div class="absolute right-4 md:right-12 lg:right-24 bottom-[22%] max-w-[220px] sm:max-w-[260px] bg-white/90 backdrop-blur-md p-3.5 rounded-xl border border-[#8B3A2B]/20 shadow-md">
+                        <div class="absolute right-6 md:right-16 lg:right-32 bottom-[22%] max-w-[220px] sm:max-w-[260px] bg-white/90 backdrop-blur-md p-3.5 rounded-xl border border-[#8B3A2B]/20 shadow-md z-20">
                             <div class="text-[10px] font-bold text-[#8B3A2B] uppercase tracking-wider mb-0.5">04. EDGE SEAMS</div>
                             <h4 class="font-serif font-bold text-sm text-[#0F172A] mb-1">2mm Hand-Pick Stitching</h4>
                             <p class="text-[11px] text-slate-600 leading-snug">Subtle hand pick-stitching along lapels signifying true bespoke grade.</p>
@@ -1331,7 +1333,7 @@
                     </div>
 
                     <!-- ── FRAME 2: THE INTERNAL CANVAS ── -->
-                    <div class="w-1/4 h-full flex-shrink-0 relative flex items-center justify-center px-4 md:px-12">
+                    <div style="width: 100vw; min-width: 100vw; max-width: 100vw; height: 100%; flex-shrink: 0; position: relative; display: flex; align-items: center; justify-content: center;" class="px-4 md:px-12">
                         <!-- Pointer SVG Lines -->
                         <svg class="absolute inset-0 w-full h-full pointer-events-none z-10 hidden md:block">
                             <line x1="28%" y1="32%" x2="44%" y2="34%" stroke="#8B3A2B" stroke-width="1.5" stroke-dasharray="4 4" />
@@ -1354,26 +1356,26 @@
                         </div>
 
                         <!-- Left Callouts -->
-                        <div class="absolute left-4 md:left-12 lg:left-24 top-[26%] max-w-[220px] sm:max-w-[260px] bg-white/90 backdrop-blur-md p-3.5 rounded-xl border border-[#8B3A2B]/20 shadow-md">
+                        <div class="absolute left-6 md:left-16 lg:left-32 top-[26%] max-w-[220px] sm:max-w-[260px] bg-white/90 backdrop-blur-md p-3.5 rounded-xl border border-[#8B3A2B]/20 shadow-md z-20">
                             <div class="text-[10px] font-bold text-[#8B3A2B] uppercase tracking-wider mb-0.5">01. INTERNAL LAYER</div>
                             <h4 class="font-serif font-bold text-sm text-[#0F172A] mb-1">Floating Horsehair Canvas</h4>
                             <p class="text-[11px] text-slate-600 leading-snug">Canvas runs length of jacket, molding naturally to body over time.</p>
                         </div>
 
-                        <div class="absolute left-4 md:left-12 lg:left-24 bottom-[20%] max-w-[220px] sm:max-w-[260px] bg-white/90 backdrop-blur-md p-3.5 rounded-xl border border-[#8B3A2B]/20 shadow-md">
+                        <div class="absolute left-6 md:left-16 lg:left-32 bottom-[20%] max-w-[220px] sm:max-w-[260px] bg-white/90 backdrop-blur-md p-3.5 rounded-xl border border-[#8B3A2B]/20 shadow-md z-20">
                             <div class="text-[10px] font-bold text-[#8B3A2B] uppercase tracking-wider mb-0.5">02. UNDERCOLLAR</div>
                             <h4 class="font-serif font-bold text-sm text-[#0F172A] mb-1">Felt Melton Undercollar</h4>
                             <p class="text-[11px] text-slate-600 leading-snug">Premium felt melton collar for permanent shape and crisp neckline.</p>
                         </div>
 
                         <!-- Right Callouts -->
-                        <div class="absolute right-4 md:right-12 lg:right-24 top-[24%] max-w-[220px] sm:max-w-[260px] bg-white/90 backdrop-blur-md p-3.5 rounded-xl border border-[#8B3A2B]/20 shadow-md">
+                        <div class="absolute right-6 md:right-16 lg:right-32 top-[24%] max-w-[220px] sm:max-w-[260px] bg-white/90 backdrop-blur-md p-3.5 rounded-xl border border-[#8B3A2B]/20 shadow-md z-20">
                             <div class="text-[10px] font-bold text-[#8B3A2B] uppercase tracking-wider mb-0.5">03. HAND CRAFT</div>
                             <h4 class="font-serif font-bold text-sm text-[#0F172A] mb-1">Tailor's Basting Threads</h4>
                             <p class="text-[11px] text-slate-600 leading-snug">Hand-tacked floating canvas layer for maximum breathability.</p>
                         </div>
 
-                        <div class="absolute right-4 md:right-12 lg:right-24 bottom-[22%] max-w-[220px] sm:max-w-[260px] bg-white/90 backdrop-blur-md p-3.5 rounded-xl border border-[#8B3A2B]/20 shadow-md">
+                        <div class="absolute right-6 md:right-16 lg:right-32 bottom-[22%] max-w-[220px] sm:max-w-[260px] bg-white/90 backdrop-blur-md p-3.5 rounded-xl border border-[#8B3A2B]/20 shadow-md z-20">
                             <div class="text-[10px] font-bold text-[#8B3A2B] uppercase tracking-wider mb-0.5">04. INLAY RESERVES</div>
                             <h4 class="font-serif font-bold text-sm text-[#0F172A] mb-1">Built-in Fabric Reserves</h4>
                             <p class="text-[11px] text-slate-600 leading-snug">2-inch interior seam allowances enabling seamless future alterations.</p>
@@ -1381,7 +1383,7 @@
                     </div>
 
                     <!-- ── FRAME 3: PRECISION FIT MATRIX ── -->
-                    <div class="w-1/4 h-full flex-shrink-0 relative flex items-center justify-center px-4 md:px-12">
+                    <div style="width: 100vw; min-width: 100vw; max-width: 100vw; height: 100%; flex-shrink: 0; position: relative; display: flex; align-items: center; justify-content: center;" class="px-4 md:px-12">
                         <!-- Pointer SVG Lines -->
                         <svg class="absolute inset-0 w-full h-full pointer-events-none z-10 hidden md:block">
                             <line x1="28%" y1="28%" x2="43%" y2="28%" stroke="#8B3A2B" stroke-width="1.5" stroke-dasharray="4 4" />
@@ -1404,26 +1406,26 @@
                         </div>
 
                         <!-- Left Callouts -->
-                        <div class="absolute left-4 md:left-12 lg:left-24 top-[22%] max-w-[220px] sm:max-w-[260px] bg-white/90 backdrop-blur-md p-3.5 rounded-xl border border-[#8B3A2B]/20 shadow-md">
+                        <div class="absolute left-6 md:left-16 lg:left-32 top-[22%] max-w-[220px] sm:max-w-[260px] bg-white/90 backdrop-blur-md p-3.5 rounded-xl border border-[#8B3A2B]/20 shadow-md z-20">
                             <div class="text-[10px] font-bold text-[#8B3A2B] uppercase tracking-wider mb-0.5">01. POSTURE SCAN</div>
                             <h4 class="font-serif font-bold text-sm text-[#0F172A] mb-1">Shoulder Slope Calibration</h4>
                             <p class="text-[11px] text-slate-600 leading-snug">Custom posture alignment mapped from 35+ body scan touchpoints.</p>
                         </div>
 
-                        <div class="absolute left-4 md:left-12 lg:left-24 bottom-[20%] max-w-[220px] sm:max-w-[260px] bg-white/90 backdrop-blur-md p-3.5 rounded-xl border border-[#8B3A2B]/20 shadow-md">
+                        <div class="absolute left-6 md:left-16 lg:left-32 bottom-[20%] max-w-[220px] sm:max-w-[260px] bg-white/90 backdrop-blur-md p-3.5 rounded-xl border border-[#8B3A2B]/20 shadow-md z-20">
                             <div class="text-[10px] font-bold text-[#8B3A2B] uppercase tracking-wider mb-0.5">02. CHEST DRAPE</div>
                             <h4 class="font-serif font-bold text-sm text-[#0F172A] mb-1">Chest Drop & Volume Ratio</h4>
                             <p class="text-[11px] text-slate-600 leading-snug">Sculpted chest-to-waist ratio for a commanding masculine silhouette.</p>
                         </div>
 
                         <!-- Right Callouts -->
-                        <div class="absolute right-4 md:right-12 lg:right-24 top-[24%] max-w-[220px] sm:max-w-[260px] bg-white/90 backdrop-blur-md p-3.5 rounded-xl border border-[#8B3A2B]/20 shadow-md">
+                        <div class="absolute right-6 md:right-16 lg:right-32 top-[24%] max-w-[220px] sm:max-w-[260px] bg-white/90 backdrop-blur-md p-3.5 rounded-xl border border-[#8B3A2B]/20 shadow-md z-20">
                             <div class="text-[10px] font-bold text-[#8B3A2B] uppercase tracking-wider mb-0.5">03. ARM MOBILITY</div>
                             <h4 class="font-serif font-bold text-sm text-[#0F172A] mb-1">360° High Armhole Cut</h4>
                             <p class="text-[11px] text-slate-600 leading-snug">High armhole cut allowing full arm rotation without pulling waist.</p>
                         </div>
 
-                        <div class="absolute right-4 md:right-12 lg:right-24 bottom-[22%] max-w-[220px] sm:max-w-[260px] bg-white/90 backdrop-blur-md p-3.5 rounded-xl border border-[#8B3A2B]/20 shadow-md">
+                        <div class="absolute right-6 md:right-16 lg:right-32 bottom-[22%] max-w-[220px] sm:max-w-[260px] bg-white/90 backdrop-blur-md p-3.5 rounded-xl border border-[#8B3A2B]/20 shadow-md z-20">
                             <div class="text-[10px] font-bold text-[#8B3A2B] uppercase tracking-wider mb-0.5">04. WAIST FIT</div>
                             <h4 class="font-serif font-bold text-sm text-[#0F172A] mb-1">Tapered Waist Suppression</h4>
                             <p class="text-[11px] text-slate-600 leading-snug">Precision waist tapering accentuating natural V-taper frame.</p>
@@ -1431,7 +1433,7 @@
                     </div>
 
                     <!-- ── FRAME 4: THE MASTERPIECE ── -->
-                    <div class="w-1/4 h-full flex-shrink-0 relative flex items-center justify-center px-4 md:px-12">
+                    <div style="width: 100vw; min-width: 100vw; max-width: 100vw; height: 100%; flex-shrink: 0; position: relative; display: flex; align-items: center; justify-content: center;" class="px-4 md:px-12">
                         <!-- Pointer SVG Lines -->
                         <svg class="absolute inset-0 w-full h-full pointer-events-none z-10 hidden md:block">
                             <line x1="28%" y1="30%" x2="44%" y2="30%" stroke="#8B3A2B" stroke-width="1.5" stroke-dasharray="4 4" />
@@ -1454,26 +1456,26 @@
                         </div>
 
                         <!-- Left Callouts -->
-                        <div class="absolute left-4 md:left-12 lg:left-24 top-[24%] max-w-[220px] sm:max-w-[260px] bg-white/90 backdrop-blur-md p-3.5 rounded-xl border border-[#8B3A2B]/20 shadow-md">
+                        <div class="absolute left-6 md:left-16 lg:left-32 top-[24%] max-w-[220px] sm:max-w-[260px] bg-white/90 backdrop-blur-md p-3.5 rounded-xl border border-[#8B3A2B]/20 shadow-md z-20">
                             <div class="text-[10px] font-bold text-[#8B3A2B] uppercase tracking-wider mb-0.5">01. ROYAL SILK</div>
                             <h4 class="font-serif font-bold text-sm text-[#0F172A] mb-1">Silk Satin Peak Lapels</h4>
                             <p class="text-[11px] text-slate-600 leading-snug">Pure silk satin peak lapels for timeless royal elegance.</p>
                         </div>
 
-                        <div class="absolute left-4 md:left-12 lg:left-24 bottom-[20%] max-w-[220px] sm:max-w-[260px] bg-white/90 backdrop-blur-md p-3.5 rounded-xl border border-[#8B3A2B]/20 shadow-md">
+                        <div class="absolute left-6 md:left-16 lg:left-32 bottom-[20%] max-w-[220px] sm:max-w-[260px] bg-white/90 backdrop-blur-md p-3.5 rounded-xl border border-[#8B3A2B]/20 shadow-md z-20">
                             <div class="text-[10px] font-bold text-[#8B3A2B] uppercase tracking-wider mb-0.5">02. ATELIER MARK</div>
                             <h4 class="font-serif font-bold text-sm text-[#0F172A] mb-1">Personalized Inner Monogram</h4>
                             <p class="text-[11px] text-slate-600 leading-snug">Custom initials hand-embroidered on inner silk coat lining.</p>
                         </div>
 
                         <!-- Right Callouts -->
-                        <div class="absolute right-4 md:right-12 lg:right-24 top-[26%] max-w-[220px] sm:max-w-[260px] bg-white/90 backdrop-blur-md p-3.5 rounded-xl border border-[#8B3A2B]/20 shadow-md">
+                        <div class="absolute right-6 md:right-16 lg:right-32 top-[26%] max-w-[220px] sm:max-w-[260px] bg-white/90 backdrop-blur-md p-3.5 rounded-xl border border-[#8B3A2B]/20 shadow-md z-20">
                             <div class="text-[10px] font-bold text-[#8B3A2B] uppercase tracking-wider mb-0.5">03. NATURAL HORN</div>
                             <h4 class="font-serif font-bold text-sm text-[#0F172A] mb-1">Hand-Cut Horn Buttons</h4>
                             <p class="text-[11px] text-slate-600 leading-snug">Natural polished horn buttons attached with silk shank stems.</p>
                         </div>
 
-                        <div class="absolute right-4 md:right-12 lg:right-24 bottom-[22%] max-w-[220px] sm:max-w-[260px] bg-white/90 backdrop-blur-md p-3.5 rounded-xl border border-[#8B3A2B]/20 shadow-md">
+                        <div class="absolute right-6 md:right-16 lg:right-32 bottom-[22%] max-w-[220px] sm:max-w-[260px] bg-white/90 backdrop-blur-md p-3.5 rounded-xl border border-[#8B3A2B]/20 shadow-md z-20">
                             <div class="text-[10px] font-bold text-[#8B3A2B] uppercase tracking-wider mb-0.5">04. LUXURY LINING</div>
                             <h4 class="font-serif font-bold text-sm text-[#0F172A] mb-1">Cupro Silk Lining</h4>
                             <p class="text-[11px] text-slate-600 leading-snug">Frictionless, breathable cupro lining for smooth layering.</p>
@@ -1513,7 +1515,7 @@
         let currentRotY = 0, currentRotX = 0;
 
         function init() {
-            const width = canvas.clientWidth || 180;
+            const width = canvas.clientWidth || 170;
             const height = canvas.clientHeight || 180;
 
             scene = new THREE.Scene();
@@ -1671,20 +1673,24 @@
             if (stepTitle) stepTitle.textContent = TITLES[index];
         }
 
-        // GSAP ScrollTrigger Integration for Pinning & Horizontal Scroll
+        // GSAP ScrollTrigger Integration for Pinning & Horizontal Scroll (translateX in vw)
         if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
             gsap.registerPlugin(ScrollTrigger);
 
             ScrollTrigger.create({
                 trigger: "#bespoke-anatomy-section",
                 start: "top top",
-                end: () => "+=" + (window.innerHeight * 2.5),
+                end: () => "+=" + (window.innerHeight * 3),
                 pin: "#anatomy-sticky-viewport",
                 scrub: 0.8,
                 onUpdate: (self) => {
-                    const progress = self.progress;
+                    const progress = self.progress; // 0.0 to 1.0
                     const frameIndex = Math.min(3, Math.floor(progress * 4));
-                    track.style.transform = `translateX(-${progress * 75}%)`;
+                    
+                    // Translate track by 0vw to -300vw so EXACTLY 1 frame (100vw) is visible per step
+                    const translateX = -(progress * 300);
+                    track.style.transform = `translateX(${translateX}vw)`;
+                    
                     updateUI(frameIndex);
                 }
             });
