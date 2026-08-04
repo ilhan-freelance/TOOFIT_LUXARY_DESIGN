@@ -553,7 +553,7 @@
                 <li><a href="#story">Our Story</a></li>
                 <li><a href="#bespoke">Bespoke</a></li>
                 <li><a href="#wedding">Wedding</a></li>
-                <li><a href="#corporate">Co&#8209;operate</a></li>
+                <li><a href="#corporate">Corporate</a></li>
             </ul>
         </div>
 
@@ -565,7 +565,7 @@
             <a href="#story">Our Story</a>
             <a href="#bespoke">Bespoke</a>
             <a href="#wedding">Wedding</a>
-            <a href="#corporate">Co&#8209;operate</a>
+            <a href="#corporate">Corporate</a>
             <a href="#book" class="tf-liquid-btn" style="margin:16px 24px;text-align:center;">
                 <span>Book Consultant</span>
             </a>
