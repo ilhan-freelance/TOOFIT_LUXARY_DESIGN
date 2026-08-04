@@ -1,0 +1,415 @@
+<!-- ========================================================= -->
+<!-- EXPERIENCE TOOFIT, YOUR WAY — LUXURY 3-CARD SECTION       -->
+<!-- ========================================================= -->
+<section id="experience" class="py-10 md:py-14 bg-[#FAFAFA] relative overflow-hidden border-t border-slate-200/80">
+  
+  <!-- Section Title -->
+  <div class="max-w-[1380px] mx-auto px-6 md:px-10 mb-8 text-center">
+    <div class="inline-flex items-center gap-3 mb-2">
+      <span class="w-6 h-px bg-[#8B3A2B]"></span>
+      <span class="text-[#8B3A2B] text-[10.5px] uppercase tracking-[0.3em] font-extrabold">Personalized Atelier Services</span>
+      <span class="w-6 h-px bg-[#8B3A2B]"></span>
+    </div>
+    <h2 class="text-2xl sm:text-3xl md:text-4xl font-serif font-extrabold text-[#0F172A] tracking-tight">
+      Experience Toofit, <span class="italic font-normal text-[#8B3A2B]">Your Way</span>
+    </h2>
+  </div>
+
+  <!-- 3 Luxury Cards Container -->
+  <div class="max-w-[1380px] mx-auto px-6 md:px-10">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+
+      <!-- ── CARD 1: STYLE CONSULTATION ── -->
+      <div class="group relative bg-white rounded-3xl overflow-hidden shadow-[0_10px_30px_rgba(0,0,0,0.06)] border border-slate-200/80 flex flex-col justify-between transition-all duration-300 hover:shadow-[0_20px_40px_rgba(15,23,42,0.12)] hover:-translate-y-1 h-[270px] sm:h-[285px]">
+        <!-- Right Background Image with S-Curve Divider -->
+        <div class="absolute inset-y-0 right-0 w-[55%] pointer-events-none overflow-hidden">
+          <img src="assets/toofit_bespoke_consultation.png" alt="Style Consultation" class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105">
+          <!-- S-Curve SVG Overlay -->
+          <svg viewBox="0 0 100 200" preserveAspectRatio="none" class="absolute inset-y-0 -left-1 h-full w-24 text-white fill-current">
+            <path d="M0,0 L60,0 C20,60 90,140 20,200 L0,200 Z"/>
+          </svg>
+        </div>
+
+        <!-- Left Content -->
+        <div class="relative z-10 p-6 sm:p-7 w-[68%] sm:w-[65%] h-full flex flex-col justify-between">
+          <div>
+            <!-- Icon Badge -->
+            <div class="w-12 h-12 rounded-full bg-[#0F172A] text-white flex items-center justify-center mb-4 shadow-md group-hover:scale-110 transition-transform">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 stroke-current" fill="none" viewBox="0 0 24 24" stroke-width="1.8">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+              </svg>
+            </div>
+            <!-- Title -->
+            <h3 class="font-serif font-bold text-lg sm:text-xl text-[#0F172A] mb-1.5 leading-snug">
+              Style Consultation
+            </h3>
+            <div class="w-6 h-0.5 bg-[#8B3A2B]/40 mb-2.5"></div>
+            <!-- Description -->
+            <p class="text-xs text-slate-600 leading-relaxed pr-2">
+              Connect with our style experts and get personalized advice tailored just for you.
+            </p>
+          </div>
+
+          <!-- Button -->
+          <button onclick="openBookingModal('studio')" class="inline-flex items-center justify-center gap-2 bg-[#0F172A] hover:bg-[#1E293B] text-white text-[11px] font-bold uppercase tracking-wider px-4 py-2.5 rounded-xl transition-all shadow-md group-hover:shadow-lg w-fit">
+            <span>Book Consultation</span>
+            <span class="text-sm">&rarr;</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- ── CARD 2: VISIT OUR STUDIO ── -->
+      <div class="group relative bg-[#FAF6F0] rounded-3xl overflow-hidden shadow-[0_10px_30px_rgba(0,0,0,0.06)] border border-amber-200/60 flex flex-col justify-between transition-all duration-300 hover:shadow-[0_20px_40px_rgba(184,115,51,0.14)] hover:-translate-y-1 h-[270px] sm:h-[285px]">
+        <!-- Right Background Image with S-Curve Divider -->
+        <div class="absolute inset-y-0 right-0 w-[55%] pointer-events-none overflow-hidden">
+          <img src="assets/atelier_interior.png" alt="Visit Our Studio" class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105">
+          <!-- S-Curve SVG Overlay -->
+          <svg viewBox="0 0 100 200" preserveAspectRatio="none" class="absolute inset-y-0 -left-1 h-full w-24 text-[#FAF6F0] fill-current">
+            <path d="M0,0 L60,0 C20,60 90,140 20,200 L0,200 Z"/>
+          </svg>
+        </div>
+
+        <!-- Left Content -->
+        <div class="relative z-10 p-6 sm:p-7 w-[68%] sm:w-[65%] h-full flex flex-col justify-between">
+          <div>
+            <!-- Icon Badge -->
+            <div class="w-12 h-12 rounded-full bg-[#B87333] text-white flex items-center justify-center mb-4 shadow-md group-hover:scale-110 transition-transform">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 stroke-current" fill="none" viewBox="0 0 24 24" stroke-width="1.8">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 21v-7.5a.75.75 0 0 1 .75-.75h3a.75.75 0 0 1 .75.75V21m-4.5 0H2.36c-.644 0-1.18-.428-1.328-1.056L.014 15.68a1.5 1.5 0 0 1 1.46-1.84h21.052a1.5 1.5 0 0 1 1.46 1.84l-.98 4.264c-.148.628-.684 1.056-1.328 1.056H13.5ZM3 7.5a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0Zm6 0a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0Zm6 0a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0Z" />
+              </svg>
+            </div>
+            <!-- Title -->
+            <h3 class="font-serif font-bold text-lg sm:text-xl text-[#B87333] mb-1.5 leading-snug">
+              Visit Our Studio
+            </h3>
+            <div class="w-6 h-0.5 bg-[#B87333]/40 mb-2.5"></div>
+            <!-- Description -->
+            <p class="text-xs text-slate-600 leading-relaxed pr-2">
+              Step into our studio and explore fabrics, designs and craftsmanship up close.
+            </p>
+          </div>
+
+          <!-- Button -->
+          <button onclick="openLocationModal()" class="inline-flex items-center justify-center gap-2 bg-[#B87333] hover:bg-[#9E5F27] text-white text-[11px] font-bold uppercase tracking-wider px-4 py-2.5 rounded-xl transition-all shadow-md group-hover:shadow-lg w-fit">
+            <span>Find Studio</span>
+            <span class="text-sm">&rarr;</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- ── CARD 3: VIDEO APPOINTMENT ── -->
+      <div class="group relative bg-[#F4F2F8] rounded-3xl overflow-hidden shadow-[0_10px_30px_rgba(0,0,0,0.06)] border border-purple-200/60 flex flex-col justify-between transition-all duration-300 hover:shadow-[0_20px_40px_rgba(67,56,92,0.14)] hover:-translate-y-1 h-[270px] sm:h-[285px]">
+        <!-- Right Background Image with Smartphone Mockup -->
+        <div class="absolute inset-y-0 right-0 w-[55%] pointer-events-none overflow-hidden">
+          <img src="assets/toofit_bespoke_fitting.png" alt="Video Appointment" class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105">
+          <!-- S-Curve SVG Overlay -->
+          <svg viewBox="0 0 100 200" preserveAspectRatio="none" class="absolute inset-y-0 -left-1 h-full w-24 text-[#F4F2F8] fill-current">
+            <path d="M0,0 L60,0 C20,60 90,140 20,200 L0,200 Z"/>
+          </svg>
+        </div>
+
+        <!-- Left Content -->
+        <div class="relative z-10 p-6 sm:p-7 w-[68%] sm:w-[65%] h-full flex flex-col justify-between">
+          <div>
+            <!-- Icon Badge -->
+            <div class="w-12 h-12 rounded-full bg-[#43385C] text-white flex items-center justify-center mb-4 shadow-md group-hover:scale-110 transition-transform">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 stroke-current" fill="none" viewBox="0 0 24 24" stroke-width="1.8">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m15.75 10.5 4.72-4.72a.75.75 0 0 1 1.28.53v11.38a.75.75 0 0 1-1.28.53l-4.72-4.72M4.5 18.75h9a2.25 2.25 0 0 0 2.25-2.25v-9a2.25 2.25 0 0 0-2.25-2.25h-9A2.25 2.25 0 0 0 2.25 7.5v9a2.25 2.25 0 0 0 2.25 2.25Z" />
+              </svg>
+            </div>
+            <!-- Title -->
+            <h3 class="font-serif font-bold text-lg sm:text-xl text-[#43385C] mb-1.5 leading-snug">
+              Video Appointment
+            </h3>
+            <div class="w-6 h-0.5 bg-[#43385C]/40 mb-2.5"></div>
+            <!-- Description -->
+            <p class="text-xs text-slate-600 leading-relaxed pr-2">
+              Talk to our stylists from the comfort of your home via secure video call.
+            </p>
+          </div>
+
+          <!-- Button -->
+          <button onclick="openBookingModal('video')" class="inline-flex items-center justify-center gap-2 bg-[#43385C] hover:bg-[#322947] text-white text-[11px] font-bold uppercase tracking-wider px-4 py-2.5 rounded-xl transition-all shadow-md group-hover:shadow-lg w-fit">
+            <span>Book Video Call</span>
+            <span class="text-sm">&rarr;</span>
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ========================================================= -->
+<!-- MODAL 1: POPUP BOOKING FORM (STUDIO VISIT / VIDEO CALL)   -->
+<!-- ========================================================= -->
+<div id="booking-modal" class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/70 backdrop-blur-sm p-4 overflow-y-auto">
+  <div class="relative w-full max-w-lg bg-white rounded-3xl shadow-2xl overflow-hidden border border-slate-200 transform transition-all duration-300 scale-95 opacity-0" id="booking-modal-card">
+    
+    <!-- Modal Header -->
+    <div class="bg-gradient-to-r from-[#0F172A] via-[#1E293B] to-[#0F172A] p-6 text-white relative">
+      <button onclick="closeBookingModal()" class="absolute top-5 right-5 text-slate-300 hover:text-white bg-white/10 hover:bg-white/20 w-8 h-8 rounded-full flex items-center justify-center transition-colors">
+        ✕
+      </button>
+      <span class="text-[10px] font-bold text-[#F2D0A9] uppercase tracking-[0.25em] block mb-1">Toofit Bespoke Atelier</span>
+      <h3 class="text-2xl font-serif font-bold">Schedule Consultation</h3>
+      <p class="text-xs text-slate-300 mt-1">Select mode & pick your preferred appointment slot</p>
+
+      <!-- TOP TOGGLE BUTTONS: STUDIO VISIT vs VIDEO CALL -->
+      <div class="flex bg-slate-900/80 p-1 rounded-xl mt-4 border border-slate-700/60">
+        <button type="button" id="btn-mode-studio" onclick="setBookingMode('studio')" class="flex-1 py-2.5 px-4 rounded-lg text-xs font-bold uppercase tracking-wider transition-all flex items-center justify-center gap-2 bg-[#8B3A2B] text-white shadow-sm">
+          <span>🏬 Studio Visit</span>
+        </button>
+        <button type="button" id="btn-mode-video" onclick="setBookingMode('video')" class="flex-1 py-2.5 px-4 rounded-lg text-xs font-bold uppercase tracking-wider transition-all flex items-center justify-center gap-2 text-slate-400 hover:text-white">
+          <span>📹 Video Call</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Modal Form Body -->
+    <form onsubmit="handleBookingSubmit(event)" class="p-6 space-y-4">
+      <input type="hidden" id="booking-mode-input" value="studio">
+
+      <!-- Name & Phone -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div>
+          <label class="block text-[11px] font-bold text-slate-700 uppercase tracking-wider mb-1">Full Name *</label>
+          <input type="text" id="bm-name" required placeholder="e.g. Vikramaditya Singh" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-3.5 py-2.5 text-xs text-slate-900 focus:outline-none focus:border-[#8B3A2B] focus:bg-white transition-all">
+        </div>
+        <div>
+          <label class="block text-[11px] font-bold text-slate-700 uppercase tracking-wider mb-1">Phone Number *</label>
+          <input type="tel" id="bm-phone" required placeholder="+91 98290 XXXXX" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-3.5 py-2.5 text-xs text-slate-900 focus:outline-none focus:border-[#8B3A2B] focus:bg-white transition-all">
+        </div>
+      </div>
+
+      <!-- Email ID -->
+      <div>
+        <label class="block text-[11px] font-bold text-slate-700 uppercase tracking-wider mb-1">Email Address *</label>
+        <input type="email" id="bm-email" required placeholder="name@example.com" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-3.5 py-2.5 text-xs text-slate-900 focus:outline-none focus:border-[#8B3A2B] focus:bg-white transition-all">
+      </div>
+
+      <!-- Service Required (LIST COPIED FROM OLD BOOKING FORM) -->
+      <div>
+        <label class="block text-[11px] font-bold text-slate-700 uppercase tracking-wider mb-1">Service Required / Garment Category *</label>
+        <select id="bm-service" required class="w-full bg-slate-50 border border-slate-300 rounded-xl px-3.5 py-2.5 text-xs text-slate-900 focus:outline-none focus:border-[#8B3A2B] focus:bg-white transition-all">
+          <option value="" disabled selected>Select a garment category</option>
+          <option value="Sherwani">Royal Sherwani</option>
+          <option value="Jodhpuri">Jodhpuri Suit</option>
+          <option value="Shirts">Custom Crafted Shirts</option>
+          <option value="Suits">Bespoke Suits & Tuxedos</option>
+          <option value="Trousers">Tailored Trousers</option>
+          <option value="Sadri">Handcrafted Sadri / Waistcoat</option>
+          <option value="Indo Western">Indo Western Couture</option>
+          <option value="Wedding package">Complete Wedding Package</option>
+          <option value="Band Gala">Band Gala Royal Suit</option>
+        </select>
+      </div>
+
+      <!-- Date & Time Slot -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div>
+          <label class="block text-[11px] font-bold text-slate-700 uppercase tracking-wider mb-1">Preferred Date *</label>
+          <input type="date" id="bm-date" required class="w-full bg-slate-50 border border-slate-300 rounded-xl px-3.5 py-2.5 text-xs text-slate-900 focus:outline-none focus:border-[#8B3A2B] focus:bg-white transition-all">
+        </div>
+        <div>
+          <label class="block text-[11px] font-bold text-slate-700 uppercase tracking-wider mb-1">Preferred Time Slot *</label>
+          <select id="bm-time" required class="w-full bg-slate-50 border border-slate-300 rounded-xl px-3.5 py-2.5 text-xs text-slate-900 focus:outline-none focus:border-[#8B3A2B] focus:bg-white transition-all">
+            <option value="11:00 AM - 01:00 PM">11:00 AM - 01:00 PM (Morning)</option>
+            <option value="02:00 PM - 04:00 PM">02:00 PM - 04:00 PM (Afternoon)</option>
+            <option value="05:00 PM - 07:00 PM">05:00 PM - 07:00 PM (Evening)</option>
+            <option value="07:30 PM - 09:00 PM">07:30 PM - 09:00 PM (Late Night)</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Submit CTA Button -->
+      <div class="pt-2">
+        <button type="submit" class="w-full bg-gradient-to-r from-[#8B3A2B] to-[#B87333] hover:from-[#753023] hover:to-[#A06229] text-white py-3.5 rounded-xl font-bold text-xs uppercase tracking-wider shadow-lg hover:shadow-xl transition-all flex items-center justify-center gap-2">
+          <span id="bm-submit-text">Confirm Studio Appointment</span>
+          <span>&rarr;</span>
+        </button>
+      </div>
+
+    </form>
+  </div>
+</div>
+
+
+<!-- ========================================================= -->
+<!-- MODAL 2: LOCATION MAP MODAL (KOTA STUDIO ADDRESS)         -->
+<!-- ========================================================= -->
+<div id="location-modal" class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/70 backdrop-blur-sm p-4 overflow-y-auto">
+  <div class="relative w-full max-w-2xl bg-white rounded-3xl shadow-2xl overflow-hidden border border-slate-200 transform transition-all duration-300 scale-95 opacity-0" id="location-modal-card">
+    
+    <!-- Modal Header -->
+    <div class="bg-[#0F172A] p-6 text-white relative">
+      <button onclick="closeLocationModal()" class="absolute top-5 right-5 text-slate-300 hover:text-white bg-white/10 hover:bg-white/20 w-8 h-8 rounded-full flex items-center justify-center transition-colors">
+        ✕
+      </button>
+      <span class="text-[10px] font-bold text-[#F2D0A9] uppercase tracking-[0.25em] block mb-1">Toofit Flagship Store</span>
+      <h3 class="text-2xl font-serif font-bold">Visit Kota Atelier</h3>
+      <p class="text-xs text-slate-300 mt-1">Explore custom fabrics, master tailoring & fitting lounge</p>
+    </div>
+
+    <!-- Address & Details Box -->
+    <div class="p-6 bg-slate-50 border-b border-slate-200 grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
+      <div class="space-y-1.5">
+        <div class="font-bold text-[#0F172A] flex items-center gap-1.5 text-sm">
+          <span>📍</span>
+          <span>TOOFIT Tailors & Fabrics</span>
+        </div>
+        <p class="text-slate-600 leading-relaxed">
+          Raymond Fabric Store, Aerodrome Circle,<br>
+          near Bank of Baroda, Gumanpura,<br>
+          Kota, Rajasthan 324007
+        </p>
+      </div>
+      <div class="space-y-2 border-t sm:border-t-0 sm:border-l border-slate-200 pt-2 sm:pt-0 sm:pl-4">
+        <div>
+          <span class="font-bold text-slate-700 block">📞 Contact & Booking</span>
+          <span class="text-slate-600">+91 98290 XXXXX / +91 744 2XXXXX</span>
+        </div>
+        <div>
+          <span class="font-bold text-slate-700 block">⏰ Opening Hours</span>
+          <span class="text-slate-600">Mon - Sun: 10:30 AM - 09:00 PM</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Google Map Embed Iframe -->
+    <div class="relative w-full h-[280px] bg-slate-200">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3610.686523992224!2d75.845187!3d25.146201!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396f849646b96e5d%3A0xb35a098cb9b6d859!2sAerodrome%20Circle%2C%20Gumanpura%2C%20Kota%2C%20Rajasthan%20324007!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
+        width="100%" 
+        height="100%" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+
+    <!-- Modal Footer CTA -->
+    <div class="p-4 bg-white flex flex-col sm:flex-row gap-3 justify-between items-center border-t border-slate-100">
+      <a href="https://maps.google.com/?q=TOOFIT+Tailors+Raymond+Fabric+Store+Aerodrome+Circle+Gumanpura+Kota+Rajasthan+324007" target="_blank" rel="noopener" class="w-full sm:w-auto bg-[#B87333] hover:bg-[#9E5F27] text-white px-5 py-2.5 rounded-xl font-bold text-xs uppercase tracking-wider transition-all flex items-center justify-center gap-2">
+        <span>🗺️ Open in Google Maps</span>
+        <span>&rarr;</span>
+      </a>
+      <button onclick="closeLocationModal(); openBookingModal('studio');" class="w-full sm:w-auto bg-[#0F172A] hover:bg-[#1E293B] text-white px-5 py-2.5 rounded-xl font-bold text-xs uppercase tracking-wider transition-all">
+        Book Appointment Here
+      </button>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- ========================================================= -->
+<!-- JAVASCRIPT CONTROLLERS FOR BOOKING & LOCATION MODALS      -->
+<!-- ========================================================= -->
+<script>
+function openBookingModal(mode) {
+  const modal = document.getElementById('booking-modal');
+  const card  = document.getElementById('booking-modal-card');
+  if(!modal || !card) return;
+
+  setBookingMode(mode || 'studio');
+
+  // Set minimum date to today
+  const dateInput = document.getElementById('bm-date');
+  if(dateInput && !dateInput.value) {
+    const today = new Date().toISOString().split('T')[0];
+    dateInput.min = today;
+    dateInput.value = today;
+  }
+
+  modal.classList.remove('hidden');
+  modal.classList.add('flex');
+  setTimeout(() => {
+    card.classList.remove('scale-95', 'opacity-0');
+    card.classList.add('scale-100', 'opacity-100');
+  }, 10);
+}
+
+function closeBookingModal() {
+  const modal = document.getElementById('booking-modal');
+  const card  = document.getElementById('booking-modal-card');
+  if(!modal || !card) return;
+
+  card.classList.remove('scale-100', 'opacity-100');
+  card.classList.add('scale-95', 'opacity-0');
+  setTimeout(() => {
+    modal.classList.remove('flex');
+    modal.classList.add('hidden');
+  }, 250);
+}
+
+function setBookingMode(mode) {
+  const modeInput  = document.getElementById('booking-mode-input');
+  const btnStudio  = document.getElementById('btn-mode-studio');
+  const btnVideo   = document.getElementById('btn-mode-video');
+  const submitText = document.getElementById('bm-submit-text');
+
+  if(modeInput) modeInput.value = mode;
+
+  if(mode === 'video') {
+    if(btnStudio) { btnStudio.className = "flex-1 py-2.5 px-4 rounded-lg text-xs font-bold uppercase tracking-wider transition-all flex items-center justify-center gap-2 text-slate-400 hover:text-white"; }
+    if(btnVideo)  { btnVideo.className  = "flex-1 py-2.5 px-4 rounded-lg text-xs font-bold uppercase tracking-wider transition-all flex items-center justify-center gap-2 bg-[#43385C] text-white shadow-sm"; }
+    if(submitText) submitText.textContent = "Confirm Video Appointment";
+  } else {
+    if(btnStudio) { btnStudio.className = "flex-1 py-2.5 px-4 rounded-lg text-xs font-bold uppercase tracking-wider transition-all flex items-center justify-center gap-2 bg-[#8B3A2B] text-white shadow-sm"; }
+    if(btnVideo)  { btnVideo.className  = "flex-1 py-2.5 px-4 rounded-lg text-xs font-bold uppercase tracking-wider transition-all flex items-center justify-center gap-2 text-slate-400 hover:text-white"; }
+    if(submitText) submitText.textContent = "Confirm Studio Appointment";
+  }
+}
+
+function handleBookingSubmit(e) {
+  e.preventDefault();
+  const name    = document.getElementById('bm-name').value;
+  const phone   = document.getElementById('bm-phone').value;
+  const service = document.getElementById('bm-service').value;
+  const mode    = document.getElementById('booking-mode-input').value;
+  const date    = document.getElementById('bm-date').value;
+  const time    = document.getElementById('bm-time').value;
+
+  const modeTitle = mode === 'video' ? 'Virtual Video Call' : 'Studio Fitting Visit';
+  alert(`Thank you ${name}!\n\nYour ${modeTitle} appointment for "${service}" has been confirmed for ${date} (${time}).\n\nOur personal stylist will call you at ${phone} shortly.`);
+  
+  closeBookingModal();
+}
+
+function openLocationModal() {
+  const modal = document.getElementById('location-modal');
+  const card  = document.getElementById('location-modal-card');
+  if(!modal || !card) return;
+
+  modal.classList.remove('hidden');
+  modal.classList.add('flex');
+  setTimeout(() => {
+    card.classList.remove('scale-95', 'opacity-0');
+    card.classList.add('scale-100', 'opacity-100');
+  }, 10);
+}
+
+function closeLocationModal() {
+  const modal = document.getElementById('location-modal');
+  const card  = document.getElementById('location-modal-card');
+  if(!modal || !card) return;
+
+  card.classList.remove('scale-100', 'opacity-100');
+  card.classList.add('scale-95', 'opacity-0');
+  setTimeout(() => {
+    modal.classList.remove('flex');
+    modal.classList.add('hidden');
+  }, 250);
+}
+
+// Close modals on outside backdrop click
+window.addEventListener('click', (e) => {
+  const bm = document.getElementById('booking-modal');
+  const lm = document.getElementById('location-modal');
+  if(e.target === bm) closeBookingModal();
+  if(e.target === lm) closeLocationModal();
+});
+</script>
