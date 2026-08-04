@@ -1,5 +1,5 @@
 <!-- ========================================================= -->
-<!-- CLIENT TESTIMONIALS SECTION — JS AUTO-SCROLL EFFECT       -->
+<!-- CLIENT TESTIMONIALS SECTION — 60FPS ULTRA SMOOTH SCROLL   -->
 <!-- ========================================================= -->
 <section id="testimonials" class="py-14 md:py-20 bg-[#F9F8F6] relative overflow-hidden border-t border-slate-200">
   
@@ -93,25 +93,19 @@
     </div>
 
 
-    <!-- ── 2. GOOGLE REVIEWS WITH INTERACTIVE AUTO-SCROLL CAROUSEL ── -->
+    <!-- ── 2. GOOGLE REVIEWS WITH 60FPS ULTRA SMOOTH AUTO-SCROLL CAROUSEL ── -->
     <div class="space-y-6 pt-4">
       
-      <!-- Header Row -->
-      <div class="flex items-center justify-between border-b border-slate-200/80 pb-3">
+      <!-- Header Row (Clean: No Arrows) -->
+      <div class="border-b border-slate-200/80 pb-3">
         <div class="flex items-center gap-2">
           <svg class="w-4 h-4" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/></svg>
           <span class="text-xs font-bold uppercase tracking-[0.25em] text-[#8B3A2B]">Google Verified Reviews</span>
         </div>
-
-        <!-- Manual Navigation Controls -->
-        <div class="flex items-center gap-2">
-          <button onclick="manualScrollTextReviews(-1)" class="w-8 h-8 rounded-full bg-white border border-slate-200 hover:bg-slate-100 text-slate-700 flex items-center justify-center text-sm font-bold shadow-sm transition-all">&larr;</button>
-          <button onclick="manualScrollTextReviews(1)" class="w-8 h-8 rounded-full bg-white border border-slate-200 hover:bg-slate-100 text-slate-700 flex items-center justify-center text-sm font-bold shadow-sm transition-all">&rarr;</button>
-        </div>
       </div>
 
       <!-- AUTO-SCROLLABLE OVERFLOW CONTAINER -->
-      <div class="overflow-x-auto no-scrollbar py-3" id="text-reviews-scroll-box" style="scroll-behavior: smooth;">
+      <div class="overflow-x-auto no-scrollbar py-3" id="text-reviews-scroll-box">
         <div class="flex gap-6 min-w-max">
           <!-- Review Card (Chandan Jha) -->
           <div class="w-[300px] sm:w-[360px] shrink-0 bg-white rounded-3xl p-6 sm:p-7 shadow-[0_10px_30px_rgba(0,0,0,0.04)] border border-slate-200/80 space-y-4 hover:shadow-xl transition-all">
@@ -608,7 +602,7 @@
   </div>
 </section>
 
-<!-- CONTROLLER SCRIPT: SINGLE VIDEO PLAYBACK + SMOOTH JS AUTO-SCROLL -->
+<!-- CONTROLLER SCRIPT: SINGLE VIDEO PLAYBACK + 60FPS SMOOTH AUTO-SCROLL -->
 <script>
 function toggleVidPlay(vidId, btnId) {
   const targetVid = document.getElementById(vidId);
@@ -632,45 +626,31 @@ function toggleVidPlay(vidId, btnId) {
   }
 }
 
-// TEXT REVIEWS AUTOMATIC & MANUAL SMOOTH CAROUSEL SCROLL
+// 60FPS HIGH PERFORMANCE AUTO-SCROLL
 (function() {
   const box = document.getElementById('text-reviews-scroll-box');
   if(!box) return;
 
-  let timer = null;
-  const speed = 1.2;
+  let animId = null;
+  let isPaused = false;
+  const speed = 1.8; // Fast, smooth 60fps glide speed
 
   function autoStep() {
-    if(box.scrollLeft + box.clientWidth >= box.scrollWidth - 5) {
-      box.scrollLeft = 0;
-    } else {
-      box.scrollLeft += speed;
+    if(!isPaused && box) {
+      if(box.scrollLeft + box.clientWidth >= box.scrollWidth - 4) {
+        box.scrollLeft = 0;
+      } else {
+        box.scrollLeft += speed;
+      }
     }
+    animId = requestAnimationFrame(autoStep);
   }
 
-  function start() {
-    stop();
-    timer = setInterval(autoStep, 25);
-  }
+  box.addEventListener('mouseenter', function() { isPaused = true; });
+  box.addEventListener('mouseleave', function() { isPaused = false; });
+  box.addEventListener('touchstart', function() { isPaused = true; }, {passive: true});
+  box.addEventListener('touchend', function() { isPaused = false; }, {passive: true});
 
-  function stop() {
-    if(timer) clearInterval(timer);
-  }
-
-  box.addEventListener('mouseenter', stop);
-  box.addEventListener('mouseleave', start);
-  box.addEventListener('touchstart', stop, {passive: true});
-  box.addEventListener('touchend', start, {passive: true});
-
-  window.manualScrollTextReviews = function(dir) {
-    stop();
-    box.scrollBy({ left: dir * 320, behavior: 'smooth' });
-    setTimeout(start, 5000);
-  };
-
-  document.addEventListener('DOMContentLoaded', start);
-  if(document.readyState === 'complete' || document.readyState === 'interactive') {
-    start();
-  }
+  animId = requestAnimationFrame(autoStep);
 })();
 </script>
