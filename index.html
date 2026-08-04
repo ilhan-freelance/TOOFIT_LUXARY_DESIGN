@@ -1235,423 +1235,387 @@
 
 
     <!-- ========================================================= -->
-    <!-- 5B. ANATOMY OF ROYAL TAILORING — DARK PINNED HORIZ SCROLL -->
+    <!-- 5B. ANATOMY OF ROYAL TAILORING — PINNED HORIZ SCROLL      -->
     <!-- ========================================================= -->
     <div id="anatomy-wrapper" style="height:400vh;position:relative;">
       <div id="anatomy-pin" style="
         position:sticky;top:0;height:100vh;width:100%;overflow:hidden;
-        background:radial-gradient(ellipse 65% 85% at 50% 48%, #1D1710 0%, #0C0905 60%, #070503 100%);
-        display:flex;flex-direction:column;">
+        background:#F7F3EE;display:flex;flex-direction:column;">
 
-        <!-- THREE.JS SUIT — transparent canvas blends with dark bg -->
-        <canvas id="suit-canvas" style="
-          position:absolute;left:50%;top:50%;
-          transform:translate(-50%,-52%);
-          width:360px;height:480px;
-          z-index:3;pointer-events:none;"></canvas>
-
-        <!-- SUBTLE VIGNETTE CENTRE GLOW -->
-        <div style="position:absolute;left:50%;top:50%;transform:translate(-50%,-52%);
-          width:400px;height:520px;border-radius:50%;
-          background:radial-gradient(ellipse at 50% 45%,rgba(212,175,55,.07) 0%,transparent 70%);
-          pointer-events:none;z-index:2;"></div>
-
-        <!-- FIXED HEADER -->
+        <!-- HEADER -->
         <div style="position:absolute;top:0;left:0;right:0;z-index:20;
           display:flex;justify-content:space-between;align-items:center;
-          padding:28px 56px 0;">
+          padding:26px 52px 0;">
           <div>
-            <span style="font-size:9px;letter-spacing:.3em;color:#8B3A2B;
-              text-transform:uppercase;display:block;margin-bottom:6px;">● Bespoke Craftsmanship</span>
-            <h2 style="font-family:Georgia,serif;font-weight:700;margin:0;color:#F0E4CC;
-              font-size:clamp(1.25rem,1.9vw,1.85rem);letter-spacing:-.01em;">
+            <span style="font-size:9px;letter-spacing:.28em;color:#8B3A2B;text-transform:uppercase;
+              display:block;margin-bottom:5px;">● Bespoke Craftsmanship</span>
+            <h2 style="font-family:Georgia,serif;font-weight:700;margin:0;color:#1A1410;
+              font-size:clamp(1.25rem,1.85vw,1.8rem);letter-spacing:-.01em;">
               Anatomy of Royal Tailoring</h2>
           </div>
-          <div style="display:flex;align-items:center;gap:7px;
-            background:rgba(212,175,55,.07);border:1px solid rgba(212,175,55,.22);
-            border-radius:99px;padding:7px 20px;backdrop-filter:blur(12px);">
-            <span id="anat-num" style="font-size:17px;font-weight:700;color:#D4AF37;">01</span>
-            <span style="color:rgba(255,255,255,.18);">/</span>
-            <span style="font-size:11px;color:rgba(255,255,255,.32);">04</span>
-            <span id="anat-title" style="margin-left:10px;font-size:8px;letter-spacing:.2em;
-              color:#A89070;text-transform:uppercase;font-weight:700;white-space:nowrap;">
-              BESPOKE CONSTRUCTION</span>
+          <div style="display:flex;align-items:center;gap:7px;background:rgba(255,255,255,.92);
+            border:1px solid rgba(139,58,43,.25);border-radius:99px;padding:7px 20px;backdrop-filter:blur(8px);">
+            <span id="anat-num" style="font-size:16px;font-weight:700;color:#8B3A2B;">01</span>
+            <span style="color:rgba(0,0,0,.2);">/</span>
+            <span style="font-size:11px;color:rgba(0,0,0,.3);">04</span>
+            <span id="anat-title" style="margin-left:9px;font-size:8px;letter-spacing:.18em;
+              color:#5A5048;text-transform:uppercase;font-weight:700;white-space:nowrap;">BESPOKE CONSTRUCTION</span>
           </div>
         </div>
 
-        <!-- SLIDING TRACK CONTAINER -->
+        <!-- SLIDING TRACK -->
         <div style="position:absolute;inset:0;overflow:hidden;">
           <div id="anatomy-track" style="display:flex;height:100%;width:400%;will-change:transform;">
 
-            <!-- ═══════════════════════════════════════════ -->
-            <!-- FRAME 1 — BESPOKE CONSTRUCTION             -->
-            <!-- ═══════════════════════════════════════════ -->
-            <div style="width:25%;flex-shrink:0;height:100%;position:relative;">
+            <!-- ════════════════════════════════════════════════════════ -->
+            <!-- FRAME 1 — CHARCOAL BESPOKE SUIT   [NAVY THEME]          -->
+            <!-- ════════════════════════════════════════════════════════ -->
+            <div style="width:25%;flex-shrink:0;height:100%;position:relative;display:flex;align-items:center;justify-content:center;">
 
-              <!-- LEFT CALLOUTS -->
-              <div style="position:absolute;left:22px;top:21%;z-index:10;width:172px;text-align:right;">
-                <div style="font-size:8px;letter-spacing:.15em;color:#D4AF37;text-transform:uppercase;line-height:1.6;">Collar Point</div>
-                <div style="font-size:9.5px;color:#6A6054;font-style:italic;font-family:Georgia;">Hand-set silk notch collar</div>
-              </div>
-              <div style="position:absolute;left:22px;top:34%;z-index:10;width:172px;text-align:right;">
-                <div style="font-size:8px;letter-spacing:.15em;color:#D4AF37;text-transform:uppercase;line-height:1.6;">Chest Gorge</div>
-                <div style="font-size:9.5px;color:#6A6054;font-style:italic;font-family:Georgia;">High lapel break position</div>
-              </div>
-              <div style="position:absolute;left:22px;top:49%;z-index:10;width:172px;text-align:right;">
-                <div style="font-size:8px;letter-spacing:.15em;color:#D4AF37;text-transform:uppercase;line-height:1.6;">Chest Pocket</div>
-                <div style="font-size:9.5px;color:#6A6054;font-style:italic;font-family:Georgia;">Silk-welted breast pocket</div>
-              </div>
-              <div style="position:absolute;left:22px;top:63%;z-index:10;width:172px;text-align:right;">
-                <div style="font-size:8px;letter-spacing:.15em;color:#D4AF37;text-transform:uppercase;line-height:1.6;">Jacket Hem</div>
-                <div style="font-size:9.5px;color:#6A6054;font-style:italic;font-family:Georgia;">Balanced rear centre vent</div>
-              </div>
+              <img src="assets/frame_1_anatomy.png" alt="Charcoal Bespoke Suit"
+                style="height:72%;max-height:500px;object-fit:contain;position:relative;z-index:5;
+                filter:drop-shadow(0 18px 36px rgba(0,0,0,.22));">
 
-              <!-- RIGHT CALLOUTS -->
-              <div style="position:absolute;right:22px;top:23%;z-index:10;width:172px;text-align:left;">
-                <div style="font-size:8px;letter-spacing:.15em;color:#C8A87A;text-transform:uppercase;line-height:1.6;">Natural Shoulder</div>
-                <div style="font-size:9.5px;color:#6A6054;font-style:italic;font-family:Georgia;">Soft roped sleeve head</div>
+              <!-- LEFT BOXES (navy #1C2A42, accent #8B3A2B) -->
+              <div style="position:absolute;left:14px;top:17%;z-index:10;width:200px;
+                background:#fff;border:1.5px solid #1C2A42;border-left:4px solid #8B3A2B;
+                border-radius:8px;padding:8px 12px;box-shadow:0 3px 16px rgba(0,0,0,.1);">
+                <div style="font-size:8px;letter-spacing:.15em;color:#1C2A42;text-transform:uppercase;font-weight:700;margin-bottom:2px;">Collar Point</div>
+                <div style="font-size:9px;color:#6A5E52;font-style:italic;font-family:Georgia;">Hand-set silk notch collar</div>
               </div>
-              <div style="position:absolute;right:22px;top:37%;z-index:10;width:172px;text-align:left;">
-                <div style="font-size:8px;letter-spacing:.15em;color:#C8A87A;text-transform:uppercase;line-height:1.6;">Lapel Roll</div>
-                <div style="font-size:9.5px;color:#6A6054;font-style:italic;font-family:Georgia;">3D hand-rolled canvas fold</div>
+              <div style="position:absolute;left:14px;top:32%;z-index:10;width:200px;
+                background:#fff;border:1.5px solid #1C2A42;border-left:4px solid #8B3A2B;
+                border-radius:8px;padding:8px 12px;box-shadow:0 3px 16px rgba(0,0,0,.1);">
+                <div style="font-size:8px;letter-spacing:.15em;color:#1C2A42;text-transform:uppercase;font-weight:700;margin-bottom:2px;">Chest Gorge</div>
+                <div style="font-size:9px;color:#6A5E52;font-style:italic;font-family:Georgia;">High lapel break position</div>
               </div>
-              <div style="position:absolute;right:22px;top:52%;z-index:10;width:172px;text-align:left;">
-                <div style="font-size:8px;letter-spacing:.15em;color:#C8A87A;text-transform:uppercase;line-height:1.6;">Working Cuffs</div>
-                <div style="font-size:9.5px;color:#6A6054;font-style:italic;font-family:Georgia;">4 surgeon's real buttons</div>
+              <div style="position:absolute;left:14px;top:47%;z-index:10;width:200px;
+                background:#fff;border:1.5px solid #1C2A42;border-left:4px solid #8B3A2B;
+                border-radius:8px;padding:8px 12px;box-shadow:0 3px 16px rgba(0,0,0,.1);">
+                <div style="font-size:8px;letter-spacing:.15em;color:#1C2A42;text-transform:uppercase;font-weight:700;margin-bottom:2px;">Breast Pocket</div>
+                <div style="font-size:9px;color:#6A5E52;font-style:italic;font-family:Georgia;">Silk-welted pocket square</div>
               </div>
-              <div style="position:absolute;right:22px;top:65%;z-index:10;width:172px;text-align:left;">
-                <div style="font-size:8px;letter-spacing:.15em;color:#C8A87A;text-transform:uppercase;line-height:1.6;">Side Seam</div>
-                <div style="font-size:9.5px;color:#6A6054;font-style:italic;font-family:Georgia;">Shaped with 2-inch reserves</div>
+              <div style="position:absolute;left:14px;top:62%;z-index:10;width:200px;
+                background:#fff;border:1.5px solid #1C2A42;border-left:4px solid #8B3A2B;
+                border-radius:8px;padding:8px 12px;box-shadow:0 3px 16px rgba(0,0,0,.1);">
+                <div style="font-size:8px;letter-spacing:.15em;color:#1C2A42;text-transform:uppercase;font-weight:700;margin-bottom:2px;">Jacket Hem</div>
+                <div style="font-size:9px;color:#6A5E52;font-style:italic;font-family:Georgia;">Balanced rear centre vent</div>
               </div>
 
-              <!-- SVG CONNECTOR LINES -->
-              <svg style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:9;">
-                <!-- Left lines -->
-                <line x1="14%" y1="22.5%" x2="36.5%" y2="28%" stroke="#D4AF37" stroke-width=".85" stroke-dasharray="5 3.5" stroke-linecap="round" opacity=".58"/>
-                <circle cx="36.5%" cy="28%" r="2.8" fill="none" stroke="#D4AF37" stroke-width="1.1" opacity=".8"/><circle cx="36.5%" cy="28%" r="1.1" fill="#D4AF37"/>
-                <line x1="14%" y1="35.5%" x2="38%" y2="37%" stroke="#D4AF37" stroke-width=".85" stroke-dasharray="5 3.5" stroke-linecap="round" opacity=".58"/>
-                <circle cx="38%" cy="37%" r="2.8" fill="none" stroke="#D4AF37" stroke-width="1.1" opacity=".8"/><circle cx="38%" cy="37%" r="1.1" fill="#D4AF37"/>
-                <line x1="14%" y1="50.5%" x2="38%" y2="50.5%" stroke="#D4AF37" stroke-width=".85" stroke-dasharray="5 3.5" stroke-linecap="round" opacity=".58"/>
-                <circle cx="38%" cy="50.5%" r="2.8" fill="none" stroke="#D4AF37" stroke-width="1.1" opacity=".8"/><circle cx="38%" cy="50.5%" r="1.1" fill="#D4AF37"/>
-                <line x1="14%" y1="64.5%" x2="39%" y2="66%" stroke="#D4AF37" stroke-width=".85" stroke-dasharray="5 3.5" stroke-linecap="round" opacity=".58"/>
-                <circle cx="39%" cy="66%" r="2.8" fill="none" stroke="#D4AF37" stroke-width="1.1" opacity=".8"/><circle cx="39%" cy="66%" r="1.1" fill="#D4AF37"/>
-                <!-- Right lines -->
-                <line x1="86%" y1="24.5%" x2="62.5%" y2="28%" stroke="#C8A87A" stroke-width=".85" stroke-dasharray="5 3.5" stroke-linecap="round" opacity=".5"/>
-                <circle cx="62.5%" cy="28%" r="2.8" fill="none" stroke="#C8A87A" stroke-width="1.1" opacity=".72"/><circle cx="62.5%" cy="28%" r="1.1" fill="#C8A87A" opacity=".8"/>
-                <line x1="86%" y1="38.5%" x2="61.5%" y2="38.5%" stroke="#C8A87A" stroke-width=".85" stroke-dasharray="5 3.5" stroke-linecap="round" opacity=".5"/>
-                <circle cx="61.5%" cy="38.5%" r="2.8" fill="none" stroke="#C8A87A" stroke-width="1.1" opacity=".72"/><circle cx="61.5%" cy="38.5%" r="1.1" fill="#C8A87A" opacity=".8"/>
-                <line x1="86%" y1="53.5%" x2="62.5%" y2="54%" stroke="#C8A87A" stroke-width=".85" stroke-dasharray="5 3.5" stroke-linecap="round" opacity=".5"/>
-                <circle cx="62.5%" cy="54%" r="2.8" fill="none" stroke="#C8A87A" stroke-width="1.1" opacity=".72"/><circle cx="62.5%" cy="54%" r="1.1" fill="#C8A87A" opacity=".8"/>
-                <line x1="86%" y1="66.5%" x2="61.5%" y2="66.5%" stroke="#C8A87A" stroke-width=".85" stroke-dasharray="5 3.5" stroke-linecap="round" opacity=".5"/>
-                <circle cx="61.5%" cy="66.5%" r="2.8" fill="none" stroke="#C8A87A" stroke-width="1.1" opacity=".72"/><circle cx="61.5%" cy="66.5%" r="1.1" fill="#C8A87A" opacity=".8"/>
+              <!-- RIGHT BOXES -->
+              <div style="position:absolute;right:14px;top:19%;z-index:10;width:200px;
+                background:#fff;border:1.5px solid #1C2A42;border-right:4px solid #8B3A2B;
+                border-radius:8px;padding:8px 12px;box-shadow:0 3px 16px rgba(0,0,0,.1);">
+                <div style="font-size:8px;letter-spacing:.15em;color:#1C2A42;text-transform:uppercase;font-weight:700;margin-bottom:2px;">Natural Shoulder</div>
+                <div style="font-size:9px;color:#6A5E52;font-style:italic;font-family:Georgia;">Soft roped sleeve head</div>
+              </div>
+              <div style="position:absolute;right:14px;top:34%;z-index:10;width:200px;
+                background:#fff;border:1.5px solid #1C2A42;border-right:4px solid #8B3A2B;
+                border-radius:8px;padding:8px 12px;box-shadow:0 3px 16px rgba(0,0,0,.1);">
+                <div style="font-size:8px;letter-spacing:.15em;color:#1C2A42;text-transform:uppercase;font-weight:700;margin-bottom:2px;">Lapel Roll</div>
+                <div style="font-size:9px;color:#6A5E52;font-style:italic;font-family:Georgia;">3D hand-rolled canvas fold</div>
+              </div>
+              <div style="position:absolute;right:14px;top:49%;z-index:10;width:200px;
+                background:#fff;border:1.5px solid #1C2A42;border-right:4px solid #8B3A2B;
+                border-radius:8px;padding:8px 12px;box-shadow:0 3px 16px rgba(0,0,0,.1);">
+                <div style="font-size:8px;letter-spacing:.15em;color:#1C2A42;text-transform:uppercase;font-weight:700;margin-bottom:2px;">Working Cuffs</div>
+                <div style="font-size:9px;color:#6A5E52;font-style:italic;font-family:Georgia;">4 surgeon's real buttons</div>
+              </div>
+              <div style="position:absolute;right:14px;top:64%;z-index:10;width:200px;
+                background:#fff;border:1.5px solid #1C2A42;border-right:4px solid #8B3A2B;
+                border-radius:8px;padding:8px 12px;box-shadow:0 3px 16px rgba(0,0,0,.1);">
+                <div style="font-size:8px;letter-spacing:.15em;color:#1C2A42;text-transform:uppercase;font-weight:700;margin-bottom:2px;">Side Seam</div>
+                <div style="font-size:9px;color:#6A5E52;font-style:italic;font-family:Georgia;">Shaped with 2-inch reserves</div>
+              </div>
+
+              <svg style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:8;">
+                <line x1="15%" y1="19.5%" x2="37%" y2="27%" stroke="#1C2A42" stroke-width="1" stroke-dasharray="5 4" stroke-linecap="round" opacity=".45"/>
+                <circle cx="37%" cy="27%" r="3" fill="none" stroke="#1C2A42" stroke-width="1.2" opacity=".65"/><circle cx="37%" cy="27%" r="1.3" fill="#8B3A2B"/>
+                <line x1="15%" y1="34.5%" x2="38%" y2="37%" stroke="#1C2A42" stroke-width="1" stroke-dasharray="5 4" stroke-linecap="round" opacity=".45"/>
+                <circle cx="38%" cy="37%" r="3" fill="none" stroke="#1C2A42" stroke-width="1.2" opacity=".65"/><circle cx="38%" cy="37%" r="1.3" fill="#8B3A2B"/>
+                <line x1="15%" y1="49.5%" x2="38.5%" y2="50%" stroke="#1C2A42" stroke-width="1" stroke-dasharray="5 4" stroke-linecap="round" opacity=".45"/>
+                <circle cx="38.5%" cy="50%" r="3" fill="none" stroke="#1C2A42" stroke-width="1.2" opacity=".65"/><circle cx="38.5%" cy="50%" r="1.3" fill="#8B3A2B"/>
+                <line x1="15%" y1="64.5%" x2="40%" y2="66%" stroke="#1C2A42" stroke-width="1" stroke-dasharray="5 4" stroke-linecap="round" opacity=".45"/>
+                <circle cx="40%" cy="66%" r="3" fill="none" stroke="#1C2A42" stroke-width="1.2" opacity=".65"/><circle cx="40%" cy="66%" r="1.3" fill="#8B3A2B"/>
+                <line x1="85%" y1="21.5%" x2="62%" y2="27%" stroke="#1C2A42" stroke-width="1" stroke-dasharray="5 4" stroke-linecap="round" opacity=".45"/>
+                <circle cx="62%" cy="27%" r="3" fill="none" stroke="#1C2A42" stroke-width="1.2" opacity=".65"/><circle cx="62%" cy="27%" r="1.3" fill="#8B3A2B"/>
+                <line x1="85%" y1="36.5%" x2="61.5%" y2="38%" stroke="#1C2A42" stroke-width="1" stroke-dasharray="5 4" stroke-linecap="round" opacity=".45"/>
+                <circle cx="61.5%" cy="38%" r="3" fill="none" stroke="#1C2A42" stroke-width="1.2" opacity=".65"/><circle cx="61.5%" cy="38%" r="1.3" fill="#8B3A2B"/>
+                <line x1="85%" y1="51.5%" x2="63%" y2="55%" stroke="#1C2A42" stroke-width="1" stroke-dasharray="5 4" stroke-linecap="round" opacity=".45"/>
+                <circle cx="63%" cy="55%" r="3" fill="none" stroke="#1C2A42" stroke-width="1.2" opacity=".65"/><circle cx="63%" cy="55%" r="1.3" fill="#8B3A2B"/>
+                <line x1="85%" y1="66.5%" x2="61%" y2="66.5%" stroke="#1C2A42" stroke-width="1" stroke-dasharray="5 4" stroke-linecap="round" opacity=".45"/>
+                <circle cx="61%" cy="66.5%" r="3" fill="none" stroke="#1C2A42" stroke-width="1.2" opacity=".65"/><circle cx="61%" cy="66.5%" r="1.3" fill="#8B3A2B"/>
               </svg>
-              <div style="position:absolute;bottom:20px;left:50%;transform:translateX(-50%);
-                font-size:8px;letter-spacing:.26em;color:#5A2218;text-transform:uppercase;z-index:10;white-space:nowrap;">
-                01 — BESPOKE CONSTRUCTION</div>
+              <div style="position:absolute;bottom:18px;left:50%;transform:translateX(-50%);
+                font-size:8.5px;letter-spacing:.24em;color:#8B3A2B;text-transform:uppercase;
+                z-index:10;white-space:nowrap;font-family:Georgia;font-style:italic;">01 — CHARCOAL BESPOKE SUIT</div>
             </div>
 
-            <!-- ═══════════════════════════════════════════ -->
-            <!-- FRAME 2 — THE INTERNAL CANVAS              -->
-            <!-- ═══════════════════════════════════════════ -->
-            <div style="width:25%;flex-shrink:0;height:100%;position:relative;">
-              <div style="position:absolute;left:22px;top:21%;z-index:10;width:172px;text-align:right;">
-                <div style="font-size:8px;letter-spacing:.15em;color:#D4AF37;text-transform:uppercase;line-height:1.6;">Melton Undercollar</div>
-                <div style="font-size:9.5px;color:#6A6054;font-style:italic;font-family:Georgia;">12-needle hand-pad stitched</div>
+            <!-- ════════════════════════════════════════════════════════ -->
+            <!-- FRAME 2 — CANVAS CUTAWAY SUIT   [COGNAC THEME]          -->
+            <!-- ════════════════════════════════════════════════════════ -->
+            <div style="width:25%;flex-shrink:0;height:100%;position:relative;display:flex;align-items:center;justify-content:center;">
+
+              <img src="assets/frame_2_canvas.png" alt="Canvas Internal View Suit"
+                style="height:72%;max-height:500px;object-fit:contain;position:relative;z-index:5;
+                filter:drop-shadow(0 18px 36px rgba(0,0,0,.22));">
+
+              <!-- LEFT BOXES (cognac #5C2E10, accent #A06B2A) -->
+              <div style="position:absolute;left:14px;top:17%;z-index:10;width:200px;
+                background:#fff;border:1.5px solid #5C2E10;border-left:4px solid #A06B2A;
+                border-radius:8px;padding:8px 12px;box-shadow:0 3px 16px rgba(0,0,0,.1);">
+                <div style="font-size:8px;letter-spacing:.15em;color:#5C2E10;text-transform:uppercase;font-weight:700;margin-bottom:2px;">Melton Undercollar</div>
+                <div style="font-size:9px;color:#6A5E52;font-style:italic;font-family:Georgia;">12-needle hand-pad stitched</div>
               </div>
-              <div style="position:absolute;left:22px;top:34%;z-index:10;width:172px;text-align:right;">
-                <div style="font-size:8px;letter-spacing:.15em;color:#D4AF37;text-transform:uppercase;line-height:1.6;">Horsehair Canvas</div>
-                <div style="font-size:9.5px;color:#6A6054;font-style:italic;font-family:Georgia;">Floating chest canvas layer</div>
+              <div style="position:absolute;left:14px;top:32%;z-index:10;width:200px;
+                background:#fff;border:1.5px solid #5C2E10;border-left:4px solid #A06B2A;
+                border-radius:8px;padding:8px 12px;box-shadow:0 3px 16px rgba(0,0,0,.1);">
+                <div style="font-size:8px;letter-spacing:.15em;color:#5C2E10;text-transform:uppercase;font-weight:700;margin-bottom:2px;">Horsehair Canvas</div>
+                <div style="font-size:9px;color:#6A5E52;font-style:italic;font-family:Georgia;">Floating chest canvas layer</div>
               </div>
-              <div style="position:absolute;left:22px;top:49%;z-index:10;width:172px;text-align:right;">
-                <div style="font-size:8px;letter-spacing:.15em;color:#D4AF37;text-transform:uppercase;line-height:1.6;">Sleeve Pitch</div>
-                <div style="font-size:9.5px;color:#6A6054;font-style:italic;font-family:Georgia;">Rotary-set for arm mobility</div>
+              <div style="position:absolute;left:14px;top:47%;z-index:10;width:200px;
+                background:#fff;border:1.5px solid #5C2E10;border-left:4px solid #A06B2A;
+                border-radius:8px;padding:8px 12px;box-shadow:0 3px 16px rgba(0,0,0,.1);">
+                <div style="font-size:8px;letter-spacing:.15em;color:#5C2E10;text-transform:uppercase;font-weight:700;margin-bottom:2px;">Sleeve Pitch</div>
+                <div style="font-size:9px;color:#6A5E52;font-style:italic;font-family:Georgia;">Rotary-set for arm mobility</div>
               </div>
-              <div style="position:absolute;left:22px;top:63%;z-index:10;width:172px;text-align:right;">
-                <div style="font-size:8px;letter-spacing:.15em;color:#D4AF37;text-transform:uppercase;line-height:1.6;">Basting Thread</div>
-                <div style="font-size:9.5px;color:#6A6054;font-style:italic;font-family:Georgia;">Hand-tacked floating weave</div>
+              <div style="position:absolute;left:14px;top:62%;z-index:10;width:200px;
+                background:#fff;border:1.5px solid #5C2E10;border-left:4px solid #A06B2A;
+                border-radius:8px;padding:8px 12px;box-shadow:0 3px 16px rgba(0,0,0,.1);">
+                <div style="font-size:8px;letter-spacing:.15em;color:#5C2E10;text-transform:uppercase;font-weight:700;margin-bottom:2px;">Basting Thread</div>
+                <div style="font-size:9px;color:#6A5E52;font-style:italic;font-family:Georgia;">Hand-tacked floating weave</div>
               </div>
-              <div style="position:absolute;right:22px;top:23%;z-index:10;width:172px;text-align:left;">
-                <div style="font-size:8px;letter-spacing:.15em;color:#C8A87A;text-transform:uppercase;line-height:1.6;">Chest Padding</div>
-                <div style="font-size:9.5px;color:#6A6054;font-style:italic;font-family:Georgia;">Natural wool shoulder pad</div>
+
+              <!-- RIGHT BOXES -->
+              <div style="position:absolute;right:14px;top:19%;z-index:10;width:200px;
+                background:#fff;border:1.5px solid #5C2E10;border-right:4px solid #A06B2A;
+                border-radius:8px;padding:8px 12px;box-shadow:0 3px 16px rgba(0,0,0,.1);">
+                <div style="font-size:8px;letter-spacing:.15em;color:#5C2E10;text-transform:uppercase;font-weight:700;margin-bottom:2px;">Chest Padding</div>
+                <div style="font-size:9px;color:#6A5E52;font-style:italic;font-family:Georgia;">Natural wool shoulder pad</div>
               </div>
-              <div style="position:absolute;right:22px;top:37%;z-index:10;width:172px;text-align:left;">
-                <div style="font-size:8px;letter-spacing:.15em;color:#C8A87A;text-transform:uppercase;line-height:1.6;">Pick Stitch Edge</div>
-                <div style="font-size:9.5px;color:#6A6054;font-style:italic;font-family:Georgia;">2mm hand-edge stitching</div>
+              <div style="position:absolute;right:14px;top:34%;z-index:10;width:200px;
+                background:#fff;border:1.5px solid #5C2E10;border-right:4px solid #A06B2A;
+                border-radius:8px;padding:8px 12px;box-shadow:0 3px 16px rgba(0,0,0,.1);">
+                <div style="font-size:8px;letter-spacing:.15em;color:#5C2E10;text-transform:uppercase;font-weight:700;margin-bottom:2px;">Pick Stitch Edge</div>
+                <div style="font-size:9px;color:#6A5E52;font-style:italic;font-family:Georgia;">2mm hand-edge stitching</div>
               </div>
-              <div style="position:absolute;right:22px;top:52%;z-index:10;width:172px;text-align:left;">
-                <div style="font-size:8px;letter-spacing:.15em;color:#C8A87A;text-transform:uppercase;line-height:1.6;">Cupro Lining</div>
-                <div style="font-size:9.5px;color:#6A6054;font-style:italic;font-family:Georgia;">Full-body frictionless sleeve</div>
+              <div style="position:absolute;right:14px;top:49%;z-index:10;width:200px;
+                background:#fff;border:1.5px solid #5C2E10;border-right:4px solid #A06B2A;
+                border-radius:8px;padding:8px 12px;box-shadow:0 3px 16px rgba(0,0,0,.1);">
+                <div style="font-size:8px;letter-spacing:.15em;color:#5C2E10;text-transform:uppercase;font-weight:700;margin-bottom:2px;">Cupro Lining</div>
+                <div style="font-size:9px;color:#6A5E52;font-style:italic;font-family:Georgia;">Full-body frictionless silk</div>
               </div>
-              <div style="position:absolute;right:22px;top:65%;z-index:10;width:172px;text-align:left;">
-                <div style="font-size:8px;letter-spacing:.15em;color:#C8A87A;text-transform:uppercase;line-height:1.6;">Fabric Reserves</div>
-                <div style="font-size:9.5px;color:#6A6054;font-style:italic;font-family:Georgia;">2-inch alteration seam room</div>
+              <div style="position:absolute;right:14px;top:64%;z-index:10;width:200px;
+                background:#fff;border:1.5px solid #5C2E10;border-right:4px solid #A06B2A;
+                border-radius:8px;padding:8px 12px;box-shadow:0 3px 16px rgba(0,0,0,.1);">
+                <div style="font-size:8px;letter-spacing:.15em;color:#5C2E10;text-transform:uppercase;font-weight:700;margin-bottom:2px;">Fabric Reserves</div>
+                <div style="font-size:9px;color:#6A5E52;font-style:italic;font-family:Georgia;">2-inch alteration seam room</div>
               </div>
-              <svg style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:9;">
-                <line x1="14%" y1="22.5%" x2="36.5%" y2="27%" stroke="#D4AF37" stroke-width=".85" stroke-dasharray="5 3.5" stroke-linecap="round" opacity=".58"/>
-                <circle cx="36.5%" cy="27%" r="2.8" fill="none" stroke="#D4AF37" stroke-width="1.1" opacity=".8"/><circle cx="36.5%" cy="27%" r="1.1" fill="#D4AF37"/>
-                <line x1="14%" y1="35.5%" x2="38%" y2="38%" stroke="#D4AF37" stroke-width=".85" stroke-dasharray="5 3.5" stroke-linecap="round" opacity=".58"/>
-                <circle cx="38%" cy="38%" r="2.8" fill="none" stroke="#D4AF37" stroke-width="1.1" opacity=".8"/><circle cx="38%" cy="38%" r="1.1" fill="#D4AF37"/>
-                <line x1="14%" y1="50.5%" x2="37%" y2="52%" stroke="#D4AF37" stroke-width=".85" stroke-dasharray="5 3.5" stroke-linecap="round" opacity=".58"/>
-                <circle cx="37%" cy="52%" r="2.8" fill="none" stroke="#D4AF37" stroke-width="1.1" opacity=".8"/><circle cx="37%" cy="52%" r="1.1" fill="#D4AF37"/>
-                <line x1="14%" y1="64.5%" x2="39%" y2="65%" stroke="#D4AF37" stroke-width=".85" stroke-dasharray="5 3.5" stroke-linecap="round" opacity=".58"/>
-                <circle cx="39%" cy="65%" r="2.8" fill="none" stroke="#D4AF37" stroke-width="1.1" opacity=".8"/><circle cx="39%" cy="65%" r="1.1" fill="#D4AF37"/>
-                <line x1="86%" y1="24.5%" x2="62.5%" y2="27%" stroke="#C8A87A" stroke-width=".85" stroke-dasharray="5 3.5" stroke-linecap="round" opacity=".5"/>
-                <circle cx="62.5%" cy="27%" r="2.8" fill="none" stroke="#C8A87A" stroke-width="1.1" opacity=".72"/><circle cx="62.5%" cy="27%" r="1.1" fill="#C8A87A" opacity=".8"/>
-                <line x1="86%" y1="38.5%" x2="61.5%" y2="38%" stroke="#C8A87A" stroke-width=".85" stroke-dasharray="5 3.5" stroke-linecap="round" opacity=".5"/>
-                <circle cx="61.5%" cy="38%" r="2.8" fill="none" stroke="#C8A87A" stroke-width="1.1" opacity=".72"/><circle cx="61.5%" cy="38%" r="1.1" fill="#C8A87A" opacity=".8"/>
-                <line x1="86%" y1="53.5%" x2="62.5%" y2="53%" stroke="#C8A87A" stroke-width=".85" stroke-dasharray="5 3.5" stroke-linecap="round" opacity=".5"/>
-                <circle cx="62.5%" cy="53%" r="2.8" fill="none" stroke="#C8A87A" stroke-width="1.1" opacity=".72"/><circle cx="62.5%" cy="53%" r="1.1" fill="#C8A87A" opacity=".8"/>
-                <line x1="86%" y1="66.5%" x2="61.5%" y2="66.5%" stroke="#C8A87A" stroke-width=".85" stroke-dasharray="5 3.5" stroke-linecap="round" opacity=".5"/>
-                <circle cx="61.5%" cy="66.5%" r="2.8" fill="none" stroke="#C8A87A" stroke-width="1.1" opacity=".72"/><circle cx="61.5%" cy="66.5%" r="1.1" fill="#C8A87A" opacity=".8"/>
+
+              <svg style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:8;">
+                <line x1="15%" y1="19.5%" x2="37%" y2="27%" stroke="#5C2E10" stroke-width="1" stroke-dasharray="5 4" stroke-linecap="round" opacity=".45"/>
+                <circle cx="37%" cy="27%" r="3" fill="none" stroke="#5C2E10" stroke-width="1.2" opacity=".65"/><circle cx="37%" cy="27%" r="1.3" fill="#A06B2A"/>
+                <line x1="15%" y1="34.5%" x2="38%" y2="38%" stroke="#5C2E10" stroke-width="1" stroke-dasharray="5 4" stroke-linecap="round" opacity=".45"/>
+                <circle cx="38%" cy="38%" r="3" fill="none" stroke="#5C2E10" stroke-width="1.2" opacity=".65"/><circle cx="38%" cy="38%" r="1.3" fill="#A06B2A"/>
+                <line x1="15%" y1="49.5%" x2="37.5%" y2="52%" stroke="#5C2E10" stroke-width="1" stroke-dasharray="5 4" stroke-linecap="round" opacity=".45"/>
+                <circle cx="37.5%" cy="52%" r="3" fill="none" stroke="#5C2E10" stroke-width="1.2" opacity=".65"/><circle cx="37.5%" cy="52%" r="1.3" fill="#A06B2A"/>
+                <line x1="15%" y1="64.5%" x2="39%" y2="65.5%" stroke="#5C2E10" stroke-width="1" stroke-dasharray="5 4" stroke-linecap="round" opacity=".45"/>
+                <circle cx="39%" cy="65.5%" r="3" fill="none" stroke="#5C2E10" stroke-width="1.2" opacity=".65"/><circle cx="39%" cy="65.5%" r="1.3" fill="#A06B2A"/>
+                <line x1="85%" y1="21.5%" x2="62%" y2="27%" stroke="#5C2E10" stroke-width="1" stroke-dasharray="5 4" stroke-linecap="round" opacity=".45"/>
+                <circle cx="62%" cy="27%" r="3" fill="none" stroke="#5C2E10" stroke-width="1.2" opacity=".65"/><circle cx="62%" cy="27%" r="1.3" fill="#A06B2A"/>
+                <line x1="85%" y1="36.5%" x2="61.5%" y2="38.5%" stroke="#5C2E10" stroke-width="1" stroke-dasharray="5 4" stroke-linecap="round" opacity=".45"/>
+                <circle cx="61.5%" cy="38.5%" r="3" fill="none" stroke="#5C2E10" stroke-width="1.2" opacity=".65"/><circle cx="61.5%" cy="38.5%" r="1.3" fill="#A06B2A"/>
+                <line x1="85%" y1="51.5%" x2="62.5%" y2="53%" stroke="#5C2E10" stroke-width="1" stroke-dasharray="5 4" stroke-linecap="round" opacity=".45"/>
+                <circle cx="62.5%" cy="53%" r="3" fill="none" stroke="#5C2E10" stroke-width="1.2" opacity=".65"/><circle cx="62.5%" cy="53%" r="1.3" fill="#A06B2A"/>
+                <line x1="85%" y1="66.5%" x2="61%" y2="66.5%" stroke="#5C2E10" stroke-width="1" stroke-dasharray="5 4" stroke-linecap="round" opacity=".45"/>
+                <circle cx="61%" cy="66.5%" r="3" fill="none" stroke="#5C2E10" stroke-width="1.2" opacity=".65"/><circle cx="61%" cy="66.5%" r="1.3" fill="#A06B2A"/>
               </svg>
-              <div style="position:absolute;bottom:20px;left:50%;transform:translateX(-50%);
-                font-size:8px;letter-spacing:.26em;color:#5A2218;text-transform:uppercase;z-index:10;white-space:nowrap;">02 — THE INTERNAL CANVAS</div>
+              <div style="position:absolute;bottom:18px;left:50%;transform:translateX(-50%);
+                font-size:8.5px;letter-spacing:.24em;color:#5C2E10;text-transform:uppercase;
+                z-index:10;white-space:nowrap;font-family:Georgia;font-style:italic;">02 — CANVAS CUTAWAY VIEW</div>
             </div>
 
-            <!-- ═══════════════════════════════════════════ -->
-            <!-- FRAME 3 — PRECISION FIT                    -->
-            <!-- ═══════════════════════════════════════════ -->
-            <div style="width:25%;flex-shrink:0;height:100%;position:relative;">
-              <div style="position:absolute;left:22px;top:21%;z-index:10;width:172px;text-align:right;">
-                <div style="font-size:8px;letter-spacing:.15em;color:#D4AF37;text-transform:uppercase;line-height:1.6;">Neckline Fit</div>
-                <div style="font-size:9.5px;color:#6A6054;font-style:italic;font-family:Georgia;">Custom collar height set</div>
+            <!-- ════════════════════════════════════════════════════════ -->
+            <!-- FRAME 3 — NAVY PRECISION SUIT   [GOLD/NAVY THEME]       -->
+            <!-- ════════════════════════════════════════════════════════ -->
+            <div style="width:25%;flex-shrink:0;height:100%;position:relative;display:flex;align-items:center;justify-content:center;">
+
+              <img src="assets/frame_3_measure.png" alt="Navy Precision Fit Suit"
+                style="height:72%;max-height:500px;object-fit:contain;position:relative;z-index:5;
+                filter:drop-shadow(0 18px 36px rgba(0,0,0,.22));">
+
+              <!-- LEFT BOXES (navy #162840, gold #B8922A) -->
+              <div style="position:absolute;left:14px;top:17%;z-index:10;width:200px;
+                background:#fff;border:1.5px solid #162840;border-left:4px solid #B8922A;
+                border-radius:8px;padding:8px 12px;box-shadow:0 3px 16px rgba(0,0,0,.1);">
+                <div style="font-size:8px;letter-spacing:.15em;color:#162840;text-transform:uppercase;font-weight:700;margin-bottom:2px;">Neckline Fit</div>
+                <div style="font-size:9px;color:#6A5E52;font-style:italic;font-family:Georgia;">Custom collar height set</div>
               </div>
-              <div style="position:absolute;left:22px;top:34%;z-index:10;width:172px;text-align:right;">
-                <div style="font-size:8px;letter-spacing:.15em;color:#D4AF37;text-transform:uppercase;line-height:1.6;">Shoulder Pitch</div>
-                <div style="font-size:9.5px;color:#6A6054;font-style:italic;font-family:Georgia;">35-point posture mapping</div>
+              <div style="position:absolute;left:14px;top:32%;z-index:10;width:200px;
+                background:#fff;border:1.5px solid #162840;border-left:4px solid #B8922A;
+                border-radius:8px;padding:8px 12px;box-shadow:0 3px 16px rgba(0,0,0,.1);">
+                <div style="font-size:8px;letter-spacing:.15em;color:#162840;text-transform:uppercase;font-weight:700;margin-bottom:2px;">Shoulder Pitch</div>
+                <div style="font-size:9px;color:#6A5E52;font-style:italic;font-family:Georgia;">35-point posture mapping</div>
               </div>
-              <div style="position:absolute;left:22px;top:49%;z-index:10;width:172px;text-align:right;">
-                <div style="font-size:8px;letter-spacing:.15em;color:#D4AF37;text-transform:uppercase;line-height:1.6;">Chest Span</div>
-                <div style="font-size:9.5px;color:#6A6054;font-style:italic;font-family:Georgia;">3D body scan calibrated</div>
+              <div style="position:absolute;left:14px;top:47%;z-index:10;width:200px;
+                background:#fff;border:1.5px solid #162840;border-left:4px solid #B8922A;
+                border-radius:8px;padding:8px 12px;box-shadow:0 3px 16px rgba(0,0,0,.1);">
+                <div style="font-size:8px;letter-spacing:.15em;color:#162840;text-transform:uppercase;font-weight:700;margin-bottom:2px;">Chest Span</div>
+                <div style="font-size:9px;color:#6A5E52;font-style:italic;font-family:Georgia;">3D body scan calibrated</div>
               </div>
-              <div style="position:absolute;left:22px;top:63%;z-index:10;width:172px;text-align:right;">
-                <div style="font-size:8px;letter-spacing:.15em;color:#D4AF37;text-transform:uppercase;line-height:1.6;">Armhole Depth</div>
-                <div style="font-size:9.5px;color:#6A6054;font-style:italic;font-family:Georgia;">Mobility-first high armhole</div>
+              <div style="position:absolute;left:14px;top:62%;z-index:10;width:200px;
+                background:#fff;border:1.5px solid #162840;border-left:4px solid #B8922A;
+                border-radius:8px;padding:8px 12px;box-shadow:0 3px 16px rgba(0,0,0,.1);">
+                <div style="font-size:8px;letter-spacing:.15em;color:#162840;text-transform:uppercase;font-weight:700;margin-bottom:2px;">Armhole Depth</div>
+                <div style="font-size:9px;color:#6A5E52;font-style:italic;font-family:Georgia;">Mobility-first high armhole</div>
               </div>
-              <div style="position:absolute;right:22px;top:23%;z-index:10;width:172px;text-align:left;">
-                <div style="font-size:8px;letter-spacing:.15em;color:#C8A87A;text-transform:uppercase;line-height:1.6;">Sleeve Angle</div>
-                <div style="font-size:9.5px;color:#6A6054;font-style:italic;font-family:Georgia;">Individual arm pitch set</div>
+
+              <!-- RIGHT BOXES -->
+              <div style="position:absolute;right:14px;top:19%;z-index:10;width:200px;
+                background:#fff;border:1.5px solid #162840;border-right:4px solid #B8922A;
+                border-radius:8px;padding:8px 12px;box-shadow:0 3px 16px rgba(0,0,0,.1);">
+                <div style="font-size:8px;letter-spacing:.15em;color:#162840;text-transform:uppercase;font-weight:700;margin-bottom:2px;">Sleeve Angle</div>
+                <div style="font-size:9px;color:#6A5E52;font-style:italic;font-family:Georgia;">Individual arm pitch set</div>
               </div>
-              <div style="position:absolute;right:22px;top:37%;z-index:10;width:172px;text-align:left;">
-                <div style="font-size:8px;letter-spacing:.15em;color:#C8A87A;text-transform:uppercase;line-height:1.6;">Waist Suppression</div>
-                <div style="font-size:9.5px;color:#6A6054;font-style:italic;font-family:Georgia;">Contour body-mapped seam</div>
+              <div style="position:absolute;right:14px;top:34%;z-index:10;width:200px;
+                background:#fff;border:1.5px solid #162840;border-right:4px solid #B8922A;
+                border-radius:8px;padding:8px 12px;box-shadow:0 3px 16px rgba(0,0,0,.1);">
+                <div style="font-size:8px;letter-spacing:.15em;color:#162840;text-transform:uppercase;font-weight:700;margin-bottom:2px;">Waist Suppression</div>
+                <div style="font-size:9px;color:#6A5E52;font-style:italic;font-family:Georgia;">Contour body-mapped seam</div>
               </div>
-              <div style="position:absolute;right:22px;top:52%;z-index:10;width:172px;text-align:left;">
-                <div style="font-size:8px;letter-spacing:.15em;color:#C8A87A;text-transform:uppercase;line-height:1.6;">Hip Balance</div>
-                <div style="font-size:9.5px;color:#6A6054;font-style:italic;font-family:Georgia;">Full circumference scan</div>
+              <div style="position:absolute;right:14px;top:49%;z-index:10;width:200px;
+                background:#fff;border:1.5px solid #162840;border-right:4px solid #B8922A;
+                border-radius:8px;padding:8px 12px;box-shadow:0 3px 16px rgba(0,0,0,.1);">
+                <div style="font-size:8px;letter-spacing:.15em;color:#162840;text-transform:uppercase;font-weight:700;margin-bottom:2px;">Hip Balance</div>
+                <div style="font-size:9px;color:#6A5E52;font-style:italic;font-family:Georgia;">Full circumference scan</div>
               </div>
-              <div style="position:absolute;right:22px;top:65%;z-index:10;width:172px;text-align:left;">
-                <div style="font-size:8px;letter-spacing:.15em;color:#C8A87A;text-transform:uppercase;line-height:1.6;">Jacket Length</div>
-                <div style="font-size:9.5px;color:#6A6054;font-style:italic;font-family:Georgia;">Knuckle-to-hem ratio rule</div>
+              <div style="position:absolute;right:14px;top:64%;z-index:10;width:200px;
+                background:#fff;border:1.5px solid #162840;border-right:4px solid #B8922A;
+                border-radius:8px;padding:8px 12px;box-shadow:0 3px 16px rgba(0,0,0,.1);">
+                <div style="font-size:8px;letter-spacing:.15em;color:#162840;text-transform:uppercase;font-weight:700;margin-bottom:2px;">Jacket Length</div>
+                <div style="font-size:9px;color:#6A5E52;font-style:italic;font-family:Georgia;">Knuckle-to-hem ratio rule</div>
               </div>
-              <svg style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:9;">
-                <line x1="14%" y1="22.5%" x2="36.5%" y2="27%" stroke="#D4AF37" stroke-width=".85" stroke-dasharray="5 3.5" stroke-linecap="round" opacity=".58"/>
-                <circle cx="36.5%" cy="27%" r="2.8" fill="none" stroke="#D4AF37" stroke-width="1.1" opacity=".8"/><circle cx="36.5%" cy="27%" r="1.1" fill="#D4AF37"/>
-                <line x1="14%" y1="35.5%" x2="37%" y2="34%" stroke="#D4AF37" stroke-width=".85" stroke-dasharray="5 3.5" stroke-linecap="round" opacity=".58"/>
-                <circle cx="37%" cy="34%" r="2.8" fill="none" stroke="#D4AF37" stroke-width="1.1" opacity=".8"/><circle cx="37%" cy="34%" r="1.1" fill="#D4AF37"/>
-                <line x1="14%" y1="50.5%" x2="38%" y2="47%" stroke="#D4AF37" stroke-width=".85" stroke-dasharray="5 3.5" stroke-linecap="round" opacity=".58"/>
-                <circle cx="38%" cy="47%" r="2.8" fill="none" stroke="#D4AF37" stroke-width="1.1" opacity=".8"/><circle cx="38%" cy="47%" r="1.1" fill="#D4AF37"/>
-                <line x1="14%" y1="64.5%" x2="38.5%" y2="57%" stroke="#D4AF37" stroke-width=".85" stroke-dasharray="5 3.5" stroke-linecap="round" opacity=".58"/>
-                <circle cx="38.5%" cy="57%" r="2.8" fill="none" stroke="#D4AF37" stroke-width="1.1" opacity=".8"/><circle cx="38.5%" cy="57%" r="1.1" fill="#D4AF37"/>
-                <line x1="86%" y1="24.5%" x2="62.5%" y2="27%" stroke="#C8A87A" stroke-width=".85" stroke-dasharray="5 3.5" stroke-linecap="round" opacity=".5"/>
-                <circle cx="62.5%" cy="27%" r="2.8" fill="none" stroke="#C8A87A" stroke-width="1.1" opacity=".72"/><circle cx="62.5%" cy="27%" r="1.1" fill="#C8A87A" opacity=".8"/>
-                <line x1="86%" y1="38.5%" x2="62%" y2="38%" stroke="#C8A87A" stroke-width=".85" stroke-dasharray="5 3.5" stroke-linecap="round" opacity=".5"/>
-                <circle cx="62%" cy="38%" r="2.8" fill="none" stroke="#C8A87A" stroke-width="1.1" opacity=".72"/><circle cx="62%" cy="38%" r="1.1" fill="#C8A87A" opacity=".8"/>
-                <line x1="86%" y1="53.5%" x2="61.5%" y2="52%" stroke="#C8A87A" stroke-width=".85" stroke-dasharray="5 3.5" stroke-linecap="round" opacity=".5"/>
-                <circle cx="61.5%" cy="52%" r="2.8" fill="none" stroke="#C8A87A" stroke-width="1.1" opacity=".72"/><circle cx="61.5%" cy="52%" r="1.1" fill="#C8A87A" opacity=".8"/>
-                <line x1="86%" y1="66.5%" x2="61.5%" y2="66.5%" stroke="#C8A87A" stroke-width=".85" stroke-dasharray="5 3.5" stroke-linecap="round" opacity=".5"/>
-                <circle cx="61.5%" cy="66.5%" r="2.8" fill="none" stroke="#C8A87A" stroke-width="1.1" opacity=".72"/><circle cx="61.5%" cy="66.5%" r="1.1" fill="#C8A87A" opacity=".8"/>
+
+              <svg style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:8;">
+                <line x1="15%" y1="19.5%" x2="37%" y2="27%" stroke="#162840" stroke-width="1" stroke-dasharray="5 4" stroke-linecap="round" opacity=".45"/>
+                <circle cx="37%" cy="27%" r="3" fill="none" stroke="#162840" stroke-width="1.2" opacity=".65"/><circle cx="37%" cy="27%" r="1.3" fill="#B8922A"/>
+                <line x1="15%" y1="34.5%" x2="37.5%" y2="34%" stroke="#162840" stroke-width="1" stroke-dasharray="5 4" stroke-linecap="round" opacity=".45"/>
+                <circle cx="37.5%" cy="34%" r="3" fill="none" stroke="#162840" stroke-width="1.2" opacity=".65"/><circle cx="37.5%" cy="34%" r="1.3" fill="#B8922A"/>
+                <line x1="15%" y1="49.5%" x2="38%" y2="47%" stroke="#162840" stroke-width="1" stroke-dasharray="5 4" stroke-linecap="round" opacity=".45"/>
+                <circle cx="38%" cy="47%" r="3" fill="none" stroke="#162840" stroke-width="1.2" opacity=".65"/><circle cx="38%" cy="47%" r="1.3" fill="#B8922A"/>
+                <line x1="15%" y1="64.5%" x2="38.5%" y2="57%" stroke="#162840" stroke-width="1" stroke-dasharray="5 4" stroke-linecap="round" opacity=".45"/>
+                <circle cx="38.5%" cy="57%" r="3" fill="none" stroke="#162840" stroke-width="1.2" opacity=".65"/><circle cx="38.5%" cy="57%" r="1.3" fill="#B8922A"/>
+                <line x1="85%" y1="21.5%" x2="62%" y2="27%" stroke="#162840" stroke-width="1" stroke-dasharray="5 4" stroke-linecap="round" opacity=".45"/>
+                <circle cx="62%" cy="27%" r="3" fill="none" stroke="#162840" stroke-width="1.2" opacity=".65"/><circle cx="62%" cy="27%" r="1.3" fill="#B8922A"/>
+                <line x1="85%" y1="36.5%" x2="62%" y2="38%" stroke="#162840" stroke-width="1" stroke-dasharray="5 4" stroke-linecap="round" opacity=".45"/>
+                <circle cx="62%" cy="38%" r="3" fill="none" stroke="#162840" stroke-width="1.2" opacity=".65"/><circle cx="62%" cy="38%" r="1.3" fill="#B8922A"/>
+                <line x1="85%" y1="51.5%" x2="61.5%" y2="52%" stroke="#162840" stroke-width="1" stroke-dasharray="5 4" stroke-linecap="round" opacity=".45"/>
+                <circle cx="61.5%" cy="52%" r="3" fill="none" stroke="#162840" stroke-width="1.2" opacity=".65"/><circle cx="61.5%" cy="52%" r="1.3" fill="#B8922A"/>
+                <line x1="85%" y1="66.5%" x2="61.5%" y2="67%" stroke="#162840" stroke-width="1" stroke-dasharray="5 4" stroke-linecap="round" opacity=".45"/>
+                <circle cx="61.5%" cy="67%" r="3" fill="none" stroke="#162840" stroke-width="1.2" opacity=".65"/><circle cx="61.5%" cy="67%" r="1.3" fill="#B8922A"/>
               </svg>
-              <div style="position:absolute;bottom:20px;left:50%;transform:translateX(-50%);
-                font-size:8px;letter-spacing:.26em;color:#5A2218;text-transform:uppercase;z-index:10;white-space:nowrap;">03 — PRECISION FIT</div>
+              <div style="position:absolute;bottom:18px;left:50%;transform:translateX(-50%);
+                font-size:8.5px;letter-spacing:.24em;color:#162840;text-transform:uppercase;
+                z-index:10;white-space:nowrap;font-family:Georgia;font-style:italic;">03 — PRECISION FIT NAVY</div>
             </div>
 
-            <!-- ═══════════════════════════════════════════ -->
-            <!-- FRAME 4 — THE MASTERPIECE                  -->
-            <!-- ═══════════════════════════════════════════ -->
-            <div style="width:25%;flex-shrink:0;height:100%;position:relative;">
-              <div style="position:absolute;left:22px;top:21%;z-index:10;width:172px;text-align:right;">
-                <div style="font-size:8px;letter-spacing:.15em;color:#D4AF37;text-transform:uppercase;line-height:1.6;">Silk Satin Lapel</div>
-                <div style="font-size:9.5px;color:#6A6054;font-style:italic;font-family:Georgia;">Pure Lyon-woven silk satin</div>
+            <!-- ════════════════════════════════════════════════════════ -->
+            <!-- FRAME 4 — ROYAL VELVET MASTERPIECE  [GOLD/ROYAL THEME]  -->
+            <!-- ════════════════════════════════════════════════════════ -->
+            <div style="width:25%;flex-shrink:0;height:100%;position:relative;display:flex;align-items:center;justify-content:center;">
+
+              <img src="assets/frame_4_masterpiece.png" alt="Royal Velvet Masterpiece"
+                style="height:72%;max-height:500px;object-fit:contain;position:relative;z-index:5;
+                filter:drop-shadow(0 18px 36px rgba(0,0,0,.22));">
+
+              <!-- LEFT BOXES (royal #2A1840, gold #C9A030) -->
+              <div style="position:absolute;left:14px;top:17%;z-index:10;width:200px;
+                background:#fff;border:1.5px solid #2A1840;border-left:4px solid #C9A030;
+                border-radius:8px;padding:8px 12px;box-shadow:0 3px 16px rgba(0,0,0,.1);">
+                <div style="font-size:8px;letter-spacing:.15em;color:#2A1840;text-transform:uppercase;font-weight:700;margin-bottom:2px;">Silk Satin Lapel</div>
+                <div style="font-size:9px;color:#6A5E52;font-style:italic;font-family:Georgia;">Pure Lyon-woven silk satin</div>
               </div>
-              <div style="position:absolute;left:22px;top:34%;z-index:10;width:172px;text-align:right;">
-                <div style="font-size:8px;letter-spacing:.15em;color:#D4AF37;text-transform:uppercase;line-height:1.6;">Atelier Monogram</div>
-                <div style="font-size:9.5px;color:#6A6054;font-style:italic;font-family:Georgia;">Hand-embroidered initials</div>
+              <div style="position:absolute;left:14px;top:32%;z-index:10;width:200px;
+                background:#fff;border:1.5px solid #2A1840;border-left:4px solid #C9A030;
+                border-radius:8px;padding:8px 12px;box-shadow:0 3px 16px rgba(0,0,0,.1);">
+                <div style="font-size:8px;letter-spacing:.15em;color:#2A1840;text-transform:uppercase;font-weight:700;margin-bottom:2px;">Atelier Monogram</div>
+                <div style="font-size:9px;color:#6A5E52;font-style:italic;font-family:Georgia;">Hand-embroidered initials</div>
               </div>
-              <div style="position:absolute;left:22px;top:49%;z-index:10;width:172px;text-align:right;">
-                <div style="font-size:8px;letter-spacing:.15em;color:#D4AF37;text-transform:uppercase;line-height:1.6;">Brocade Lining</div>
-                <div style="font-size:9.5px;color:#6A6054;font-style:italic;font-family:Georgia;">Custom jacquard body print</div>
+              <div style="position:absolute;left:14px;top:47%;z-index:10;width:200px;
+                background:#fff;border:1.5px solid #2A1840;border-left:4px solid #C9A030;
+                border-radius:8px;padding:8px 12px;box-shadow:0 3px 16px rgba(0,0,0,.1);">
+                <div style="font-size:8px;letter-spacing:.15em;color:#2A1840;text-transform:uppercase;font-weight:700;margin-bottom:2px;">Brocade Lining</div>
+                <div style="font-size:9px;color:#6A5E52;font-style:italic;font-family:Georgia;">Custom jacquard body print</div>
               </div>
-              <div style="position:absolute;left:22px;top:63%;z-index:10;width:172px;text-align:right;">
-                <div style="font-size:8px;letter-spacing:.15em;color:#D4AF37;text-transform:uppercase;line-height:1.6;">Certificate Seal</div>
-                <div style="font-size:9.5px;color:#6A6054;font-style:italic;font-family:Georgia;">Numbered craftsman tag</div>
+              <div style="position:absolute;left:14px;top:62%;z-index:10;width:200px;
+                background:#fff;border:1.5px solid #2A1840;border-left:4px solid #C9A030;
+                border-radius:8px;padding:8px 12px;box-shadow:0 3px 16px rgba(0,0,0,.1);">
+                <div style="font-size:8px;letter-spacing:.15em;color:#2A1840;text-transform:uppercase;font-weight:700;margin-bottom:2px;">Certificate Seal</div>
+                <div style="font-size:9px;color:#6A5E52;font-style:italic;font-family:Georgia;">Numbered craftsman tag</div>
               </div>
-              <div style="position:absolute;right:22px;top:23%;z-index:10;width:172px;text-align:left;">
-                <div style="font-size:8px;letter-spacing:.15em;color:#C8A87A;text-transform:uppercase;line-height:1.6;">Horn Buttons</div>
-                <div style="font-size:9.5px;color:#6A6054;font-style:italic;font-family:Georgia;">Natural polished buffalo horn</div>
+
+              <!-- RIGHT BOXES -->
+              <div style="position:absolute;right:14px;top:19%;z-index:10;width:200px;
+                background:#fff;border:1.5px solid #2A1840;border-right:4px solid #C9A030;
+                border-radius:8px;padding:8px 12px;box-shadow:0 3px 16px rgba(0,0,0,.1);">
+                <div style="font-size:8px;letter-spacing:.15em;color:#2A1840;text-transform:uppercase;font-weight:700;margin-bottom:2px;">Horn Buttons</div>
+                <div style="font-size:9px;color:#6A5E52;font-style:italic;font-family:Georgia;">Natural polished buffalo horn</div>
               </div>
-              <div style="position:absolute;right:22px;top:37%;z-index:10;width:172px;text-align:left;">
-                <div style="font-size:8px;letter-spacing:.15em;color:#C8A87A;text-transform:uppercase;line-height:1.6;">Super 150s Cloth</div>
-                <div style="font-size:9.5px;color:#6A6054;font-style:italic;font-family:Georgia;">Ermenegildo Zegna mill</div>
+              <div style="position:absolute;right:14px;top:34%;z-index:10;width:200px;
+                background:#fff;border:1.5px solid #2A1840;border-right:4px solid #C9A030;
+                border-radius:8px;padding:8px 12px;box-shadow:0 3px 16px rgba(0,0,0,.1);">
+                <div style="font-size:8px;letter-spacing:.15em;color:#2A1840;text-transform:uppercase;font-weight:700;margin-bottom:2px;">Super 150s Cloth</div>
+                <div style="font-size:9px;color:#6A5E52;font-style:italic;font-family:Georgia;">Ermenegildo Zegna mill</div>
               </div>
-              <div style="position:absolute;right:22px;top:52%;z-index:10;width:172px;text-align:left;">
-                <div style="font-size:8px;letter-spacing:.15em;color:#C8A87A;text-transform:uppercase;line-height:1.6;">Taped Seams</div>
-                <div style="font-size:9.5px;color:#6A6054;font-style:italic;font-family:Georgia;">Reinforced canvas stay-tape</div>
+              <div style="position:absolute;right:14px;top:49%;z-index:10;width:200px;
+                background:#fff;border:1.5px solid #2A1840;border-right:4px solid #C9A030;
+                border-radius:8px;padding:8px 12px;box-shadow:0 3px 16px rgba(0,0,0,.1);">
+                <div style="font-size:8px;letter-spacing:.15em;color:#2A1840;text-transform:uppercase;font-weight:700;margin-bottom:2px;">Taped Seams</div>
+                <div style="font-size:9px;color:#6A5E52;font-style:italic;font-family:Georgia;">Reinforced canvas stay-tape</div>
               </div>
-              <div style="position:absolute;right:22px;top:65%;z-index:10;width:172px;text-align:left;">
-                <div style="font-size:8px;letter-spacing:.15em;color:#C8A87A;text-transform:uppercase;line-height:1.6;">Master Signature</div>
-                <div style="font-size:9.5px;color:#6A6054;font-style:italic;font-family:Georgia;">Head tailor personal stamp</div>
+              <div style="position:absolute;right:14px;top:64%;z-index:10;width:200px;
+                background:#fff;border:1.5px solid #2A1840;border-right:4px solid #C9A030;
+                border-radius:8px;padding:8px 12px;box-shadow:0 3px 16px rgba(0,0,0,.1);">
+                <div style="font-size:8px;letter-spacing:.15em;color:#2A1840;text-transform:uppercase;font-weight:700;margin-bottom:2px;">Master Signature</div>
+                <div style="font-size:9px;color:#6A5E52;font-style:italic;font-family:Georgia;">Head tailor personal stamp</div>
               </div>
-              <svg style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:9;">
-                <line x1="14%" y1="22.5%" x2="36.5%" y2="28%" stroke="#D4AF37" stroke-width=".85" stroke-dasharray="5 3.5" stroke-linecap="round" opacity=".58"/>
-                <circle cx="36.5%" cy="28%" r="2.8" fill="none" stroke="#D4AF37" stroke-width="1.1" opacity=".8"/><circle cx="36.5%" cy="28%" r="1.1" fill="#D4AF37"/>
-                <line x1="14%" y1="35.5%" x2="38%" y2="40%" stroke="#D4AF37" stroke-width=".85" stroke-dasharray="5 3.5" stroke-linecap="round" opacity=".58"/>
-                <circle cx="38%" cy="40%" r="2.8" fill="none" stroke="#D4AF37" stroke-width="1.1" opacity=".8"/><circle cx="38%" cy="40%" r="1.1" fill="#D4AF37"/>
-                <line x1="14%" y1="50.5%" x2="38%" y2="52%" stroke="#D4AF37" stroke-width=".85" stroke-dasharray="5 3.5" stroke-linecap="round" opacity=".58"/>
-                <circle cx="38%" cy="52%" r="2.8" fill="none" stroke="#D4AF37" stroke-width="1.1" opacity=".8"/><circle cx="38%" cy="52%" r="1.1" fill="#D4AF37"/>
-                <line x1="14%" y1="64.5%" x2="38%" y2="67%" stroke="#D4AF37" stroke-width=".85" stroke-dasharray="5 3.5" stroke-linecap="round" opacity=".58"/>
-                <circle cx="38%" cy="67%" r="2.8" fill="none" stroke="#D4AF37" stroke-width="1.1" opacity=".8"/><circle cx="38%" cy="67%" r="1.1" fill="#D4AF37"/>
-                <line x1="86%" y1="24.5%" x2="62.5%" y2="28%" stroke="#C8A87A" stroke-width=".85" stroke-dasharray="5 3.5" stroke-linecap="round" opacity=".5"/>
-                <circle cx="62.5%" cy="28%" r="2.8" fill="none" stroke="#C8A87A" stroke-width="1.1" opacity=".72"/><circle cx="62.5%" cy="28%" r="1.1" fill="#C8A87A" opacity=".8"/>
-                <line x1="86%" y1="38.5%" x2="61.5%" y2="38.5%" stroke="#C8A87A" stroke-width=".85" stroke-dasharray="5 3.5" stroke-linecap="round" opacity=".5"/>
-                <circle cx="61.5%" cy="38.5%" r="2.8" fill="none" stroke="#C8A87A" stroke-width="1.1" opacity=".72"/><circle cx="61.5%" cy="38.5%" r="1.1" fill="#C8A87A" opacity=".8"/>
-                <line x1="86%" y1="53.5%" x2="62.5%" y2="53%" stroke="#C8A87A" stroke-width=".85" stroke-dasharray="5 3.5" stroke-linecap="round" opacity=".5"/>
-                <circle cx="62.5%" cy="53%" r="2.8" fill="none" stroke="#C8A87A" stroke-width="1.1" opacity=".72"/><circle cx="62.5%" cy="53%" r="1.1" fill="#C8A87A" opacity=".8"/>
-                <line x1="86%" y1="66.5%" x2="61.5%" y2="66.5%" stroke="#C8A87A" stroke-width=".85" stroke-dasharray="5 3.5" stroke-linecap="round" opacity=".5"/>
-                <circle cx="61.5%" cy="66.5%" r="2.8" fill="none" stroke="#C8A87A" stroke-width="1.1" opacity=".72"/><circle cx="61.5%" cy="66.5%" r="1.1" fill="#C8A87A" opacity=".8"/>
+
+              <svg style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:8;">
+                <line x1="15%" y1="19.5%" x2="37%" y2="28%" stroke="#2A1840" stroke-width="1" stroke-dasharray="5 4" stroke-linecap="round" opacity=".45"/>
+                <circle cx="37%" cy="28%" r="3" fill="none" stroke="#2A1840" stroke-width="1.2" opacity=".65"/><circle cx="37%" cy="28%" r="1.3" fill="#C9A030"/>
+                <line x1="15%" y1="34.5%" x2="38%" y2="40%" stroke="#2A1840" stroke-width="1" stroke-dasharray="5 4" stroke-linecap="round" opacity=".45"/>
+                <circle cx="38%" cy="40%" r="3" fill="none" stroke="#2A1840" stroke-width="1.2" opacity=".65"/><circle cx="38%" cy="40%" r="1.3" fill="#C9A030"/>
+                <line x1="15%" y1="49.5%" x2="38%" y2="52%" stroke="#2A1840" stroke-width="1" stroke-dasharray="5 4" stroke-linecap="round" opacity=".45"/>
+                <circle cx="38%" cy="52%" r="3" fill="none" stroke="#2A1840" stroke-width="1.2" opacity=".65"/><circle cx="38%" cy="52%" r="1.3" fill="#C9A030"/>
+                <line x1="15%" y1="64.5%" x2="38.5%" y2="67%" stroke="#2A1840" stroke-width="1" stroke-dasharray="5 4" stroke-linecap="round" opacity=".45"/>
+                <circle cx="38.5%" cy="67%" r="3" fill="none" stroke="#2A1840" stroke-width="1.2" opacity=".65"/><circle cx="38.5%" cy="67%" r="1.3" fill="#C9A030"/>
+                <line x1="85%" y1="21.5%" x2="62%" y2="28%" stroke="#2A1840" stroke-width="1" stroke-dasharray="5 4" stroke-linecap="round" opacity=".45"/>
+                <circle cx="62%" cy="28%" r="3" fill="none" stroke="#2A1840" stroke-width="1.2" opacity=".65"/><circle cx="62%" cy="28%" r="1.3" fill="#C9A030"/>
+                <line x1="85%" y1="36.5%" x2="61.5%" y2="38.5%" stroke="#2A1840" stroke-width="1" stroke-dasharray="5 4" stroke-linecap="round" opacity=".45"/>
+                <circle cx="61.5%" cy="38.5%" r="3" fill="none" stroke="#2A1840" stroke-width="1.2" opacity=".65"/><circle cx="61.5%" cy="38.5%" r="1.3" fill="#C9A030"/>
+                <line x1="85%" y1="51.5%" x2="62.5%" y2="53.5%" stroke="#2A1840" stroke-width="1" stroke-dasharray="5 4" stroke-linecap="round" opacity=".45"/>
+                <circle cx="62.5%" cy="53.5%" r="3" fill="none" stroke="#2A1840" stroke-width="1.2" opacity=".65"/><circle cx="62.5%" cy="53.5%" r="1.3" fill="#C9A030"/>
+                <line x1="85%" y1="66.5%" x2="61%" y2="66.5%" stroke="#2A1840" stroke-width="1" stroke-dasharray="5 4" stroke-linecap="round" opacity=".45"/>
+                <circle cx="61%" cy="66.5%" r="3" fill="none" stroke="#2A1840" stroke-width="1.2" opacity=".65"/><circle cx="61%" cy="66.5%" r="1.3" fill="#C9A030"/>
               </svg>
-              <div style="position:absolute;bottom:20px;left:50%;transform:translateX(-50%);
-                font-size:8px;letter-spacing:.26em;color:#5A2218;text-transform:uppercase;z-index:10;white-space:nowrap;">04 — THE MASTERPIECE</div>
+              <div style="position:absolute;bottom:18px;left:50%;transform:translateX(-50%);
+                font-size:8.5px;letter-spacing:.24em;color:#2A1840;text-transform:uppercase;
+                z-index:10;white-space:nowrap;font-family:Georgia;font-style:italic;">04 — ROYAL VELVET MASTERPIECE</div>
             </div>
 
           </div><!-- /track -->
         </div><!-- /overflow container -->
 
-        <!-- PROGRESS DOTS (fixed bottom-right) -->
-        <div style="position:absolute;bottom:22px;right:56px;display:flex;gap:7px;z-index:20;align-items:center;">
-          <span class="anat-dot" style="width:22px;height:2px;border-radius:2px;background:#D4AF37;transition:all .35s;"></span>
-          <span class="anat-dot" style="width:7px;height:2px;border-radius:2px;background:rgba(255,255,255,.16);transition:all .35s;"></span>
-          <span class="anat-dot" style="width:7px;height:2px;border-radius:2px;background:rgba(255,255,255,.16);transition:all .35s;"></span>
-          <span class="anat-dot" style="width:7px;height:2px;border-radius:2px;background:rgba(255,255,255,.16);transition:all .35s;"></span>
+        <!-- PROGRESS DOTS -->
+        <div style="position:absolute;bottom:20px;right:52px;display:flex;gap:7px;z-index:20;align-items:center;">
+          <span class="anat-dot" style="width:20px;height:2.5px;border-radius:2px;background:#1C2A42;transition:all .35s;"></span>
+          <span class="anat-dot" style="width:7px;height:2.5px;border-radius:2px;background:rgba(0,0,0,.15);transition:all .35s;"></span>
+          <span class="anat-dot" style="width:7px;height:2.5px;border-radius:2px;background:rgba(0,0,0,.15);transition:all .35s;"></span>
+          <span class="anat-dot" style="width:7px;height:2.5px;border-radius:2px;background:rgba(0,0,0,.15);transition:all .35s;"></span>
         </div>
 
       </div><!-- /sticky pin -->
     </div><!-- /anatomy-wrapper -->
-
-    <!-- THREE.JS BESPOKE SUIT MANNEQUIN -->
-    <script>
-    (function(){
-      var canvas = document.getElementById('suit-canvas');
-      var pin    = document.getElementById('anatomy-pin');
-      if (!canvas || !pin || typeof THREE === 'undefined') return;
-
-      var W=360, H=480;
-      var scene = new THREE.Scene();
-      var cam   = new THREE.PerspectiveCamera(30, W/H, .1, 100);
-      cam.position.set(0, .2, 5.8); cam.lookAt(0, .2, 0);
-
-      var renderer = new THREE.WebGLRenderer({canvas:canvas, alpha:true, antialias:true});
-      renderer.setPixelRatio(Math.min(devicePixelRatio,2));
-      renderer.setSize(W, H, false);
-
-      // Lighting — studio portrait setup
-      scene.add(new THREE.AmbientLight(0xFFEDD8, .38));
-      var kl=new THREE.DirectionalLight(0xFFF8EC,2.1); kl.position.set(2.5,4,5); scene.add(kl);
-      var rl=new THREE.DirectionalLight(0x2040A0,1.1); rl.position.set(-3.5,1,-3); scene.add(rl);
-      var fl=new THREE.DirectionalLight(0xFFD090,.5); fl.position.set(-1,3,3); scene.add(fl);
-
-      // Materials
-      var M={
-        suit:  new THREE.MeshStandardMaterial({color:0x1A1C22,roughness:.82,metalness:.06}),
-        lapel: new THREE.MeshStandardMaterial({color:0x232A36,roughness:.68,metalness:.12}),
-        shirt: new THREE.MeshStandardMaterial({color:0xEBE5D5,roughness:.88,metalness:0}),
-        gold:  new THREE.MeshStandardMaterial({color:0xC8A238,roughness:.1,metalness:.98}),
-        skin:  new THREE.MeshStandardMaterial({color:0xBA8858,roughness:.72,metalness:0}),
-        tie:   new THREE.MeshStandardMaterial({color:0x4A0C0C,roughness:.78,metalness:.06}),
-      };
-
-      var grp = new THREE.Group();
-
-      function m(geo, mat, x,y,z){ var o=new THREE.Mesh(geo,mat); o.position.set(x||0,y||0,z||0); grp.add(o); return o; }
-
-      // Head
-      var hg=new THREE.SphereGeometry(.27,22,22); hg.scale(.88,1.17,.86);
-      m(hg,M.skin,0,2.1,0);
-
-      // Neck
-      m(new THREE.CylinderGeometry(.1,.13,.3,18),M.skin,0,1.76,0);
-
-      // Shirt collar
-      [-1,1].forEach(function(s){
-        var c=new THREE.Mesh(new THREE.BoxGeometry(.14,.24,.05),M.shirt);
-        c.position.set(s*.08,1.63,.22); c.rotation.z=-s*.38; grp.add(c);
-      });
-
-      // Torso
-      m(new THREE.BoxGeometry(1.16,.9,.56),M.suit,0,1.05,0);  // chest
-      m(new THREE.BoxGeometry(.90,.44,.5),M.suit,0,.36,0);    // waist
-      m(new THREE.BoxGeometry(1.02,.54,.52),M.suit,0,-.16,0); // hips
-
-      // Shoulders
-      var sg=new THREE.CylinderGeometry(.22,.17,.52,18); sg.rotateZ(Math.PI/2);
-      m(sg,M.suit,-.74,1.18,0); m(sg,M.suit,.74,1.18,0);
-
-      // Arms
-      var ag=new THREE.CylinderGeometry(.14,.11,1.18,18);
-      var al=new THREE.Mesh(ag,M.suit); al.position.set(-.88,.44,0); al.rotation.z=.17; grp.add(al);
-      var ar=al.clone(); ar.position.set(.88,.44,0); ar.rotation.z=-.17; grp.add(ar);
-
-      // Cuffs
-      var cg=new THREE.CylinderGeometry(.13,.13,.1,18);
-      m(cg,M.shirt,-.9,-.12,0); m(cg,M.shirt,.9,-.12,0);
-
-      // Shirt front
-      m(new THREE.BoxGeometry(.19,.7,.01),M.shirt,0,.9,.286);
-
-      // Tie
-      m(new THREE.BoxGeometry(.09,.5,.01),M.tie,0,.74,.292);
-      m(new THREE.BoxGeometry(.12,.09,.04),M.tie,0,1.01,.289);
-
-      // Lapels (hand-rolled shape)
-      [-1,1].forEach(function(s){
-        var sh=new THREE.Shape();
-        sh.moveTo(0,0); sh.lineTo(s*.29,.41); sh.lineTo(s*.06,.69); sh.lineTo(s*-.23,.35); sh.closePath();
-        var lm=new THREE.Mesh(new THREE.ShapeGeometry(sh),M.lapel);
-        lm.position.set(s*.04,.65,.284); lm.rotation.x=-.11; grp.add(lm);
-      });
-
-      // Buttons
-      [.53,.33,.13].forEach(function(y){ m(new THREE.SphereGeometry(.031,10,10),M.gold,0,y,.31); });
-      m(new THREE.SphereGeometry(.024,8,8),M.gold,-.9,-.09,.14);
-      m(new THREE.SphereGeometry(.024,8,8),M.gold,.9,-.09,.14);
-
-      // Pocket square
-      m(new THREE.BoxGeometry(.12,.08,.01),M.shirt,-.32,1.09,.285);
-
-      scene.add(grp);
-
-      // Cursor tracking
-      var tY=0,tX=0,cY=0,cX=0;
-      pin.addEventListener('mousemove',function(e){
-        var r=pin.getBoundingClientRect();
-        tY=((e.clientX-r.left)/r.width-.5)*.7;
-        tX=((e.clientY-r.top)/r.height-.5)*.2;
-      });
-      pin.addEventListener('mouseleave',function(){ tY=0; tX=0; });
-
-      window.addEventListener('resize',function(){
-        var w=canvas.clientWidth,h=canvas.clientHeight;
-        if(w&&h){cam.aspect=w/h;cam.updateProjectionMatrix();renderer.setSize(w,h,false);}
-      });
-
-      (function loop(){
-        requestAnimationFrame(loop);
-        cY+=(tY-cY)*.07; cX+=(tX-cX)*.07;
-        grp.rotation.y=cY; grp.rotation.x=cX;
-        renderer.render(scene,cam);
-      })();
-    })();
-    </script>
 
     <!-- SCROLL CONTROLLER -->
     <script>
@@ -1660,30 +1624,30 @@
       var numEl  =document.getElementById('anat-num');
       var titleEl=document.getElementById('anat-title');
       var dots   =document.querySelectorAll('.anat-dot');
-      var TITLES =['BESPOKE CONSTRUCTION','THE INTERNAL CANVAS','PRECISION FIT','THE MASTERPIECE'];
+      var FC=['#1C2A42','#5C2E10','#162840','#2A1840'];
+      var TITLES=['BESPOKE CONSTRUCTION','THE INTERNAL CANVAS','PRECISION FIT','THE MASTERPIECE'];
 
       function update(p){
         track.style.transform='translateX('+(-p*75)+'%)';
         var idx=Math.min(3,Math.floor(p*4));
-        if(numEl)    numEl.textContent   =String(idx+1).padStart(2,'0');
-        if(titleEl)  titleEl.textContent =TITLES[idx];
+        if(numEl)   { numEl.textContent=String(idx+1).padStart(2,'0'); numEl.style.color=FC[idx]; }
+        if(titleEl)   titleEl.textContent=TITLES[idx];
         dots.forEach(function(d,i){
-          d.style.width     =i===idx?'22px':'7px';
-          d.style.background=i===idx?'#D4AF37':'rgba(255,255,255,.16)';
+          d.style.width     =i===idx?'20px':'7px';
+          d.style.background=i===idx?FC[idx]:'rgba(0,0,0,.15)';
         });
       }
 
       if(typeof gsap!=='undefined'&&typeof ScrollTrigger!=='undefined'){
         gsap.registerPlugin(ScrollTrigger);
         ScrollTrigger.create({
-          trigger:'#anatomy-wrapper', start:'top top', end:'bottom bottom',
+          trigger:'#anatomy-wrapper',start:'top top',end:'bottom bottom',
           scrub:1,
           onUpdate:function(s){ update(s.progress); }
         });
       }
     })();
     </script>
-
 
 
         <!-- ============================================ -->
