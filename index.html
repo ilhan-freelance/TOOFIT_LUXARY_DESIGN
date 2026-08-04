@@ -38,6 +38,8 @@
     <!-- GSAP for Smooth Reveal & Carousel Interactions -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <!-- Three.js for 3D Interactive Mannequin Head -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 
     <style>
         *, *::before, *::after { box-sizing: border-box; }
@@ -1226,6 +1228,536 @@
         document.readyState==='loading'
             ? document.addEventListener('DOMContentLoaded', init)
             : init();
+    })();
+    </script>
+
+
+
+
+    <!-- ============================================ -->
+    <!-- 5B. BESPOKE CRAFTSMANSHIP ANATOMY (HORIZONTAL PINNED SCROLL & 3D MANNEQUIN HEAD) -->
+    <!-- ============================================ -->
+    <section id="bespoke-anatomy-section" class="relative w-full bg-[#FAF6F0] text-[#231B15] border-y border-[#8B3A2B]/15 min-h-screen">
+        
+        <!-- STICKY VIEWPORT CONTAINER (Pinned during horizontal scroll) -->
+        <div id="anatomy-sticky-viewport" class="relative w-full min-h-screen flex flex-col justify-between py-6 px-4 sm:px-8 md:px-12 overflow-hidden">
+            
+            <!-- SECTION HEADER & CONTROLS -->
+            <div class="relative z-30 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 max-w-[1400px] mx-auto w-full pt-2">
+                <div>
+                    <span class="text-xs font-bold text-[#8B3A2B] uppercase tracking-[0.3em] flex items-center gap-2">
+                        <span class="w-2.5 h-2.5 rounded-full bg-[#8B3A2B] animate-pulse"></span>
+                        BESPOKE TAILORING ANATOMY
+                    </span>
+                    <h2 class="text-2xl sm:text-3xl md:text-4xl font-serif font-black text-[#0F172A] tracking-tight mt-1">
+                        The Architecture of Bespoke Suits
+                    </h2>
+                </div>
+
+                <!-- NAVIGATION CONTROLS & COUNTER -->
+                <div class="flex items-center gap-4 bg-white/90 backdrop-blur-md px-5 py-2 rounded-full border border-[#8B3A2B]/20 shadow-md">
+                    <button id="anatomy-prev-btn" onclick="anatomyPrev()" class="w-9 h-9 rounded-full bg-[#FAF6F0] hover:bg-[#8B3A2B] text-[#8B3A2B] hover:text-white border border-[#8B3A2B]/30 flex items-center justify-center transition-all duration-300 shadow-sm active:scale-95" aria-label="Previous Frame">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+                    </button>
+                    
+                    <div class="flex items-center gap-1.5 font-serif text-sm">
+                        <span id="anatomy-step-num" class="font-bold text-lg text-[#8B3A2B]">01</span>
+                        <span class="text-slate-400">/</span>
+                        <span class="text-slate-500 font-semibold">04</span>
+                        <span id="anatomy-step-title" class="hidden md:inline-block ml-3 text-xs uppercase tracking-widest text-[#0F172A] font-sans font-bold">BESPOKE ANATOMY</span>
+                    </div>
+
+                    <button id="anatomy-next-btn" onclick="anatomyNext()" class="w-9 h-9 rounded-full bg-[#FAF6F0] hover:bg-[#8B3A2B] text-[#8B3A2B] hover:text-white border border-[#8B3A2B]/30 flex items-center justify-center transition-all duration-300 shadow-sm active:scale-95" aria-label="Next Frame">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- 3D CURSOR-FOLLOWING DUMMY MANNEQUIN HEAD OVERLAY -->
+            <div class="absolute inset-0 pointer-events-none z-20 flex justify-center items-center">
+                <div class="relative w-full max-w-[1400px] h-full flex justify-center items-center">
+                    <!-- Positioned at top of mannequin torso -->
+                    <div class="absolute top-[8%] sm:top-[10%] md:top-[11%] w-[160px] h-[170px] sm:w-[190px] sm:h-[200px] pointer-events-none">
+                        <canvas id="mannequin-3d-head" class="w-full h-full"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SLIDING HORIZONTAL TRACK (400% WIDTH, 4 PANELS) -->
+            <div class="relative z-10 w-full flex-1 overflow-hidden my-2 sm:my-4 flex items-center">
+                <div id="anatomy-track" class="flex h-full w-[400%] transition-transform duration-700 ease-out will-change-transform">
+                    
+                    <!-- ── FRAME 1: BESPOKE CRAFTSMANSHIP ANATOMY ── -->
+                    <div class="w-1/4 h-full flex-shrink-0 px-4 sm:px-8 flex items-center justify-center">
+                        <div class="w-full max-w-[1350px] grid grid-cols-1 lg:grid-cols-12 gap-4 md:gap-6 items-center">
+                            
+                            <!-- Left Callouts -->
+                            <div class="lg:col-span-3 space-y-3">
+                                <div class="bg-white/85 backdrop-blur-md p-4 rounded-xl border border-[#8B3A2B]/20 shadow-md hover:border-[#8B3A2B]/50 transition-all duration-300">
+                                    <div class="flex items-center gap-2.5 mb-1">
+                                        <span class="w-6 h-6 rounded-full bg-[#8B3A2B] text-white text-xs font-bold flex items-center justify-center shrink-0">01</span>
+                                        <h4 class="font-serif font-bold text-xs sm:text-sm text-[#0F172A]">NATURAL ROPED SHOULDER</h4>
+                                    </div>
+                                    <p class="text-[11px] sm:text-xs text-slate-600 leading-relaxed">Handset soft shoulder padding creating a natural, elegant fall and soft silhouette.</p>
+                                </div>
+                                <div class="bg-white/85 backdrop-blur-md p-4 rounded-xl border border-[#8B3A2B]/20 shadow-md hover:border-[#8B3A2B]/50 transition-all duration-300">
+                                    <div class="flex items-center gap-2.5 mb-1">
+                                        <span class="w-6 h-6 rounded-full bg-[#8B3A2B] text-white text-xs font-bold flex items-center justify-center shrink-0">02</span>
+                                        <h4 class="font-serif font-bold text-xs sm:text-sm text-[#0F172A]">HAND-SEWN BUTTONS</h4>
+                                    </div>
+                                    <p class="text-[11px] sm:text-xs text-slate-600 leading-relaxed">Durable natural horn buttons meticulously attached with silk thread & shank stems.</p>
+                                </div>
+                                <div class="bg-white/85 backdrop-blur-md p-4 rounded-xl border border-[#8B3A2B]/20 shadow-md hover:border-[#8B3A2B]/50 transition-all duration-300">
+                                    <div class="flex items-center gap-2.5 mb-1">
+                                        <span class="w-6 h-6 rounded-full bg-[#8B3A2B] text-white text-xs font-bold flex items-center justify-center shrink-0">03</span>
+                                        <h4 class="font-serif font-bold text-xs sm:text-sm text-[#0F172A]">INTERIOR PASSEPOIL POCKETS</h4>
+                                    </div>
+                                    <p class="text-[11px] sm:text-xs text-slate-600 leading-relaxed">Multiple functional interior passport & cigar pockets tailored into silk lining.</p>
+                                </div>
+                            </div>
+
+                            <!-- Center Hero Mannequin -->
+                            <div class="lg:col-span-6 flex flex-col items-center justify-center relative">
+                                <div class="relative w-full max-w-[400px] h-[340px] sm:h-[420px] md:h-[480px] flex items-center justify-center pt-8">
+                                    <div class="absolute inset-0 bg-radial from-[#D4AF37]/20 via-[#8B3A2B]/10 to-transparent rounded-full blur-3xl pointer-events-none"></div>
+                                    <img src="assets/frame_1_anatomy.png" alt="Bespoke Suit Mannequin Anatomy" class="h-full object-contain relative z-10 drop-shadow-[0_20px_35px_rgba(0,0,0,0.15)]">
+                                </div>
+                            </div>
+
+                            <!-- Right Callouts -->
+                            <div class="lg:col-span-3 space-y-3">
+                                <div class="bg-white/85 backdrop-blur-md p-4 rounded-xl border border-[#8B3A2B]/20 shadow-md hover:border-[#8B3A2B]/50 transition-all duration-300">
+                                    <div class="flex items-center gap-2.5 mb-1">
+                                        <span class="w-6 h-6 rounded-full bg-[#8B3A2B] text-white text-xs font-bold flex items-center justify-center shrink-0">04</span>
+                                        <h4 class="font-serif font-bold text-xs sm:text-sm text-[#0F172A]">HAND-ROLLED LAPELS</h4>
+                                    </div>
+                                    <p class="text-[11px] sm:text-xs text-slate-600 leading-relaxed">Hand-stitched canvas roll ensuring graceful, permanent lapel curvature.</p>
+                                </div>
+                                <div class="bg-white/85 backdrop-blur-md p-4 rounded-xl border border-[#8B3A2B]/20 shadow-md hover:border-[#8B3A2B]/50 transition-all duration-300">
+                                    <div class="flex items-center gap-2.5 mb-1">
+                                        <span class="w-6 h-6 rounded-full bg-[#8B3A2B] text-white text-xs font-bold flex items-center justify-center shrink-0">05</span>
+                                        <h4 class="font-serif font-bold text-xs sm:text-sm text-[#0F172A]">HAND-PICK STITCHING</h4>
+                                    </div>
+                                    <p class="text-[11px] sm:text-xs text-slate-600 leading-relaxed">Subtle 2mm pick-stitching along suit lapel edges signifying bespoke quality.</p>
+                                </div>
+                                <div class="bg-white/85 backdrop-blur-md p-4 rounded-xl border border-[#8B3A2B]/20 shadow-md hover:border-[#8B3A2B]/50 transition-all duration-300">
+                                    <div class="flex items-center gap-2.5 mb-1">
+                                        <span class="w-6 h-6 rounded-full bg-[#8B3A2B] text-white text-xs font-bold flex items-center justify-center shrink-0">06</span>
+                                        <h4 class="font-serif font-bold text-xs sm:text-sm text-[#0F172A]">SILK-BEMBERG LINING</h4>
+                                    </div>
+                                    <p class="text-[11px] sm:text-xs text-slate-600 leading-relaxed">Breathable, frictionless cupro lining for smooth layering & perspiration control.</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- ── FRAME 2: SUIT CANVAS EXPLAINED (INTERNAL CONSTRUCTION) ── -->
+                    <div class="w-1/4 h-full flex-shrink-0 px-4 sm:px-8 flex items-center justify-center">
+                        <div class="w-full max-w-[1350px] grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+                            
+                            <!-- Left Cutaway Mannequin -->
+                            <div class="lg:col-span-5 flex flex-col items-center justify-center relative">
+                                <div class="relative w-full max-w-[400px] h-[340px] sm:h-[420px] md:h-[480px] flex items-center justify-center pt-8">
+                                    <div class="absolute inset-0 bg-radial from-[#8B3A2B]/15 via-transparent to-transparent rounded-full blur-2xl pointer-events-none"></div>
+                                    <img src="assets/frame_2_canvas.png" alt="Internal Suit Canvas Cutaway" class="h-full object-contain relative z-10 drop-shadow-[0_20px_35px_rgba(0,0,0,0.15)]">
+                                </div>
+                            </div>
+
+                            <!-- Right Canvas Cards -->
+                            <div class="lg:col-span-7 space-y-4">
+                                <div class="text-left mb-1">
+                                    <span class="text-xs font-bold text-[#8B3A2B] uppercase tracking-widest">INTERNAL CONSTRUCTION</span>
+                                    <h3 class="text-xl sm:text-2xl font-serif font-bold text-[#0F172A]">Suit Canvas Comparison</h3>
+                                </div>
+
+                                <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4">
+                                    <!-- Full Canvas -->
+                                    <div class="bg-white p-4 sm:p-5 rounded-2xl border-2 border-[#8B3A2B] shadow-xl relative overflow-hidden">
+                                        <span class="absolute top-0 right-0 bg-[#8B3A2B] text-white text-[9px] font-bold px-2.5 py-0.5 rounded-bl-lg uppercase tracking-wider">Master Grade</span>
+                                        <div class="text-[#8B3A2B] font-serif font-bold text-lg mb-1">01</div>
+                                        <h4 class="font-serif font-bold text-sm text-[#0F172A] mb-2">Full Canvas Suit</h4>
+                                        <ul class="space-y-1.5 text-[11px] text-slate-600">
+                                            <li class="flex items-start gap-1.5"><span class="text-emerald-600 font-bold">✓</span> Horsehair canvas runs entire length</li>
+                                            <li class="flex items-start gap-1.5"><span class="text-emerald-600 font-bold">✓</span> Molds to your body over time</li>
+                                            <li class="flex items-start gap-1.5"><span class="text-emerald-600 font-bold">✓</span> Maximum drape & lifetime durability</li>
+                                        </ul>
+                                    </div>
+
+                                    <!-- Half Canvas -->
+                                    <div class="bg-white p-4 sm:p-5 rounded-2xl border border-slate-200 shadow-md">
+                                        <div class="text-slate-400 font-serif font-bold text-lg mb-1">02</div>
+                                        <h4 class="font-serif font-bold text-sm text-[#0F172A] mb-2">Half Canvas Suit</h4>
+                                        <ul class="space-y-1.5 text-[11px] text-slate-600">
+                                            <li class="flex items-start gap-1.5"><span class="text-emerald-600 font-bold">✓</span> Canvas over chest & lapel area</li>
+                                            <li class="flex items-start gap-1.5"><span class="text-emerald-600 font-bold">✓</span> Balanced structure & comfort</li>
+                                            <li class="flex items-start gap-1.5"><span class="text-emerald-600 font-bold">✓</span> Excellent value & posture support</li>
+                                        </ul>
+                                    </div>
+
+                                    <!-- Fused Suit -->
+                                    <div class="bg-white p-4 sm:p-5 rounded-2xl border border-slate-200 shadow-md">
+                                        <div class="text-slate-400 font-serif font-bold text-lg mb-1">03</div>
+                                        <h4 class="font-serif font-bold text-sm text-[#0F172A] mb-2">Fused Suit</h4>
+                                        <ul class="space-y-1.5 text-[11px] text-slate-600">
+                                            <li class="flex items-start gap-1.5"><span class="text-slate-400">●</span> Fused interlining throughout</li>
+                                            <li class="flex items-start gap-1.5"><span class="text-slate-400">●</span> Lightweight everyday option</li>
+                                            <li class="flex items-start gap-1.5"><span class="text-slate-400">●</span> Budget-friendly entry point</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- ── FRAME 3: PRECISION FIT & MEASUREMENT ANATOMY ── -->
+                    <div class="w-1/4 h-full flex-shrink-0 px-4 sm:px-8 flex items-center justify-center">
+                        <div class="w-full max-w-[1350px] grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+                            
+                            <!-- Left Specs -->
+                            <div class="lg:col-span-4 space-y-3">
+                                <div class="bg-white/85 backdrop-blur-md p-5 rounded-2xl border border-[#8B3A2B]/20 shadow-md">
+                                    <span class="text-xs font-bold text-[#8B3A2B] uppercase tracking-widest block mb-1">3D BODY MATRIX</span>
+                                    <h3 class="text-xl sm:text-2xl font-serif font-bold text-[#0F172A] mb-2">35+ Precision Measurements</h3>
+                                    <p class="text-xs text-slate-600 leading-relaxed">Unlike standard sizing, our master atelier captures shoulder slope, chest drop, back curvature, and arm pitch for a flawless silhouette.</p>
+                                </div>
+                                
+                                <div class="grid grid-cols-2 gap-3">
+                                    <div class="bg-white p-3 rounded-xl border border-slate-200">
+                                        <div class="text-[11px] text-slate-500 font-medium">Posture Calibration</div>
+                                        <div class="text-sm font-bold text-[#8B3A2B] font-serif">Laser Calibrated</div>
+                                    </div>
+                                    <div class="bg-white p-3 rounded-xl border border-slate-200">
+                                        <div class="text-[11px] text-slate-500 font-medium">Inlay Seam Reserve</div>
+                                        <div class="text-sm font-bold text-[#0F172A] font-serif">+2 Inches Built-in</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Center Measurement Mannequin -->
+                            <div class="lg:col-span-4 flex flex-col items-center justify-center relative">
+                                <div class="relative w-full max-w-[400px] h-[340px] sm:h-[420px] md:h-[480px] flex items-center justify-center pt-8">
+                                    <div class="absolute inset-0 bg-radial from-[#D4AF37]/25 via-transparent to-transparent rounded-full blur-2xl pointer-events-none"></div>
+                                    <img src="assets/frame_3_measure.png" alt="Laser Measurement Suit Anatomy" class="h-full object-contain relative z-10 drop-shadow-[0_20px_35px_rgba(0,0,0,0.15)]">
+                                </div>
+                            </div>
+
+                            <!-- Right Specs -->
+                            <div class="lg:col-span-4 space-y-3">
+                                <div class="bg-white/85 backdrop-blur-md p-4 rounded-xl border border-slate-200 shadow-sm">
+                                    <h4 class="font-serif font-bold text-xs sm:text-sm text-[#0F172A] mb-0.5">ARMHOLE & SLEEVE PITCH</h4>
+                                    <p class="text-[11px] text-slate-600">High armhole cut allowing complete 360-degree arm rotation without pulling suit waist.</p>
+                                </div>
+                                <div class="bg-white/85 backdrop-blur-md p-4 rounded-xl border border-slate-200 shadow-sm">
+                                    <h4 class="font-serif font-bold text-xs sm:text-sm text-[#0F172A] mb-0.5">WAIST SUPPRESSION</h4>
+                                    <p class="text-[11px] text-slate-600">Tapered side suppression sculpted to enhance masculine shoulders and waistline ratio.</p>
+                                </div>
+                                <div class="bg-white/85 backdrop-blur-md p-4 rounded-xl border border-slate-200 shadow-sm">
+                                    <h4 class="font-serif font-bold text-xs sm:text-sm text-[#0F172A] mb-0.5">INLAY FABRIC RESERVES</h4>
+                                    <p class="text-[11px] text-slate-600">Built-in interior seam allowances enabling seamless future alterations up to 2 full sizes.</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- ── FRAME 4: THE MASTERPIECE & FINISHING TOUCHES ── -->
+                    <div class="w-1/4 h-full flex-shrink-0 px-4 sm:px-8 flex items-center justify-center">
+                        <div class="w-full max-w-[1350px] grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+                            
+                            <!-- Left Details -->
+                            <div class="lg:col-span-4 space-y-3">
+                                <div class="bg-white/85 backdrop-blur-md p-5 rounded-2xl border border-[#8B3A2B]/20 shadow-md">
+                                    <span class="text-xs font-bold text-[#8B3A2B] uppercase tracking-widest block mb-1">THE BESPOKE MASTERPIECE</span>
+                                    <h3 class="text-xl sm:text-2xl font-serif font-bold text-[#0F172A] mb-2">Finished Perfection</h3>
+                                    <p class="text-xs text-slate-600 leading-relaxed">Every suit is delivered in a custom cedar garment vault with personalized monograms, luxury silk linings, and hand-polished horn buttons.</p>
+                                </div>
+                            </div>
+
+                            <!-- Center Masterpiece Image -->
+                            <div class="lg:col-span-4 flex flex-col items-center justify-center relative">
+                                <div class="relative w-full max-w-[400px] h-[340px] sm:h-[420px] md:h-[480px] flex items-center justify-center pt-8">
+                                    <div class="absolute inset-0 bg-radial from-[#8B3A2B]/25 via-[#D4AF37]/15 to-transparent rounded-full blur-2xl pointer-events-none"></div>
+                                    <img src="assets/frame_4_masterpiece.png" alt="Finished Royal Bespoke Suit Masterpiece" class="h-full object-contain relative z-10 drop-shadow-[0_20px_35px_rgba(0,0,0,0.2)]">
+                                </div>
+                            </div>
+
+                            <!-- Right CTA Box -->
+                            <div class="lg:col-span-4 flex flex-col justify-center">
+                                <div class="bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#0F172A] text-white p-6 sm:p-7 rounded-2xl shadow-2xl border border-[#D4AF37]/30 text-center space-y-4">
+                                    <div class="w-10 h-10 rounded-full bg-[#8B3A2B] text-white flex items-center justify-center mx-auto text-lg font-serif">✦</div>
+                                    <div>
+                                        <h4 class="font-serif text-xl font-bold text-white mb-1">Experience Royal Fit</h4>
+                                        <p class="text-xs text-slate-300">Book your master tailor doorstep consultation today.</p>
+                                    </div>
+                                    <button onclick="openBookingModal()" class="w-full py-3 px-5 rounded-xl bg-[#8B3A2B] hover:bg-[#6e2c20] text-white font-bold text-xs uppercase tracking-widest transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-[1.02] active:scale-95 flex items-center justify-center gap-2">
+                                        <span>Book Atelier Consultation</span>
+                                        <span>→</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- SECTION FOOTER & PAGINATION DOTS -->
+            <div class="relative z-30 flex justify-between items-center max-w-[1400px] mx-auto w-full pb-1">
+                <div class="flex items-center gap-2 text-[11px] sm:text-xs font-bold text-[#8B3A2B] uppercase tracking-wider">
+                    <span class="w-1.5 h-1.5 rounded-full bg-[#8B3A2B]"></span>
+                    <span>Interactive 3D Mannequin View</span>
+                </div>
+
+                <!-- Indicator Dots -->
+                <div class="flex items-center gap-2.5">
+                    <button onclick="anatomyGoTo(0)" class="anatomy-dot w-3 h-3 rounded-full bg-[#8B3A2B] transition-all duration-300 scale-125" aria-label="Go to Frame 1"></button>
+                    <button onclick="anatomyGoTo(1)" class="anatomy-dot w-3 h-3 rounded-full bg-slate-300 hover:bg-[#8B3A2B]/50 transition-all duration-300" aria-label="Go to Frame 2"></button>
+                    <button onclick="anatomyGoTo(2)" class="anatomy-dot w-3 h-3 rounded-full bg-slate-300 hover:bg-[#8B3A2B]/50 transition-all duration-300" aria-label="Go to Frame 3"></button>
+                    <button onclick="anatomyGoTo(3)" class="anatomy-dot w-3 h-3 rounded-full bg-slate-300 hover:bg-[#8B3A2B]/50 transition-all duration-300" aria-label="Go to Frame 4"></button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ── BESPOKE ANATOMY SCRIPT (3D CURSOR-FOLLOWING DUMMY FACE & GSAP HORIZONTAL SCROLL) ── -->
+    <script>
+    /* ─────────────────────────────────────────────────────────
+       1. 3D CURSOR-FOLLOWING DUMMY MANNEQUIN HEAD (THREE.JS)
+    ────────────────────────────────────────────────────────── */
+    (function initMannequinHead3D() {
+        const canvas = document.getElementById('mannequin-3d-head');
+        const section = document.getElementById('bespoke-anatomy-section');
+        if (!canvas || !section || typeof THREE === 'undefined') return;
+
+        let scene, camera, renderer, headGroup;
+        let targetRotY = 0, targetRotX = 0;
+        let currentRotY = 0, currentRotX = 0;
+
+        function init() {
+            const width = canvas.clientWidth || 200;
+            const height = canvas.clientHeight || 200;
+
+            scene = new THREE.Scene();
+
+            camera = new THREE.PerspectiveCamera(38, width / height, 0.1, 1000);
+            camera.position.set(0, 0, 4.2);
+
+            renderer = new THREE.WebGLRenderer({ canvas: canvas, alpha: true, antialias: true });
+            renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+            renderer.setSize(width, height, false);
+
+            // Lights
+            const ambientLight = new THREE.AmbientLight(0xfffaee, 0.95);
+            scene.add(ambientLight);
+
+            const keyLight = new THREE.DirectionalLight(0xffffff, 1.2);
+            keyLight.position.set(3, 4, 5);
+            scene.add(keyLight);
+
+            const rimLight = new THREE.DirectionalLight(0xd4af37, 0.85);
+            rimLight.position.set(-3, 2, -2);
+            scene.add(rimLight);
+
+            // Create Mannequin Head Group
+            headGroup = new THREE.Group();
+
+            // Materials
+            const headMat = new THREE.MeshStandardMaterial({
+                color: 0xF5EBE0,
+                roughness: 0.35,
+                metalness: 0.15
+            });
+
+            const goldAccentMat = new THREE.MeshStandardMaterial({
+                color: 0xD4AF37,
+                roughness: 0.2,
+                metalness: 0.8
+            });
+
+            const woodMat = new THREE.MeshStandardMaterial({
+                color: 0x4A2511,
+                roughness: 0.5,
+                metalness: 0.1
+            });
+
+            // 1. Head Oval
+            const headGeo = new THREE.SphereGeometry(0.6, 32, 32);
+            headGeo.scale(0.85, 1.25, 0.95);
+            const headMesh = new THREE.Mesh(headGeo, headMat);
+            headMesh.position.y = 0.25;
+            headGroup.add(headMesh);
+
+            // 2. Sculpted Jaw
+            const jawGeo = new THREE.ConeGeometry(0.48, 0.5, 16);
+            jawGeo.rotateX(Math.PI);
+            const jawMesh = new THREE.Mesh(jawGeo, headMat);
+            jawMesh.position.set(0, -0.2, 0.05);
+            headGroup.add(jawMesh);
+
+            // 3. Nose Bridge Highlight
+            const noseGeo = new THREE.BoxGeometry(0.08, 0.28, 0.16);
+            const noseMesh = new THREE.Mesh(noseGeo, headMat);
+            noseMesh.position.set(0, 0.25, 0.55);
+            headGroup.add(noseMesh);
+
+            // 4. Gold Brow Crown Band
+            const browGeo = new THREE.CylinderGeometry(0.35, 0.35, 0.04, 16, 1, false, -Math.PI / 3, Math.PI * 2 / 3);
+            const browMesh = new THREE.Mesh(browGeo, goldAccentMat);
+            browMesh.position.set(0, 0.42, 0.22);
+            browMesh.rotation.x = Math.PI / 2;
+            headGroup.add(browMesh);
+
+            // 5. Wooden Neck Cap
+            const neckGeo = new THREE.CylinderGeometry(0.25, 0.3, 0.4, 32);
+            const neckMesh = new THREE.Mesh(neckGeo, woodMat);
+            neckMesh.position.y = -0.55;
+            headGroup.add(neckMesh);
+
+            const capGeo = new THREE.CylinderGeometry(0.35, 0.28, 0.08, 32);
+            const capMesh = new THREE.Mesh(capGeo, goldAccentMat);
+            capMesh.position.y = -0.72;
+            headGroup.add(capMesh);
+
+            scene.add(headGroup);
+
+            // Smooth Loop
+            function animate() {
+                requestAnimationFrame(animate);
+
+                currentRotY += (targetRotY - currentRotY) * 0.08;
+                currentRotX += (targetRotX - currentRotX) * 0.08;
+
+                if (headGroup) {
+                    headGroup.rotation.y = currentRotY;
+                    headGroup.rotation.x = currentRotX;
+                }
+
+                renderer.render(scene, camera);
+            }
+            animate();
+
+            // Resize handler
+            window.addEventListener('resize', () => {
+                const w = canvas.clientWidth;
+                const h = canvas.clientHeight;
+                if (w && h) {
+                    camera.aspect = w / h;
+                    camera.updateProjectionMatrix();
+                    renderer.setSize(w, h, false);
+                }
+            });
+        }
+
+        // Track cursor only when inside section
+        section.addEventListener('mousemove', (e) => {
+            const rect = section.getBoundingClientRect();
+            const relativeX = (e.clientX - rect.left) / rect.width - 0.5;
+            const relativeY = (e.clientY - rect.top) / rect.height - 0.5;
+
+            targetRotY = relativeX * 1.3;
+            targetRotX = relativeY * 0.5;
+        });
+
+        section.addEventListener('mouseleave', () => {
+            targetRotY = 0;
+            targetRotX = 0;
+        });
+
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', init);
+        } else {
+            init();
+        }
+    })();
+
+    /* ─────────────────────────────────────────────────────────
+       2. HORIZONTAL SCROLL & NAV CONTROLLER
+    ────────────────────────────────────────────────────────── */
+    (function initAnatomyHorizontalScroll() {
+        const section = document.getElementById('bespoke-anatomy-section');
+        const track = document.getElementById('anatomy-track');
+        const stepNum = document.getElementById('anatomy-step-num');
+        const stepTitle = document.getElementById('anatomy-step-title');
+        const dots = document.querySelectorAll('.anatomy-dot');
+
+        if (!section || !track) return;
+
+        const TITLES = [
+            'BESPOKE ANATOMY',
+            'SUIT CANVAS EXPLAINED',
+            'PRECISION FIT MATRIX',
+            'FINISHED MASTERPIECE'
+        ];
+
+        let currentFrame = 0;
+        const totalFrames = 4;
+
+        function updateUI(index) {
+            currentFrame = index;
+            if (stepNum) stepNum.textContent = String(index + 1).padStart(2, '0');
+            if (stepTitle) stepTitle.textContent = TITLES[index];
+
+            dots.forEach((dot, i) => {
+                if (i === index) {
+                    dot.className = 'anatomy-dot w-3 h-3 rounded-full bg-[#8B3A2B] transition-all duration-300 scale-125';
+                } else {
+                    dot.className = 'anatomy-dot w-3 h-3 rounded-full bg-slate-300 hover:bg-[#8B3A2B]/50 transition-all duration-300';
+                }
+            });
+        }
+
+        window.anatomyGoTo = function(index) {
+            if (index < 0) index = 0;
+            if (index >= totalFrames) index = totalFrames - 1;
+            currentFrame = index;
+            track.style.transform = `translateX(-${index * 25}%)`;
+            updateUI(index);
+        };
+
+        window.anatomyNext = function() {
+            anatomyGoTo(currentFrame + 1);
+        };
+
+        window.anatomyPrev = function() {
+            anatomyGoTo(currentFrame - 1);
+        };
+
+        // GSAP ScrollTrigger Integration for Pinning & Horizontal Scroll
+        if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+            gsap.registerPlugin(ScrollTrigger);
+
+            ScrollTrigger.create({
+                trigger: "#bespoke-anatomy-section",
+                start: "top top",
+                end: () => "+=" + (window.innerHeight * 2.5),
+                pin: "#anatomy-sticky-viewport",
+                scrub: 0.8,
+                onUpdate: (self) => {
+                    const progress = self.progress;
+                    const frameIndex = Math.min(3, Math.floor(progress * 4));
+                    track.style.transform = `translateX(-${progress * 75}%)`;
+                    updateUI(frameIndex);
+                }
+            });
+        }
+
+        // Touch Swipe Support
+        let touchStartX = 0;
+        section.addEventListener('touchstart', (e) => {
+            touchStartX = e.touches[0].clientX;
+        }, { passive: true });
+
+        section.addEventListener('touchend', (e) => {
+            const diff = touchStartX - e.changedTouches[0].clientX;
+            if (Math.abs(diff) > 40) {
+                if (diff > 0) anatomyNext();
+                else anatomyPrev();
+            }
+        }, { passive: true });
     })();
     </script>
 
