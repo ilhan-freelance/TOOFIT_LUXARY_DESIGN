@@ -1,0 +1,323 @@
+<!-- ========================================================= -->
+<!-- STYLED BY TOOFIT — CLIENTS DIARIES GALLERY SECTION        -->
+<!-- ========================================================= -->
+<section id="styled-by-toofit" class="bg-white py-12 md:py-16 relative overflow-hidden border-t border-slate-200">
+  
+  <!-- ── 1. COLLAGE HERO BANNER (MATCHING USER SCREENSHOT 1) ── -->
+  <div class="max-w-[1380px] mx-auto px-4 sm:px-6 md:px-10 mb-12">
+    <div class="relative w-full rounded-3xl overflow-hidden shadow-2xl h-[280px] sm:h-[340px] md:h-[400px] bg-slate-900 group">
+      
+      <!-- Multi-Photo Collage Grid Overlay Background -->
+      <div class="absolute inset-0 grid grid-cols-6 gap-1 opacity-70 group-hover:opacity-80 transition-opacity duration-700 pointer-events-none">
+        <div class="h-full"><img src="assets/hero_sherwani_palace_4k.jpg" class="w-full h-full object-cover object-center" alt="Client 1"></div>
+        <div class="h-full"><img src="assets/hero_black_tie_tuxedo_5_1785437572507.png" class="w-full h-full object-cover object-top" alt="Client 2"></div>
+        <div class="h-full"><img src="assets/wedding_groom.png" class="w-full h-full object-cover object-center" alt="Client 3"></div>
+        <div class="h-full"><img src="assets/hero_modern_gentleman_suit_4_1785437549474.png" class="w-full h-full object-cover object-center" alt="Client 4"></div>
+        <div class="h-full"><img src="assets/hero_royal_sherwani_model_2_1785437525300.png" class="w-full h-full object-cover object-top" alt="Client 5"></div>
+        <div class="h-full"><img src="assets/hero_mansion_suit_4k.jpg" class="w-full h-full object-cover object-center" alt="Client 6"></div>
+      </div>
+
+      <!-- Dark Vignette Overlay -->
+      <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-black/60 pointer-events-none"></div>
+
+      <!-- Center Title Badge (Matching Screenshot 1) -->
+      <div class="absolute inset-0 flex flex-col items-center justify-center p-6 text-center z-10">
+        <span class="text-[#F2D0A9] text-xs font-extrabold uppercase tracking-[0.35em] mb-2 drop-shadow-md">
+          Real Grooms & Patrons
+        </span>
+        <h2 class="text-3xl sm:text-5xl md:text-6xl font-serif font-black text-white tracking-tight drop-shadow-lg mb-4">
+          Styled by <span class="text-[#F2D0A9] italic font-normal">Toofit</span>
+        </h2>
+        <div class="flex items-center gap-3">
+          <span class="bg-[#8B3A2B] text-white text-[11px] font-bold uppercase tracking-wider px-5 py-2.5 rounded-full shadow-lg">
+            100+ Client Diaries
+          </span>
+          <a href="#clients-diaries-grid" class="bg-white/20 hover:bg-white/30 text-white backdrop-blur-md border border-white/40 text-[11px] font-bold uppercase tracking-wider px-5 py-2.5 rounded-full transition-all shadow-md">
+            View Diaries &darr;
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- ── 2. CLIENTS DIARIES GRID (MATCHING USER SCREENSHOT 2) ── -->
+  <div id="clients-diaries-grid" class="max-w-[1380px] mx-auto px-4 sm:px-6 md:px-10">
+    
+    <!-- Clean Centered Section Title (Matching Screenshot 2) -->
+    <div class="text-center mb-8">
+      <h3 class="text-2xl sm:text-3xl md:text-4xl font-serif font-semibold text-[#0F172A] tracking-tight">
+        Clients Diaries
+      </h3>
+      <p class="text-xs text-slate-500 mt-1 font-serif italic">Real stories, real moments, tailored to perfection</p>
+    </div>
+
+    <!-- Category Filter Tabs -->
+    <div class="flex flex-wrap items-center justify-center gap-2 mb-10">
+      <button onclick="filterDiaries('all')" class="cd-filter-btn active-cd-btn text-xs font-bold px-4 py-2 rounded-full transition-all bg-[#0F172A] text-white shadow-sm">
+        All Diaries (100+)
+      </button>
+      <button onclick="filterDiaries('sherwani')" class="cd-filter-btn text-xs font-bold px-4 py-2 rounded-full transition-all bg-slate-100 text-slate-700 hover:bg-slate-200">
+        Royal Sherwanis
+      </button>
+      <button onclick="filterDiaries('tuxedo')" class="cd-filter-btn text-xs font-bold px-4 py-2 rounded-full transition-all bg-slate-100 text-slate-700 hover:bg-slate-200">
+        Tuxedos & Suits
+      </button>
+      <button onclick="filterDiaries('jodhpuri')" class="cd-filter-btn text-xs font-bold px-4 py-2 rounded-full transition-all bg-slate-100 text-slate-700 hover:bg-slate-200">
+        Jodhpuri & Bandgala
+      </button>
+      <button onclick="filterDiaries('reception')" class="cd-filter-btn text-xs font-bold px-4 py-2 rounded-full transition-all bg-slate-100 text-slate-700 hover:bg-slate-200">
+        Haldi & Reception
+      </button>
+    </div>
+
+    <!-- Clean 4-Column Photo Gallery Grid -->
+    <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4 md:gap-6" id="cd-gallery-container">
+      
+      <!-- Photo 1: Royal Sherwani Groom -->
+      <div class="cd-card group relative bg-slate-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 cursor-pointer aspect-[3/4]" data-category="sherwani" onclick="openDiaryLightbox('assets/hero_sherwani_palace_4k.jpg', 'Manish & Divya', 'Bespoke Velvet Sherwani & Bridal Garb', 'Jaipur Heritage Palace')">
+        <img src="assets/hero_sherwani_palace_4k.jpg" alt="Client Diary 1" class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4 text-white">
+          <span class="text-[10px] font-bold text-[#F2D0A9] uppercase tracking-wider">Royal Sherwani</span>
+          <h4 class="font-serif font-bold text-sm">Manish & Divya</h4>
+          <span class="text-[10px] text-slate-300">Jaipur Heritage Palace</span>
+        </div>
+      </div>
+
+      <!-- Photo 2: Tuxedo Groom -->
+      <div class="cd-card group relative bg-slate-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 cursor-pointer aspect-[3/4]" data-category="tuxedo" onclick="openDiaryLightbox('assets/hero_black_tie_tuxedo_5_1785437572507.png', 'Rohan & Sanya', 'Midnight Navy Silk Tuxedo', 'Udaipur Lake Palace')">
+        <img src="assets/hero_black_tie_tuxedo_5_1785437572507.png" alt="Client Diary 2" class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4 text-white">
+          <span class="text-[10px] font-bold text-[#F2D0A9] uppercase tracking-wider">Bespoke Tuxedo</span>
+          <h4 class="font-serif font-bold text-sm">Rohan & Sanya</h4>
+          <span class="text-[10px] text-slate-300">Udaipur Lake Palace</span>
+        </div>
+      </div>
+
+      <!-- Photo 3: Groom & Bride Pair -->
+      <div class="cd-card group relative bg-slate-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 cursor-pointer aspect-[3/4]" data-category="sherwani" onclick="openDiaryLightbox('assets/wedding_groom.png', 'Kabir & Ananya', 'Zari Embroidered Ivory Sherwani', 'Rambagh Palace Jaipur')">
+        <img src="assets/wedding_groom.png" alt="Client Diary 3" class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4 text-white">
+          <span class="text-[10px] font-bold text-[#F2D0A9] uppercase tracking-wider">Ivory Wedding Sherwani</span>
+          <h4 class="font-serif font-bold text-sm">Kabir & Ananya</h4>
+          <span class="text-[10px] text-slate-300">Rambagh Palace Jaipur</span>
+        </div>
+      </div>
+
+      <!-- Photo 4: Modern Suit Client -->
+      <div class="cd-card group relative bg-slate-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 cursor-pointer aspect-[3/4]" data-category="tuxedo" onclick="openDiaryLightbox('assets/hero_modern_gentleman_suit_4_1785437549474.png', 'Vikram Singhania', 'Super 150s Charcoal Pinstripe Suit', 'Dubai Atelier Trunk Show')">
+        <img src="assets/hero_modern_gentleman_suit_4_1785437549474.png" alt="Client Diary 4" class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4 text-white">
+          <span class="text-[10px] font-bold text-[#F2D0A9] uppercase tracking-wider">Executive Business Suit</span>
+          <h4 class="font-serif font-bold text-sm">Vikram Singhania</h4>
+          <span class="text-[10px] text-slate-300">Dubai Trunk Show</span>
+        </div>
+      </div>
+
+      <!-- Photo 5: Jodhpuri Royal Suit -->
+      <div class="cd-card group relative bg-slate-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 cursor-pointer aspect-[3/4]" data-category="jodhpuri" onclick="openDiaryLightbox('assets/card_jodhpuri_v2.png', 'Aditya Raj', 'Royal Gold Crest Jodhpuri Suit', 'Jodhpur Umaid Bhawan')">
+        <img src="assets/card_jodhpuri_v2.png" alt="Client Diary 5" class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4 text-white">
+          <span class="text-[10px] font-bold text-[#F2D0A9] uppercase tracking-wider">Royal Jodhpuri</span>
+          <h4 class="font-serif font-bold text-sm">Aditya Raj</h4>
+          <span class="text-[10px] text-slate-300">Umaid Bhawan Palace</span>
+        </div>
+      </div>
+
+      <!-- Photo 6: Haldi & Sangeet Garb -->
+      <div class="cd-card group relative bg-slate-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 cursor-pointer aspect-[3/4]" data-category="reception" onclick="openDiaryLightbox('assets/occasion_haldi.jpg', 'Siddharth & Meera', 'Handcrafted Mustard Silk Kurta', 'Kota Heritage Resort')">
+        <img src="assets/occasion_haldi.jpg" alt="Client Diary 6" class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4 text-white">
+          <span class="text-[10px] font-bold text-[#F2D0A9] uppercase tracking-wider">Haldi & Sangeet Couture</span>
+          <h4 class="font-serif font-bold text-sm">Siddharth & Meera</h4>
+          <span class="text-[10px] text-slate-300">Kota Heritage Resort</span>
+        </div>
+      </div>
+
+      <!-- Photo 7: Indo Western Masterpiece -->
+      <div class="cd-card group relative bg-slate-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 cursor-pointer aspect-[3/4]" data-category="jodhpuri" onclick="openDiaryLightbox('assets/card_indowestern_v2.png', 'Yashvardhan Rathore', 'Asymmetric Cut Indo Western', 'Jaipur Sangeet Night')">
+        <img src="assets/card_indowestern_v2.png" alt="Client Diary 7" class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4 text-white">
+          <span class="text-[10px] font-bold text-[#F2D0A9] uppercase tracking-wider">Indo Western Couture</span>
+          <h4 class="font-serif font-bold text-sm">Yashvardhan Rathore</h4>
+          <span class="text-[10px] text-slate-300">Jaipur Sangeet Night</span>
+        </div>
+      </div>
+
+      <!-- Photo 8: Bespoke Lounge Suit -->
+      <div class="cd-card group relative bg-slate-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 cursor-pointer aspect-[3/4]" data-category="tuxedo" onclick="openDiaryLightbox('assets/hero_mansion_suit_4k.jpg', 'Tushar Mehta', 'Cognac Double-Breasted Tweed Suit', 'Delhi Golf Club')">
+        <img src="assets/hero_mansion_suit_4k.jpg" alt="Client Diary 8" class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4 text-white">
+          <span class="text-[10px] font-bold text-[#F2D0A9] uppercase tracking-wider">Bespoke Tweed Suit</span>
+          <h4 class="font-serif font-bold text-sm">Tushar Mehta</h4>
+          <span class="text-[10px] text-slate-300">Delhi Golf Club</span>
+        </div>
+      </div>
+
+      <!-- Additional Hidden Grid Cards (revealed on Load More) -->
+      <div class="cd-card cd-extra hidden group relative bg-slate-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 cursor-pointer aspect-[3/4]" data-category="sherwani" onclick="openDiaryLightbox('assets/hero_royal_sherwani_model_2_1785437525300.png', 'Harsh & Riya', 'Royal Crimson Zardozi Sherwani', 'Jhaveri Mahal Jaipur')">
+        <img src="assets/hero_royal_sherwani_model_2_1785437525300.png" alt="Client Diary 9" class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4 text-white">
+          <span class="text-[10px] font-bold text-[#F2D0A9] uppercase tracking-wider">Zardozi Sherwani</span>
+          <h4 class="font-serif font-bold text-sm">Harsh & Riya</h4>
+          <span class="text-[10px] text-slate-300">Jhaveri Mahal Jaipur</span>
+        </div>
+      </div>
+
+      <div class="cd-card cd-extra hidden group relative bg-slate-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 cursor-pointer aspect-[3/4]" data-category="reception" onclick="openDiaryLightbox('assets/occasion_sangeet.jpg', 'Gaurav & Priyanshi', 'Midnight Blue Brocade Sherwani', 'Clarks Amer Jaipur')">
+        <img src="assets/occasion_sangeet.jpg" alt="Client Diary 10" class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4 text-white">
+          <span class="text-[10px] font-bold text-[#F2D0A9] uppercase tracking-wider">Brocade Sangeet Outfit</span>
+          <h4 class="font-serif font-bold text-sm">Gaurav & Priyanshi</h4>
+          <span class="text-[10px] text-slate-300">Clarks Amer Jaipur</span>
+        </div>
+      </div>
+
+      <div class="cd-card cd-extra hidden group relative bg-slate-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 cursor-pointer aspect-[3/4]" data-category="jodhpuri" onclick="openDiaryLightbox('assets/card_sadri_v2.png', 'Pranav Dev', 'Hand-woven Raw Silk Sadri', 'Kota Family Gala')">
+        <img src="assets/card_sadri_v2.png" alt="Client Diary 11" class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4 text-white">
+          <span class="text-[10px] font-bold text-[#F2D0A9] uppercase tracking-wider">Silk Sadri & Kurta</span>
+          <h4 class="font-serif font-bold text-sm">Pranav Dev</h4>
+          <span class="text-[10px] text-slate-300">Kota Family Gala</span>
+        </div>
+      </div>
+
+      <div class="cd-card cd-extra hidden group relative bg-slate-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 cursor-pointer aspect-[3/4]" data-category="sherwani" onclick="openDiaryLightbox('assets/hero_bespoke_suit_model_1_1785437512721.png', 'Devendra Shekhawat', 'Superfine Merino Wool Bespoke Suit', 'Oberoi Rajvilas')">
+        <img src="assets/hero_bespoke_suit_model_1_1785437512721.png" alt="Client Diary 12" class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4 text-white">
+          <span class="text-[10px] font-bold text-[#F2D0A9] uppercase tracking-wider">3-Piece Bespoke Suit</span>
+          <h4 class="font-serif font-bold text-sm">Devendra Shekhawat</h4>
+          <span class="text-[10px] text-slate-300">Oberoi Rajvilas</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- "LOAD MORE CLIENT DIARIES" CTA BUTTON -->
+    <div class="text-center mt-10">
+      <button id="load-more-diaries-btn" onclick="toggleMoreDiaries()" class="inline-flex items-center justify-center gap-2 bg-[#8B3A2B] hover:bg-[#753023] text-white text-xs font-bold uppercase tracking-wider px-8 py-3.5 rounded-full shadow-lg hover:shadow-xl transition-all cursor-pointer">
+        <span id="load-btn-text">View All 100+ Client Diaries</span>
+        <span id="load-btn-icon">&darr;</span>
+      </button>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ========================================================= -->
+<!-- LIGHTBOX MODAL FOR CLIENT DIARIES                         -->
+<!-- ========================================================= -->
+<div id="diary-lightbox" class="fixed inset-0 z-[120] hidden items-center justify-center bg-black/85 backdrop-blur-md p-4 overflow-y-auto">
+  <div class="relative max-w-3xl w-full bg-slate-900 rounded-3xl overflow-hidden border border-white/20 shadow-2xl flex flex-col md:flex-row" id="diary-lightbox-card">
+    <button onclick="closeDiaryLightbox()" class="absolute top-4 right-4 z-20 text-white bg-black/50 hover:bg-black/80 w-9 h-9 rounded-full flex items-center justify-center transition-colors">
+      ✕
+    </button>
+    <div class="w-full md:w-1/2 h-[350px] md:h-[480px] bg-black">
+      <img id="lb-img" src="" alt="Client Diary Detail" class="w-full h-full object-cover">
+    </div>
+    <div class="w-full md:w-1/2 p-6 sm:p-8 text-white flex flex-col justify-between space-y-4">
+      <div>
+        <span id="lb-tag" class="text-[11px] font-bold text-[#F2D0A9] uppercase tracking-[0.25em] block mb-1">Garment Category</span>
+        <h3 id="lb-title" class="text-2xl font-serif font-bold text-white mb-2">Client Name</h3>
+        <p id="lb-loc" class="text-xs text-slate-400 flex items-center gap-1.5 mb-4">
+          <span>📍</span> <span>Event Location</span>
+        </p>
+        <div class="w-10 h-0.5 bg-[#8B3A2B] mb-4"></div>
+        <p class="text-xs text-slate-300 leading-relaxed italic">
+          "The fitting and fabric texture from Toofit Atelier were exceptional. Every karigar detail from shoulder pitch to buttonhole stitching was crafted to perfection."
+        </p>
+      </div>
+      <div class="pt-4 border-t border-white/10 flex items-center justify-between">
+        <span class="text-[10px] text-slate-400 font-bold uppercase tracking-wider">Toofit Bespoke Registry</span>
+        <button onclick="closeDiaryLightbox(); openBookingModal('studio');" class="bg-[#8B3A2B] hover:bg-[#753023] text-white px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider">
+          Book Similar Look
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ========================================================= -->
+<!-- JAVASCRIPT CONTROLLERS FOR CLIENT DIARIES                 -->
+<!-- ========================================================= -->
+<script>
+function filterDiaries(cat) {
+  const cards = document.querySelectorAll('.cd-card');
+  const btns  = document.querySelectorAll('.cd-filter-btn');
+
+  btns.forEach(btn => {
+    btn.className = "cd-filter-btn text-xs font-bold px-4 py-2 rounded-full transition-all bg-slate-100 text-slate-700 hover:bg-slate-200";
+  });
+  event.target.className = "cd-filter-btn active-cd-btn text-xs font-bold px-4 py-2 rounded-full transition-all bg-[#0F172A] text-white shadow-sm";
+
+  cards.forEach(card => {
+    if(cat === 'all') {
+      if(!card.classList.contains('cd-extra')) card.style.display = 'block';
+    } else {
+      if(card.getAttribute('data-category') === cat) {
+        card.style.display = 'block';
+      } else {
+        card.style.display = 'none';
+      }
+    }
+  });
+}
+
+function toggleMoreDiaries() {
+  const extras = document.querySelectorAll('.cd-extra');
+  const btnText = document.getElementById('load-btn-text');
+  const btnIcon = document.getElementById('load-btn-icon');
+  let showing = false;
+
+  extras.forEach(card => {
+    if(card.classList.contains('hidden')) {
+      card.classList.remove('hidden');
+      showing = true;
+    } else {
+      card.classList.add('hidden');
+    }
+  });
+
+  if(showing) {
+    if(btnText) btnText.textContent = "Show Fewer Diaries";
+    if(btnIcon) btnIcon.textContent = "↑";
+  } else {
+    if(btnText) btnText.textContent = "View All 100+ Client Diaries";
+    if(btnIcon) btnIcon.textContent = "↓";
+  }
+}
+
+function openDiaryLightbox(imgSrc, title, tag, loc) {
+  const lb    = document.getElementById('diary-lightbox');
+  const lbImg = document.getElementById('lb-img');
+  const lbTitle = document.getElementById('lb-title');
+  const lbTag = document.getElementById('lb-tag');
+  const lbLoc = document.getElementById('lb-loc');
+
+  if(lbImg)   lbImg.src = imgSrc;
+  if(lbTitle) lbTitle.textContent = title;
+  if(lbTag)   lbTag.textContent = tag;
+  if(lbLoc)   lbLoc.innerHTML = `<span>📍</span> <span>${loc}</span>`;
+
+  if(lb) {
+    lb.classList.remove('hidden');
+    lb.classList.add('flex');
+  }
+}
+
+function closeDiaryLightbox() {
+  const lb = document.getElementById('diary-lightbox');
+  if(lb) {
+    lb.classList.remove('flex');
+    lb.classList.add('hidden');
+  }
+}
+
+window.addEventListener('click', (e) => {
+  const lb = document.getElementById('diary-lightbox');
+  if(e.target === lb) closeDiaryLightbox();
+});
+</script>
