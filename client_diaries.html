@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOOFIT | Online Customized Suits & Royal Menswear | Suit Atelier</title>
+    <meta name="description" content="Toofit offers custom tailored solutions for men. Discover bespoke suits, sherwanis, jodhpuris, tuxedos, shirts & wedding packages in Jaipur, Kota & Dubai. Perfect fit guaranteed.">
+    
+    <!-- Fonts: Inter / Montserrat for modern UI + Playfair Display for luxury headers -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200;0,6..72,300;0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;0,6..96,700;1,6..96,400;1,6..96,600&family=Prata&family=Cinzel:wght@600;700;800;900&family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&family=Jost:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        mpfNavy: '#0A192F',
+                        mpfDarkSlate: '#1E293B',
+                        mpfOrange: '#E27217',
+                        mpfGold: '#D4AF37',
+                        mpfBg: '#FAF9F6',
+                        mpfLightGray: '#F8F9FA',
+                        mpfBorder: '#E2E8F0',
+                    },
+                    fontFamily: {
+                        sans: ['"Inter"', 'sans-serif'],
+                        serif: ['"Playfair Display"', 'Georgia', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- GSAP for Smooth Reveal & Carousel Interactions -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <!-- Three.js for 3D Interactive Mannequin Head -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        
+        body { 
+            background-color: #FAF6F0; 
+            color: #231B15; 
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ===== SLICK CAROUSEL HIDE SCROLLBAR ===== */
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+        /* ===== MPF BUTTON HOVER ===== */
+        .btn-primary-mpf {
+            background-color: #8B3A2B;
+            color: #FAF6F0;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 14px rgba(139, 58, 43, 0.25);
+        }
+        .btn-primary-mpf:hover {
+            background-color: #6e2c20;
+            transform: translateY(-1px);
+            box-shadow: 0 6px 20px rgba(139, 58, 43, 0.38);
+        }
+
+        .btn-secondary-mpf {
+            border: 1.5px solid #231B15;
+            color: #231B15;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        .btn-secondary-mpf:hover {
+            background-color: #231B15;
+            color: #FAF6F0;
+        }
+
+        /* ===== CARD HOVER ANIMATION ===== */
+        .mpf-card {
+            transition: box-shadow 0.4s ease;
+        }
+        .mpf-card:hover {
+            box-shadow: 0 10px 25px rgba(35, 27, 21, 0.08);
+        }
+
+        /* ===== WHATSAPP FAB PULSE ===== */
+        @keyframes fabPulse {
+            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6); }
+            70% { box-shadow: 0 0 0 16px rgba(37, 211, 102, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        }
+        .wa-fab { animation: fabPulse 2.5s infinite; }
+
+        /* ===== GSAP REVEAL ===== */
+        .gs-reveal {
+            visibility: hidden;
+            opacity: 0;
+        }
+
+        /* ========================================== */
+        /*   LUXURY NAVBAR STYLES — TOOFIT ATELIER   */
+        /* ========================================== */
+
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Bodoni+Moda:ital,opsz,wght@0,6..96,600;0,6..96,700;0,6..96,800&family=Jost:wght@400;500;600;700&display=swap');
+
+        #toofit-nav {
+            background-color: #FFFFFF !important;
+            border-bottom: 1px solid rgba(139, 58, 43, 0.12);
+            position: sticky;
+            top: 0;
+            z-index: 9999;
+            width: 100%;
+            box-shadow: 0 4px 20px rgba(35, 27, 21, 0.04);
+        }
+
+        /* Navbar Header Container: 3-column flex layout (Mathematical Exact Center) */
+        .tf-brand-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 8px 36px 4px;
+            position: relative;
+            background-color: #FFFFFF !important;
+            min-height: 64px;
+        }
+
+        /* ── Center: Brand Title + Aligned Suit Atelier + Faded Line + Prominent Since 1969 ── */
+        .tf-brand-center {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+        }
+
+        /* ── Top Left: Standalone Logo ── */
+        .tf-logo-container {
+            display: flex;
+            align-items: center;
+            flex: 1;
+            justify-content: flex-start;
+        }
+
+        .tf-logo-link {
+            display: inline-flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .tf-standalone-logo-img {
+            height: 60px;
+            width: auto;
+            max-width: 170px;
+            object-fit: contain;
+            background: transparent !important;
+            border: none !important;
+            box-shadow: none !important;
+            outline: none !important;
+            filter: contrast(1.15) saturate(1.2);
+            transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        .tf-logo-link:hover .tf-standalone-logo-img {
+            transform: scale(1.05);
+        }
+
+
+
+        .tf-brand-row-wrapper {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* TOOFIT + SUIT ATELIER Column */
+        .tf-toofit-column {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .tf-brand-name-link {
+            text-decoration: none;
+            display: block;
+            line-height: 1;
+        }
+
+        .tf-brand-name {
+            font-family: 'Newsreader', serif;
+            font-weight: 500;
+            font-size: 34px;
+            letter-spacing: 0.18em;
+            color: #2D0A0F;
+            background-color: transparent;
+            text-transform: none;
+            text-decoration: none;
+            text-align: center;
+            line-height: 1;
+            transition: all 0.3s ease;
+        }
+
+        .tf-brand-name-link:hover .tf-brand-name {
+            color: #4A1017;
+            transform: translateY(-1px);
+        }
+
+        /* SUIT ATELIER with faded color tone and elegant text shadow */
+        .tf-brand-caption {
+            font-family: 'Jost', 'Inter', sans-serif;
+            font-weight: 500;
+            font-size: 0.58rem;
+            letter-spacing: 0.42em;
+            color: #9E7B56;
+            text-shadow: 0 1px 4px rgba(139, 58, 43, 0.25);
+            text-transform: uppercase;
+            text-align: center;
+            margin-top: 2px;
+            width: 100%;
+            opacity: 0.9;
+        }
+
+        /* Faded vertical divider line */
+        .tf-faded-vdivider {
+            display: inline-block;
+            width: 1px;
+            height: 28px;
+            background: linear-gradient(to bottom, transparent, rgba(139, 58, 43, 0.45), transparent);
+            margin: 0 16px;
+            align-self: center;
+        }
+
+        /* Large & Highly Visible "since 1969" */
+        .tf-since-column {
+            display: flex;
+            align-items: center;
+        }
+
+        .tf-since-text {
+            font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+            font-style: italic;
+            font-weight: 700;
+            font-size: 1.05rem;
+            letter-spacing: 0.14em;
+            color: #A38350;
+            line-height: 1;
+            white-space: nowrap;
+            text-shadow: 0 1px 2px rgba(163, 131, 80, 0.15);
+        }
+
+        /* ── Right: Header Actions (CTA + Mobile menu) ── */
+        .tf-nav-right {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            flex: 1;
+        }
+
+        /* Separator Style A: Faded Gradient Hairline */
+        .tf-separator-a {
+            height: 1px;
+            background: linear-gradient(to right, transparent, rgba(139, 58, 43, 0.25), transparent);
+            margin: 1px 48px 2px;
+        }
+
+        /* Bottom row: nav links perfectly centered */
+        .tf-nav-row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            text-align: center;
+            padding: 6px 0 8px;
+            position: relative;
+            background-color: #FFFFFF !important;
+        }
+
+        .tf-nav-links {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 52px;
+            list-style: none;
+            margin: 0 auto;
+            padding: 0;
+            text-align: center;
+        }
+
+        .tf-nav-links li {
+            opacity: 1;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .tf-nav-links li a {
+            font-family: 'Jost', 'Inter', sans-serif;
+            font-weight: 500;
+            font-size: 0.7rem;
+            letter-spacing: 0.2em;
+            color: #231B15;
+            text-transform: uppercase;
+            text-decoration: none;
+            position: relative;
+            padding-bottom: 4px;
+            transition: color 0.4s ease, text-shadow 0.4s ease;
+        }
+
+        .tf-nav-links li a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 1.5px;
+            background: linear-gradient(to right, transparent, #8B3A2B, transparent);
+            transition: width 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .tf-nav-links li a:hover {
+            color: #8B3A2B;
+            text-shadow: 0 0 12px rgba(139, 58, 43, 0.18);
+        }
+
+        .tf-nav-links li a:hover::after {
+            width: 100%;
+        }
+
+        /* === LUXURY FLUID LIQUID BUTTON === */
+        .tf-liquid-btn {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            font-family: 'Jost', 'Inter', sans-serif;
+            font-weight: 600;
+            font-size: 0.72rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #FFFFFF !important;
+            background: rgba(26, 20, 16, 0.65);
+            border: 1.5px solid rgba(255, 255, 255, 0.25);
+            padding: 12px 32px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.4s ease;
+            isolation: isolate;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+        }
+
+        .tf-liquid-btn::before {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: -10%;
+            width: 120%;
+            height: 200%;
+            background: linear-gradient(135deg, #7A281A 0%, #8B3A2B 60%, #B89248 100%);
+            border-radius: 50% 50% 0 0 / 30% 30% 0 0;
+            transition: top 0.5s cubic-bezier(0.33, 1, 0.68, 1),
+                        border-radius 0.5s cubic-bezier(0.33, 1, 0.68, 1);
+            z-index: 1;
+        }
+
+        .tf-liquid-btn:hover::before {
+            top: -50%;
+            border-radius: 0 0 50% 50% / 0 0 30% 30%;
+        }
+
+        .tf-liquid-btn:hover {
+            border-color: #FAF6F0;
+            box-shadow: 0 6px 24px rgba(212, 175, 55, 0.5);
+            transform: translateY(-2px);
+        }
+
+        .tf-liquid-btn span {
+            position: relative;
+            z-index: 2;
+            color: #FFFFFF !important;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            text-shadow: 0 1px 4px rgba(0, 0, 0, 0.9);
+            font-weight: 600;
+        }
+
+        .tf-liquid-btn:hover span {
+            color: #FFFFFF !important;
+        }
+
+        /* thin line under nav */
+        .tf-nav-divider {
+            height: 1px;
+            background: linear-gradient(to right, transparent, rgba(139, 58, 43, 0.18), transparent);
+            margin: 0 52px;
+        }
+
+        /* Hamburger (mobile) */
+        .tf-hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 4px;
+        }
+        .tf-hamburger span {
+            display: block;
+            width: 24px;
+            height: 1.2px;
+            background: #231B15;
+            transition: all 0.35s ease;
+            transform-origin: center;
+        }
+        .tf-hamburger.open span:nth-child(1) { transform: translateY(6.2px) rotate(45deg); }
+        .tf-hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+        .tf-hamburger.open span:nth-child(3) { transform: translateY(-6.2px) rotate(-45deg); }
+
+        /* Mobile drawer */
+        .tf-mobile-drawer {
+            display: none;
+            flex-direction: column;
+            gap: 0;
+            background: #FAF6F0;
+            border-top: 1px solid rgba(139, 58, 43, 0.1);
+            overflow: hidden;
+            max-height: 0;
+            transition: max-height 0.5s cubic-bezier(0.33, 1, 0.68, 1);
+        }
+        .tf-mobile-drawer.open {
+            max-height: 400px;
+        }
+        .tf-mobile-drawer a {
+            font-family: 'Jost', 'Inter', sans-serif;
+            font-size: 0.78rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #231B15;
+            text-decoration: none;
+            padding: 14px 32px;
+            border-bottom: 1px solid rgba(139, 58, 43, 0.06);
+            transition: background 0.25s, color 0.25s;
+        }
+        .tf-mobile-drawer a:hover {
+            background: rgba(139, 58, 43, 0.06);
+            color: #8B3A2B;
+        }
+        .tf-mobile-drawer .tf-liquid-btn {
+            margin: 16px 32px;
+            width: calc(100% - 64px);
+            justify-content: center;
+        }
+
+        @media (max-width: 900px) {
+            .tf-brand-header {
+                padding: 10px 16px 6px;
+            }
+            .tf-brand-name {
+                font-size: 18px;
+                letter-spacing: 0.18em;
+            }
+            .tf-since-text {
+                font-size: 0.95rem;
+            }
+            .tf-faded-vdivider {
+                height: 24px;
+                margin: 0 12px;
+            }
+            .tf-standalone-logo-img {
+                height: 50px;
+            }
+            .tf-nav-links { display: none; }
+            .tf-liquid-btn.desktop-only { display: none; }
+            .tf-hamburger { display: flex; }
+            .tf-mobile-drawer { display: flex; }
+            .tf-nav-row { padding: 6px 20px 10px; }
+            .tf-separator-a { margin: 2px 20px 4px; }
+            .tf-nav-divider { margin: 0 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ============================================ -->
+    <!-- LUXURY NAVBAR — TOOFIT SUIT ATELIER          -->
+    <!-- ============================================ -->
+    <nav id="toofit-nav" aria-label="Main Navigation">
+
+        <!-- ── Brand Header Row (3 Columns: Standalone Big Logo Top-Left, Company Name + Aligned Suit Atelier + Faded Line + Since 1969 Center, CTA Right) ── -->
+        <div class="tf-brand-header">
+            
+            <!-- Top-Left Corner: Pure Transparent Logo (Direct on Navbar) -->
+            <div class="tf-logo-container">
+                <a href="#" class="tf-logo-link" title="TOOFIT Bespoke Atelier">
+                    <img src="assets/logo_crimson_gold.png" alt="TOOFIT Monogram Logo" class="tf-standalone-logo-img">
+                </a>
+            </div>
+
+            <!-- Center: TOOFIT + SUIT ATELIER (Column) | Faded Line | since 1969 -->
+            <div class="tf-brand-center">
+                <div class="tf-brand-row-wrapper">
+                    
+                    <!-- TOOFIT & SUIT ATELIER stacked together for perfect alignment -->
+                    <div class="tf-toofit-column">
+                        <a href="#" class="tf-brand-name-link">
+                            <span class="tf-brand-name">TOOFIT</span>
+                        </a>
+                        <div class="tf-brand-caption">SUIT ATELIER</div>
+                    </div>
+
+                    <!-- Faded vertical divider line -->
+                    <span class="tf-faded-vdivider"></span>
+
+                    <!-- Prominent since 1969 -->
+                    <div class="tf-since-column">
+                        <span class="tf-since-text">since 1969</span>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Right: CTA Button & Mobile Hamburger -->
+            <div class="tf-nav-right">
+                <a href="#" onclick="openBookingModal('studio'); return false;" class="tf-liquid-btn desktop-only" id="book-consultant-btn">
+                    <span>Book Consultant</span>
+                </a>
+                <button class="tf-hamburger" id="tf-hamburger" aria-label="Toggle Menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+
+        </div>
+
+        <!-- ── Separator: Faded Hairline ── -->
+        <div class="tf-separator-a"></div>
+
+        <!-- ── Nav Links Row ── -->
+        <div class="tf-nav-row">
+            <ul class="tf-nav-links">
+                <li><a href="#story">Our Story</a></li>
+                <li><a href="#bespoke">Bespoke</a></li>
+                <li><a href="#wedding">Wedding</a></li>
+                <li><a href="#corporate">Co&#8209;operate</a></li>
+            </ul>
+        </div>
+
+        <!-- thin decorative line -->
+        <div class="tf-nav-divider"></div>
+
+        <!-- ── Mobile Drawer ── -->
+        <div class="tf-mobile-drawer" id="tf-mobile-drawer">
+            <a href="#story">Our Story</a>
+            <a href="#bespoke">Bespoke</a>
+            <a href="#wedding">Wedding</a>
+            <a href="#corporate">Co&#8209;operate</a>
+            <a href="#" onclick="openBookingModal('studio'); return false;" class="tf-liquid-btn" style="margin:16px 24px;text-align:center;">
+                <span>Book Consultant</span>
+            </a>
+        </div>
+
+    </nav>
+
+    <script>
+        // Mobile hamburger toggle
+        (function() {
+            var btn = document.getElementById('tf-hamburger');
+            var drawer = document.getElementById('tf-mobile-drawer');
+            if (btn && drawer) {
+                btn.addEventListener('click', function() {
+                    btn.classList.toggle('open');
+                    drawer.classList.toggle('open');
+                });
+                // Close drawer on link click
+                drawer.querySelectorAll('a').forEach(function(a) {
+                    a.addEventListener('click', function() {
+                        btn.classList.remove('open');
+                        drawer.classList.remove('open');
+                    });
+                });
+            }
+        })();
+    </script>
+
+
+    <!-- ============================================ -->
+    <!-- 1. FULL-WIDTH HERO SECTION — AUTO SLIDESHOW   -->
+    <!-- ============================================ -->
+    
+    <!-- ========================================================= -->
+    <!-- CLIENT DIARIES — FULL PAGE HERO BANNER                    -->
+    <!-- ========================================================= -->
+    <section class="bg-slate-950 text-white py-16 md:py-24 relative overflow-hidden">
+      <!-- Background Photo Grid -->
+      <div class="absolute inset-0 grid grid-cols-4 md:grid-cols-6 gap-1 opacity-40 pointer-events-none">
+        <div class="h-full"><img src="assets/hero_sherwani_palace_4k.jpg" class="w-full h-full object-cover" alt="Client 1"></div>
+        <div class="h-full"><img src="assets/hero_black_tie_tuxedo_5_1785437572507.png" class="w-full h-full object-cover object-top" alt="Client 2"></div>
+        <div class="h-full"><img src="assets/wedding_groom.png" class="w-full h-full object-cover" alt="Client 3"></div>
+        <div class="h-full"><img src="assets/hero_modern_gentleman_suit_4_1785437549474.png" class="w-full h-full object-cover" alt="Client 4"></div>
+        <div class="h-full"><img src="assets/hero_royal_sherwani_model_2_1785437525300.png" class="w-full h-full object-cover object-top" alt="Client 5"></div>
+        <div class="h-full"><img src="assets/hero_mansion_suit_4k.jpg" class="w-full h-full object-cover" alt="Client 6"></div>
+      </div>
+      <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/70 to-transparent pointer-events-none"></div>
+
+      <div class="max-w-[1380px] mx-auto px-6 md:px-10 relative z-10 text-center">
+        <span class="text-[#F2D0A9] text-xs font-extrabold uppercase tracking-[0.35em] block mb-3">Toofit Bespoke Atelier</span>
+        <h1 class="text-4xl sm:text-6xl md:text-7xl font-serif font-black tracking-tight text-white mb-4">
+          Client <span class="text-[#F2D0A9] italic font-normal">Diaries</span>
+        </h1>
+        <p class="text-slate-300 text-sm max-w-xl mx-auto font-serif italic">
+          100+ bespoke grooms & gentlemen styled across Jaipur, Kota, and International ateliers.
+        </p>
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- CLIENT DIARIES — FULL PAGE RANDOM IMAGE GALLERY           -->
+    <!-- ========================================================= -->
+    <section class="bg-white py-12 md:py-20 relative border-t border-slate-200">
+      <div class="max-w-[1380px] mx-auto px-4 sm:px-6 md:px-10">
+        
+        <!-- Random Image Masonry Layout (No keywords, No headings) -->
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 sm:gap-6">
+
+          <div class="rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 aspect-[3/4] bg-slate-100 group">
+            <img src="assets/hero_sherwani_palace_4k.jpg" alt="Client Photo" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          </div>
+
+          <div class="rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 aspect-[3/4] bg-slate-100 group">
+            <img src="assets/hero_black_tie_tuxedo_5_1785437572507.png" alt="Client Photo" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
+          </div>
+
+          <div class="rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 aspect-[3/4] bg-slate-100 group">
+            <img src="assets/wedding_groom.png" alt="Client Photo" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          </div>
+
+          <div class="rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 aspect-[3/4] bg-slate-100 group">
+            <img src="assets/hero_modern_gentleman_suit_4_1785437549474.png" alt="Client Photo" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          </div>
+
+          <div class="rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 aspect-[3/4] bg-slate-100 group">
+            <img src="assets/hero_royal_sherwani_model_2_1785437525300.png" alt="Client Photo" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
+          </div>
+
+          <div class="rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 aspect-[3/4] bg-slate-100 group">
+            <img src="assets/card_jodhpuri_v2.png" alt="Client Photo" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
+          </div>
+
+          <div class="rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 aspect-[3/4] bg-slate-100 group">
+            <img src="assets/occasion_haldi.jpg" alt="Client Photo" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          </div>
+
+          <div class="rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 aspect-[3/4] bg-slate-100 group">
+            <img src="assets/card_indowestern_v2.png" alt="Client Photo" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
+          </div>
+
+          <div class="rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 aspect-[3/4] bg-slate-100 group">
+            <img src="assets/hero_mansion_suit_4k.jpg" alt="Client Photo" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          </div>
+
+          <div class="rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 aspect-[3/4] bg-slate-100 group">
+            <img src="assets/occasion_sangeet.jpg" alt="Client Photo" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          </div>
+
+          <div class="rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 aspect-[3/4] bg-slate-100 group">
+            <img src="assets/card_sadri_v2.png" alt="Client Photo" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
+          </div>
+
+          <div class="rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 aspect-[3/4] bg-slate-100 group">
+            <img src="assets/hero_bespoke_suit_model_1_1785437512721.png" alt="Client Photo" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
+          </div>
+
+          <div class="rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 aspect-[3/4] bg-slate-100 group">
+            <img src="assets/card_sherwani_v2.png" alt="Client Photo" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
+          </div>
+
+          <div class="rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 aspect-[3/4] bg-slate-100 group">
+            <img src="assets/card_suits_v2.png" alt="Client Photo" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
+          </div>
+
+          <div class="rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 aspect-[3/4] bg-slate-100 group">
+            <img src="assets/occasion_partywear_v2.png" alt="Client Photo" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
+          </div>
+
+          <div class="rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 aspect-[3/4] bg-slate-100 group">
+            <img src="assets/occasion_engagement_v2.png" alt="Client Photo" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
+          </div>
+
+          <div class="rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 aspect-[3/4] bg-slate-100 group">
+            <img src="assets/everyday_shirt_trouser.png" alt="Client Photo" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
+          </div>
+
+          <div class="rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 aspect-[3/4] bg-slate-100 group">
+            <img src="assets/garment_blazers.png" alt="Client Photo" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
+          </div>
+
+          <div class="rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 aspect-[3/4] bg-slate-100 group">
+            <img src="assets/garment_sherwanis.png" alt="Client Photo" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
+          </div>
+
+          <div class="rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 aspect-[3/4] bg-slate-100 group">
+            <img src="assets/garment_suits.png" alt="Client Photo" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+<footer class="bg-slate-950 text-slate-300 py-16 px-6 md:px-10 border-t border-slate-800">
+        <div class="max-w-[1400px] mx-auto space-y-12">
+            
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10 text-xs">
+                
+                <!-- Col 1: Brand Info -->
+                <div class="space-y-4">
+                    <div class="flex items-center gap-2">
+                        <div class="bg-mpfOrange text-white font-serif font-bold text-xl w-8 h-8 rounded flex items-center justify-center">T</div>
+                        <span class="text-2xl font-serif font-bold text-white tracking-wider">TOOFIT</span>
+                    </div>
+                    <p class="text-slate-400 leading-relaxed">
+                        India's premier custom menswear brand offering bespoke suits, sherwanis, kurtas, jodhpuris, tuxedos and accessories. Founded in 1969.
+                    </p>
+                    <p class="text-mpfOrange font-semibold">Jaipur &bull; Kota &bull; Dubai</p>
+                </div>
+
+                <!-- Col 2: Categories -->
+                <div class="space-y-3">
+                    <h5 class="text-sm font-bold text-white font-serif uppercase">Shop Categories</h5>
+                    <ul class="space-y-2 text-slate-400">
+                        <li><a href="#categories" class="hover:text-mpfOrange transition-colors">Royal Sherwanis</a></li>
+                        <li><a href="#categories" class="hover:text-mpfOrange transition-colors">Bespoke Suits & Tuxedos</a></li>
+                        <li><a href="#categories" class="hover:text-mpfOrange transition-colors">Jodhpuri & Band Gala</a></li>
+                        <li><a href="#categories" class="hover:text-mpfOrange transition-colors">Crafted Shirts & Trousers</a></li>
+                        <li><a href="#categories" class="hover:text-mpfOrange transition-colors">Indo Western Outfits</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Useful Links -->
+                <div class="space-y-3">
+                    <h5 class="text-sm font-bold text-white font-serif uppercase">Toofit Atelier</h5>
+                    <ul class="space-y-2 text-slate-400">
+                        <li><a href="#experience" class="hover:text-mpfOrange transition-colors">Why Choose Us</a></li>
+                        <li><a href="#process" class="hover:text-mpfOrange transition-colors">How it Works</a></li>
+                        <li><a href="#reviews" class="hover:text-mpfOrange transition-colors">Client Testimonials</a></li>
+                        <li><a href="#" onclick="openLocationModal(); return false;" class="hover:text-mpfOrange transition-colors">Store Locations</a></li>
+                        <li><a href="#" onclick="openBookingModal('studio'); return false;" class="hover:text-mpfOrange transition-colors">Book Appointment</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4: Newsletter -->
+                <div class="space-y-4">
+                    <h5 class="text-sm font-bold text-white font-serif uppercase">Newsletter</h5>
+                    <p class="text-slate-400">Receive updates on new fabric arrivals & wedding styling guides.</p>
+                    <form class="flex gap-2" onsubmit="event.preventDefault(); alert('Subscribed to Toofit Atelier newsletter!');">
+                        <input type="email" placeholder="Your Email Address" class="bg-slate-900 border border-slate-800 rounded px-3 py-2 text-xs w-full text-white focus:outline-none focus:border-mpfOrange" required>
+                        <button type="submit" class="bg-mpfOrange text-white font-bold px-4 py-2 rounded text-xs hover:bg-orange-600 transition-colors">
+                            Subscribe
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+
+            <div class="pt-8 border-t border-slate-800 text-center text-[11px] text-slate-500 flex flex-col sm:flex-row justify-between items-center gap-4">
+                <span>&copy; 2026 TOOFIT TAILORS & FABRICS. ALL RIGHTS RESERVED.</span>
+                <span>JAIPUR &bull; KOTA &bull; DUBAI</span>
+            </div>
+
+        </div>
+    </footer>
+
+
+    <!-- ============================================ -->
+    <!-- FLOATING WHATSAPP FAB BUTTON                -->
+    <!-- ============================================ -->
+    <a href="https://wa.me/919829000000" target="_blank" rel="noopener" class="fixed bottom-6 right-6 z-50 bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:scale-110 transition-transform duration-300 flex items-center justify-center wa-fab" aria-label="Chat on WhatsApp">
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 16 16">
+            <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c-.003 1.396.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c.003-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
+        </svg>
+    </a>
+
+
+    <!-- INTERACTIVE JAVASCRIPT LOGIC -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            gsap.registerPlugin(ScrollTrigger);
+
+            gsap.utils.toArray('.gs-reveal').forEach((elem) => {
+                gsap.fromTo(elem, 
+                    { autoAlpha: 0, y: 40 }, 
+                    { 
+                        duration: 1, 
+                        autoAlpha: 1, 
+                        y: 0, 
+                        ease: "power2.out",
+                        scrollTrigger: {
+                            trigger: elem,
+                            start: "top 88%", 
+                            toggleActions: "play none none reverse"
+                        }
+                    }
+                );
+            });
+
+            // ===============================================
+            // SIGNATURE STYLES CAROUSEL: 2 FRAMES CONTROL
+            // ===============================================
+            const carousel = document.getElementById('cat-carousel');
+            const track = document.getElementById('cat-frames-track');
+            const dot0 = document.getElementById('dot-frame-0');
+            const dot1 = document.getElementById('dot-frame-1');
+
+            if (carousel && track) {
+                let currentFrame = 0;
+                let autoScrollTimer = null;
+                let isDown = false;
+                let startX = 0;
+
+                window.goToFrame = (index) => {
+                    currentFrame = index;
+                    track.style.transform = `translateX(-${currentFrame * 100}%)`;
+                    if (dot0 && dot1) {
+                        dot0.className = currentFrame === 0 
+                            ? "w-7 h-2.5 rounded-full bg-[#8B3A2B] transition-all cursor-pointer" 
+                            : "w-2.5 h-2.5 rounded-full bg-[#231B15]/20 hover:bg-[#8B3A2B]/60 transition-all cursor-pointer";
+                        dot1.className = currentFrame === 1 
+                            ? "w-7 h-2.5 rounded-full bg-[#8B3A2B] transition-all cursor-pointer" 
+                            : "w-2.5 h-2.5 rounded-full bg-[#231B15]/20 hover:bg-[#8B3A2B]/60 transition-all cursor-pointer";
+                    }
+                };
+
+                const nextFrame = () => {
+                    currentFrame = (currentFrame === 0) ? 1 : 0;
+                    goToFrame(currentFrame);
+                };
+
+                const startAutoScroll = () => {
+                    stopAutoScroll();
+                    autoScrollTimer = setInterval(nextFrame, 5000);
+                };
+
+                const stopAutoScroll = () => {
+                    if (autoScrollTimer) {
+                        clearInterval(autoScrollTimer);
+                        autoScrollTimer = null;
+                    }
+                };
+
+                // Prevent native image dragging
+                carousel.addEventListener('dragstart', (e) => e.preventDefault());
+
+                // Mouse Drag / Swipe Events
+                carousel.addEventListener('mousedown', (e) => {
+                    isDown = true;
+                    startX = e.pageX;
+                    stopAutoScroll();
+                });
+
+                carousel.addEventListener('mouseleave', () => {
+                    isDown = false;
+                    startAutoScroll();
+                });
+
+                carousel.addEventListener('mouseup', (e) => {
+                    if (!isDown) return;
+                    isDown = false;
+                    const diff = e.pageX - startX;
+                    if (diff < -50) goToFrame(1);
+                    else if (diff > 50) goToFrame(0);
+                    startAutoScroll();
+                });
+
+                // Touch swipe support
+                let touchStartX = 0;
+                carousel.addEventListener('touchstart', (e) => {
+                    touchStartX = e.touches[0].clientX;
+                    stopAutoScroll();
+                }, { passive: true });
+
+                carousel.addEventListener('touchend', (e) => {
+                    const diff = e.changedTouches[0].clientX - touchStartX;
+                    if (diff < -40) goToFrame(1);
+                    else if (diff > 40) goToFrame(0);
+                    startAutoScroll();
+                }, { passive: true });
+
+                // Pause auto scroll on mouse enter
+                carousel.addEventListener('mouseenter', stopAutoScroll);
+
+                // Init Frame 0 & Timer
+                goToFrame(0);
+                startAutoScroll();
+            }
+
+            // ===============================================
+            // MADE FOR EVERY OCCASION CAROUSEL: 2 FRAMES CONTROL
+            // ===============================================
+            const occCarousel = document.getElementById('occ-carousel');
+            const occTrack = document.getElementById('occ-frames-track');
+            const occDot0 = document.getElementById('occ-dot-frame-0');
+            const occDot1 = document.getElementById('occ-dot-frame-1');
+
+            if (occCarousel && occTrack) {
+                let currentOccFrame = 0;
+                let autoOccScrollTimer = null;
+                let isOccDown = false;
+                let occStartX = 0;
+
+                window.goToOccasionFrame = (index) => {
+                    currentOccFrame = index;
+                    occTrack.style.transform = `translateX(-${currentOccFrame * 100}%)`;
+                    if (occDot0 && occDot1) {
+                        occDot0.className = currentOccFrame === 0 
+                            ? "w-7 h-2.5 rounded-full bg-[#8B3A2B] transition-all cursor-pointer" 
+                            : "w-2.5 h-2.5 rounded-full bg-[#231B15]/20 hover:bg-[#8B3A2B]/60 transition-all cursor-pointer";
+                        occDot1.className = currentOccFrame === 1 
+                            ? "w-7 h-2.5 rounded-full bg-[#8B3A2B] transition-all cursor-pointer" 
+                            : "w-2.5 h-2.5 rounded-full bg-[#231B15]/20 hover:bg-[#8B3A2B]/60 transition-all cursor-pointer";
+                    }
+                };
+
+                const nextOccFrame = () => {
+                    currentOccFrame = (currentOccFrame === 0) ? 1 : 0;
+                    goToOccasionFrame(currentOccFrame);
+                };
+
+                const startOccAutoScroll = () => {
+                    stopOccAutoScroll();
+                    autoOccScrollTimer = setInterval(nextOccFrame, 5000);
+                };
+
+                const stopOccAutoScroll = () => {
+                    if (autoOccScrollTimer) {
+                        clearInterval(autoOccScrollTimer);
+                        autoOccScrollTimer = null;
+                    }
+                };
+
+                // Prevent native image dragging
+                occCarousel.addEventListener('dragstart', (e) => e.preventDefault());
+
+                // Mouse Drag / Swipe Events
+                occCarousel.addEventListener('mousedown', (e) => {
+                    isOccDown = true;
+                    occStartX = e.pageX;
+                    stopOccAutoScroll();
+                });
+
+                occCarousel.addEventListener('mouseleave', () => {
+                    isOccDown = false;
+                    startOccAutoScroll();
+                });
+
+                occCarousel.addEventListener('mouseup', (e) => {
+                    if (!isOccDown) return;
+                    isOccDown = false;
+                    const diff = e.pageX - occStartX;
+                    if (diff < -50) goToOccasionFrame(1);
+                    else if (diff > 50) goToOccasionFrame(0);
+                    startOccAutoScroll();
+                });
+
+                // Touch swipe support
+                let touchOccStartX = 0;
+                occCarousel.addEventListener('touchstart', (e) => {
+                    touchOccStartX = e.touches[0].clientX;
+                    stopOccAutoScroll();
+                }, { passive: true });
+
+                occCarousel.addEventListener('touchend', (e) => {
+                    const diff = e.changedTouches[0].clientX - touchOccStartX;
+                    if (diff < -40) goToOccasionFrame(1);
+                    else if (diff > 40) goToOccasionFrame(0);
+                    startOccAutoScroll();
+                }, { passive: true });
+
+                // Pause auto scroll on mouse enter
+                occCarousel.addEventListener('mouseenter', stopOccAutoScroll);
+
+                // Init Frame 0 & Timer
+                goToOccasionFrame(0);
+                startOccAutoScroll();
+            }
+        });
+    </script>
+
+</body>
+</html>
