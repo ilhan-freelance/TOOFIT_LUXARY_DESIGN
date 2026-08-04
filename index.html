@@ -99,8 +99,8 @@
 
         /* ===== GSAP REVEAL ===== */
         .gs-reveal {
-            visibility: hidden;
-            opacity: 0;
+            visibility: visible !important;
+            opacity: 1 !important;
         }
 
         /* ========================================== */
@@ -788,7 +788,7 @@
     <section class="py-8 sm:py-10 px-6 md:px-10 bg-[#F7F7F7]" id="categories">
         <div class="max-w-[1400px] mx-auto space-y-5">
             
-            <div class="flex flex-col items-center justify-center text-center gs-reveal">
+            <div class="flex flex-col items-center justify-center text-center">
                 <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight" style="font-family: PolySans, 'Helvetica Neue', Arial, sans-serif;">
                     <span class="text-[#1C1410]">Signature</span> 
                     <span class="relative inline-block ml-1.5 text-[#8B3A2B] italic font-serif px-1">
@@ -905,100 +905,12 @@
     </section>
 
     <!-- ============================================ -->
-    <!-- CAROUSEL JAVASCRIPT CONTROLLERS              -->
-    <!-- ============================================ -->
-    <script>
-    // ── GARMENT CATEGORIES CAROUSEL ──────────────────────────────
-    (function() {
-      var track     = document.getElementById('cat-frames-track');
-      var carousel  = document.getElementById('cat-carousel');
-      var dots      = [document.getElementById('dot-frame-0'), document.getElementById('dot-frame-1')];
-      var current   = 0;
-      var total     = 2;
-
-      function activeDot(idx) {
-        dots.forEach(function(d, i) {
-          if (!d) return;
-          if (i === idx) {
-            d.className = 'w-7 h-2.5 rounded-full bg-[#8B3A2B] transition-all';
-          } else {
-            d.className = 'w-2.5 h-2.5 rounded-full bg-[#231B15]/20 hover:bg-[#8B3A2B]/60 transition-all';
-          }
-        });
-      }
-
-      window.goToFrame = function(idx) {
-        if (!track) return;
-        current = idx;
-        track.style.transform = 'translateX(-' + (idx * 100) + '%)';
-        activeDot(idx);
-      };
-
-      // Auto-advance every 4 seconds
-      var catTimer = setInterval(function() {
-        var next = (current + 1) % total;
-        window.goToFrame(next);
-      }, 4000);
-
-      // Drag / swipe support
-      var startX = 0, dragging = false;
-      carousel && carousel.addEventListener('mousedown',  function(e){ startX = e.clientX; dragging = true; });
-      carousel && carousel.addEventListener('touchstart', function(e){ startX = e.touches[0].clientX; dragging = true; }, {passive:true});
-      carousel && carousel.addEventListener('mouseup',  function(e){ if(dragging){ var dx=e.clientX-startX; if(Math.abs(dx)>40) window.goToFrame(dx<0?Math.min(current+1,total-1):Math.max(current-1,0)); dragging=false; } });
-      carousel && carousel.addEventListener('touchend', function(e){ if(dragging){ var dx=e.changedTouches[0].clientX-startX; if(Math.abs(dx)>40) window.goToFrame(dx<0?Math.min(current+1,total-1):Math.max(current-1,0)); dragging=false; } });
-      carousel && carousel.addEventListener('mouseleave', function(){ dragging=false; });
-    })();
-
-    // ── OCCASIONS CAROUSEL ───────────────────────────────────────
-    (function() {
-      var occTrack    = document.getElementById('occ-frames-track');
-      var occCarousel = document.getElementById('occ-carousel');
-      var occDots     = [document.getElementById('occ-dot-frame-0'), document.getElementById('occ-dot-frame-1')];
-      var occCurrent  = 0;
-      var occTotal    = 2;
-
-      function occActiveDot(idx) {
-        occDots.forEach(function(d, i) {
-          if (!d) return;
-          if (i === idx) {
-            d.className = 'w-7 h-2.5 rounded-full bg-[#8B3A2B] transition-all cursor-pointer';
-          } else {
-            d.className = 'w-2.5 h-2.5 rounded-full bg-[#231B15]/20 hover:bg-[#8B3A2B]/60 transition-all cursor-pointer';
-          }
-        });
-      }
-
-      window.goToOccasionFrame = function(idx) {
-        if (!occTrack) return;
-        occCurrent = idx;
-        occTrack.style.transform = 'translateX(-' + (idx * 100) + '%)';
-        occActiveDot(idx);
-      };
-
-      // Auto-advance every 4.5 seconds (offset from categories)
-      var occTimer = setInterval(function() {
-        var next = (occCurrent + 1) % occTotal;
-        window.goToOccasionFrame(next);
-      }, 4500);
-
-      // Drag / swipe support
-      var startX = 0, dragging = false;
-      occCarousel && occCarousel.addEventListener('mousedown',  function(e){ startX = e.clientX; dragging = true; });
-      occCarousel && occCarousel.addEventListener('touchstart', function(e){ startX = e.touches[0].clientX; dragging = true; }, {passive:true});
-      occCarousel && occCarousel.addEventListener('mouseup',  function(e){ if(dragging){ var dx=e.clientX-startX; if(Math.abs(dx)>40) window.goToOccasionFrame(dx<0?Math.min(occCurrent+1,occTotal-1):Math.max(occCurrent-1,0)); dragging=false; } });
-      occCarousel && occCarousel.addEventListener('touchend', function(e){ if(dragging){ var dx=e.changedTouches[0].clientX-startX; if(Math.abs(dx)>40) window.goToOccasionFrame(dx<0?Math.min(occCurrent+1,occTotal-1):Math.max(occCurrent-1,0)); dragging=false; } });
-      occCarousel && occCarousel.addEventListener('mouseleave', function(){ dragging=false; });
-    })();
-    </script>
-
-
-    <!-- ============================================ -->
     <!-- 3. SHOP BY OCCASION (MY PERFECT FIT MATCH)  -->
     <!-- ============================================ -->
     <section class="py-8 sm:py-10 px-6 md:px-10 bg-[#F7F7F7]" id="occasions">
         <div class="max-w-[1400px] mx-auto space-y-5">
             
-            <div class="flex flex-col items-center justify-center text-center gs-reveal">
+            <div class="flex flex-col items-center justify-center text-center">
                 <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight" style="font-family: PolySans, 'Helvetica Neue', Arial, sans-serif;">
                     <span class="text-[#1C1410]">Made for Every</span> 
                     <span class="relative inline-block ml-1.5 text-[#8B3A2B] italic font-serif px-1">
@@ -1113,6 +1025,84 @@
 
         </div>
     </section>
+
+        <!-- ============================================ -->
+    <!-- CAROUSEL JAVASCRIPT CONTROLLERS (IMMEDIATE)   -->
+    <!-- ============================================ -->
+    <script>
+    (function() {
+      // Garment Categories State
+      var catCurrent = 0, catTotal = 2;
+      
+      window.goToFrame = function(idx) {
+        var track = document.getElementById('cat-frames-track');
+        var d0 = document.getElementById('dot-frame-0');
+        var d1 = document.getElementById('dot-frame-1');
+        if (!track) return;
+        catCurrent = idx;
+        track.style.transform = 'translateX(-' + (idx * 100) + '%)';
+        if (d0) d0.className = (idx === 0) ? 'w-7 h-2.5 rounded-full bg-[#8B3A2B] transition-all cursor-pointer' : 'w-2.5 h-2.5 rounded-full bg-[#231B15]/20 hover:bg-[#8B3A2B]/60 transition-all cursor-pointer';
+        if (d1) d1.className = (idx === 1) ? 'w-7 h-2.5 rounded-full bg-[#8B3A2B] transition-all cursor-pointer' : 'w-2.5 h-2.5 rounded-full bg-[#231B15]/20 hover:bg-[#8B3A2B]/60 transition-all cursor-pointer';
+      };
+
+      // Occasions State
+      var occCurrent = 0, occTotal = 2;
+
+      window.goToOccasionFrame = function(idx) {
+        var track = document.getElementById('occ-frames-track');
+        var d0 = document.getElementById('occ-dot-frame-0');
+        var d1 = document.getElementById('occ-dot-frame-1');
+        if (!track) return;
+        occCurrent = idx;
+        track.style.transform = 'translateX(-' + (idx * 100) + '%)';
+        if (d0) d0.className = (idx === 0) ? 'w-7 h-2.5 rounded-full bg-[#8B3A2B] transition-all cursor-pointer' : 'w-2.5 h-2.5 rounded-full bg-[#231B15]/20 hover:bg-[#8B3A2B]/60 transition-all cursor-pointer';
+        if (d1) d1.className = (idx === 1) ? 'w-7 h-2.5 rounded-full bg-[#8B3A2B] transition-all cursor-pointer' : 'w-2.5 h-2.5 rounded-full bg-[#231B15]/20 hover:bg-[#8B3A2B]/60 transition-all cursor-pointer';
+      };
+
+      // Timers for Auto-Motion
+      setInterval(function() {
+        window.goToFrame((catCurrent + 1) % catTotal);
+      }, 4000);
+
+      setInterval(function() {
+        window.goToOccasionFrame((occCurrent + 1) % occTotal);
+      }, 4500);
+
+      // Drag / Touch Listeners initialized safely
+      function setupDrag(carouselId, goToFn, getCurrent, getTotal) {
+        var car = document.getElementById(carouselId);
+        if (!car) return;
+        var startX = 0, dragging = false;
+        car.addEventListener('mousedown', function(e) { startX = e.clientX; dragging = true; });
+        car.addEventListener('touchstart', function(e) { startX = e.touches[0].clientX; dragging = true; }, {passive:true});
+        car.addEventListener('mouseup', function(e) {
+          if (!dragging) return;
+          var dx = e.clientX - startX;
+          if (Math.abs(dx) > 30) {
+            goToFn(dx < 0 ? Math.min(getCurrent() + 1, getTotal() - 1) : Math.max(getCurrent() - 1, 0));
+          }
+          dragging = false;
+        });
+        car.addEventListener('touchend', function(e) {
+          if (!dragging) return;
+          var dx = e.changedTouches[0].clientX - startX;
+          if (Math.abs(dx) > 30) {
+            goToFn(dx < 0 ? Math.min(getCurrent() + 1, getTotal() - 1) : Math.max(getCurrent() - 1, 0));
+          }
+          dragging = false;
+        });
+        car.addEventListener('mouseleave', function() { dragging = false; });
+      }
+
+      // Init Drag Listeners when ready
+      setTimeout(function() {
+        setupDrag('cat-carousel', window.goToFrame, function() { return catCurrent; }, function() { return catTotal; });
+        setupDrag('occ-carousel', window.goToOccasionFrame, function() { return occCurrent; }, function() { return occTotal; });
+      }, 100);
+    })();
+    </script>
+
+
 
 
     <!-- ============================================ -->
