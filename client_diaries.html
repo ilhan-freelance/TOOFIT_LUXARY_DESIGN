@@ -601,11 +601,11 @@
     <!-- ============================================ -->
     
     <!-- ========================================================= -->
-    <!-- CLIENT DIARIES — FULL PAGE HERO BANNER                    -->
+    <!-- CLIENT DIARIES — DYNAMIC RANDOMIZED HERO & GALLERY        -->
     <!-- ========================================================= -->
-    <section class="bg-slate-950 text-white py-16 md:py-24 relative overflow-hidden">
+    <section class="bg-slate-950 text-white py-14 md:py-20 relative overflow-hidden">
       <!-- Background Photo Grid -->
-      <div class="absolute inset-0 grid grid-cols-4 md:grid-cols-6 gap-1 opacity-40 pointer-events-none">
+      <div class="absolute inset-0 grid grid-cols-4 md:grid-cols-6 gap-1 opacity-35 pointer-events-none">
         <div class="h-full"><img src="assets/hero_sherwani_palace_4k.jpg" class="w-full h-full object-cover" alt="Client 1"></div>
         <div class="h-full"><img src="assets/hero_black_tie_tuxedo_5_1785437572507.png" class="w-full h-full object-cover object-top" alt="Client 2"></div>
         <div class="h-full"><img src="assets/wedding_groom.png" class="w-full h-full object-cover" alt="Client 3"></div>
@@ -615,110 +615,103 @@
       </div>
       <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/70 to-transparent pointer-events-none"></div>
 
-      <div class="max-w-[1380px] mx-auto px-6 md:px-10 relative z-10 text-center">
-        <span class="text-[#F2D0A9] text-xs font-extrabold uppercase tracking-[0.35em] block mb-3">Toofit Bespoke Atelier</span>
-        <h1 class="text-4xl sm:text-6xl md:text-7xl font-serif font-black tracking-tight text-white mb-4">
+      <div class="max-w-[1380px] mx-auto px-6 md:px-10 relative z-10 text-center space-y-4">
+        <span class="text-[#F2D0A9] text-xs font-extrabold uppercase tracking-[0.35em] block">Styled by Toofit Atelier</span>
+        <h1 class="text-4xl sm:text-6xl md:text-7xl font-serif font-black tracking-tight text-white">
           Client <span class="text-[#F2D0A9] italic font-normal">Diaries</span>
         </h1>
-        <p class="text-slate-300 text-sm max-w-xl mx-auto font-serif italic">
-          100+ bespoke grooms & gentlemen styled across Jaipur, Kota, and International ateliers.
-        </p>
+        
+        <!-- Shuffle Button -->
+        <div class="pt-2">
+          <button onclick="renderRandomGallery()" class="inline-flex items-center gap-2 bg-[#8B3A2B] hover:bg-[#753023] text-white text-xs font-bold uppercase tracking-wider px-6 py-3 rounded-full shadow-lg hover:scale-105 transition-all cursor-pointer">
+            <span>🎲 Shuffle Gallery Layout</span>
+          </button>
+        </div>
       </div>
     </section>
 
     <!-- ========================================================= -->
-    <!-- CLIENT DIARIES — FULL PAGE RANDOM IMAGE GALLERY           -->
+    <!-- DYNAMIC RANDOM PHOTO MASONRY GRID                         -->
     <!-- ========================================================= -->
     <section class="bg-white py-12 md:py-20 relative border-t border-slate-200">
       <div class="max-w-[1380px] mx-auto px-4 sm:px-6 md:px-10">
-        
-        <!-- Random Image Masonry Layout (No keywords, No headings) -->
-        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 sm:gap-6">
-
-          <div class="rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 aspect-[3/4] bg-slate-100 group">
-            <img src="assets/hero_sherwani_palace_4k.jpg" alt="Client Photo" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-          </div>
-
-          <div class="rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 aspect-[3/4] bg-slate-100 group">
-            <img src="assets/hero_black_tie_tuxedo_5_1785437572507.png" alt="Client Photo" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
-          </div>
-
-          <div class="rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 aspect-[3/4] bg-slate-100 group">
-            <img src="assets/wedding_groom.png" alt="Client Photo" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-          </div>
-
-          <div class="rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 aspect-[3/4] bg-slate-100 group">
-            <img src="assets/hero_modern_gentleman_suit_4_1785437549474.png" alt="Client Photo" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-          </div>
-
-          <div class="rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 aspect-[3/4] bg-slate-100 group">
-            <img src="assets/hero_royal_sherwani_model_2_1785437525300.png" alt="Client Photo" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
-          </div>
-
-          <div class="rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 aspect-[3/4] bg-slate-100 group">
-            <img src="assets/card_jodhpuri_v2.png" alt="Client Photo" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
-          </div>
-
-          <div class="rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 aspect-[3/4] bg-slate-100 group">
-            <img src="assets/occasion_haldi.jpg" alt="Client Photo" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-          </div>
-
-          <div class="rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 aspect-[3/4] bg-slate-100 group">
-            <img src="assets/card_indowestern_v2.png" alt="Client Photo" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
-          </div>
-
-          <div class="rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 aspect-[3/4] bg-slate-100 group">
-            <img src="assets/hero_mansion_suit_4k.jpg" alt="Client Photo" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-          </div>
-
-          <div class="rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 aspect-[3/4] bg-slate-100 group">
-            <img src="assets/occasion_sangeet.jpg" alt="Client Photo" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-          </div>
-
-          <div class="rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 aspect-[3/4] bg-slate-100 group">
-            <img src="assets/card_sadri_v2.png" alt="Client Photo" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
-          </div>
-
-          <div class="rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 aspect-[3/4] bg-slate-100 group">
-            <img src="assets/hero_bespoke_suit_model_1_1785437512721.png" alt="Client Photo" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
-          </div>
-
-          <div class="rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 aspect-[3/4] bg-slate-100 group">
-            <img src="assets/card_sherwani_v2.png" alt="Client Photo" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
-          </div>
-
-          <div class="rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 aspect-[3/4] bg-slate-100 group">
-            <img src="assets/card_suits_v2.png" alt="Client Photo" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
-          </div>
-
-          <div class="rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 aspect-[3/4] bg-slate-100 group">
-            <img src="assets/occasion_partywear_v2.png" alt="Client Photo" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
-          </div>
-
-          <div class="rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 aspect-[3/4] bg-slate-100 group">
-            <img src="assets/occasion_engagement_v2.png" alt="Client Photo" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
-          </div>
-
-          <div class="rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 aspect-[3/4] bg-slate-100 group">
-            <img src="assets/everyday_shirt_trouser.png" alt="Client Photo" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
-          </div>
-
-          <div class="rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 aspect-[3/4] bg-slate-100 group">
-            <img src="assets/garment_blazers.png" alt="Client Photo" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
-          </div>
-
-          <div class="rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 aspect-[3/4] bg-slate-100 group">
-            <img src="assets/garment_sherwanis.png" alt="Client Photo" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
-          </div>
-
-          <div class="rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 aspect-[3/4] bg-slate-100 group">
-            <img src="assets/garment_suits.png" alt="Client Photo" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
-          </div>
-
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 sm:gap-6" id="random-diaries-grid">
+          <!-- Dynamic Randomly Shuffled Images Inserted via JS -->
         </div>
-
       </div>
     </section>
+
+    <script>
+    (function(){
+      const CLIENT_DIARIES_IMAGES = [
+        'assets/hero_sherwani_palace_4k.jpg',
+        'assets/hero_black_tie_tuxedo_5_1785437572507.png',
+        'assets/wedding_groom.png',
+        'assets/hero_modern_gentleman_suit_4_1785437549474.png',
+        'assets/hero_royal_sherwani_model_2_1785437525300.png',
+        'assets/card_jodhpuri_v2.png',
+        'assets/occasion_haldi.jpg',
+        'assets/card_indowestern_v2.png',
+        'assets/hero_mansion_suit_4k.jpg',
+        'assets/occasion_sangeet.jpg',
+        'assets/card_sadri_v2.png',
+        'assets/hero_bespoke_suit_model_1_1785437512721.png',
+        'assets/card_sherwani_v2.png',
+        'assets/card_suits_v2.png',
+        'assets/occasion_partywear_v2.png',
+        'assets/occasion_engagement_v2.png',
+        'assets/everyday_shirt_trouser.png',
+        'assets/garment_blazers.png',
+        'assets/garment_sherwanis.png',
+        'assets/garment_suits.png',
+        'assets/card_pants_clean.png',
+        'assets/card_shirt_v2.png',
+        'assets/card_trousers_v2.png',
+        'assets/hero_editorial_suits.png',
+        'assets/hero_sherwani.png',
+        'assets/hero_wedding.png',
+        'assets/hero_formal.png',
+        'assets/hero_bandgala.png',
+        'assets/master_tailor.png',
+        'assets/atelier_interior.png'
+      ];
+
+      const ASPECT_RATIOS = ['aspect-[3/4]', 'aspect-[4/5]', 'aspect-[3/4]', 'aspect-[1/1]', 'aspect-[3/4]'];
+
+      function shuffle(arr) {
+        let array = [...arr];
+        for (let i = array.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [array[i], array[j]] = [array[j], array[i]];
+        }
+        return array;
+      }
+
+      window.renderRandomGallery = function() {
+        const container = document.getElementById('random-diaries-grid');
+        if (!container) return;
+
+        const shuffled = shuffle(CLIENT_DIARIES_IMAGES);
+        let html = '';
+
+        shuffled.forEach((imgSrc, idx) => {
+          const ratio = ASPECT_RATIOS[idx % ASPECT_RATIOS.length];
+          html += `
+            <div class="rounded-2xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 ${ratio} bg-slate-100 group cursor-pointer border border-slate-200/60">
+              <img src="${imgSrc}" alt="Client Photo ${idx+1}" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700">
+            </div>
+          `;
+        });
+
+        container.innerHTML = html;
+      };
+
+      document.addEventListener('DOMContentLoaded', window.renderRandomGallery);
+      if (document.readyState === 'complete' || document.readyState === 'interactive') {
+        window.renderRandomGallery();
+      }
+    })();
+    </script>
 
 <footer class="bg-slate-950 text-slate-300 py-16 px-6 md:px-10 border-t border-slate-800">
         <div class="max-w-[1400px] mx-auto space-y-12">
