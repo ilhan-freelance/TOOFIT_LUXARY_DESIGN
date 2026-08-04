@@ -2160,9 +2160,254 @@ window.addEventListener('click', (e) => {
 </section>
 
 
+    
+
+<!-- VIDEO REEL CONTROLLER SCRIPT -->
+<script>
+(function(){
+  const reelVid   = document.getElementById('testimonial-reel-vid');
+  const reelName  = document.getElementById('reel-client-name');
+  const reelQuote = document.getElementById('reel-client-quote');
+  const audioIcon = document.getElementById('reel-audio-icon');
+
+  window.switchReel = function(index, vidSrc, name, loc, quote) {
+    if(!reelVid) return;
+    reelVid.src = vidSrc;
+    reelVid.play().catch(()=>{});
+    if(reelName)  reelName.textContent = name;
+    if(reelQuote) reelQuote.textContent = `"${quote}"`;
+
+    const btns = document.querySelectorAll('.reel-thumb-btn');
+    btns.forEach((btn, idx) => {
+      if(idx === index) {
+        btn.className = "reel-thumb-btn bg-slate-800 hover:bg-slate-700 active-reel p-2 rounded-xl text-left border border-[#8B3A2B] transition-all shadow-md";
+      } else {
+        btn.className = "reel-thumb-btn bg-slate-800 hover:bg-slate-700 p-2 rounded-xl text-left border border-slate-700/80 transition-all opacity-70";
+      }
+    });
+  };
+
+  window.toggleReelAudio = function() {
+    if(!reelVid || !audioIcon) return;
+    reelVid.muted = !reelVid.muted;
+    audioIcon.textContent = reelVid.muted ? '🔇' : '🔊';
+  };
+})();
+</script>
+
+
+
+
+
     <!-- ============================================ -->
     <!-- 9. FOOTER (MY PERFECT FIT MATCH)            -->
     <!-- ============================================ -->
+    <!-- ========================================================= -->
+<!-- CLIENT TESTIMONIALS SECTION — VIDEO REELS + TEXT REVIEWS  -->
+<!-- ========================================================= -->
+<section id="testimonials" class="py-14 md:py-20 bg-[#F9F8F6] relative overflow-hidden border-t border-slate-200">
+  
+  <!-- Subtle Ambient Background Glows -->
+  <div class="absolute -top-32 -left-32 w-96 h-96 rounded-full bg-[radial-gradient(circle,_rgba(242,208,169,0.3)_0%,_transparent_70%)] blur-3xl pointer-events-none"></div>
+  <div class="absolute -bottom-32 -right-32 w-96 h-96 rounded-full bg-[radial-gradient(circle,_rgba(139,58,43,0.08)_0%,_transparent_70%)] blur-3xl pointer-events-none"></div>
+
+  <!-- Header & Trust Rating Bar -->
+  <div class="max-w-[1380px] mx-auto px-6 md:px-10 mb-12 text-center relative z-10">
+    <div class="inline-flex items-center gap-2.5 bg-white px-4 py-1.5 rounded-full shadow-sm border border-slate-200/80 mb-3">
+      <span class="text-amber-500 font-bold text-xs tracking-wider">★ 4.9 / 5.0</span>
+      <span class="text-slate-300 text-xs">•</span>
+      <span class="text-slate-600 text-[11px] font-semibold">1,500+ Verified Patron Reviews</span>
+    </div>
+    <h2 class="text-3xl sm:text-4xl md:text-5xl font-serif font-extrabold text-[#0F172A] tracking-tight">
+      Client <span class="italic font-normal text-[#8B3A2B]">Testimonials</span>
+    </h2>
+    <div class="w-12 h-0.5 bg-[#8B3A2B] mx-auto mt-3 rounded-full opacity-80"></div>
+  </div>
+
+  <!-- Main Content Grid: Left Video Reels + Right Text Review Cards -->
+  <div class="max-w-[1380px] mx-auto px-4 sm:px-6 md:px-10 relative z-10">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-stretch">
+
+      <!-- ── LEFT 5 COLS: VIDEO REELS CAROUSEL ── -->
+      <div class="lg:col-span-5 flex flex-col justify-between space-y-4">
+        <div class="bg-slate-900 rounded-3xl p-4 sm:p-6 shadow-xl border border-slate-800 flex flex-col h-full justify-between">
+          
+          <div class="flex items-center justify-between mb-4">
+            <span class="text-[11px] font-bold text-[#F2D0A9] uppercase tracking-[0.25em]">Real Groom Video Reviews</span>
+            <div class="flex items-center gap-1.5">
+              <span class="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span>
+              <span class="text-[10px] text-slate-400 uppercase font-bold tracking-wider">Live Atelier Stories</span>
+            </div>
+          </div>
+
+          <!-- Smartphone Video Reel Box -->
+          <div class="relative w-full rounded-2xl overflow-hidden bg-black border border-slate-800 aspect-[9/14] shadow-2xl group">
+            <video id="testimonial-reel-vid" class="w-full h-full object-cover" src="assets/video_consultation.mp4" muted playsinline loop preload="auto"></video>
+            
+            <!-- Video Overlay Gradient -->
+            <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-black/30 pointer-events-none"></div>
+
+            <!-- Mute/Unmute & Play Control Button -->
+            <button onclick="toggleReelAudio()" class="absolute top-4 right-4 bg-black/60 hover:bg-black/80 text-white w-9 h-9 rounded-full backdrop-blur-md flex items-center justify-center transition-all shadow-lg z-20">
+              <span id="reel-audio-icon">🔇</span>
+            </button>
+
+            <!-- Video Info Footer Overlay -->
+            <div class="absolute bottom-0 inset-x-0 p-5 text-white z-10 space-y-1">
+              <div class="flex items-center gap-2">
+                <span class="bg-[#8B3A2B] text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded">Wedding Fitting</span>
+                <span class="text-amber-400 text-xs font-bold">★ ★ ★ ★ ★</span>
+              </div>
+              <h4 id="reel-client-name" class="font-serif font-bold text-lg leading-tight">Rohan Joshi & Family</h4>
+              <p id="reel-client-quote" class="text-xs text-slate-300 italic font-serif leading-snug">
+                "The trial fitting at Jaipur Atelier was an unmatched experience. Perfection down to every seam!"
+              </p>
+            </div>
+          </div>
+
+          <!-- Video Reel Selector Dots / Buttons -->
+          <div class="grid grid-cols-3 gap-2 mt-4">
+            <button onclick="switchReel(0, 'assets/video_consultation.mp4', 'Rohan Joshi & Family', 'Jaipur Atelier', 'The trial fitting at Jaipur Atelier was an unmatched experience. Perfection down to every seam!')" class="reel-thumb-btn bg-slate-800 hover:bg-slate-700 active-reel p-2 rounded-xl text-left border border-slate-700/80 transition-all">
+              <span class="text-[9px] text-[#F2D0A9] font-bold block uppercase">Review 01</span>
+              <span class="text-[10px] text-white font-semibold truncate block">Rohan J.</span>
+            </button>
+            <button onclick="switchReel(1, 'assets/video_measurements.mp4', 'Dr. Anirudh Verma', 'Kota Showroom', '3D measurement precision! The suit draped flawlessly on my wedding day.')" class="reel-thumb-btn bg-slate-800 hover:bg-slate-700 p-2 rounded-xl text-left border border-slate-700/80 transition-all">
+              <span class="text-[9px] text-[#F2D0A9] font-bold block uppercase">Review 02</span>
+              <span class="text-[10px] text-white font-semibold truncate block">Dr. Anirudh</span>
+            </button>
+            <button onclick="switchReel(2, 'assets/video_finalfitting.mp4', 'Shahamat Khan', 'Dubai Atelier', 'Custom midnight tuxedo crafted for my reception. Exceptional craftsmanship!')" class="reel-thumb-btn bg-slate-800 hover:bg-slate-700 p-2 rounded-xl text-left border border-slate-700/80 transition-all">
+              <span class="text-[9px] text-[#F2D0A9] font-bold block uppercase">Review 03</span>
+              <span class="text-[10px] text-white font-semibold truncate block">Shahamat K.</span>
+            </button>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ── RIGHT 7 COLS: VERIFIED TEXT REVIEW CARDS ── -->
+      <div class="lg:col-span-7 flex flex-col justify-between space-y-4">
+        
+        <!-- Review Card 1 -->
+        <div class="bg-white rounded-3xl p-6 sm:p-7 shadow-[0_10px_30px_rgba(0,0,0,0.04)] border border-slate-200/80 space-y-3 hover:shadow-[0_16px_36px_rgba(0,0,0,0.08)] transition-all">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-1 text-amber-500 text-sm font-bold">
+              ★ ★ ★ ★ ★
+            </div>
+            <span class="text-[10px] font-bold text-slate-500 bg-slate-100 px-3 py-1 rounded-full uppercase tracking-wider">
+              Google Verified &bull; 5.0
+            </span>
+          </div>
+          <p class="text-xs sm:text-sm text-slate-700 leading-relaxed font-serif italic">
+            "Got my wedding Sherwani & Tuxedo customized from Toofit. The fitting was absolute perfection right from the first trial! The master Karigars paid attention to every single detail of shoulder padding and silk lining."
+          </p>
+          <div class="flex items-center justify-between pt-2 border-t border-slate-100">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-[#0F172A] text-[#F2D0A9] font-serif font-bold flex items-center justify-center text-xs">
+                RJ
+              </div>
+              <div>
+                <h4 class="text-xs font-bold text-[#0F172A]">Rohan Joshi</h4>
+                <span class="text-[10px] text-slate-400 uppercase font-semibold">Bespoke Sherwani &bull; Jaipur Atelier</span>
+              </div>
+            </div>
+            <span class="text-[11px] text-slate-400 font-medium">Verified Groom</span>
+          </div>
+        </div>
+
+        <!-- Review Card 2 -->
+        <div class="bg-white rounded-3xl p-6 sm:p-7 shadow-[0_10px_30px_rgba(0,0,0,0.04)] border border-slate-200/80 space-y-3 hover:shadow-[0_16px_36px_rgba(0,0,0,0.08)] transition-all">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-1 text-amber-500 text-sm font-bold">
+              ★ ★ ★ ★ ★
+            </div>
+            <span class="text-[10px] font-bold text-slate-500 bg-slate-100 px-3 py-1 rounded-full uppercase tracking-wider">
+              WedMeGood &bull; 5.0
+            </span>
+          </div>
+          <p class="text-xs sm:text-sm text-slate-700 leading-relaxed font-serif italic">
+            "The personal stylist recommendation saved me so much time. They matched my Sherwani fabric with my bride's lehenga color and event lighting. Unmatched bespoke service!"
+          </p>
+          <div class="flex items-center justify-between pt-2 border-t border-slate-100">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-[#8B3A2B] text-white font-serif font-bold flex items-center justify-center text-xs">
+                SK
+              </div>
+              <div>
+                <h4 class="text-xs font-bold text-[#0F172A]">Shahamat Khan</h4>
+                <span class="text-[10px] text-slate-400 uppercase font-semibold">Custom Silk Tuxedo &bull; Dubai Trunk Show</span>
+              </div>
+            </div>
+            <span class="text-[11px] text-slate-400 font-medium">Verified Groom</span>
+          </div>
+        </div>
+
+        <!-- Review Card 3 -->
+        <div class="bg-white rounded-3xl p-6 sm:p-7 shadow-[0_10px_30px_rgba(0,0,0,0.04)] border border-slate-200/80 space-y-3 hover:shadow-[0_16px_36px_rgba(0,0,0,0.08)] transition-all">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-1 text-amber-500 text-sm font-bold">
+              ★ ★ ★ ★ ★
+            </div>
+            <span class="text-[10px] font-bold text-slate-500 bg-slate-100 px-3 py-1 rounded-full uppercase tracking-wider">
+              Justdial Gold &bull; 5.0
+            </span>
+          </div>
+          <p class="text-xs sm:text-sm text-slate-700 leading-relaxed font-serif italic">
+            "Been getting my business suits and cotton shirts stitched here for 5 years. Fabric quality of Super 150s merino wool is top notch. Guaranteed fit every single time."
+          </p>
+          <div class="flex items-center justify-between pt-2 border-t border-slate-100">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-[#B87333] text-white font-serif font-bold flex items-center justify-center text-xs">
+                VS
+              </div>
+              <div>
+                <h4 class="text-xs font-bold text-[#0F172A]">Vikram Singhania</h4>
+                <span class="text-[10px] text-slate-400 uppercase font-semibold">Regular Client &bull; Kota Showroom</span>
+              </div>
+            </div>
+            <span class="text-[11px] text-slate-400 font-medium">Verified Client</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- VIDEO REEL CONTROLLER SCRIPT -->
+<script>
+(function(){
+  const reelVid   = document.getElementById('testimonial-reel-vid');
+  const reelName  = document.getElementById('reel-client-name');
+  const reelQuote = document.getElementById('reel-client-quote');
+  const audioIcon = document.getElementById('reel-audio-icon');
+
+  window.switchReel = function(index, vidSrc, name, loc, quote) {
+    if(!reelVid) return;
+    reelVid.src = vidSrc;
+    reelVid.play().catch(()=>{});
+    if(reelName)  reelName.textContent = name;
+    if(reelQuote) reelQuote.textContent = `"${quote}"`;
+
+    const btns = document.querySelectorAll('.reel-thumb-btn');
+    btns.forEach((btn, idx) => {
+      if(idx === index) {
+        btn.className = "reel-thumb-btn bg-slate-800 hover:bg-slate-700 active-reel p-2 rounded-xl text-left border border-[#8B3A2B] transition-all shadow-md";
+      } else {
+        btn.className = "reel-thumb-btn bg-slate-800 hover:bg-slate-700 p-2 rounded-xl text-left border border-slate-700/80 transition-all opacity-70";
+      }
+    });
+  };
+
+  window.toggleReelAudio = function() {
+    if(!reelVid || !audioIcon) return;
+    reelVid.muted = !reelVid.muted;
+    audioIcon.textContent = reelVid.muted ? '🔇' : '🔊';
+  };
+})();
+</script>
+
+
     <footer class="bg-slate-950 text-slate-300 py-16 px-6 md:px-10 border-t border-slate-800">
         <div class="max-w-[1400px] mx-auto space-y-12">
             
