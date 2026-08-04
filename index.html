@@ -1237,24 +1237,24 @@
     <!-- ========================================================= -->
     <!-- 5B. ANATOMY OF ROYAL TAILORING — PINNED HORIZ SCROLL      -->
     <!-- ========================================================= -->
-    <div id="anatomy-wrapper" style="height:400vh;position:relative;">
-      <div id="anatomy-pin" style="position:sticky;top:0;height:100vh;background:#FFFFFF;border-top:3px solid #1C2A42;">
+    <div id="anatomy-wrapper" style="height:400vh;position:relative;background:#FFFFFF;">
+      <div id="anatomy-pin" style="position:sticky;top:0;height:100vh;width:100%;overflow:hidden;background:#FFFFFF;border-top:3px solid #1C2A42;">
 
         <!-- MAX-WIDTH CONSTRAINED INNER CONTAINER -->
         <div style="max-width:1340px;margin:0 auto;height:100%;position:relative;overflow:hidden;background:#FFFFFF;">
 
-          <!-- CENTERED HEADER — title only, no bullet -->
-          <div style="position:absolute;top:0;left:0;right:0;z-index:20;text-align:center;padding-top:16px;">
-            <div style="display:flex;align-items:center;justify-content:center;gap:14px;">
-              <div style="height:1px;width:50px;background:rgba(0,0,0,.2);"></div>
+          <!-- CENTERED HEADER — Title Only -->
+          <div style="position:absolute;top:18px;left:0;right:0;z-index:20;text-align:center;">
+            <div style="display:flex;align-items:center;justify-content:center;gap:16px;">
+              <div style="height:1px;width:60px;background:rgba(28,42,66,.25);"></div>
               <h2 style="font-family:Georgia,serif;font-weight:700;margin:0;color:#0F1A2A;
-                font-size:clamp(1.1rem,1.6vw,1.65rem);letter-spacing:.02em;">
+                font-size:clamp(1.15rem,1.7vw,1.7rem);letter-spacing:.02em;">
                 Anatomy of Royal Tailoring</h2>
-              <div style="height:1px;width:50px;background:rgba(0,0,0,.2);"></div>
+              <div style="height:1px;width:60px;background:rgba(28,42,66,.25);"></div>
             </div>
           </div>
 
-          <!-- SLIDING TRACK — background:white ensures mix-blend-mode works regardless of compositing layer -->
+          <!-- SLIDING TRACK -->
           <div style="position:absolute;inset:0;overflow:hidden;">
             <div id="anatomy-track" style="display:flex;height:100%;width:400%;background:#FFFFFF;">
 
@@ -1263,83 +1263,83 @@
               <!-- ═══════════════════════════════════════════ -->
               <div style="width:25%;flex-shrink:0;height:100%;position:relative;display:flex;align-items:center;justify-content:center;background:#FFFFFF;">
 
-                <!-- SUIT — mix-blend-mode:multiply removes white bg on white parent -->
+                <!-- SUIT — Pure transparent PNG, no background box -->
                 <img src="assets/frame_1_anatomy.png" alt="Charcoal Bespoke Suit"
-                  style="height:73%;max-height:500px;object-fit:contain;position:relative;z-index:5;
-                  mix-blend-mode:multiply;">
+                  style="height:62vh;max-height:440px;object-fit:contain;position:relative;z-index:5;
+                  filter:drop-shadow(0 14px 28px rgba(0,0,0,.15));">
 
-                <!-- LEFT BOXES — navy #1C2A42 -->
-                <div style="position:absolute;left:30px;top:17%;z-index:10;width:178px;
-                  background:#fff;border:1px solid #1C2A42;border-top:3px solid #1C2A42;
-                  border-radius:4px;padding:7px 10px;box-shadow:0 2px 10px rgba(0,0,0,.08);">
-                  <div style="font-size:8px;letter-spacing:.16em;color:#1C2A42;text-transform:uppercase;font-weight:700;margin-bottom:2px;">Collar Point</div>
-                  <div style="font-size:9px;color:#7A6E62;font-style:italic;font-family:Georgia;">Hand-set silk notch collar</div>
+                <!-- LEFT CALLOUT BOXES — navy #1C2A42 -->
+                <div style="position:absolute;left:28px;top:16%;z-index:10;width:180px;
+                  background:#FFFFFF;border:1px solid #1C2A42;border-left:4px solid #1C2A42;
+                  border-radius:6px;padding:6px 10px;box-shadow:0 3px 12px rgba(0,0,0,.07);">
+                  <div style="font-size:8px;letter-spacing:.15em;color:#1C2A42;text-transform:uppercase;font-weight:700;margin-bottom:2px;">Collar Point</div>
+                  <div style="font-size:9px;color:#6A5E52;font-style:italic;font-family:Georgia;">Hand-set silk notch collar</div>
                 </div>
-                <div style="position:absolute;left:30px;top:31%;z-index:10;width:178px;
-                  background:#fff;border:1px solid #1C2A42;border-top:3px solid #1C2A42;
-                  border-radius:4px;padding:7px 10px;box-shadow:0 2px 10px rgba(0,0,0,.08);">
-                  <div style="font-size:8px;letter-spacing:.16em;color:#1C2A42;text-transform:uppercase;font-weight:700;margin-bottom:2px;">Peak Lapel</div>
-                  <div style="font-size:9px;color:#7A6E62;font-style:italic;font-family:Georgia;">High gorge hand-rolled fold</div>
+                <div style="position:absolute;left:28px;top:30%;z-index:10;width:180px;
+                  background:#FFFFFF;border:1px solid #1C2A42;border-left:4px solid #1C2A42;
+                  border-radius:6px;padding:6px 10px;box-shadow:0 3px 12px rgba(0,0,0,.07);">
+                  <div style="font-size:8px;letter-spacing:.15em;color:#1C2A42;text-transform:uppercase;font-weight:700;margin-bottom:2px;">Peak Lapel</div>
+                  <div style="font-size:9px;color:#6A5E52;font-style:italic;font-family:Georgia;">High gorge hand-rolled fold</div>
                 </div>
-                <div style="position:absolute;left:30px;top:45%;z-index:10;width:178px;
-                  background:#fff;border:1px solid #1C2A42;border-top:3px solid #1C2A42;
-                  border-radius:4px;padding:7px 10px;box-shadow:0 2px 10px rgba(0,0,0,.08);">
-                  <div style="font-size:8px;letter-spacing:.16em;color:#1C2A42;text-transform:uppercase;font-weight:700;margin-bottom:2px;">Breast Pocket</div>
-                  <div style="font-size:9px;color:#7A6E62;font-style:italic;font-family:Georgia;">Silk-welted pocket square</div>
+                <div style="position:absolute;left:28px;top:44%;z-index:10;width:180px;
+                  background:#FFFFFF;border:1px solid #1C2A42;border-left:4px solid #1C2A42;
+                  border-radius:6px;padding:6px 10px;box-shadow:0 3px 12px rgba(0,0,0,.07);">
+                  <div style="font-size:8px;letter-spacing:.15em;color:#1C2A42;text-transform:uppercase;font-weight:700;margin-bottom:2px;">Jacket Hem & Vent</div>
+                  <div style="font-size:9px;color:#6A5E52;font-style:italic;font-family:Georgia;">Balanced rear centre vent</div>
                 </div>
-                <div style="position:absolute;left:30px;top:60%;z-index:10;width:178px;
-                  background:#fff;border:1px solid #1C2A42;border-top:3px solid #1C2A42;
-                  border-radius:4px;padding:7px 10px;box-shadow:0 2px 10px rgba(0,0,0,.08);">
-                  <div style="font-size:8px;letter-spacing:.16em;color:#1C2A42;text-transform:uppercase;font-weight:700;margin-bottom:2px;">Jacket Hem</div>
-                  <div style="font-size:9px;color:#7A6E62;font-style:italic;font-family:Georgia;">Balanced rear centre vent</div>
-                </div>
-
-                <!-- RIGHT BOXES -->
-                <div style="position:absolute;right:30px;top:19%;z-index:10;width:178px;
-                  background:#fff;border:1px solid #8B3A2B;border-top:3px solid #8B3A2B;
-                  border-radius:4px;padding:7px 10px;box-shadow:0 2px 10px rgba(0,0,0,.08);">
-                  <div style="font-size:8px;letter-spacing:.16em;color:#8B3A2B;text-transform:uppercase;font-weight:700;margin-bottom:2px;">Natural Shoulder</div>
-                  <div style="font-size:9px;color:#7A6E62;font-style:italic;font-family:Georgia;">Soft roped sleeve head</div>
-                </div>
-                <div style="position:absolute;right:30px;top:34%;z-index:10;width:178px;
-                  background:#fff;border:1px solid #8B3A2B;border-top:3px solid #8B3A2B;
-                  border-radius:4px;padding:7px 10px;box-shadow:0 2px 10px rgba(0,0,0,.08);">
-                  <div style="font-size:8px;letter-spacing:.16em;color:#8B3A2B;text-transform:uppercase;font-weight:700;margin-bottom:2px;">Chest Canvas</div>
-                  <div style="font-size:9px;color:#7A6E62;font-style:italic;font-family:Georgia;">Floating horsehair weave</div>
-                </div>
-                <div style="position:absolute;right:30px;top:48%;z-index:10;width:178px;
-                  background:#fff;border:1px solid #8B3A2B;border-top:3px solid #8B3A2B;
-                  border-radius:4px;padding:7px 10px;box-shadow:0 2px 10px rgba(0,0,0,.08);">
-                  <div style="font-size:8px;letter-spacing:.16em;color:#8B3A2B;text-transform:uppercase;font-weight:700;margin-bottom:2px;">Working Cuffs</div>
-                  <div style="font-size:9px;color:#7A6E62;font-style:italic;font-family:Georgia;">4 surgeon's real buttons</div>
-                </div>
-                <div style="position:absolute;right:30px;top:62%;z-index:10;width:178px;
-                  background:#fff;border:1px solid #8B3A2B;border-top:3px solid #8B3A2B;
-                  border-radius:4px;padding:7px 10px;box-shadow:0 2px 10px rgba(0,0,0,.08);">
-                  <div style="font-size:8px;letter-spacing:.16em;color:#8B3A2B;text-transform:uppercase;font-weight:700;margin-bottom:2px;">Side Seam</div>
-                  <div style="font-size:9px;color:#7A6E62;font-style:italic;font-family:Georgia;">Shaped with 2-inch reserves</div>
+                <div style="position:absolute;left:28px;top:58%;z-index:10;width:180px;
+                  background:#FFFFFF;border:1px solid #1C2A42;border-left:4px solid #1C2A42;
+                  border-radius:6px;padding:6px 10px;box-shadow:0 3px 12px rgba(0,0,0,.07);">
+                  <div style="font-size:8px;letter-spacing:.15em;color:#1C2A42;text-transform:uppercase;font-weight:700;margin-bottom:2px;">Trouser Crease</div>
+                  <div style="font-size:9px;color:#6A5E52;font-style:italic;font-family:Georgia;">Precision pressed single crease</div>
                 </div>
 
-                <!-- SVG: Stylish open-chevron arrowheads pointing TO suit features -->
+                <!-- RIGHT CALLOUT BOXES — terracotta #8B3A2B -->
+                <div style="position:absolute;right:28px;top:18%;z-index:10;width:180px;
+                  background:#FFFFFF;border:1px solid #8B3A2B;border-right:4px solid #8B3A2B;
+                  border-radius:6px;padding:6px 10px;box-shadow:0 3px 12px rgba(0,0,0,.07);">
+                  <div style="font-size:8px;letter-spacing:.15em;color:#8B3A2B;text-transform:uppercase;font-weight:700;margin-bottom:2px;">Natural Shoulder</div>
+                  <div style="font-size:9px;color:#6A5E52;font-style:italic;font-family:Georgia;">Soft roped sleeve head</div>
+                </div>
+                <div style="position:absolute;right:28px;top:32%;z-index:10;width:180px;
+                  background:#FFFFFF;border:1px solid #8B3A2B;border-right:4px solid #8B3A2B;
+                  border-radius:6px;padding:6px 10px;box-shadow:0 3px 12px rgba(0,0,0,.07);">
+                  <div style="font-size:8px;letter-spacing:.15em;color:#8B3A2B;text-transform:uppercase;font-weight:700;margin-bottom:2px;">Breast Pocket</div>
+                  <div style="font-size:9px;color:#6A5E52;font-style:italic;font-family:Georgia;">Silk-welted pocket square</div>
+                </div>
+                <div style="position:absolute;right:28px;top:46%;z-index:10;width:180px;
+                  background:#FFFFFF;border:1px solid #8B3A2B;border-right:4px solid #8B3A2B;
+                  border-radius:6px;padding:6px 10px;box-shadow:0 3px 12px rgba(0,0,0,.07);">
+                  <div style="font-size:8px;letter-spacing:.15em;color:#8B3A2B;text-transform:uppercase;font-weight:700;margin-bottom:2px;">Working Cuffs</div>
+                  <div style="font-size:9px;color:#6A5E52;font-style:italic;font-family:Georgia;">4 surgeon's real buttons</div>
+                </div>
+                <div style="position:absolute;right:28px;top:60%;z-index:10;width:180px;
+                  background:#FFFFFF;border:1px solid #8B3A2B;border-right:4px solid #8B3A2B;
+                  border-radius:6px;padding:6px 10px;box-shadow:0 3px 12px rgba(0,0,0,.07);">
+                  <div style="font-size:8px;letter-spacing:.15em;color:#8B3A2B;text-transform:uppercase;font-weight:700;margin-bottom:2px;">Side Seam</div>
+                  <div style="font-size:9px;color:#6A5E52;font-style:italic;font-family:Georgia;">Shaped with 2-inch reserves</div>
+                </div>
+
+                <!-- SVG ARROWS — Perfect pointing to suit details -->
                 <svg style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:8;overflow:visible;">
                   <defs>
-                    <marker id="ah-f1L" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
-                      <path d="M1,1.5 L9,4 L1,6.5" fill="none" stroke="#1C2A42" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                    <marker id="ah-f1L" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto">
+                      <path d="M1,1 L8,3.5 L1,6" fill="none" stroke="#1C2A42" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
                     </marker>
-                    <marker id="ah-f1R" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
-                      <path d="M1,1.5 L9,4 L1,6.5" fill="none" stroke="#8B3A2B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                    <marker id="ah-f1R" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto">
+                      <path d="M1,1 L8,3.5 L1,6" fill="none" stroke="#8B3A2B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
                     </marker>
                   </defs>
-                  <!-- LEFT lines → collar at 46%,24% | lapel at 43%,35% | pocket at 42%,41% | hem at 44%,62% -->
-                  <line x1="15.5%" y1="19%" x2="45.5%" y2="23%" stroke="#1C2A42" stroke-width="1" stroke-dasharray="5 3.5" opacity=".65" marker-end="url(#ah-f1L)"/>
-                  <line x1="15.5%" y1="33%" x2="43%" y2="35%" stroke="#1C2A42" stroke-width="1" stroke-dasharray="5 3.5" opacity=".65" marker-end="url(#ah-f1L)"/>
-                  <line x1="15.5%" y1="47%" x2="42%" y2="41%" stroke="#1C2A42" stroke-width="1" stroke-dasharray="5 3.5" opacity=".65" marker-end="url(#ah-f1L)"/>
-                  <line x1="15.5%" y1="62%" x2="44%" y2="62%" stroke="#1C2A42" stroke-width="1" stroke-dasharray="5 3.5" opacity=".65" marker-end="url(#ah-f1L)"/>
-                  <!-- RIGHT lines → shoulder at 56%,26% | canvas at 57%,37% | cuffs at 60%,60% | seam at 57%,55% -->
-                  <line x1="84.5%" y1="21%" x2="56.5%" y2="26%" stroke="#8B3A2B" stroke-width="1" stroke-dasharray="5 3.5" opacity=".65" marker-end="url(#ah-f1R)"/>
-                  <line x1="84.5%" y1="36%" x2="57%" y2="37%" stroke="#8B3A2B" stroke-width="1" stroke-dasharray="5 3.5" opacity=".65" marker-end="url(#ah-f1R)"/>
-                  <line x1="84.5%" y1="50%" x2="60%" y2="60%" stroke="#8B3A2B" stroke-width="1" stroke-dasharray="5 3.5" opacity=".65" marker-end="url(#ah-f1R)"/>
-                  <line x1="84.5%" y1="64%" x2="57%" y2="55%" stroke="#8B3A2B" stroke-width="1" stroke-dasharray="5 3.5" opacity=".65" marker-end="url(#ah-f1R)"/>
+                  <!-- LEFT LINES -->
+                  <line x1="16%" y1="19%" x2="47.5%" y2="23%" stroke="#1C2A42" stroke-width="1" stroke-dasharray="4 3.5" opacity=".7" marker-end="url(#ah-f1L)"/>
+                  <line x1="16%" y1="33%" x2="45.5%" y2="33%" stroke="#1C2A42" stroke-width="1" stroke-dasharray="4 3.5" opacity=".7" marker-end="url(#ah-f1L)"/>
+                  <line x1="16%" y1="47%" x2="46%" y2="48%" stroke="#1C2A42" stroke-width="1" stroke-dasharray="4 3.5" opacity=".7" marker-end="url(#ah-f1L)"/>
+                  <line x1="16%" y1="61%" x2="47%" y2="68%" stroke="#1C2A42" stroke-width="1" stroke-dasharray="4 3.5" opacity=".7" marker-end="url(#ah-f1L)"/>
+                  <!-- RIGHT LINES -->
+                  <line x1="84%" y1="21%" x2="56.5%" y2="26%" stroke="#8B3A2B" stroke-width="1" stroke-dasharray="4 3.5" opacity=".7" marker-end="url(#ah-f1R)"/>
+                  <line x1="84%" y1="35%" x2="53.5%" y2="36%" stroke="#8B3A2B" stroke-width="1" stroke-dasharray="4 3.5" opacity=".7" marker-end="url(#ah-f1R)"/>
+                  <line x1="84%" y1="49%" x2="58.5%" y2="53%" stroke="#8B3A2B" stroke-width="1" stroke-dasharray="4 3.5" opacity=".7" marker-end="url(#ah-f1R)"/>
+                  <line x1="84%" y1="63%" x2="55%" y2="50%" stroke="#8B3A2B" stroke-width="1" stroke-dasharray="4 3.5" opacity=".7" marker-end="url(#ah-f1R)"/>
                 </svg>
               </div>
 
@@ -1348,79 +1348,80 @@
               <!-- ═══════════════════════════════════════════ -->
               <div style="width:25%;flex-shrink:0;height:100%;position:relative;display:flex;align-items:center;justify-content:center;background:#FFFFFF;">
                 <img src="assets/frame_2_canvas.png" alt="Cognac Tweed Suit"
-                  style="height:73%;max-height:500px;object-fit:contain;position:relative;z-index:5;mix-blend-mode:multiply;">
+                  style="height:62vh;max-height:440px;object-fit:contain;position:relative;z-index:5;
+                  filter:drop-shadow(0 14px 28px rgba(0,0,0,.15));">
 
-                <!-- LEFT BOXES — cognac #5C2E10 -->
-                <div style="position:absolute;left:30px;top:17%;z-index:10;width:178px;
-                  background:#fff;border:1px solid #5C2E10;border-top:3px solid #5C2E10;
-                  border-radius:4px;padding:7px 10px;box-shadow:0 2px 10px rgba(0,0,0,.08);">
-                  <div style="font-size:8px;letter-spacing:.16em;color:#5C2E10;text-transform:uppercase;font-weight:700;margin-bottom:2px;">Melton Undercollar</div>
-                  <div style="font-size:9px;color:#7A6E62;font-style:italic;font-family:Georgia;">12-needle hand-pad stitched</div>
+                <!-- LEFT CALLOUT BOXES — cognac #5C2E10 -->
+                <div style="position:absolute;left:28px;top:16%;z-index:10;width:180px;
+                  background:#FFFFFF;border:1px solid #5C2E10;border-left:4px solid #5C2E10;
+                  border-radius:6px;padding:6px 10px;box-shadow:0 3px 12px rgba(0,0,0,.07);">
+                  <div style="font-size:8px;letter-spacing:.15em;color:#5C2E10;text-transform:uppercase;font-weight:700;margin-bottom:2px;">Melton Undercollar</div>
+                  <div style="font-size:9px;color:#6A5E52;font-style:italic;font-family:Georgia;">12-needle hand-pad stitched</div>
                 </div>
-                <div style="position:absolute;left:30px;top:31%;z-index:10;width:178px;
-                  background:#fff;border:1px solid #5C2E10;border-top:3px solid #5C2E10;
-                  border-radius:4px;padding:7px 10px;box-shadow:0 2px 10px rgba(0,0,0,.08);">
-                  <div style="font-size:8px;letter-spacing:.16em;color:#5C2E10;text-transform:uppercase;font-weight:700;margin-bottom:2px;">Horsehair Canvas</div>
-                  <div style="font-size:9px;color:#7A6E62;font-style:italic;font-family:Georgia;">Floating chest canvas layer</div>
+                <div style="position:absolute;left:28px;top:30%;z-index:10;width:180px;
+                  background:#FFFFFF;border:1px solid #5C2E10;border-left:4px solid #5C2E10;
+                  border-radius:6px;padding:6px 10px;box-shadow:0 3px 12px rgba(0,0,0,.07);">
+                  <div style="font-size:8px;letter-spacing:.15em;color:#5C2E10;text-transform:uppercase;font-weight:700;margin-bottom:2px;">Horsehair Canvas</div>
+                  <div style="font-size:9px;color:#6A5E52;font-style:italic;font-family:Georgia;">Floating chest canvas layer</div>
                 </div>
-                <div style="position:absolute;left:30px;top:45%;z-index:10;width:178px;
-                  background:#fff;border:1px solid #5C2E10;border-top:3px solid #5C2E10;
-                  border-radius:4px;padding:7px 10px;box-shadow:0 2px 10px rgba(0,0,0,.08);">
-                  <div style="font-size:8px;letter-spacing:.16em;color:#5C2E10;text-transform:uppercase;font-weight:700;margin-bottom:2px;">Patch Pockets</div>
-                  <div style="font-size:9px;color:#7A6E62;font-style:italic;font-family:Georgia;">Hand-sewn flap construction</div>
+                <div style="position:absolute;left:28px;top:44%;z-index:10;width:180px;
+                  background:#FFFFFF;border:1px solid #5C2E10;border-left:4px solid #5C2E10;
+                  border-radius:6px;padding:6px 10px;box-shadow:0 3px 12px rgba(0,0,0,.07);">
+                  <div style="font-size:8px;letter-spacing:.15em;color:#5C2E10;text-transform:uppercase;font-weight:700;margin-bottom:2px;">Patch Pockets</div>
+                  <div style="font-size:9px;color:#6A5E52;font-style:italic;font-family:Georgia;">Hand-sewn flap construction</div>
                 </div>
-                <div style="position:absolute;left:30px;top:60%;z-index:10;width:178px;
-                  background:#fff;border:1px solid #5C2E10;border-top:3px solid #5C2E10;
-                  border-radius:4px;padding:7px 10px;box-shadow:0 2px 10px rgba(0,0,0,.08);">
-                  <div style="font-size:8px;letter-spacing:.16em;color:#5C2E10;text-transform:uppercase;font-weight:700;margin-bottom:2px;">Jacket Hem</div>
-                  <div style="font-size:9px;color:#7A6E62;font-style:italic;font-family:Georgia;">Clean single-button closure</div>
+                <div style="position:absolute;left:28px;top:58%;z-index:10;width:180px;
+                  background:#FFFFFF;border:1px solid #5C2E10;border-left:4px solid #5C2E10;
+                  border-radius:6px;padding:6px 10px;box-shadow:0 3px 12px rgba(0,0,0,.07);">
+                  <div style="font-size:8px;letter-spacing:.15em;color:#5C2E10;text-transform:uppercase;font-weight:700;margin-bottom:2px;">Basting Thread</div>
+                  <div style="font-size:9px;color:#6A5E52;font-style:italic;font-family:Georgia;">Hand-tacked floating weave</div>
                 </div>
 
-                <!-- RIGHT BOXES — amber #A06B2A -->
-                <div style="position:absolute;right:30px;top:19%;z-index:10;width:178px;
-                  background:#fff;border:1px solid #A06B2A;border-top:3px solid #A06B2A;
-                  border-radius:4px;padding:7px 10px;box-shadow:0 2px 10px rgba(0,0,0,.08);">
-                  <div style="font-size:8px;letter-spacing:.16em;color:#A06B2A;text-transform:uppercase;font-weight:700;margin-bottom:2px;">Notch Lapel</div>
-                  <div style="font-size:9px;color:#7A6E62;font-style:italic;font-family:Georgia;">Hand-rolled 3D canvas edge</div>
+                <!-- RIGHT CALLOUT BOXES — amber #A06B2A -->
+                <div style="position:absolute;right:28px;top:18%;z-index:10;width:180px;
+                  background:#FFFFFF;border:1px solid #A06B2A;border-right:4px solid #A06B2A;
+                  border-radius:6px;padding:6px 10px;box-shadow:0 3px 12px rgba(0,0,0,.07);">
+                  <div style="font-size:8px;letter-spacing:.15em;color:#A06B2A;text-transform:uppercase;font-weight:700;margin-bottom:2px;">Notch Lapel</div>
+                  <div style="font-size:9px;color:#6A5E52;font-style:italic;font-family:Georgia;">Hand-rolled 3D canvas edge</div>
                 </div>
-                <div style="position:absolute;right:30px;top:34%;z-index:10;width:178px;
-                  background:#fff;border:1px solid #A06B2A;border-top:3px solid #A06B2A;
-                  border-radius:4px;padding:7px 10px;box-shadow:0 2px 10px rgba(0,0,0,.08);">
-                  <div style="font-size:8px;letter-spacing:.16em;color:#A06B2A;text-transform:uppercase;font-weight:700;margin-bottom:2px;">Horn Buttons</div>
-                  <div style="font-size:9px;color:#7A6E62;font-style:italic;font-family:Georgia;">Natural buffalo horn set</div>
+                <div style="position:absolute;right:28px;top:32%;z-index:10;width:180px;
+                  background:#FFFFFF;border:1px solid #A06B2A;border-right:4px solid #A06B2A;
+                  border-radius:6px;padding:6px 10px;box-shadow:0 3px 12px rgba(0,0,0,.07);">
+                  <div style="font-size:8px;letter-spacing:.15em;color:#A06B2A;text-transform:uppercase;font-weight:700;margin-bottom:2px;">Elbow Patches</div>
+                  <div style="font-size:9px;color:#6A5E52;font-style:italic;font-family:Georgia;">Leather-suede reinforcement</div>
                 </div>
-                <div style="position:absolute;right:30px;top:48%;z-index:10;width:178px;
-                  background:#fff;border:1px solid #A06B2A;border-top:3px solid #A06B2A;
-                  border-radius:4px;padding:7px 10px;box-shadow:0 2px 10px rgba(0,0,0,.08);">
-                  <div style="font-size:8px;letter-spacing:.16em;color:#A06B2A;text-transform:uppercase;font-weight:700;margin-bottom:2px;">Elbow Patches</div>
-                  <div style="font-size:9px;color:#7A6E62;font-style:italic;font-family:Georgia;">Leather-suede reinforcement</div>
+                <div style="position:absolute;right:28px;top:46%;z-index:10;width:180px;
+                  background:#FFFFFF;border:1px solid #A06B2A;border-right:4px solid #A06B2A;
+                  border-radius:6px;padding:6px 10px;box-shadow:0 3px 12px rgba(0,0,0,.07);">
+                  <div style="font-size:8px;letter-spacing:.15em;color:#A06B2A;text-transform:uppercase;font-weight:700;margin-bottom:2px;">Horn Buttons</div>
+                  <div style="font-size:9px;color:#6A5E52;font-style:italic;font-family:Georgia;">Natural buffalo horn set</div>
                 </div>
-                <div style="position:absolute;right:30px;top:62%;z-index:10;width:178px;
-                  background:#fff;border:1px solid #A06B2A;border-top:3px solid #A06B2A;
-                  border-radius:4px;padding:7px 10px;box-shadow:0 2px 10px rgba(0,0,0,.08);">
-                  <div style="font-size:8px;letter-spacing:.16em;color:#A06B2A;text-transform:uppercase;font-weight:700;margin-bottom:2px;">Trouser Crease</div>
-                  <div style="font-size:9px;color:#7A6E62;font-style:italic;font-family:Georgia;">Knife-pressed single crease</div>
+                <div style="position:absolute;right:28px;top:60%;z-index:10;width:180px;
+                  background:#FFFFFF;border:1px solid #A06B2A;border-right:4px solid #A06B2A;
+                  border-radius:6px;padding:6px 10px;box-shadow:0 3px 12px rgba(0,0,0,.07);">
+                  <div style="font-size:8px;letter-spacing:.15em;color:#A06B2A;text-transform:uppercase;font-weight:700;margin-bottom:2px;">Fabric Reserves</div>
+                  <div style="font-size:9px;color:#6A5E52;font-style:italic;font-family:Georgia;">2-inch alteration seam room</div>
                 </div>
 
                 <svg style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:8;overflow:visible;">
                   <defs>
-                    <marker id="ah-f2L" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
-                      <path d="M1,1.5 L9,4 L1,6.5" fill="none" stroke="#5C2E10" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                    <marker id="ah-f2L" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto">
+                      <path d="M1,1 L8,3.5 L1,6" fill="none" stroke="#5C2E10" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
                     </marker>
-                    <marker id="ah-f2R" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
-                      <path d="M1,1.5 L9,4 L1,6.5" fill="none" stroke="#A06B2A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                    <marker id="ah-f2R" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto">
+                      <path d="M1,1 L8,3.5 L1,6" fill="none" stroke="#A06B2A" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
                     </marker>
                   </defs>
-                  <!-- LEFT → collar 45%,24% | canvas 43%,36% | pocket 42%,50% | hem 44%,64% -->
-                  <line x1="15.5%" y1="19%" x2="44.5%" y2="23%" stroke="#5C2E10" stroke-width="1" stroke-dasharray="5 3.5" opacity=".65" marker-end="url(#ah-f2L)"/>
-                  <line x1="15.5%" y1="33%" x2="43%" y2="36%" stroke="#5C2E10" stroke-width="1" stroke-dasharray="5 3.5" opacity=".65" marker-end="url(#ah-f2L)"/>
-                  <line x1="15.5%" y1="47%" x2="41%" y2="52%" stroke="#5C2E10" stroke-width="1" stroke-dasharray="5 3.5" opacity=".65" marker-end="url(#ah-f2L)"/>
-                  <line x1="15.5%" y1="62%" x2="44%" y2="63%" stroke="#5C2E10" stroke-width="1" stroke-dasharray="5 3.5" opacity=".65" marker-end="url(#ah-f2L)"/>
-                  <!-- RIGHT → lapel 57%,34% | buttons 56%,43% | elbow 61%,52% | trouser 56%,72% -->
-                  <line x1="84.5%" y1="21%" x2="57%" y2="34%" stroke="#A06B2A" stroke-width="1" stroke-dasharray="5 3.5" opacity=".65" marker-end="url(#ah-f2R)"/>
-                  <line x1="84.5%" y1="36%" x2="56%" y2="43%" stroke="#A06B2A" stroke-width="1" stroke-dasharray="5 3.5" opacity=".65" marker-end="url(#ah-f2R)"/>
-                  <line x1="84.5%" y1="50%" x2="61%" y2="52%" stroke="#A06B2A" stroke-width="1" stroke-dasharray="5 3.5" opacity=".65" marker-end="url(#ah-f2R)"/>
-                  <line x1="84.5%" y1="64%" x2="55%" y2="73%" stroke="#A06B2A" stroke-width="1" stroke-dasharray="5 3.5" opacity=".65" marker-end="url(#ah-f2R)"/>
+                  <!-- LEFT LINES -->
+                  <line x1="16%" y1="19%" x2="47.5%" y2="23%" stroke="#5C2E10" stroke-width="1" stroke-dasharray="4 3.5" opacity=".7" marker-end="url(#ah-f2L)"/>
+                  <line x1="16%" y1="33%" x2="45.5%" y2="33%" stroke="#5C2E10" stroke-width="1" stroke-dasharray="4 3.5" opacity=".7" marker-end="url(#ah-f2L)"/>
+                  <line x1="16%" y1="47%" x2="44%" y2="47%" stroke="#5C2E10" stroke-width="1" stroke-dasharray="4 3.5" opacity=".7" marker-end="url(#ah-f2L)"/>
+                  <line x1="16%" y1="61%" x2="46.5%" y2="54%" stroke="#5C2E10" stroke-width="1" stroke-dasharray="4 3.5" opacity=".7" marker-end="url(#ah-f2L)"/>
+                  <!-- RIGHT LINES -->
+                  <line x1="84%" y1="21%" x2="54.5%" y2="32%" stroke="#A06B2A" stroke-width="1" stroke-dasharray="4 3.5" opacity=".7" marker-end="url(#ah-f2R)"/>
+                  <line x1="84%" y1="35%" x2="58.5%" y2="43%" stroke="#A06B2A" stroke-width="1" stroke-dasharray="4 3.5" opacity=".7" marker-end="url(#ah-f2R)"/>
+                  <line x1="84%" y1="49%" x2="50%" y2="43%" stroke="#A06B2A" stroke-width="1" stroke-dasharray="4 3.5" opacity=".7" marker-end="url(#ah-f2R)"/>
+                  <line x1="84%" y1="63%" x2="55%" y2="50%" stroke="#A06B2A" stroke-width="1" stroke-dasharray="4 3.5" opacity=".7" marker-end="url(#ah-f2R)"/>
                 </svg>
               </div>
 
@@ -1429,79 +1430,80 @@
               <!-- ═══════════════════════════════════════════ -->
               <div style="width:25%;flex-shrink:0;height:100%;position:relative;display:flex;align-items:center;justify-content:center;background:#FFFFFF;">
                 <img src="assets/frame_3_measure.png" alt="Navy Pinstripe Suit"
-                  style="height:73%;max-height:500px;object-fit:contain;position:relative;z-index:5;mix-blend-mode:multiply;">
+                  style="height:62vh;max-height:440px;object-fit:contain;position:relative;z-index:5;
+                  filter:drop-shadow(0 14px 28px rgba(0,0,0,.15));">
 
-                <!-- LEFT BOXES — navy #162840 -->
-                <div style="position:absolute;left:30px;top:17%;z-index:10;width:178px;
-                  background:#fff;border:1px solid #162840;border-top:3px solid #162840;
-                  border-radius:4px;padding:7px 10px;box-shadow:0 2px 10px rgba(0,0,0,.08);">
-                  <div style="font-size:8px;letter-spacing:.16em;color:#162840;text-transform:uppercase;font-weight:700;margin-bottom:2px;">Neckline Fit</div>
-                  <div style="font-size:9px;color:#7A6E62;font-style:italic;font-family:Georgia;">Custom collar height set</div>
+                <!-- LEFT CALLOUT BOXES — navy #162840 -->
+                <div style="position:absolute;left:28px;top:16%;z-index:10;width:180px;
+                  background:#FFFFFF;border:1px solid #162840;border-left:4px solid #162840;
+                  border-radius:6px;padding:6px 10px;box-shadow:0 3px 12px rgba(0,0,0,.07);">
+                  <div style="font-size:8px;letter-spacing:.15em;color:#162840;text-transform:uppercase;font-weight:700;margin-bottom:2px;">Neckline Fit</div>
+                  <div style="font-size:9px;color:#6A5E52;font-style:italic;font-family:Georgia;">Custom collar height set</div>
                 </div>
-                <div style="position:absolute;left:30px;top:31%;z-index:10;width:178px;
-                  background:#fff;border:1px solid #162840;border-top:3px solid #162840;
-                  border-radius:4px;padding:7px 10px;box-shadow:0 2px 10px rgba(0,0,0,.08);">
-                  <div style="font-size:8px;letter-spacing:.16em;color:#162840;text-transform:uppercase;font-weight:700;margin-bottom:2px;">Pinstripe Cloth</div>
-                  <div style="font-size:9px;color:#7A6E62;font-style:italic;font-family:Georgia;">Super 150s fine wool weave</div>
+                <div style="position:absolute;left:28px;top:30%;z-index:10;width:180px;
+                  background:#FFFFFF;border:1px solid #162840;border-left:4px solid #162840;
+                  border-radius:6px;padding:6px 10px;box-shadow:0 3px 12px rgba(0,0,0,.07);">
+                  <div style="font-size:8px;letter-spacing:.15em;color:#162840;text-transform:uppercase;font-weight:700;margin-bottom:2px;">Pinstripe Cloth</div>
+                  <div style="font-size:9px;color:#6A5E52;font-style:italic;font-family:Georgia;">Super 150s fine wool weave</div>
                 </div>
-                <div style="position:absolute;left:30px;top:45%;z-index:10;width:178px;
-                  background:#fff;border:1px solid #162840;border-top:3px solid #162840;
-                  border-radius:4px;padding:7px 10px;box-shadow:0 2px 10px rgba(0,0,0,.08);">
-                  <div style="font-size:8px;letter-spacing:.16em;color:#162840;text-transform:uppercase;font-weight:700;margin-bottom:2px;">Waist Suppression</div>
-                  <div style="font-size:9px;color:#7A6E62;font-style:italic;font-family:Georgia;">Contour body-mapped seam</div>
+                <div style="position:absolute;left:28px;top:44%;z-index:10;width:180px;
+                  background:#FFFFFF;border:1px solid #162840;border-left:4px solid #162840;
+                  border-radius:6px;padding:6px 10px;box-shadow:0 3px 12px rgba(0,0,0,.07);">
+                  <div style="font-size:8px;letter-spacing:.15em;color:#162840;text-transform:uppercase;font-weight:700;margin-bottom:2px;">Waist Suppression</div>
+                  <div style="font-size:9px;color:#6A5E52;font-style:italic;font-family:Georgia;">Contour body-mapped seam</div>
                 </div>
-                <div style="position:absolute;left:30px;top:60%;z-index:10;width:178px;
-                  background:#fff;border:1px solid #162840;border-top:3px solid #162840;
-                  border-radius:4px;padding:7px 10px;box-shadow:0 2px 10px rgba(0,0,0,.08);">
-                  <div style="font-size:8px;letter-spacing:.16em;color:#162840;text-transform:uppercase;font-weight:700;margin-bottom:2px;">Trouser Break</div>
-                  <div style="font-size:9px;color:#7A6E62;font-style:italic;font-family:Georgia;">Knuckle-to-hem ratio rule</div>
+                <div style="position:absolute;left:28px;top:58%;z-index:10;width:180px;
+                  background:#FFFFFF;border:1px solid #162840;border-left:4px solid #162840;
+                  border-radius:6px;padding:6px 10px;box-shadow:0 3px 12px rgba(0,0,0,.07);">
+                  <div style="font-size:8px;letter-spacing:.15em;color:#162840;text-transform:uppercase;font-weight:700;margin-bottom:2px;">Trouser Break</div>
+                  <div style="font-size:9px;color:#6A5E52;font-style:italic;font-family:Georgia;">Knuckle-to-hem ratio rule</div>
                 </div>
 
-                <!-- RIGHT BOXES — gold #B8922A -->
-                <div style="position:absolute;right:30px;top:19%;z-index:10;width:178px;
-                  background:#fff;border:1px solid #B8922A;border-top:3px solid #B8922A;
-                  border-radius:4px;padding:7px 10px;box-shadow:0 2px 10px rgba(0,0,0,.08);">
-                  <div style="font-size:8px;letter-spacing:.16em;color:#B8922A;text-transform:uppercase;font-weight:700;margin-bottom:2px;">Double-Breast Buttons</div>
-                  <div style="font-size:9px;color:#7A6E62;font-style:italic;font-family:Georgia;">6×2 polished bone set</div>
+                <!-- RIGHT CALLOUT BOXES — gold #B8922A -->
+                <div style="position:absolute;right:28px;top:18%;z-index:10;width:180px;
+                  background:#FFFFFF;border:1px solid #B8922A;border-right:4px solid #B8922A;
+                  border-radius:6px;padding:6px 10px;box-shadow:0 3px 12px rgba(0,0,0,.07);">
+                  <div style="font-size:8px;letter-spacing:.15em;color:#B8922A;text-transform:uppercase;font-weight:700;margin-bottom:2px;">High Gorge Lapel</div>
+                  <div style="font-size:9px;color:#6A5E52;font-style:italic;font-family:Georgia;">Peak set above chest line</div>
                 </div>
-                <div style="position:absolute;right:30px;top:34%;z-index:10;width:178px;
-                  background:#fff;border:1px solid #B8922A;border-top:3px solid #B8922A;
-                  border-radius:4px;padding:7px 10px;box-shadow:0 2px 10px rgba(0,0,0,.08);">
-                  <div style="font-size:8px;letter-spacing:.16em;color:#B8922A;text-transform:uppercase;font-weight:700;margin-bottom:2px;">High Gorge Lapel</div>
-                  <div style="font-size:9px;color:#7A6E62;font-style:italic;font-family:Georgia;">Peak set above chest line</div>
+                <div style="position:absolute;right:28px;top:32%;z-index:10;width:180px;
+                  background:#FFFFFF;border:1px solid #B8922A;border-right:4px solid #B8922A;
+                  border-radius:6px;padding:6px 10px;box-shadow:0 3px 12px rgba(0,0,0,.07);">
+                  <div style="font-size:8px;letter-spacing:.15em;color:#B8922A;text-transform:uppercase;font-weight:700;margin-bottom:2px;">Double-Breast Buttons</div>
+                  <div style="font-size:9px;color:#6A5E52;font-style:italic;font-family:Georgia;">6×2 polished bone set</div>
                 </div>
-                <div style="position:absolute;right:30px;top:48%;z-index:10;width:178px;
-                  background:#fff;border:1px solid #B8922A;border-top:3px solid #B8922A;
-                  border-radius:4px;padding:7px 10px;box-shadow:0 2px 10px rgba(0,0,0,.08);">
-                  <div style="font-size:8px;letter-spacing:.16em;color:#B8922A;text-transform:uppercase;font-weight:700;margin-bottom:2px;">Armhole Depth</div>
-                  <div style="font-size:9px;color:#7A6E62;font-style:italic;font-family:Georgia;">Mobility-first high set cut</div>
+                <div style="position:absolute;right:28px;top:46%;z-index:10;width:180px;
+                  background:#FFFFFF;border:1px solid #B8922A;border-right:4px solid #B8922A;
+                  border-radius:6px;padding:6px 10px;box-shadow:0 3px 12px rgba(0,0,0,.07);">
+                  <div style="font-size:8px;letter-spacing:.15em;color:#B8922A;text-transform:uppercase;font-weight:700;margin-bottom:2px;">Armhole Depth</div>
+                  <div style="font-size:9px;color:#6A5E52;font-style:italic;font-family:Georgia;">Mobility-first high set cut</div>
                 </div>
-                <div style="position:absolute;right:30px;top:62%;z-index:10;width:178px;
-                  background:#fff;border:1px solid #B8922A;border-top:3px solid #B8922A;
-                  border-radius:4px;padding:7px 10px;box-shadow:0 2px 10px rgba(0,0,0,.08);">
-                  <div style="font-size:8px;letter-spacing:.16em;color:#B8922A;text-transform:uppercase;font-weight:700;margin-bottom:2px;">Side Vents</div>
-                  <div style="font-size:9px;color:#7A6E62;font-style:italic;font-family:Georgia;">Double-vented rear finish</div>
+                <div style="position:absolute;right:28px;top:60%;z-index:10;width:180px;
+                  background:#FFFFFF;border:1px solid #B8922A;border-right:4px solid #B8922A;
+                  border-radius:6px;padding:6px 10px;box-shadow:0 3px 12px rgba(0,0,0,.07);">
+                  <div style="font-size:8px;letter-spacing:.15em;color:#B8922A;text-transform:uppercase;font-weight:700;margin-bottom:2px;">Side Vents</div>
+                  <div style="font-size:9px;color:#6A5E52;font-style:italic;font-family:Georgia;">Double-vented rear finish</div>
                 </div>
 
                 <svg style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:8;overflow:visible;">
                   <defs>
-                    <marker id="ah-f3L" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
-                      <path d="M1,1.5 L9,4 L1,6.5" fill="none" stroke="#162840" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                    <marker id="ah-f3L" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto">
+                      <path d="M1,1 L8,3.5 L1,6" fill="none" stroke="#162840" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
                     </marker>
-                    <marker id="ah-f3R" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
-                      <path d="M1,1.5 L9,4 L1,6.5" fill="none" stroke="#B8922A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                    <marker id="ah-f3R" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto">
+                      <path d="M1,1 L8,3.5 L1,6" fill="none" stroke="#B8922A" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
                     </marker>
                   </defs>
-                  <!-- LEFT → collar 46%,24% | cloth 43%,37% | waist 41%,52% | trouser 44%,72% -->
-                  <line x1="15.5%" y1="19%" x2="45.5%" y2="23%" stroke="#162840" stroke-width="1" stroke-dasharray="5 3.5" opacity=".65" marker-end="url(#ah-f3L)"/>
-                  <line x1="15.5%" y1="33%" x2="42.5%" y2="37%" stroke="#162840" stroke-width="1" stroke-dasharray="5 3.5" opacity=".65" marker-end="url(#ah-f3L)"/>
-                  <line x1="15.5%" y1="47%" x2="41%" y2="52%" stroke="#162840" stroke-width="1" stroke-dasharray="5 3.5" opacity=".65" marker-end="url(#ah-f3L)"/>
-                  <line x1="15.5%" y1="62%" x2="44%" y2="73%" stroke="#162840" stroke-width="1" stroke-dasharray="5 3.5" opacity=".65" marker-end="url(#ah-f3L)"/>
-                  <!-- RIGHT → buttons 56%,42% | lapel 57%,35% | armhole 58%,29% | vents 60%,63% -->
-                  <line x1="84.5%" y1="21%" x2="55.5%" y2="42%" stroke="#B8922A" stroke-width="1" stroke-dasharray="5 3.5" opacity=".65" marker-end="url(#ah-f3R)"/>
-                  <line x1="84.5%" y1="36%" x2="57%" y2="34%" stroke="#B8922A" stroke-width="1" stroke-dasharray="5 3.5" opacity=".65" marker-end="url(#ah-f3R)"/>
-                  <line x1="84.5%" y1="50%" x2="58%" y2="28%" stroke="#B8922A" stroke-width="1" stroke-dasharray="5 3.5" opacity=".65" marker-end="url(#ah-f3R)"/>
-                  <line x1="84.5%" y1="64%" x2="60%" y2="63%" stroke="#B8922A" stroke-width="1" stroke-dasharray="5 3.5" opacity=".65" marker-end="url(#ah-f3R)"/>
+                  <!-- LEFT LINES -->
+                  <line x1="16%" y1="19%" x2="47.5%" y2="23%" stroke="#162840" stroke-width="1" stroke-dasharray="4 3.5" opacity=".7" marker-end="url(#ah-f3L)"/>
+                  <line x1="16%" y1="33%" x2="45%" y2="34%" stroke="#162840" stroke-width="1" stroke-dasharray="4 3.5" opacity=".7" marker-end="url(#ah-f3L)"/>
+                  <line x1="16%" y1="47%" x2="45.5%" y2="46%" stroke="#162840" stroke-width="1" stroke-dasharray="4 3.5" opacity=".7" marker-end="url(#ah-f3L)"/>
+                  <line x1="16%" y1="61%" x2="47%" y2="70%" stroke="#162840" stroke-width="1" stroke-dasharray="4 3.5" opacity=".7" marker-end="url(#ah-f3L)"/>
+                  <!-- RIGHT LINES -->
+                  <line x1="84%" y1="21%" x2="54.5%" y2="31%" stroke="#B8922A" stroke-width="1" stroke-dasharray="4 3.5" opacity=".7" marker-end="url(#ah-f3R)"/>
+                  <line x1="84%" y1="35%" x2="52%" y2="42%" stroke="#B8922A" stroke-width="1" stroke-dasharray="4 3.5" opacity=".7" marker-end="url(#ah-f3R)"/>
+                  <line x1="84%" y1="49%" x2="56.5%" y2="26%" stroke="#B8922A" stroke-width="1" stroke-dasharray="4 3.5" opacity=".7" marker-end="url(#ah-f3R)"/>
+                  <line x1="84%" y1="63%" x2="55%" y2="52%" stroke="#B8922A" stroke-width="1" stroke-dasharray="4 3.5" opacity=".7" marker-end="url(#ah-f3R)"/>
                 </svg>
               </div>
 
@@ -1510,101 +1512,102 @@
               <!-- ═══════════════════════════════════════════ -->
               <div style="width:25%;flex-shrink:0;height:100%;position:relative;display:flex;align-items:center;justify-content:center;background:#FFFFFF;">
                 <img src="assets/frame_4_masterpiece.png" alt="Royal Velvet Tuxedo"
-                  style="height:73%;max-height:500px;object-fit:contain;position:relative;z-index:5;mix-blend-mode:multiply;">
+                  style="height:62vh;max-height:440px;object-fit:contain;position:relative;z-index:5;
+                  filter:drop-shadow(0 14px 28px rgba(0,0,0,.15));">
 
-                <!-- LEFT BOXES — royal #2A1840 -->
-                <div style="position:absolute;left:30px;top:17%;z-index:10;width:178px;
-                  background:#fff;border:1px solid #2A1840;border-top:3px solid #2A1840;
-                  border-radius:4px;padding:7px 10px;box-shadow:0 2px 10px rgba(0,0,0,.08);">
-                  <div style="font-size:8px;letter-spacing:.16em;color:#2A1840;text-transform:uppercase;font-weight:700;margin-bottom:2px;">Silk Satin Lapel</div>
-                  <div style="font-size:9px;color:#7A6E62;font-style:italic;font-family:Georgia;">Pure Lyon-woven silk satin</div>
+                <!-- LEFT CALLOUT BOXES — royal #2A1840 -->
+                <div style="position:absolute;left:28px;top:16%;z-index:10;width:180px;
+                  background:#FFFFFF;border:1px solid #2A1840;border-left:4px solid #2A1840;
+                  border-radius:6px;padding:6px 10px;box-shadow:0 3px 12px rgba(0,0,0,.07);">
+                  <div style="font-size:8px;letter-spacing:.15em;color:#2A1840;text-transform:uppercase;font-weight:700;margin-bottom:2px;">Silk Satin Lapel</div>
+                  <div style="font-size:9px;color:#6A5E52;font-style:italic;font-family:Georgia;">Pure Lyon-woven silk satin</div>
                 </div>
-                <div style="position:absolute;left:30px;top:31%;z-index:10;width:178px;
-                  background:#fff;border:1px solid #2A1840;border-top:3px solid #2A1840;
-                  border-radius:4px;padding:7px 10px;box-shadow:0 2px 10px rgba(0,0,0,.08);">
-                  <div style="font-size:8px;letter-spacing:.16em;color:#2A1840;text-transform:uppercase;font-weight:700;margin-bottom:2px;">Velvet Body</div>
-                  <div style="font-size:9px;color:#7A6E62;font-style:italic;font-family:Georgia;">Italian crushed midnight velvet</div>
+                <div style="position:absolute;left:28px;top:30%;z-index:10;width:180px;
+                  background:#FFFFFF;border:1px solid #2A1840;border-left:4px solid #2A1840;
+                  border-radius:6px;padding:6px 10px;box-shadow:0 3px 12px rgba(0,0,0,.07);">
+                  <div style="font-size:8px;letter-spacing:.15em;color:#2A1840;text-transform:uppercase;font-weight:700;margin-bottom:2px;">Velvet Body</div>
+                  <div style="font-size:9px;color:#6A5E52;font-style:italic;font-family:Georgia;">Italian crushed midnight velvet</div>
                 </div>
-                <div style="position:absolute;left:30px;top:45%;z-index:10;width:178px;
-                  background:#fff;border:1px solid #2A1840;border-top:3px solid #2A1840;
-                  border-radius:4px;padding:7px 10px;box-shadow:0 2px 10px rgba(0,0,0,.08);">
-                  <div style="font-size:8px;letter-spacing:.16em;color:#2A1840;text-transform:uppercase;font-weight:700;margin-bottom:2px;">Atelier Monogram</div>
-                  <div style="font-size:9px;color:#7A6E62;font-style:italic;font-family:Georgia;">Hand-embroidered initials</div>
+                <div style="position:absolute;left:28px;top:44%;z-index:10;width:180px;
+                  background:#FFFFFF;border:1px solid #2A1840;border-left:4px solid #2A1840;
+                  border-radius:6px;padding:6px 10px;box-shadow:0 3px 12px rgba(0,0,0,.07);">
+                  <div style="font-size:8px;letter-spacing:.15em;color:#2A1840;text-transform:uppercase;font-weight:700;margin-bottom:2px;">Atelier Monogram</div>
+                  <div style="font-size:9px;color:#6A5E52;font-style:italic;font-family:Georgia;">Hand-embroidered initials</div>
                 </div>
-                <div style="position:absolute;left:30px;top:60%;z-index:10;width:178px;
-                  background:#fff;border:1px solid #2A1840;border-top:3px solid #2A1840;
-                  border-radius:4px;padding:7px 10px;box-shadow:0 2px 10px rgba(0,0,0,.08);">
-                  <div style="font-size:8px;letter-spacing:.16em;color:#2A1840;text-transform:uppercase;font-weight:700;margin-bottom:2px;">Satin Trouser Stripe</div>
-                  <div style="font-size:9px;color:#7A6E62;font-style:italic;font-family:Georgia;">Matching satin side seam</div>
+                <div style="position:absolute;left:28px;top:58%;z-index:10;width:180px;
+                  background:#FFFFFF;border:1px solid #2A1840;border-left:4px solid #2A1840;
+                  border-radius:6px;padding:6px 10px;box-shadow:0 3px 12px rgba(0,0,0,.07);">
+                  <div style="font-size:8px;letter-spacing:.15em;color:#2A1840;text-transform:uppercase;font-weight:700;margin-bottom:2px;">Satin Trouser Stripe</div>
+                  <div style="font-size:9px;color:#6A5E52;font-style:italic;font-family:Georgia;">Matching satin side seam</div>
                 </div>
 
-                <!-- RIGHT BOXES — gold #C9A030 -->
-                <div style="position:absolute;right:30px;top:19%;z-index:10;width:178px;
-                  background:#fff;border:1px solid #C9A030;border-top:3px solid #C9A030;
-                  border-radius:4px;padding:7px 10px;box-shadow:0 2px 10px rgba(0,0,0,.08);">
-                  <div style="font-size:8px;letter-spacing:.16em;color:#C9A030;text-transform:uppercase;font-weight:700;margin-bottom:2px;">Gold Buttons</div>
-                  <div style="font-size:9px;color:#7A6E62;font-style:italic;font-family:Georgia;">Polished 24K-plated studs</div>
+                <!-- RIGHT CALLOUT BOXES — gold #C9A030 -->
+                <div style="position:absolute;right:28px;top:18%;z-index:10;width:180px;
+                  background:#FFFFFF;border:1px solid #C9A030;border-right:4px solid #C9A030;
+                  border-radius:6px;padding:6px 10px;box-shadow:0 3px 12px rgba(0,0,0,.07);">
+                  <div style="font-size:8px;letter-spacing:.15em;color:#C9A030;text-transform:uppercase;font-weight:700;margin-bottom:2px;">Silk Pocket Square</div>
+                  <div style="font-size:9px;color:#6A5E52;font-style:italic;font-family:Georgia;">Hand-rolled pure silk</div>
                 </div>
-                <div style="position:absolute;right:30px;top:34%;z-index:10;width:178px;
-                  background:#fff;border:1px solid #C9A030;border-top:3px solid #C9A030;
-                  border-radius:4px;padding:7px 10px;box-shadow:0 2px 10px rgba(0,0,0,.08);">
-                  <div style="font-size:8px;letter-spacing:.16em;color:#C9A030;text-transform:uppercase;font-weight:700;margin-bottom:2px;">Silk Pocket Square</div>
-                  <div style="font-size:9px;color:#7A6E62;font-style:italic;font-family:Georgia;">Hand-rolled pure silk</div>
+                <div style="position:absolute;right:28px;top:32%;z-index:10;width:180px;
+                  background:#FFFFFF;border:1px solid #C9A030;border-right:4px solid #C9A030;
+                  border-radius:6px;padding:6px 10px;box-shadow:0 3px 12px rgba(0,0,0,.07);">
+                  <div style="font-size:8px;letter-spacing:.15em;color:#C9A030;text-transform:uppercase;font-weight:700;margin-bottom:2px;">Gold Buttons</div>
+                  <div style="font-size:9px;color:#6A5E52;font-style:italic;font-family:Georgia;">Polished 24K-plated studs</div>
                 </div>
-                <div style="position:absolute;right:30px;top:48%;z-index:10;width:178px;
-                  background:#fff;border:1px solid #C9A030;border-top:3px solid #C9A030;
-                  border-radius:4px;padding:7px 10px;box-shadow:0 2px 10px rgba(0,0,0,.08);">
-                  <div style="font-size:8px;letter-spacing:.16em;color:#C9A030;text-transform:uppercase;font-weight:700;margin-bottom:2px;">Brocade Lining</div>
-                  <div style="font-size:9px;color:#7A6E62;font-style:italic;font-family:Georgia;">Custom jacquard body print</div>
+                <div style="position:absolute;right:28px;top:46%;z-index:10;width:180px;
+                  background:#FFFFFF;border:1px solid #C9A030;border-right:4px solid #C9A030;
+                  border-radius:6px;padding:6px 10px;box-shadow:0 3px 12px rgba(0,0,0,.07);">
+                  <div style="font-size:8px;letter-spacing:.15em;color:#C9A030;text-transform:uppercase;font-weight:700;margin-bottom:2px;">Brocade Lining</div>
+                  <div style="font-size:9px;color:#6A5E52;font-style:italic;font-family:Georgia;">Custom jacquard body print</div>
                 </div>
-                <div style="position:absolute;right:30px;top:62%;z-index:10;width:178px;
-                  background:#fff;border:1px solid #C9A030;border-top:3px solid #C9A030;
-                  border-radius:4px;padding:7px 10px;box-shadow:0 2px 10px rgba(0,0,0,.08);">
-                  <div style="font-size:8px;letter-spacing:.16em;color:#C9A030;text-transform:uppercase;font-weight:700;margin-bottom:2px;">Certificate Seal</div>
-                  <div style="font-size:9px;color:#7A6E62;font-style:italic;font-family:Georgia;">Numbered craftsman tag</div>
+                <div style="position:absolute;right:28px;top:60%;z-index:10;width:180px;
+                  background:#FFFFFF;border:1px solid #C9A030;border-right:4px solid #C9A030;
+                  border-radius:6px;padding:6px 10px;box-shadow:0 3px 12px rgba(0,0,0,.07);">
+                  <div style="font-size:8px;letter-spacing:.15em;color:#C9A030;text-transform:uppercase;font-weight:700;margin-bottom:2px;">Certificate Seal</div>
+                  <div style="font-size:9px;color:#6A5E52;font-style:italic;font-family:Georgia;">Numbered craftsman tag</div>
                 </div>
 
                 <svg style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:8;overflow:visible;">
                   <defs>
-                    <marker id="ah-f4L" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
-                      <path d="M1,1.5 L9,4 L1,6.5" fill="none" stroke="#2A1840" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                    <marker id="ah-f4L" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto">
+                      <path d="M1,1 L8,3.5 L1,6" fill="none" stroke="#2A1840" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
                     </marker>
-                    <marker id="ah-f4R" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
-                      <path d="M1,1.5 L9,4 L1,6.5" fill="none" stroke="#C9A030" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                    <marker id="ah-f4R" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto">
+                      <path d="M1,1 L8,3.5 L1,6" fill="none" stroke="#C9A030" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
                     </marker>
                   </defs>
-                  <!-- LEFT → lapel 43%,32% | velvet chest 42%,40% | monogram 44%,46% | trouser 44%,70% -->
-                  <line x1="15.5%" y1="19%" x2="42.5%" y2="32%" stroke="#2A1840" stroke-width="1" stroke-dasharray="5 3.5" opacity=".65" marker-end="url(#ah-f4L)"/>
-                  <line x1="15.5%" y1="33%" x2="42%" y2="40%" stroke="#2A1840" stroke-width="1" stroke-dasharray="5 3.5" opacity=".65" marker-end="url(#ah-f4L)"/>
-                  <line x1="15.5%" y1="47%" x2="44.5%" y2="46%" stroke="#2A1840" stroke-width="1" stroke-dasharray="5 3.5" opacity=".65" marker-end="url(#ah-f4L)"/>
-                  <line x1="15.5%" y1="62%" x2="44%" y2="71%" stroke="#2A1840" stroke-width="1" stroke-dasharray="5 3.5" opacity=".65" marker-end="url(#ah-f4L)"/>
-                  <!-- RIGHT → buttons 56%,43% | pocket 58%,39% | lining 57%,47% | seal 52%,55% -->
-                  <line x1="84.5%" y1="21%" x2="55.5%" y2="43%" stroke="#C9A030" stroke-width="1" stroke-dasharray="5 3.5" opacity=".65" marker-end="url(#ah-f4R)"/>
-                  <line x1="84.5%" y1="36%" x2="58%" y2="39%" stroke="#C9A030" stroke-width="1" stroke-dasharray="5 3.5" opacity=".65" marker-end="url(#ah-f4R)"/>
-                  <line x1="84.5%" y1="50%" x2="57%" y2="47%" stroke="#C9A030" stroke-width="1" stroke-dasharray="5 3.5" opacity=".65" marker-end="url(#ah-f4R)"/>
-                  <line x1="84.5%" y1="64%" x2="52%" y2="55%" stroke="#C9A030" stroke-width="1" stroke-dasharray="5 3.5" opacity=".65" marker-end="url(#ah-f4R)"/>
+                  <!-- LEFT LINES -->
+                  <line x1="16%" y1="19%" x2="45.5%" y2="32%" stroke="#2A1840" stroke-width="1" stroke-dasharray="4 3.5" opacity=".7" marker-end="url(#ah-f4L)"/>
+                  <line x1="16%" y1="33%" x2="45%" y2="40%" stroke="#2A1840" stroke-width="1" stroke-dasharray="4 3.5" opacity=".7" marker-end="url(#ah-f4L)"/>
+                  <line x1="16%" y1="47%" x2="46%" y2="46%" stroke="#2A1840" stroke-width="1" stroke-dasharray="4 3.5" opacity=".7" marker-end="url(#ah-f4L)"/>
+                  <line x1="16%" y1="61%" x2="47%" y2="68%" stroke="#2A1840" stroke-width="1" stroke-dasharray="4 3.5" opacity=".7" marker-end="url(#ah-f4L)"/>
+                  <!-- RIGHT LINES -->
+                  <line x1="84%" y1="21%" x2="53.5%" y2="36%" stroke="#C9A030" stroke-width="1" stroke-dasharray="4 3.5" opacity=".7" marker-end="url(#ah-f4R)"/>
+                  <line x1="84%" y1="35%" x2="50%" y2="44%" stroke="#C9A030" stroke-width="1" stroke-dasharray="4 3.5" opacity=".7" marker-end="url(#ah-f4R)"/>
+                  <line x1="84%" y1="49%" x2="54.5%" y2="46%" stroke="#C9A030" stroke-width="1" stroke-dasharray="4 3.5" opacity=".7" marker-end="url(#ah-f4R)"/>
+                  <line x1="84%" y1="63%" x2="55%" y2="52%" stroke="#C9A030" stroke-width="1" stroke-dasharray="4 3.5" opacity=".7" marker-end="url(#ah-f4R)"/>
                 </svg>
               </div>
 
             </div><!-- /track -->
           </div><!-- /overflow container -->
 
-          <!-- CENTERED FRAME INDICATOR — below mannequin -->
-          <div style="position:absolute;bottom:16px;left:50%;transform:translateX(-50%);z-index:20;text-align:center;white-space:nowrap;">
-            <div style="display:flex;align-items:baseline;gap:5px;justify-content:center;margin-bottom:3px;">
+          <!-- CENTERED FRAME INDICATOR — Elevated so whole view fits in single 100vh frame -->
+          <div style="position:absolute;bottom:28px;left:50%;transform:translateX(-50%);z-index:20;text-align:center;white-space:nowrap;">
+            <div style="display:flex;align-items:baseline;gap:6px;justify-content:center;margin-bottom:3px;">
               <span id="anat-num" style="font-size:22px;font-weight:700;color:#0F1A2A;font-family:Georgia;line-height:1;">01</span>
-              <span style="font-size:12px;color:rgba(0,0,0,.25);line-height:1;">/</span>
-              <span style="font-size:12px;color:rgba(0,0,0,.2);line-height:1;">04</span>
+              <span style="font-size:12px;color:rgba(0,0,0,.3);line-height:1;">/</span>
+              <span style="font-size:12px;color:rgba(0,0,0,.25);line-height:1;">04</span>
             </div>
             <span id="anat-title" style="font-size:8px;letter-spacing:.22em;text-transform:uppercase;color:#6A5E52;font-weight:700;display:block;">BESPOKE CONSTRUCTION</span>
           </div>
 
           <!-- PROGRESS DOTS — bottom left -->
-          <div style="position:absolute;bottom:20px;left:40px;display:flex;gap:6px;z-index:20;align-items:center;">
-            <span class="anat-dot" style="width:18px;height:2px;border-radius:2px;background:#1C2A42;transition:all .35s;"></span>
-            <span class="anat-dot" style="width:6px;height:2px;border-radius:2px;background:rgba(0,0,0,.15);transition:all .35s;"></span>
-            <span class="anat-dot" style="width:6px;height:2px;border-radius:2px;background:rgba(0,0,0,.15);transition:all .35s;"></span>
-            <span class="anat-dot" style="width:6px;height:2px;border-radius:2px;background:rgba(0,0,0,.15);transition:all .35s;"></span>
+          <div style="position:absolute;bottom:28px;left:32px;display:flex;gap:6px;z-index:20;align-items:center;">
+            <span class="anat-dot" style="width:18px;height:2.5px;border-radius:2px;background:#1C2A42;transition:all .35s;"></span>
+            <span class="anat-dot" style="width:6px;height:2.5px;border-radius:2px;background:rgba(0,0,0,.18);transition:all .35s;"></span>
+            <span class="anat-dot" style="width:6px;height:2.5px;border-radius:2px;background:rgba(0,0,0,.18);transition:all .35s;"></span>
+            <span class="anat-dot" style="width:6px;height:2.5px;border-radius:2px;background:rgba(0,0,0,.18);transition:all .35s;"></span>
           </div>
 
         </div><!-- /max-width inner -->
@@ -1628,7 +1631,7 @@
         if(titleEl)   titleEl.textContent=TITLES[idx];
         dots.forEach(function(d,i){
           d.style.width     =i===idx?'18px':'6px';
-          d.style.background=i===idx?FC[idx]:'rgba(0,0,0,.15)';
+          d.style.background=i===idx?FC[idx]:'rgba(0,0,0,.18)';
         });
       }
 
