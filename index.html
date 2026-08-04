@@ -2203,7 +2203,7 @@ window.addEventListener('click', (e) => {
     <!-- 9. FOOTER (MY PERFECT FIT MATCH)            -->
     <!-- ============================================ -->
     <!-- ========================================================= -->
-<!-- CLIENT TESTIMONIALS SECTION — SINGLE VIDEO PLAYBACK RULE  -->
+<!-- CLIENT TESTIMONIALS SECTION — JS AUTO-SCROLL EFFECT       -->
 <!-- ========================================================= -->
 <section id="testimonials" class="py-14 md:py-20 bg-[#F9F8F6] relative overflow-hidden border-t border-slate-200">
   
@@ -2297,22 +2297,28 @@ window.addEventListener('click', (e) => {
     </div>
 
 
-    <!-- ── 2. GOOGLE VERIFIED WRITTEN REVIEWS ── -->
+    <!-- ── 2. GOOGLE REVIEWS WITH INTERACTIVE AUTO-SCROLL CAROUSEL ── -->
     <div class="space-y-6 pt-4">
       
       <!-- Header Row -->
-      <div class="border-b border-slate-200/80 pb-3">
+      <div class="flex items-center justify-between border-b border-slate-200/80 pb-3">
         <div class="flex items-center gap-2">
           <svg class="w-4 h-4" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/></svg>
           <span class="text-xs font-bold uppercase tracking-[0.25em] text-[#8B3A2B]">Google Verified Reviews</span>
         </div>
+
+        <!-- Manual Navigation Controls -->
+        <div class="flex items-center gap-2">
+          <button onclick="manualScrollTextReviews(-1)" class="w-8 h-8 rounded-full bg-white border border-slate-200 hover:bg-slate-100 text-slate-700 flex items-center justify-center text-sm font-bold shadow-sm transition-all">&larr;</button>
+          <button onclick="manualScrollTextReviews(1)" class="w-8 h-8 rounded-full bg-white border border-slate-200 hover:bg-slate-100 text-slate-700 flex items-center justify-center text-sm font-bold shadow-sm transition-all">&rarr;</button>
+        </div>
       </div>
 
-      <!-- Modern Time-Lapse Auto Scroll Track (Infinite Smooth Marquee) -->
-      <div class="relative overflow-hidden py-2 group">
-        <div class="flex gap-6 animate-timelapse-scroll hover:[animation-play-state:paused]" id="text-reviews-marquee">
+      <!-- AUTO-SCROLLABLE OVERFLOW CONTAINER -->
+      <div class="overflow-x-auto no-scrollbar py-3" id="text-reviews-scroll-box" style="scroll-behavior: smooth;">
+        <div class="flex gap-6 min-w-max">
           <!-- Review Card (Chandan Jha) -->
-          <div class="w-[320px] sm:w-[380px] shrink-0 bg-white rounded-3xl p-6 sm:p-7 shadow-[0_10px_30px_rgba(0,0,0,0.04)] border border-slate-200/80 space-y-4 hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-500">
+          <div class="w-[300px] sm:w-[360px] shrink-0 bg-white rounded-3xl p-6 sm:p-7 shadow-[0_10px_30px_rgba(0,0,0,0.04)] border border-slate-200/80 space-y-4 hover:shadow-xl transition-all">
             <div class="flex items-center justify-between">
               <div class="flex items-center gap-1 text-amber-500 font-bold text-sm">
                 ★ ★ ★ ★ ★
@@ -2336,7 +2342,7 @@ window.addEventListener('click', (e) => {
           </div>
 
           <!-- Review Card (Bhavuk Gupta) -->
-          <div class="w-[320px] sm:w-[380px] shrink-0 bg-white rounded-3xl p-6 sm:p-7 shadow-[0_10px_30px_rgba(0,0,0,0.04)] border border-slate-200/80 space-y-4 hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-500">
+          <div class="w-[300px] sm:w-[360px] shrink-0 bg-white rounded-3xl p-6 sm:p-7 shadow-[0_10px_30px_rgba(0,0,0,0.04)] border border-slate-200/80 space-y-4 hover:shadow-xl transition-all">
             <div class="flex items-center justify-between">
               <div class="flex items-center gap-1 text-amber-500 font-bold text-sm">
                 ★ ★ ★ ★ ★
@@ -2360,7 +2366,7 @@ window.addEventListener('click', (e) => {
           </div>
 
           <!-- Review Card (Phoenix) -->
-          <div class="w-[320px] sm:w-[380px] shrink-0 bg-white rounded-3xl p-6 sm:p-7 shadow-[0_10px_30px_rgba(0,0,0,0.04)] border border-slate-200/80 space-y-4 hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-500">
+          <div class="w-[300px] sm:w-[360px] shrink-0 bg-white rounded-3xl p-6 sm:p-7 shadow-[0_10px_30px_rgba(0,0,0,0.04)] border border-slate-200/80 space-y-4 hover:shadow-xl transition-all">
             <div class="flex items-center justify-between">
               <div class="flex items-center gap-1 text-amber-500 font-bold text-sm">
                 ★ ★ ★ ★ ★
@@ -2384,7 +2390,7 @@ window.addEventListener('click', (e) => {
           </div>
 
           <!-- Review Card (Sourabh Meena) -->
-          <div class="w-[320px] sm:w-[380px] shrink-0 bg-white rounded-3xl p-6 sm:p-7 shadow-[0_10px_30px_rgba(0,0,0,0.04)] border border-slate-200/80 space-y-4 hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-500">
+          <div class="w-[300px] sm:w-[360px] shrink-0 bg-white rounded-3xl p-6 sm:p-7 shadow-[0_10px_30px_rgba(0,0,0,0.04)] border border-slate-200/80 space-y-4 hover:shadow-xl transition-all">
             <div class="flex items-center justify-between">
               <div class="flex items-center gap-1 text-amber-500 font-bold text-sm">
                 ★ ★ ★ ★ ★
@@ -2408,7 +2414,7 @@ window.addEventListener('click', (e) => {
           </div>
 
           <!-- Review Card (Sangeeta Kacker) -->
-          <div class="w-[320px] sm:w-[380px] shrink-0 bg-white rounded-3xl p-6 sm:p-7 shadow-[0_10px_30px_rgba(0,0,0,0.04)] border border-slate-200/80 space-y-4 hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-500">
+          <div class="w-[300px] sm:w-[360px] shrink-0 bg-white rounded-3xl p-6 sm:p-7 shadow-[0_10px_30px_rgba(0,0,0,0.04)] border border-slate-200/80 space-y-4 hover:shadow-xl transition-all">
             <div class="flex items-center justify-between">
               <div class="flex items-center gap-1 text-amber-500 font-bold text-sm">
                 ★ ★ ★ ★ ★
@@ -2432,7 +2438,7 @@ window.addEventListener('click', (e) => {
           </div>
 
           <!-- Review Card (Afsar Khan) -->
-          <div class="w-[320px] sm:w-[380px] shrink-0 bg-white rounded-3xl p-6 sm:p-7 shadow-[0_10px_30px_rgba(0,0,0,0.04)] border border-slate-200/80 space-y-4 hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-500">
+          <div class="w-[300px] sm:w-[360px] shrink-0 bg-white rounded-3xl p-6 sm:p-7 shadow-[0_10px_30px_rgba(0,0,0,0.04)] border border-slate-200/80 space-y-4 hover:shadow-xl transition-all">
             <div class="flex items-center justify-between">
               <div class="flex items-center gap-1 text-amber-500 font-bold text-sm">
                 ★ ★ ★ ★ ★
@@ -2456,7 +2462,7 @@ window.addEventListener('click', (e) => {
           </div>
 
           <!-- Review Card (Gaurav Sharma) -->
-          <div class="w-[320px] sm:w-[380px] shrink-0 bg-white rounded-3xl p-6 sm:p-7 shadow-[0_10px_30px_rgba(0,0,0,0.04)] border border-slate-200/80 space-y-4 hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-500">
+          <div class="w-[300px] sm:w-[360px] shrink-0 bg-white rounded-3xl p-6 sm:p-7 shadow-[0_10px_30px_rgba(0,0,0,0.04)] border border-slate-200/80 space-y-4 hover:shadow-xl transition-all">
             <div class="flex items-center justify-between">
               <div class="flex items-center gap-1 text-amber-500 font-bold text-sm">
                 ★ ★ ★ ★ ★
@@ -2480,7 +2486,7 @@ window.addEventListener('click', (e) => {
           </div>
 
           <!-- Review Card (Sukanksha Khandelwal) -->
-          <div class="w-[320px] sm:w-[380px] shrink-0 bg-white rounded-3xl p-6 sm:p-7 shadow-[0_10px_30px_rgba(0,0,0,0.04)] border border-slate-200/80 space-y-4 hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-500">
+          <div class="w-[300px] sm:w-[360px] shrink-0 bg-white rounded-3xl p-6 sm:p-7 shadow-[0_10px_30px_rgba(0,0,0,0.04)] border border-slate-200/80 space-y-4 hover:shadow-xl transition-all">
             <div class="flex items-center justify-between">
               <div class="flex items-center gap-1 text-amber-500 font-bold text-sm">
                 ★ ★ ★ ★ ★
@@ -2504,7 +2510,7 @@ window.addEventListener('click', (e) => {
           </div>
 
           <!-- Review Card (Sitaram Meena) -->
-          <div class="w-[320px] sm:w-[380px] shrink-0 bg-white rounded-3xl p-6 sm:p-7 shadow-[0_10px_30px_rgba(0,0,0,0.04)] border border-slate-200/80 space-y-4 hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-500">
+          <div class="w-[300px] sm:w-[360px] shrink-0 bg-white rounded-3xl p-6 sm:p-7 shadow-[0_10px_30px_rgba(0,0,0,0.04)] border border-slate-200/80 space-y-4 hover:shadow-xl transition-all">
             <div class="flex items-center justify-between">
               <div class="flex items-center gap-1 text-amber-500 font-bold text-sm">
                 ★ ★ ★ ★ ★
@@ -2528,7 +2534,7 @@ window.addEventListener('click', (e) => {
           </div>
 
           <!-- Review Card (Yogesh Sharma) -->
-          <div class="w-[320px] sm:w-[380px] shrink-0 bg-white rounded-3xl p-6 sm:p-7 shadow-[0_10px_30px_rgba(0,0,0,0.04)] border border-slate-200/80 space-y-4 hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-500">
+          <div class="w-[300px] sm:w-[360px] shrink-0 bg-white rounded-3xl p-6 sm:p-7 shadow-[0_10px_30px_rgba(0,0,0,0.04)] border border-slate-200/80 space-y-4 hover:shadow-xl transition-all">
             <div class="flex items-center justify-between">
               <div class="flex items-center gap-1 text-amber-500 font-bold text-sm">
                 ★ ★ ★ ★ ★
@@ -2552,7 +2558,7 @@ window.addEventListener('click', (e) => {
           </div>
 
           <!-- Review Card (Ankit Sharma) -->
-          <div class="w-[320px] sm:w-[380px] shrink-0 bg-white rounded-3xl p-6 sm:p-7 shadow-[0_10px_30px_rgba(0,0,0,0.04)] border border-slate-200/80 space-y-4 hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-500">
+          <div class="w-[300px] sm:w-[360px] shrink-0 bg-white rounded-3xl p-6 sm:p-7 shadow-[0_10px_30px_rgba(0,0,0,0.04)] border border-slate-200/80 space-y-4 hover:shadow-xl transition-all">
             <div class="flex items-center justify-between">
               <div class="flex items-center gap-1 text-amber-500 font-bold text-sm">
                 ★ ★ ★ ★ ★
@@ -2576,7 +2582,7 @@ window.addEventListener('click', (e) => {
           </div>
 
           <!-- Review Card (Bankat Bihari) -->
-          <div class="w-[320px] sm:w-[380px] shrink-0 bg-white rounded-3xl p-6 sm:p-7 shadow-[0_10px_30px_rgba(0,0,0,0.04)] border border-slate-200/80 space-y-4 hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-500">
+          <div class="w-[300px] sm:w-[360px] shrink-0 bg-white rounded-3xl p-6 sm:p-7 shadow-[0_10px_30px_rgba(0,0,0,0.04)] border border-slate-200/80 space-y-4 hover:shadow-xl transition-all">
             <div class="flex items-center justify-between">
               <div class="flex items-center gap-1 text-amber-500 font-bold text-sm">
                 ★ ★ ★ ★ ★
@@ -2600,7 +2606,7 @@ window.addEventListener('click', (e) => {
           </div>
 
           <!-- Review Card (Abhi Chittora) -->
-          <div class="w-[320px] sm:w-[380px] shrink-0 bg-white rounded-3xl p-6 sm:p-7 shadow-[0_10px_30px_rgba(0,0,0,0.04)] border border-slate-200/80 space-y-4 hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-500">
+          <div class="w-[300px] sm:w-[360px] shrink-0 bg-white rounded-3xl p-6 sm:p-7 shadow-[0_10px_30px_rgba(0,0,0,0.04)] border border-slate-200/80 space-y-4 hover:shadow-xl transition-all">
             <div class="flex items-center justify-between">
               <div class="flex items-center gap-1 text-amber-500 font-bold text-sm">
                 ★ ★ ★ ★ ★
@@ -2624,7 +2630,7 @@ window.addEventListener('click', (e) => {
           </div>
 
           <!-- Review Card (Ravindra Gochar) -->
-          <div class="w-[320px] sm:w-[380px] shrink-0 bg-white rounded-3xl p-6 sm:p-7 shadow-[0_10px_30px_rgba(0,0,0,0.04)] border border-slate-200/80 space-y-4 hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-500">
+          <div class="w-[300px] sm:w-[360px] shrink-0 bg-white rounded-3xl p-6 sm:p-7 shadow-[0_10px_30px_rgba(0,0,0,0.04)] border border-slate-200/80 space-y-4 hover:shadow-xl transition-all">
             <div class="flex items-center justify-between">
               <div class="flex items-center gap-1 text-amber-500 font-bold text-sm">
                 ★ ★ ★ ★ ★
@@ -2648,7 +2654,7 @@ window.addEventListener('click', (e) => {
           </div>
 
           <!-- Review Card (Deepak Meena) -->
-          <div class="w-[320px] sm:w-[380px] shrink-0 bg-white rounded-3xl p-6 sm:p-7 shadow-[0_10px_30px_rgba(0,0,0,0.04)] border border-slate-200/80 space-y-4 hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-500">
+          <div class="w-[300px] sm:w-[360px] shrink-0 bg-white rounded-3xl p-6 sm:p-7 shadow-[0_10px_30px_rgba(0,0,0,0.04)] border border-slate-200/80 space-y-4 hover:shadow-xl transition-all">
             <div class="flex items-center justify-between">
               <div class="flex items-center gap-1 text-amber-500 font-bold text-sm">
                 ★ ★ ★ ★ ★
@@ -2672,7 +2678,7 @@ window.addEventListener('click', (e) => {
           </div>
 
           <!-- Review Card (Ikbal Husain) -->
-          <div class="w-[320px] sm:w-[380px] shrink-0 bg-white rounded-3xl p-6 sm:p-7 shadow-[0_10px_30px_rgba(0,0,0,0.04)] border border-slate-200/80 space-y-4 hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-500">
+          <div class="w-[300px] sm:w-[360px] shrink-0 bg-white rounded-3xl p-6 sm:p-7 shadow-[0_10px_30px_rgba(0,0,0,0.04)] border border-slate-200/80 space-y-4 hover:shadow-xl transition-all">
             <div class="flex items-center justify-between">
               <div class="flex items-center gap-1 text-amber-500 font-bold text-sm">
                 ★ ★ ★ ★ ★
@@ -2696,7 +2702,7 @@ window.addEventListener('click', (e) => {
           </div>
 
           <!-- Review Card (Zakiya Parvej) -->
-          <div class="w-[320px] sm:w-[380px] shrink-0 bg-white rounded-3xl p-6 sm:p-7 shadow-[0_10px_30px_rgba(0,0,0,0.04)] border border-slate-200/80 space-y-4 hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-500">
+          <div class="w-[300px] sm:w-[360px] shrink-0 bg-white rounded-3xl p-6 sm:p-7 shadow-[0_10px_30px_rgba(0,0,0,0.04)] border border-slate-200/80 space-y-4 hover:shadow-xl transition-all">
             <div class="flex items-center justify-between">
               <div class="flex items-center gap-1 text-amber-500 font-bold text-sm">
                 ★ ★ ★ ★ ★
@@ -2720,7 +2726,7 @@ window.addEventListener('click', (e) => {
           </div>
 
           <!-- Review Card (Ashish Meena) -->
-          <div class="w-[320px] sm:w-[380px] shrink-0 bg-white rounded-3xl p-6 sm:p-7 shadow-[0_10px_30px_rgba(0,0,0,0.04)] border border-slate-200/80 space-y-4 hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-500">
+          <div class="w-[300px] sm:w-[360px] shrink-0 bg-white rounded-3xl p-6 sm:p-7 shadow-[0_10px_30px_rgba(0,0,0,0.04)] border border-slate-200/80 space-y-4 hover:shadow-xl transition-all">
             <div class="flex items-center justify-between">
               <div class="flex items-center gap-1 text-amber-500 font-bold text-sm">
                 ★ ★ ★ ★ ★
@@ -2744,7 +2750,7 @@ window.addEventListener('click', (e) => {
           </div>
 
           <!-- Review Card (Dinesh Gupta) -->
-          <div class="w-[320px] sm:w-[380px] shrink-0 bg-white rounded-3xl p-6 sm:p-7 shadow-[0_10px_30px_rgba(0,0,0,0.04)] border border-slate-200/80 space-y-4 hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-500">
+          <div class="w-[300px] sm:w-[360px] shrink-0 bg-white rounded-3xl p-6 sm:p-7 shadow-[0_10px_30px_rgba(0,0,0,0.04)] border border-slate-200/80 space-y-4 hover:shadow-xl transition-all">
             <div class="flex items-center justify-between">
               <div class="flex items-center gap-1 text-amber-500 font-bold text-sm">
                 ★ ★ ★ ★ ★
@@ -2768,7 +2774,7 @@ window.addEventListener('click', (e) => {
           </div>
 
           <!-- Review Card (Shikha Goyal) -->
-          <div class="w-[320px] sm:w-[380px] shrink-0 bg-white rounded-3xl p-6 sm:p-7 shadow-[0_10px_30px_rgba(0,0,0,0.04)] border border-slate-200/80 space-y-4 hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-500">
+          <div class="w-[300px] sm:w-[360px] shrink-0 bg-white rounded-3xl p-6 sm:p-7 shadow-[0_10px_30px_rgba(0,0,0,0.04)] border border-slate-200/80 space-y-4 hover:shadow-xl transition-all">
             <div class="flex items-center justify-between">
               <div class="flex items-center gap-1 text-amber-500 font-bold text-sm">
                 ★ ★ ★ ★ ★
@@ -2790,487 +2796,6 @@ window.addEventListener('click', (e) => {
               </div>
             </div>
           </div>
-
-          <!-- Review Card (Chandan Jha) -->
-          <div class="w-[320px] sm:w-[380px] shrink-0 bg-white rounded-3xl p-6 sm:p-7 shadow-[0_10px_30px_rgba(0,0,0,0.04)] border border-slate-200/80 space-y-4 hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-500">
-            <div class="flex items-center justify-between">
-              <div class="flex items-center gap-1 text-amber-500 font-bold text-sm">
-                ★ ★ ★ ★ ★
-              </div>
-              <span class="text-[10px] text-slate-400 font-semibold">2 months ago</span>
-            </div>
-            <p class="text-xs sm:text-sm text-slate-700 leading-relaxed font-serif italic">
-              "I had a fantastic experience shopping at TOO FIT ! They have an impressive collection of garments, ranging from traditional wear to modern styles. The fabric quality is top-notch, and everything is very reasonably priced."
-            </p>
-            <div class="flex items-center justify-between pt-3 border-t border-slate-100">
-              <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-full bg-[#4285F4] text-white font-bold flex items-center justify-center text-xs shadow-sm">
-                  CJ
-                </div>
-                <div>
-                  <h4 class="text-xs font-bold text-[#0F172A]">Chandan Jha</h4>
-                  <span class="text-[10px] text-slate-400 font-semibold">Google Maps Review</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Review Card (Bhavuk Gupta) -->
-          <div class="w-[320px] sm:w-[380px] shrink-0 bg-white rounded-3xl p-6 sm:p-7 shadow-[0_10px_30px_rgba(0,0,0,0.04)] border border-slate-200/80 space-y-4 hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-500">
-            <div class="flex items-center justify-between">
-              <div class="flex items-center gap-1 text-amber-500 font-bold text-sm">
-                ★ ★ ★ ★ ★
-              </div>
-              <span class="text-[10px] text-slate-400 font-semibold">3 months ago</span>
-            </div>
-            <p class="text-xs sm:text-sm text-slate-700 leading-relaxed font-serif italic">
-              "Got my first suit stitched at Too Fit, and it fits perfectly—something I’ve struggled to find elsewhere. The stitching quality and finishing are excellent, with great attention to detail."
-            </p>
-            <div class="flex items-center justify-between pt-3 border-t border-slate-100">
-              <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-full bg-[#EA4335] text-white font-bold flex items-center justify-center text-xs shadow-sm">
-                  BG
-                </div>
-                <div>
-                  <h4 class="text-xs font-bold text-[#0F172A]">Bhavuk Gupta</h4>
-                  <span class="text-[10px] text-slate-400 font-semibold">Google Maps Review</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Review Card (Phoenix) -->
-          <div class="w-[320px] sm:w-[380px] shrink-0 bg-white rounded-3xl p-6 sm:p-7 shadow-[0_10px_30px_rgba(0,0,0,0.04)] border border-slate-200/80 space-y-4 hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-500">
-            <div class="flex items-center justify-between">
-              <div class="flex items-center gap-1 text-amber-500 font-bold text-sm">
-                ★ ★ ★ ★ ★
-              </div>
-              <span class="text-[10px] text-slate-400 font-semibold">5 months ago</span>
-            </div>
-            <p class="text-xs sm:text-sm text-slate-700 leading-relaxed font-serif italic">
-              "I recently got my trousers stitched here and I’m extremely satisfied with the quality. The fitting is perfect and exactly as per my measurements. Stitching and finishing are very neat and professional."
-            </p>
-            <div class="flex items-center justify-between pt-3 border-t border-slate-100">
-              <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-full bg-[#FBBC05] text-white font-bold flex items-center justify-center text-xs shadow-sm">
-                  PX
-                </div>
-                <div>
-                  <h4 class="text-xs font-bold text-[#0F172A]">Phoenix</h4>
-                  <span class="text-[10px] text-slate-400 font-semibold">Google Maps Review</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Review Card (Sourabh Meena) -->
-          <div class="w-[320px] sm:w-[380px] shrink-0 bg-white rounded-3xl p-6 sm:p-7 shadow-[0_10px_30px_rgba(0,0,0,0.04)] border border-slate-200/80 space-y-4 hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-500">
-            <div class="flex items-center justify-between">
-              <div class="flex items-center gap-1 text-amber-500 font-bold text-sm">
-                ★ ★ ★ ★ ★
-              </div>
-              <span class="text-[10px] text-slate-400 font-semibold">5 months ago</span>
-            </div>
-            <p class="text-xs sm:text-sm text-slate-700 leading-relaxed font-serif italic">
-              "My Father is coming to stitch clothes since 1980. After him I am also following this shop. Best stitch fitting ever in my life."
-            </p>
-            <div class="flex items-center justify-between pt-3 border-t border-slate-100">
-              <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-full bg-[#34A853] text-white font-bold flex items-center justify-center text-xs shadow-sm">
-                  SM
-                </div>
-                <div>
-                  <h4 class="text-xs font-bold text-[#0F172A]">Sourabh Meena</h4>
-                  <span class="text-[10px] text-slate-400 font-semibold">Google Maps Review</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Review Card (Sangeeta Kacker) -->
-          <div class="w-[320px] sm:w-[380px] shrink-0 bg-white rounded-3xl p-6 sm:p-7 shadow-[0_10px_30px_rgba(0,0,0,0.04)] border border-slate-200/80 space-y-4 hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-500">
-            <div class="flex items-center justify-between">
-              <div class="flex items-center gap-1 text-amber-500 font-bold text-sm">
-                ★ ★ ★ ★ ★
-              </div>
-              <span class="text-[10px] text-slate-400 font-semibold">7 months ago</span>
-            </div>
-            <p class="text-xs sm:text-sm text-slate-700 leading-relaxed font-serif italic">
-              "I have been getting my clothes stitched for many years now, their service and hospitality is par excellence. The most important part the fitting and designs they have is amazing."
-            </p>
-            <div class="flex items-center justify-between pt-3 border-t border-slate-100">
-              <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-full bg-[#8B3A2B] text-white font-bold flex items-center justify-center text-xs shadow-sm">
-                  SK
-                </div>
-                <div>
-                  <h4 class="text-xs font-bold text-[#0F172A]">Sangeeta Kacker</h4>
-                  <span class="text-[10px] text-slate-400 font-semibold">Google Maps Review</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Review Card (Afsar Khan) -->
-          <div class="w-[320px] sm:w-[380px] shrink-0 bg-white rounded-3xl p-6 sm:p-7 shadow-[0_10px_30px_rgba(0,0,0,0.04)] border border-slate-200/80 space-y-4 hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-500">
-            <div class="flex items-center justify-between">
-              <div class="flex items-center gap-1 text-amber-500 font-bold text-sm">
-                ★ ★ ★ ★ ★
-              </div>
-              <span class="text-[10px] text-slate-400 font-semibold">10 months ago</span>
-            </div>
-            <p class="text-xs sm:text-sm text-slate-700 leading-relaxed font-serif italic">
-              "Hello Kota. Raymond and Italian fabrics are best quality: I have checked all other options, but for variety and quality- Excellent!"
-            </p>
-            <div class="flex items-center justify-between pt-3 border-t border-slate-100">
-              <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-full bg-[#0F172A] text-white font-bold flex items-center justify-center text-xs shadow-sm">
-                  AK
-                </div>
-                <div>
-                  <h4 class="text-xs font-bold text-[#0F172A]">Afsar Khan</h4>
-                  <span class="text-[10px] text-slate-400 font-semibold">Google Maps Review</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Review Card (Gaurav Sharma) -->
-          <div class="w-[320px] sm:w-[380px] shrink-0 bg-white rounded-3xl p-6 sm:p-7 shadow-[0_10px_30px_rgba(0,0,0,0.04)] border border-slate-200/80 space-y-4 hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-500">
-            <div class="flex items-center justify-between">
-              <div class="flex items-center gap-1 text-amber-500 font-bold text-sm">
-                ★ ★ ★ ★ ★
-              </div>
-              <span class="text-[10px] text-slate-400 font-semibold">1 year ago</span>
-            </div>
-            <p class="text-xs sm:text-sm text-slate-700 leading-relaxed font-serif italic">
-              "Toofit Tailors & Fabrics is a place where one can find diversity in clothing and fashion. Really amazing about the fitting. A complete place for wedding dresses for groom."
-            </p>
-            <div class="flex items-center justify-between pt-3 border-t border-slate-100">
-              <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-full bg-[#B87333] text-white font-bold flex items-center justify-center text-xs shadow-sm">
-                  GS
-                </div>
-                <div>
-                  <h4 class="text-xs font-bold text-[#0F172A]">Gaurav Sharma</h4>
-                  <span class="text-[10px] text-slate-400 font-semibold">Google Maps Review</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Review Card (Sukanksha Khandelwal) -->
-          <div class="w-[320px] sm:w-[380px] shrink-0 bg-white rounded-3xl p-6 sm:p-7 shadow-[0_10px_30px_rgba(0,0,0,0.04)] border border-slate-200/80 space-y-4 hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-500">
-            <div class="flex items-center justify-between">
-              <div class="flex items-center gap-1 text-amber-500 font-bold text-sm">
-                ★ ★ ★ ★ ★
-              </div>
-              <span class="text-[10px] text-slate-400 font-semibold">8 months ago</span>
-            </div>
-            <p class="text-xs sm:text-sm text-slate-700 leading-relaxed font-serif italic">
-              "Amazing collection for wedding and casual wear as well. Must visit!"
-            </p>
-            <div class="flex items-center justify-between pt-3 border-t border-slate-100">
-              <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-full bg-[#4285F4] text-white font-bold flex items-center justify-center text-xs shadow-sm">
-                  SK
-                </div>
-                <div>
-                  <h4 class="text-xs font-bold text-[#0F172A]">Sukanksha Khandelwal</h4>
-                  <span class="text-[10px] text-slate-400 font-semibold">Google Maps Review</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Review Card (Sitaram Meena) -->
-          <div class="w-[320px] sm:w-[380px] shrink-0 bg-white rounded-3xl p-6 sm:p-7 shadow-[0_10px_30px_rgba(0,0,0,0.04)] border border-slate-200/80 space-y-4 hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-500">
-            <div class="flex items-center justify-between">
-              <div class="flex items-center gap-1 text-amber-500 font-bold text-sm">
-                ★ ★ ★ ★ ★
-              </div>
-              <span class="text-[10px] text-slate-400 font-semibold">5 months ago</span>
-            </div>
-            <p class="text-xs sm:text-sm text-slate-700 leading-relaxed font-serif italic">
-              "I am stitching my clothes since 1980. Best tailor shop in my life."
-            </p>
-            <div class="flex items-center justify-between pt-3 border-t border-slate-100">
-              <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-full bg-[#EA4335] text-white font-bold flex items-center justify-center text-xs shadow-sm">
-                  SM
-                </div>
-                <div>
-                  <h4 class="text-xs font-bold text-[#0F172A]">Sitaram Meena</h4>
-                  <span class="text-[10px] text-slate-400 font-semibold">Google Maps Review</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Review Card (Yogesh Sharma) -->
-          <div class="w-[320px] sm:w-[380px] shrink-0 bg-white rounded-3xl p-6 sm:p-7 shadow-[0_10px_30px_rgba(0,0,0,0.04)] border border-slate-200/80 space-y-4 hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-500">
-            <div class="flex items-center justify-between">
-              <div class="flex items-center gap-1 text-amber-500 font-bold text-sm">
-                ★ ★ ★ ★ ★
-              </div>
-              <span class="text-[10px] text-slate-400 font-semibold">6 years ago</span>
-            </div>
-            <p class="text-xs sm:text-sm text-slate-700 leading-relaxed font-serif italic">
-              "Its really good hand made custom styles and fitting which you won't get anywhere else. Staff knows well about the fabric and counts."
-            </p>
-            <div class="flex items-center justify-between pt-3 border-t border-slate-100">
-              <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-full bg-[#34A853] text-white font-bold flex items-center justify-center text-xs shadow-sm">
-                  YS
-                </div>
-                <div>
-                  <h4 class="text-xs font-bold text-[#0F172A]">Yogesh Sharma</h4>
-                  <span class="text-[10px] text-slate-400 font-semibold">Google Maps Review</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Review Card (Ankit Sharma) -->
-          <div class="w-[320px] sm:w-[380px] shrink-0 bg-white rounded-3xl p-6 sm:p-7 shadow-[0_10px_30px_rgba(0,0,0,0.04)] border border-slate-200/80 space-y-4 hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-500">
-            <div class="flex items-center justify-between">
-              <div class="flex items-center gap-1 text-amber-500 font-bold text-sm">
-                ★ ★ ★ ★ ★
-              </div>
-              <span class="text-[10px] text-slate-400 font-semibold">1 year ago</span>
-            </div>
-            <p class="text-xs sm:text-sm text-slate-700 leading-relaxed font-serif italic">
-              "Amazing experience and decent behaviour. Best place for amazing tailoring experience."
-            </p>
-            <div class="flex items-center justify-between pt-3 border-t border-slate-100">
-              <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-full bg-[#0F172A] text-white font-bold flex items-center justify-center text-xs shadow-sm">
-                  AS
-                </div>
-                <div>
-                  <h4 class="text-xs font-bold text-[#0F172A]">Ankit Sharma</h4>
-                  <span class="text-[10px] text-slate-400 font-semibold">Google Maps Review</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Review Card (Bankat Bihari) -->
-          <div class="w-[320px] sm:w-[380px] shrink-0 bg-white rounded-3xl p-6 sm:p-7 shadow-[0_10px_30px_rgba(0,0,0,0.04)] border border-slate-200/80 space-y-4 hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-500">
-            <div class="flex items-center justify-between">
-              <div class="flex items-center gap-1 text-amber-500 font-bold text-sm">
-                ★ ★ ★ ★ ★
-              </div>
-              <span class="text-[10px] text-slate-400 font-semibold">4 years ago</span>
-            </div>
-            <p class="text-xs sm:text-sm text-slate-700 leading-relaxed font-serif italic">
-              "1st time I tried custom made shirt and trouser @toofit tailors. I am very satisfied for fitting. And cloth is also good quality."
-            </p>
-            <div class="flex items-center justify-between pt-3 border-t border-slate-100">
-              <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-full bg-[#B87333] text-white font-bold flex items-center justify-center text-xs shadow-sm">
-                  BB
-                </div>
-                <div>
-                  <h4 class="text-xs font-bold text-[#0F172A]">Bankat Bihari</h4>
-                  <span class="text-[10px] text-slate-400 font-semibold">Google Maps Review</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Review Card (Abhi Chittora) -->
-          <div class="w-[320px] sm:w-[380px] shrink-0 bg-white rounded-3xl p-6 sm:p-7 shadow-[0_10px_30px_rgba(0,0,0,0.04)] border border-slate-200/80 space-y-4 hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-500">
-            <div class="flex items-center justify-between">
-              <div class="flex items-center gap-1 text-amber-500 font-bold text-sm">
-                ★ ★ ★ ★ ★
-              </div>
-              <span class="text-[10px] text-slate-400 font-semibold">2 years ago</span>
-            </div>
-            <p class="text-xs sm:text-sm text-slate-700 leading-relaxed font-serif italic">
-              "Nice fitting and best quality everything in tailoring. Best shop!"
-            </p>
-            <div class="flex items-center justify-between pt-3 border-t border-slate-100">
-              <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-full bg-[#8B3A2B] text-white font-bold flex items-center justify-center text-xs shadow-sm">
-                  AC
-                </div>
-                <div>
-                  <h4 class="text-xs font-bold text-[#0F172A]">Abhi Chittora</h4>
-                  <span class="text-[10px] text-slate-400 font-semibold">Google Maps Review</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Review Card (Ravindra Gochar) -->
-          <div class="w-[320px] sm:w-[380px] shrink-0 bg-white rounded-3xl p-6 sm:p-7 shadow-[0_10px_30px_rgba(0,0,0,0.04)] border border-slate-200/80 space-y-4 hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-500">
-            <div class="flex items-center justify-between">
-              <div class="flex items-center gap-1 text-amber-500 font-bold text-sm">
-                ★ ★ ★ ★ ★
-              </div>
-              <span class="text-[10px] text-slate-400 font-semibold">5 months ago</span>
-            </div>
-            <p class="text-xs sm:text-sm text-slate-700 leading-relaxed font-serif italic">
-              "Splendid fitting and nice behavior."
-            </p>
-            <div class="flex items-center justify-between pt-3 border-t border-slate-100">
-              <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-full bg-[#4285F4] text-white font-bold flex items-center justify-center text-xs shadow-sm">
-                  RG
-                </div>
-                <div>
-                  <h4 class="text-xs font-bold text-[#0F172A]">Ravindra Gochar</h4>
-                  <span class="text-[10px] text-slate-400 font-semibold">Google Maps Review</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Review Card (Deepak Meena) -->
-          <div class="w-[320px] sm:w-[380px] shrink-0 bg-white rounded-3xl p-6 sm:p-7 shadow-[0_10px_30px_rgba(0,0,0,0.04)] border border-slate-200/80 space-y-4 hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-500">
-            <div class="flex items-center justify-between">
-              <div class="flex items-center gap-1 text-amber-500 font-bold text-sm">
-                ★ ★ ★ ★ ★
-              </div>
-              <span class="text-[10px] text-slate-400 font-semibold">5 months ago</span>
-            </div>
-            <p class="text-xs sm:text-sm text-slate-700 leading-relaxed font-serif italic">
-              "Nice fitting, good behavior ❤️"
-            </p>
-            <div class="flex items-center justify-between pt-3 border-t border-slate-100">
-              <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-full bg-[#EA4335] text-white font-bold flex items-center justify-center text-xs shadow-sm">
-                  DM
-                </div>
-                <div>
-                  <h4 class="text-xs font-bold text-[#0F172A]">Deepak Meena</h4>
-                  <span class="text-[10px] text-slate-400 font-semibold">Google Maps Review</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Review Card (Ikbal Husain) -->
-          <div class="w-[320px] sm:w-[380px] shrink-0 bg-white rounded-3xl p-6 sm:p-7 shadow-[0_10px_30px_rgba(0,0,0,0.04)] border border-slate-200/80 space-y-4 hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-500">
-            <div class="flex items-center justify-between">
-              <div class="flex items-center gap-1 text-amber-500 font-bold text-sm">
-                ★ ★ ★ ★ ★
-              </div>
-              <span class="text-[10px] text-slate-400 font-semibold">6 years ago</span>
-            </div>
-            <p class="text-xs sm:text-sm text-slate-700 leading-relaxed font-serif italic">
-              "Good collection and best stitching quality. I am regular customer of toofit tailors. I am happy."
-            </p>
-            <div class="flex items-center justify-between pt-3 border-t border-slate-100">
-              <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-full bg-[#34A853] text-white font-bold flex items-center justify-center text-xs shadow-sm">
-                  IH
-                </div>
-                <div>
-                  <h4 class="text-xs font-bold text-[#0F172A]">Ikbal Husain</h4>
-                  <span class="text-[10px] text-slate-400 font-semibold">Google Maps Review</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Review Card (Zakiya Parvej) -->
-          <div class="w-[320px] sm:w-[380px] shrink-0 bg-white rounded-3xl p-6 sm:p-7 shadow-[0_10px_30px_rgba(0,0,0,0.04)] border border-slate-200/80 space-y-4 hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-500">
-            <div class="flex items-center justify-between">
-              <div class="flex items-center gap-1 text-amber-500 font-bold text-sm">
-                ★ ★ ★ ★ ★
-              </div>
-              <span class="text-[10px] text-slate-400 font-semibold">4 months ago</span>
-            </div>
-            <p class="text-xs sm:text-sm text-slate-700 leading-relaxed font-serif italic">
-              "Good Raymond fabrics, nice collection."
-            </p>
-            <div class="flex items-center justify-between pt-3 border-t border-slate-100">
-              <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-full bg-[#FBBC05] text-white font-bold flex items-center justify-center text-xs shadow-sm">
-                  ZP
-                </div>
-                <div>
-                  <h4 class="text-xs font-bold text-[#0F172A]">Zakiya Parvej</h4>
-                  <span class="text-[10px] text-slate-400 font-semibold">Google Maps Review</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Review Card (Ashish Meena) -->
-          <div class="w-[320px] sm:w-[380px] shrink-0 bg-white rounded-3xl p-6 sm:p-7 shadow-[0_10px_30px_rgba(0,0,0,0.04)] border border-slate-200/80 space-y-4 hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-500">
-            <div class="flex items-center justify-between">
-              <div class="flex items-center gap-1 text-amber-500 font-bold text-sm">
-                ★ ★ ★ ★ ★
-              </div>
-              <span class="text-[10px] text-slate-400 font-semibold">7 months ago</span>
-            </div>
-            <p class="text-xs sm:text-sm text-slate-700 leading-relaxed font-serif italic">
-              "Excellent service and comfort satisfaction, thanks!"
-            </p>
-            <div class="flex items-center justify-between pt-3 border-t border-slate-100">
-              <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-full bg-[#0F172A] text-white font-bold flex items-center justify-center text-xs shadow-sm">
-                  AM
-                </div>
-                <div>
-                  <h4 class="text-xs font-bold text-[#0F172A]">Ashish Meena</h4>
-                  <span class="text-[10px] text-slate-400 font-semibold">Google Maps Review</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Review Card (Dinesh Gupta) -->
-          <div class="w-[320px] sm:w-[380px] shrink-0 bg-white rounded-3xl p-6 sm:p-7 shadow-[0_10px_30px_rgba(0,0,0,0.04)] border border-slate-200/80 space-y-4 hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-500">
-            <div class="flex items-center justify-between">
-              <div class="flex items-center gap-1 text-amber-500 font-bold text-sm">
-                ★ ★ ★ ★ ★
-              </div>
-              <span class="text-[10px] text-slate-400 font-semibold">1 month ago</span>
-            </div>
-            <p class="text-xs sm:text-sm text-slate-700 leading-relaxed font-serif italic">
-              "Best experience in bespoke tailoring."
-            </p>
-            <div class="flex items-center justify-between pt-3 border-t border-slate-100">
-              <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-full bg-[#B87333] text-white font-bold flex items-center justify-center text-xs shadow-sm">
-                  DG
-                </div>
-                <div>
-                  <h4 class="text-xs font-bold text-[#0F172A]">Dinesh Gupta</h4>
-                  <span class="text-[10px] text-slate-400 font-semibold">Google Maps Review</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Review Card (Shikha Goyal) -->
-          <div class="w-[320px] sm:w-[380px] shrink-0 bg-white rounded-3xl p-6 sm:p-7 shadow-[0_10px_30px_rgba(0,0,0,0.04)] border border-slate-200/80 space-y-4 hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-500">
-            <div class="flex items-center justify-between">
-              <div class="flex items-center gap-1 text-amber-500 font-bold text-sm">
-                ★ ★ ★ ★ ★
-              </div>
-              <span class="text-[10px] text-slate-400 font-semibold">7 months ago</span>
-            </div>
-            <p class="text-xs sm:text-sm text-slate-700 leading-relaxed font-serif italic">
-              "Nice and supportive staff."
-            </p>
-            <div class="flex items-center justify-between pt-3 border-t border-slate-100">
-              <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-full bg-[#8B3A2B] text-white font-bold flex items-center justify-center text-xs shadow-sm">
-                  SG
-                </div>
-                <div>
-                  <h4 class="text-xs font-bold text-[#0F172A]">Shikha Goyal</h4>
-                  <span class="text-[10px] text-slate-400 font-semibold">Google Maps Review</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
         </div>
       </div>
 
@@ -3287,7 +2812,7 @@ window.addEventListener('click', (e) => {
   </div>
 </section>
 
-<!-- SINGLE VIDEO PLAYBACK RULE SCRIPT -->
+<!-- CONTROLLER SCRIPT: SINGLE VIDEO PLAYBACK + SMOOTH JS AUTO-SCROLL -->
 <script>
 function toggleVidPlay(vidId, btnId) {
   const targetVid = document.getElementById(vidId);
@@ -3296,7 +2821,7 @@ function toggleVidPlay(vidId, btnId) {
 
   const isPaused = targetVid.paused;
 
-  // 1. Pause ALL video reels in testimonials section and restore play buttons
+  // Pause all other video reels
   const allVideos = document.querySelectorAll('#testimonials video');
   allVideos.forEach(v => {
     v.pause();
@@ -3305,12 +2830,53 @@ function toggleVidPlay(vidId, btnId) {
     if(b) b.style.opacity = '1';
   });
 
-  // 2. Play only target video if it was previously paused
   if(isPaused) {
     targetVid.play().catch(()=>{});
     if(targetBtn) targetBtn.style.opacity = '0';
   }
 }
+
+// TEXT REVIEWS AUTOMATIC & MANUAL SMOOTH CAROUSEL SCROLL
+(function() {
+  const box = document.getElementById('text-reviews-scroll-box');
+  if(!box) return;
+
+  let timer = null;
+  const speed = 1.2;
+
+  function autoStep() {
+    if(box.scrollLeft + box.clientWidth >= box.scrollWidth - 5) {
+      box.scrollLeft = 0;
+    } else {
+      box.scrollLeft += speed;
+    }
+  }
+
+  function start() {
+    stop();
+    timer = setInterval(autoStep, 25);
+  }
+
+  function stop() {
+    if(timer) clearInterval(timer);
+  }
+
+  box.addEventListener('mouseenter', stop);
+  box.addEventListener('mouseleave', start);
+  box.addEventListener('touchstart', stop, {passive: true});
+  box.addEventListener('touchend', start, {passive: true});
+
+  window.manualScrollTextReviews = function(dir) {
+    stop();
+    box.scrollBy({ left: dir * 320, behavior: 'smooth' });
+    setTimeout(start, 5000);
+  };
+
+  document.addEventListener('DOMContentLoaded', start);
+  if(document.readyState === 'complete' || document.readyState === 'interactive') {
+    start();
+  }
+})();
 </script>
 
 
