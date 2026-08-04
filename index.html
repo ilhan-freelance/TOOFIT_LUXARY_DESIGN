@@ -5219,283 +5219,106 @@ function toggleVidPlay(vidId, btnId) {
 </script>
 
 
-    <footer class="bg-slate-950 text-slate-300 py-16 px-6 md:px-10 border-t border-slate-800">
-        <div class="max-w-[1400px] mx-auto space-y-12">
-            
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-10 text-xs">
-                
-                <!-- Col 1: Brand Info -->
-                <div class="space-y-4">
-                    <div class="flex items-center gap-2">
-                        <div class="bg-mpfOrange text-white font-serif font-bold text-xl w-8 h-8 rounded flex items-center justify-center">T</div>
-                        <span class="text-2xl font-serif font-bold text-white tracking-wider">TOOFIT</span>
-                    </div>
-                    <p class="text-slate-400 leading-relaxed">
-                        India's premier custom menswear brand offering bespoke suits, sherwanis, kurtas, jodhpuris, tuxedos and accessories. Founded in 1969.
-                    </p>
-                    <p class="text-mpfOrange font-semibold">Jaipur &bull; Kota &bull; Dubai</p>
-                </div>
+    <!-- ========================================================= -->
+<!-- LUXURY FOOTER — GRAND EMBLEM, BLURRED BACKDROP & CONTACTS -->
+<!-- ========================================================= -->
+<footer class="relative bg-slate-950 text-white overflow-hidden border-t border-amber-900/30">
+  
+  <!-- 1. BLURRED LUXURY BACKGROUND IMAGE & OVERLAY -->
+  <div class="absolute inset-0 z-0 pointer-events-none">
+    <img src="assets/hero_mansion_suit_4k.jpg" class="w-full h-full object-cover object-center filter blur-xl scale-110 opacity-30">
+    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/90 to-slate-950/85"></div>
+  </div>
 
-                <!-- Col 2: Categories -->
-                <div class="space-y-3">
-                    <h5 class="text-sm font-bold text-white font-serif uppercase">Shop Categories</h5>
-                    <ul class="space-y-2 text-slate-400">
-                        <li><a href="#categories" class="hover:text-mpfOrange transition-colors">Royal Sherwanis</a></li>
-                        <li><a href="#categories" class="hover:text-mpfOrange transition-colors">Bespoke Suits & Tuxedos</a></li>
-                        <li><a href="#categories" class="hover:text-mpfOrange transition-colors">Jodhpuri & Band Gala</a></li>
-                        <li><a href="#categories" class="hover:text-mpfOrange transition-colors">Crafted Shirts & Trousers</a></li>
-                        <li><a href="#categories" class="hover:text-mpfOrange transition-colors">Indo Western Outfits</a></li>
-                    </ul>
-                </div>
+  <!-- Ambient Golden Glow -->
+  <div class="absolute -top-32 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-[radial-gradient(circle,_rgba(242,208,169,0.15)_0%,_transparent_70%)] blur-3xl pointer-events-none"></div>
 
-                <!-- Col 3: Useful Links -->
-                <div class="space-y-3">
-                    <h5 class="text-sm font-bold text-white font-serif uppercase">Toofit Atelier</h5>
-                    <ul class="space-y-2 text-slate-400">
-                        <li><a href="#experience" class="hover:text-mpfOrange transition-colors">Why Choose Us</a></li>
-                        <li><a href="#process" class="hover:text-mpfOrange transition-colors">How it Works</a></li>
-                        <li><a href="#reviews" class="hover:text-mpfOrange transition-colors">Client Testimonials</a></li>
-                        <li><a href="#" onclick="openLocationModal(); return false;" class="hover:text-mpfOrange transition-colors">Store Locations</a></li>
-                        <li><a href="#" onclick="openBookingModal('studio'); return false;" class="hover:text-mpfOrange transition-colors">Book Appointment</a></li>
-                    </ul>
-                </div>
-
-                <!-- Col 4: Newsletter -->
-                <div class="space-y-4">
-                    <h5 class="text-sm font-bold text-white font-serif uppercase">Newsletter</h5>
-                    <p class="text-slate-400">Receive updates on new fabric arrivals & wedding styling guides.</p>
-                    <form class="flex gap-2" onsubmit="event.preventDefault(); alert('Subscribed to Toofit Atelier newsletter!');">
-                        <input type="email" placeholder="Your Email Address" class="bg-slate-900 border border-slate-800 rounded px-3 py-2 text-xs w-full text-white focus:outline-none focus:border-mpfOrange" required>
-                        <button type="submit" class="bg-mpfOrange text-white font-bold px-4 py-2 rounded text-xs hover:bg-orange-600 transition-colors">
-                            Subscribe
-                        </button>
-                    </form>
-                </div>
-
-            </div>
-
-            <div class="pt-8 border-t border-slate-800 text-center text-[11px] text-slate-500 flex flex-col sm:flex-row justify-between items-center gap-4">
-                <span>&copy; 2026 TOOFIT TAILORS & FABRICS. ALL RIGHTS RESERVED.</span>
-                <span>JAIPUR &bull; KOTA &bull; DUBAI</span>
-            </div>
-
-        </div>
-    </footer>
+  <div class="max-w-[1280px] mx-auto px-6 md:px-10 pt-16 pb-12 relative z-10 space-y-14 text-center">
+    
+    <!-- ── 2. TOP BRAND ESSENCE & LOCATIONS ONLY ── -->
+    <div class="space-y-4 max-w-2xl mx-auto">
+      <p class="text-xs sm:text-sm uppercase tracking-[0.3em] text-[#F2D0A9] font-bold">
+        Bespoke Tailoring & Raymond Fabrics
+      </p>
+      
+      <!-- Locations Only Names -->
+      <div class="flex items-center justify-center gap-3 sm:gap-6 text-slate-300 font-serif text-sm sm:text-base tracking-widest pt-2">
+        <span class="flex items-center gap-2"><span>📍</span><span>Kota</span></span>
+        <span class="text-amber-500/60">•</span>
+        <span class="flex items-center gap-2"><span>📍</span><span>Jaipur</span></span>
+        <span class="text-amber-500/60">•</span>
+        <span class="flex items-center gap-2"><span>📍</span><span>Dubai</span></span>
+      </div>
+    </div>
 
 
-    <!-- ============================================ -->
-    <!-- FLOATING WHATSAPP FAB BUTTON                -->
-    <!-- ============================================ -->
-    <a href="https://wa.me/919829000000" target="_blank" rel="noopener" class="fixed bottom-6 right-6 z-50 bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:scale-110 transition-transform duration-300 flex items-center justify-center wa-fab" aria-label="Chat on WhatsApp">
-        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 16 16">
-            <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c-.003 1.396.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c.003-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
+    <!-- ── 3. CONTACT INFORMATION (PHONE, EMAIL, SHOWROOM) ── -->
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-4xl mx-auto py-8 border-y border-white/10 text-slate-300 text-xs sm:text-sm">
+      
+      <!-- Phone & WhatsApp -->
+      <div class="space-y-1">
+        <span class="text-[10px] font-bold uppercase tracking-widest text-[#F2D0A9]">Phone & WhatsApp</span>
+        <p class="font-medium text-white text-sm">+91 98290 00000</p>
+        <p class="text-xs text-slate-400">+91 744 2360000</p>
+      </div>
+
+      <!-- Email Inquiry -->
+      <div class="space-y-1">
+        <span class="text-[10px] font-bold uppercase tracking-widest text-[#F2D0A9]">Email Inquiry</span>
+        <p class="font-medium text-white text-sm">contact@toofittailors.com</p>
+        <p class="text-xs text-slate-400">support@toofittailors.com</p>
+      </div>
+
+      <!-- Showroom Address -->
+      <div class="space-y-1">
+        <span class="text-[10px] font-bold uppercase tracking-widest text-[#F2D0A9]">Flagship Store</span>
+        <p class="font-medium text-white text-xs leading-relaxed">
+          Aerodrome Circle, near Bank of Baroda, Gumanpura, Kota, Rajasthan 324007
+        </p>
+      </div>
+
+    </div>
+
+
+    <!-- ── 4. LEGAL & POLICY LINKS (NO NAV LINKS) ── -->
+    <div class="flex flex-wrap items-center justify-center gap-6 sm:gap-10 text-xs font-semibold uppercase tracking-widest text-slate-400">
+      <a href="#privacy" class="hover:text-[#F2D0A9] transition-colors">Privacy Policy</a>
+      <span class="text-slate-700">•</span>
+      <a href="#terms" class="hover:text-[#F2D0A9] transition-colors">Terms & Conditions</a>
+      <span class="text-slate-700">•</span>
+      <a href="#faq" class="hover:text-[#F2D0A9] transition-colors">FAQ</a>
+    </div>
+
+
+    <!-- ── 5. GRAND ENDING EMBLEM & BRAND TITLE (MATCHING REFERENCE IMAGE) ── -->
+    <div class="pt-8 space-y-4 border-t border-white/10">
+      
+      <!-- Royal Golden Emblem with Sunburst Rays -->
+      <div class="w-20 h-20 mx-auto flex items-center justify-center relative group">
+        <!-- Sunburst Radiating Rays SVG -->
+        <svg class="w-24 h-24 absolute text-amber-500/40 animate-pulse" viewBox="0 0 100 100" fill="none">
+          <circle cx="50" cy="50" r="45" stroke="currentColor" stroke-width="0.5" stroke-dasharray="2 4"/>
+          <path d="M50 5 L50 95 M5 50 L95 50 M18 18 L82 82 M18 82 L82 18" stroke="currentColor" stroke-width="0.5"/>
         </svg>
-    </a>
+        <!-- Golden Scissors Crown Emblem -->
+        <div class="w-14 h-14 rounded-full bg-gradient-to-tr from-amber-600 via-amber-400 to-amber-200 p-0.5 shadow-2xl">
+          <div class="w-full h-full rounded-full bg-slate-950 flex items-center justify-center text-amber-300 text-xl font-bold font-serif">
+            ✂️
+          </div>
+        </div>
+      </div>
 
+      <!-- Large Grand Typography Title: T O O F I T -->
+      <h1 class="text-4xl sm:text-6xl md:text-7xl font-serif font-black tracking-[0.35em] text-[#F2D0A9] drop-shadow-2xl">
+        TOOFIT
+      </h1>
 
-    <!-- INTERACTIVE JAVASCRIPT LOGIC -->
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            gsap.registerPlugin(ScrollTrigger);
+      <!-- Copyright Line -->
+      <p class="text-[11px] text-slate-500 font-sans tracking-wider pt-2">
+        &copy; 2026 TOOFIT Tailors & Fabrics. All rights reserved. Crafting bespoke perfection since 1980.
+      </p>
 
-            gsap.utils.toArray('.gs-reveal').forEach((elem) => {
-                gsap.fromTo(elem, 
-                    { autoAlpha: 0, y: 40 }, 
-                    { 
-                        duration: 1, 
-                        autoAlpha: 1, 
-                        y: 0, 
-                        ease: "power2.out",
-                        scrollTrigger: {
-                            trigger: elem,
-                            start: "top 88%", 
-                            toggleActions: "play none none reverse"
-                        }
-                    }
-                );
-            });
+    </div>
 
-            // ===============================================
-            // SIGNATURE STYLES CAROUSEL: 2 FRAMES CONTROL
-            // ===============================================
-            const carousel = document.getElementById('cat-carousel');
-            const track = document.getElementById('cat-frames-track');
-            const dot0 = document.getElementById('dot-frame-0');
-            const dot1 = document.getElementById('dot-frame-1');
-
-            if (carousel && track) {
-                let currentFrame = 0;
-                let autoScrollTimer = null;
-                let isDown = false;
-                let startX = 0;
-
-                window.goToFrame = (index) => {
-                    currentFrame = index;
-                    track.style.transform = `translateX(-${currentFrame * 100}%)`;
-                    if (dot0 && dot1) {
-                        dot0.className = currentFrame === 0 
-                            ? "w-7 h-2.5 rounded-full bg-[#8B3A2B] transition-all cursor-pointer" 
-                            : "w-2.5 h-2.5 rounded-full bg-[#231B15]/20 hover:bg-[#8B3A2B]/60 transition-all cursor-pointer";
-                        dot1.className = currentFrame === 1 
-                            ? "w-7 h-2.5 rounded-full bg-[#8B3A2B] transition-all cursor-pointer" 
-                            : "w-2.5 h-2.5 rounded-full bg-[#231B15]/20 hover:bg-[#8B3A2B]/60 transition-all cursor-pointer";
-                    }
-                };
-
-                const nextFrame = () => {
-                    currentFrame = (currentFrame === 0) ? 1 : 0;
-                    goToFrame(currentFrame);
-                };
-
-                const startAutoScroll = () => {
-                    stopAutoScroll();
-                    autoScrollTimer = setInterval(nextFrame, 5000);
-                };
-
-                const stopAutoScroll = () => {
-                    if (autoScrollTimer) {
-                        clearInterval(autoScrollTimer);
-                        autoScrollTimer = null;
-                    }
-                };
-
-                // Prevent native image dragging
-                carousel.addEventListener('dragstart', (e) => e.preventDefault());
-
-                // Mouse Drag / Swipe Events
-                carousel.addEventListener('mousedown', (e) => {
-                    isDown = true;
-                    startX = e.pageX;
-                    stopAutoScroll();
-                });
-
-                carousel.addEventListener('mouseleave', () => {
-                    isDown = false;
-                    startAutoScroll();
-                });
-
-                carousel.addEventListener('mouseup', (e) => {
-                    if (!isDown) return;
-                    isDown = false;
-                    const diff = e.pageX - startX;
-                    if (diff < -50) goToFrame(1);
-                    else if (diff > 50) goToFrame(0);
-                    startAutoScroll();
-                });
-
-                // Touch swipe support
-                let touchStartX = 0;
-                carousel.addEventListener('touchstart', (e) => {
-                    touchStartX = e.touches[0].clientX;
-                    stopAutoScroll();
-                }, { passive: true });
-
-                carousel.addEventListener('touchend', (e) => {
-                    const diff = e.changedTouches[0].clientX - touchStartX;
-                    if (diff < -40) goToFrame(1);
-                    else if (diff > 40) goToFrame(0);
-                    startAutoScroll();
-                }, { passive: true });
-
-                // Pause auto scroll on mouse enter
-                carousel.addEventListener('mouseenter', stopAutoScroll);
-
-                // Init Frame 0 & Timer
-                goToFrame(0);
-                startAutoScroll();
-            }
-
-            // ===============================================
-            // MADE FOR EVERY OCCASION CAROUSEL: 2 FRAMES CONTROL
-            // ===============================================
-            const occCarousel = document.getElementById('occ-carousel');
-            const occTrack = document.getElementById('occ-frames-track');
-            const occDot0 = document.getElementById('occ-dot-frame-0');
-            const occDot1 = document.getElementById('occ-dot-frame-1');
-
-            if (occCarousel && occTrack) {
-                let currentOccFrame = 0;
-                let autoOccScrollTimer = null;
-                let isOccDown = false;
-                let occStartX = 0;
-
-                window.goToOccasionFrame = (index) => {
-                    currentOccFrame = index;
-                    occTrack.style.transform = `translateX(-${currentOccFrame * 100}%)`;
-                    if (occDot0 && occDot1) {
-                        occDot0.className = currentOccFrame === 0 
-                            ? "w-7 h-2.5 rounded-full bg-[#8B3A2B] transition-all cursor-pointer" 
-                            : "w-2.5 h-2.5 rounded-full bg-[#231B15]/20 hover:bg-[#8B3A2B]/60 transition-all cursor-pointer";
-                        occDot1.className = currentOccFrame === 1 
-                            ? "w-7 h-2.5 rounded-full bg-[#8B3A2B] transition-all cursor-pointer" 
-                            : "w-2.5 h-2.5 rounded-full bg-[#231B15]/20 hover:bg-[#8B3A2B]/60 transition-all cursor-pointer";
-                    }
-                };
-
-                const nextOccFrame = () => {
-                    currentOccFrame = (currentOccFrame === 0) ? 1 : 0;
-                    goToOccasionFrame(currentOccFrame);
-                };
-
-                const startOccAutoScroll = () => {
-                    stopOccAutoScroll();
-                    autoOccScrollTimer = setInterval(nextOccFrame, 5000);
-                };
-
-                const stopOccAutoScroll = () => {
-                    if (autoOccScrollTimer) {
-                        clearInterval(autoOccScrollTimer);
-                        autoOccScrollTimer = null;
-                    }
-                };
-
-                // Prevent native image dragging
-                occCarousel.addEventListener('dragstart', (e) => e.preventDefault());
-
-                // Mouse Drag / Swipe Events
-                occCarousel.addEventListener('mousedown', (e) => {
-                    isOccDown = true;
-                    occStartX = e.pageX;
-                    stopOccAutoScroll();
-                });
-
-                occCarousel.addEventListener('mouseleave', () => {
-                    isOccDown = false;
-                    startOccAutoScroll();
-                });
-
-                occCarousel.addEventListener('mouseup', (e) => {
-                    if (!isOccDown) return;
-                    isOccDown = false;
-                    const diff = e.pageX - occStartX;
-                    if (diff < -50) goToOccasionFrame(1);
-                    else if (diff > 50) goToOccasionFrame(0);
-                    startOccAutoScroll();
-                });
-
-                // Touch swipe support
-                let touchOccStartX = 0;
-                occCarousel.addEventListener('touchstart', (e) => {
-                    touchOccStartX = e.touches[0].clientX;
-                    stopOccAutoScroll();
-                }, { passive: true });
-
-                occCarousel.addEventListener('touchend', (e) => {
-                    const diff = e.changedTouches[0].clientX - touchOccStartX;
-                    if (diff < -40) goToOccasionFrame(1);
-                    else if (diff > 40) goToOccasionFrame(0);
-                    startOccAutoScroll();
-                }, { passive: true });
-
-                // Pause auto scroll on mouse enter
-                occCarousel.addEventListener('mouseenter', stopOccAutoScroll);
-
-                // Init Frame 0 & Timer
-                goToOccasionFrame(0);
-                startOccAutoScroll();
-            }
-        });
-    </script>
-
-</body>
-</html>
+  </div>
+</footer>
