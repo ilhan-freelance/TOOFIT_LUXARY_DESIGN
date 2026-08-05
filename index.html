@@ -476,22 +476,67 @@
                 letter-spacing: 0.18em;
             }
             .tf-since-text {
-                font-size: 0.95rem;
+                font-size: 0.85rem;
             }
             .tf-faded-vdivider {
-                height: 24px;
-                margin: 0 12px;
+                height: 20px;
+                margin: 0 8px;
             }
             .tf-standalone-logo-img {
-                height: 50px;
+                height: 46px;
             }
             .tf-nav-links { display: none; }
             .tf-liquid-btn.desktop-only { display: none; }
             .tf-hamburger { display: flex; }
             .tf-mobile-drawer { display: flex; }
-            .tf-nav-row { padding: 6px 20px 10px; }
-            .tf-separator-a { margin: 2px 20px 4px; }
-            .tf-nav-divider { margin: 0 20px; }
+            .tf-nav-row { padding: 4px 16px 8px; }
+            .tf-separator-a { margin: 2px 16px 4px; }
+            .tf-nav-divider { margin: 0 16px; }
+        }
+
+        @media (max-width: 640px) {
+            .tf-faded-vdivider, .tf-since-column { display: none !important; }
+            .tf-brand-name { font-size: 16px; letter-spacing: 0.15em; }
+            .tf-brand-caption { font-size: 0.5rem; letter-spacing: 0.28em; }
+            .tf-standalone-logo-img { height: 40px; }
+        }
+
+        @media (max-width: 400px) {
+            .tf-brand-header { padding: 8px 10px 4px; }
+            .tf-brand-name { font-size: 14px; letter-spacing: 0.12em; }
+            .tf-standalone-logo-img { height: 36px; }
+        }
+
+        /* Responsive Anatomy Section Detail Cards */
+        @media (max-width: 1023px) {
+            #anatomy-track [style*="width:250px"] {
+                width: 180px !important;
+                padding: 6px 10px !important;
+                gap: 8px !important;
+            }
+            #anatomy-track [style*="width:52px"] {
+                width: 36px !important;
+                height: 36px !important;
+            }
+            #anatomy-track [style*="font-size:9px"] {
+                font-size: 7.5px !important;
+            }
+            #anatomy-track [style*="font-size:8.5px"] {
+                font-size: 7px !important;
+            }
+        }
+        @media (max-width: 640px) {
+            #anatomy-track [style*="width:250px"], #anatomy-track [style*="width:180px"] {
+                width: 130px !important;
+                padding: 4px 6px !important;
+                gap: 5px !important;
+            }
+            #anatomy-track [style*="left:24px"] { left: 6px !important; }
+            #anatomy-track [style*="right:24px"] { right: 6px !important; }
+            #anatomy-track [style*="width:52px"], #anatomy-track [style*="width:36px"] {
+                width: 26px !important;
+                height: 26px !important;
+            }
         }
     </style>
 </head>
@@ -626,7 +671,7 @@
         <div class="relative z-10 w-full max-w-[1400px] ml-0 sm:ml-4 md:ml-8 lg:ml-12 px-6 md:px-10 pb-10 md:pb-16 pt-24 flex flex-col items-start justify-end space-y-5 text-left">
             
             <!-- Category Line (Exact from 2nd SS) -->
-            <div class="inline-flex items-center justify-start gap-3 text-white/95 text-xs md:text-sm font-sans tracking-[0.28em] uppercase font-light drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
+            <div class="flex flex-wrap items-center justify-start gap-2 sm:gap-3 text-white/95 text-[11px] sm:text-xs md:text-sm font-sans tracking-[0.16em] sm:tracking-[0.28em] uppercase font-light drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
                 <span>SUITS</span>
                 <span class="text-[#D4AF37]">|</span>
                 <span>SHERWANIS</span>
@@ -758,7 +803,7 @@
         <div class="max-w-[1480px] mx-auto flex items-end justify-center gap-6 md:gap-8 lg:gap-12 relative">
             
             <!-- Left Side: Wedding Sherwani Mannequin Cutout (No Background) -->
-            <div class="hidden md:block w-[220px] lg:w-[260px] xl:w-[285px] shrink-0 transition-transform duration-500 hover:scale-105 self-end">
+            <div class="hidden lg:block lg:w-[200px] xl:w-[260px] 2xl:w-[285px] shrink-0 transition-transform duration-500 hover:scale-105 self-end">
                 <img src="assets/mannequin_wedding_sherwani_transparent.png" alt="TOOFIT Bespoke Royal Wedding Sherwani" class="w-full h-auto block filter drop-shadow-[0_12px_24px_rgba(0,0,0,0.18)]">
             </div>
 
@@ -776,7 +821,7 @@
             </div>
 
             <!-- Right Side: Formal Suitwear Mannequin Cutout (No Background) -->
-            <div class="hidden md:block w-[220px] lg:w-[260px] xl:w-[285px] shrink-0 transition-transform duration-500 hover:scale-105 self-end">
+            <div class="hidden lg:block lg:w-[200px] xl:w-[260px] 2xl:w-[285px] shrink-0 transition-transform duration-500 hover:scale-105 self-end">
                 <img src="assets/mannequin_formal_suit_transparent.png?v=5" alt="TOOFIT Bespoke Formal Suitwear with Shoes" class="w-full h-auto block filter drop-shadow-[0_12px_24px_rgba(0,0,0,0.18)]">
             </div>
 
@@ -5451,7 +5496,7 @@ function toggleVidPlay(vidId, btnId) {
     <!-- Subtle top shimmer line in gold -->
     <div class="w-full h-px bg-gradient-to-r from-transparent via-[#B87333]/50 to-transparent mb-10"></div>
 
-    <h1 class="relative z-10 text-5xl sm:text-7xl md:text-[9rem] lg:text-[11rem] font-serif font-black tracking-[0.18em] sm:tracking-[0.28em] text-[#F2D0A9] leading-none select-none text-center">
+    <h1 class="relative z-10 text-3xl sm:text-7xl md:text-[9rem] lg:text-[11rem] font-serif font-black tracking-[0.14em] sm:tracking-[0.28em] text-[#F2D0A9] leading-none select-none text-center">
       TOOFIT
     </h1>
 
