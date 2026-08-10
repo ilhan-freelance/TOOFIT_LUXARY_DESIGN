@@ -1342,7 +1342,12 @@
         /* Boot */
         function init(){ bjGoTo(0); }
         document.readyState==='loading'
-         <!-- ========================================================= -->
+            ? document.addEventListener('DOMContentLoaded', init)
+            : init();
+    })();
+    </script>
+
+    <!-- ========================================================= -->
     <!-- WEDDING PACKAGES SECTION (AESTHETIC DIAMOND BULLET LISTS) -->
     <!-- ========================================================= -->
     <section id="wedding-packages" class="py-12 md:py-18 bg-[#FAF6F0] relative overflow-hidden border-t border-slate-200/80">
