@@ -9,7 +9,7 @@
     <!-- Fonts: Inter / Montserrat for modern UI + Playfair Display for luxury headers -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200;0,6..72,300;0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;0,6..96,700;1,6..96,400;1,6..96,600&family=Prata&family=Cinzel:wght@600;700;800;900&family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&family=Jost:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,200;0,6..72,300;0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;0,6..96,700;1,6..96,400;1,6..96,600&family=Prata&family=Cinzel:wght@600;700;800;900&family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&family=Jost:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -216,19 +216,20 @@
             transform: translateY(-1px);
         }
 
-        /* SUIT ATELIER with faded color tone and elegant text shadow */
+        /* SUIT ATELIER - Darker, Sharper, High Contrast */
         .tf-brand-caption {
-            font-family: 'Jost', 'Inter', sans-serif;
-            font-weight: 500;
-            font-size: 0.58rem;
+            font-family: "Josefin Sans", 'Jost', 'Inter', sans-serif;
+            font-weight: 700;
+            font-size: 0.62rem;
             letter-spacing: 0.42em;
-            color: #9E7B56;
-            text-shadow: 0 1px 4px rgba(139, 58, 43, 0.25);
+            color: #1A120B;
+            text-shadow: none;
             text-transform: uppercase;
             text-align: center;
             margin-top: 2px;
             width: 100%;
-            opacity: 0.9;
+            opacity: 1;
+            -webkit-font-smoothing: antialiased;
         }
 
         /* Faded vertical divider line */
@@ -241,7 +242,7 @@
             align-self: center;
         }
 
-        /* Large & Highly Visible "since 1969" */
+        /* Large & Highly Visible "since 1969" - Darker & Sharper */
         .tf-since-column {
             display: flex;
             align-items: center;
@@ -251,12 +252,14 @@
             font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
             font-style: italic;
             font-weight: 700;
-            font-size: 1.05rem;
-            letter-spacing: 0.14em;
-            color: #A38350;
+            font-size: 1.08rem;
+            letter-spacing: 0.12em;
+            color: #1A120B;
             line-height: 1;
             white-space: nowrap;
-            text-shadow: 0 1px 2px rgba(163, 131, 80, 0.15);
+            text-shadow: none;
+            opacity: 1;
+            -webkit-font-smoothing: antialiased;
         }
 
         /* ── Right: Header Actions (CTA + Mobile menu) ── */
@@ -305,12 +308,12 @@
         }
 
         .tf-nav-links li a {
-            font-family: 'Jost', 'Inter', sans-serif;
+            font-family: "Brandon Grotesque", "Josefin Sans", sans-serif;
+            font-size: 13px;
             font-weight: 500;
-            font-size: 0.7rem;
-            letter-spacing: 0.2em;
-            color: #231B15;
             text-transform: uppercase;
+            letter-spacing: 0.2em;
+            color: #5B554F;
             text-decoration: none;
             position: relative;
             padding-bottom: 4px;
