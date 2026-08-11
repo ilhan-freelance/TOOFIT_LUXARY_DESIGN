@@ -227,22 +227,16 @@
 
     .tf-brand-name {
       font-family: 'Newsreader', serif;
-      font-weight: 700;
-      font-size: 35px;
+      font-weight: 600;
+      font-size: 34px;
       letter-spacing: 0.18em;
-      color: #1A0609;
-      position: relative;
-      z-index: 2;
-      /* 3D Multi-Layer Extrusion Text Shadow */
-      text-shadow: 
-        0 1px 0 #3D1217,
-        0 2px 0 #2A0A0E,
-        0 3px 0 #1E0609,
-        0 4px 0 #120305,
-        0 6px 12px rgba(0, 0, 0, 0.35);
-      background: linear-gradient(180deg, #3D141A 0%, #160608 60%, #0D0304 100%);
+      color: #16080A;
+      background: linear-gradient(135deg, #110507 0%, #3D141A 45%, #18090C 85%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+      filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.3));
+      position: relative;
+      z-index: 2;
       text-transform: none;
       text-decoration: none;
       text-align: center;
@@ -251,26 +245,24 @@
     }
 
     .tf-brand-name-link:hover .tf-brand-name {
+      filter: drop-shadow(0 2px 6px rgba(139, 58, 43, 0.4));
       transform: translateY(-1px);
-      filter: drop-shadow(0 4px 10px rgba(139, 58, 43, 0.45));
     }
 
-    /* SUIT ATELIER - Positioned Under & Behind TOOFIT in 3D Perspective Layer */
+    /* SUIT ATELIER - Inner side tucked directly under TOOFIT */
     .tf-brand-caption {
       font-family: "Josefin Sans", 'Jost', 'Inter', sans-serif;
       font-weight: 700;
-      font-size: 0.62rem;
-      letter-spacing: 0.44em;
-      color: #8C6A48;
+      font-size: 0.6rem;
+      letter-spacing: 0.46em;
+      color: #6B4D30;
       position: relative;
       z-index: 1;
-      margin-top: -4px;
+      margin-top: -3px;
       text-transform: uppercase;
       text-align: center;
       width: 100%;
-      opacity: 0.88;
-      transform: perspective(400px) rotateX(14deg) translateZ(-6px);
-      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+      opacity: 0.85;
       -webkit-font-smoothing: antialiased;
     }
 
