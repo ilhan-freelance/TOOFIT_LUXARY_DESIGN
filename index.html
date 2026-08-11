@@ -227,11 +227,14 @@
 
     .tf-brand-name {
       font-family: 'Newsreader', serif;
-      font-weight: 500;
+      font-weight: 600;
       font-size: 34px;
       letter-spacing: 0.18em;
-      color: #2D0A0F;
-      background-color: transparent;
+      color: #16080A;
+      background: linear-gradient(135deg, #110507 0%, #3D141A 45%, #18090C 85%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.3));
       text-transform: none;
       text-decoration: none;
       text-align: center;
@@ -240,18 +243,18 @@
     }
 
     .tf-brand-name-link:hover .tf-brand-name {
-      color: #4A1017;
+      filter: drop-shadow(0 2px 6px rgba(139, 58, 43, 0.4));
       transform: translateY(-1px);
     }
 
-    /* SUIT ATELIER - Sharp, Bold, Rich Bronze Gold Tone */
+    /* SUIT ATELIER - Sharp, Bold, Rich Darker Metallic Bronze Tone */
     .tf-brand-caption {
       font-family: "Josefin Sans", 'Jost', 'Inter', sans-serif;
       font-weight: 700;
-      font-size: 0.62rem;
-      letter-spacing: 0.4em;
-      color: #8A6743;
-      text-shadow: none;
+      font-size: 0.64rem;
+      letter-spacing: 0.42em;
+      color: #5C3D20;
+      text-shadow: 0 0.5px 1px rgba(0,0,0,0.12);
       text-transform: uppercase;
       text-align: center;
       margin-top: 2px;
@@ -270,7 +273,7 @@
       align-self: center;
     }
 
-    /* Large & Highly Visible "since 1969" - Sharp, Bold Antique Gold */
+    /* Large & Highly Visible "since 1969" - Increased by 1px */
     .tf-since-column {
       display: flex;
       align-items: center;
@@ -280,9 +283,9 @@
       font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
       font-style: italic;
       font-weight: 700;
-      font-size: 1.08rem;
+      font-size: calc(1.08rem + 1px);
       letter-spacing: 0.12em;
-      color: #8F6E3B;
+      color: #7A5B2B;
       line-height: 1;
       white-space: nowrap;
       text-shadow: none;
