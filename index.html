@@ -1875,6 +1875,171 @@
   </section>
 
   <!-- ========================================================= -->
+  <!-- PRODUCT SHOWCASE / GALLERY — OUR IN-HOUSE CREATIONS       -->
+  <!-- ========================================================= -->
+  <section id="gallery" class="py-14 md:py-20 bg-[#FAF6F0] relative overflow-hidden border-t border-[#8B3A2B]/15">
+    
+    <!-- Ambient Soft Glow Background -->
+    <div class="absolute -top-24 -left-24 w-96 h-96 bg-[#8B3A2B]/5 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute -bottom-24 -right-24 w-96 h-96 bg-[#C59B27]/8 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-[1440px] mx-auto px-6 md:px-12 relative z-10">
+      
+      <!-- Section Title & Subtitle Header -->
+      <div class="text-center max-w-2xl mx-auto mb-8 md:mb-12">
+        <!-- Category Accent Pill -->
+        <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-[#8B3A2B]/8 border border-[#8B3A2B]/20 backdrop-blur-md mb-3.5 shadow-sm">
+          <span class="w-1.5 h-1.5 rotate-45 bg-[#8B3A2B]"></span>
+          <span class="text-xs font-bold uppercase tracking-[0.35em] text-[#8B3A2B]">Bespoke Gallery</span>
+          <span class="w-1.5 h-1.5 rotate-45 bg-[#8B3A2B]"></span>
+        </div>
+
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-[#0F172A] tracking-tight leading-tight mb-3">
+          Our In-House <span class="italic font-normal text-[#8B3A2B]">Creations</span>
+        </h2>
+        <p class="text-xs sm:text-sm md:text-base text-[#4A1D16]/80 font-medium leading-relaxed">
+          Browse through our premium, custom-manufactured garments crafted with perfection right at our store.
+        </p>
+      </div>
+
+      <!-- Category Filter Tabs (Pill-shaped Buttons) -->
+      <div class="flex flex-wrap items-center justify-center gap-2.5 sm:gap-3 mb-10 md:mb-12" id="gallery-tabs">
+        <button onclick="filterGallery('all', this)" class="tf-gallery-tab active px-5 py-2 rounded-full text-xs sm:text-sm font-bold uppercase tracking-wider border transition-all duration-300 cursor-pointer bg-[#8B3A2B] text-white border-[#8B3A2B] shadow-md">
+          All
+        </button>
+        <button onclick="filterGallery('shirts', this)" class="tf-gallery-tab px-5 py-2 rounded-full text-xs sm:text-sm font-bold uppercase tracking-wider border transition-all duration-300 cursor-pointer bg-white/80 text-[#231B15] border-slate-200 hover:border-[#8B3A2B]/40 hover:text-[#8B3A2B]">
+          Shirts
+        </button>
+        <button onclick="filterGallery('pants', this)" class="tf-gallery-tab px-5 py-2 rounded-full text-xs sm:text-sm font-bold uppercase tracking-wider border transition-all duration-300 cursor-pointer bg-white/80 text-[#231B15] border-slate-200 hover:border-[#8B3A2B]/40 hover:text-[#8B3A2B]">
+          Pants
+        </button>
+        <button onclick="filterGallery('jodhpuri', this)" class="tf-gallery-tab px-5 py-2 rounded-full text-xs sm:text-sm font-bold uppercase tracking-wider border transition-all duration-300 cursor-pointer bg-white/80 text-[#231B15] border-slate-200 hover:border-[#8B3A2B]/40 hover:text-[#8B3A2B]">
+          Jodhpuri
+        </button>
+        <button onclick="filterGallery('sherwani', this)" class="tf-gallery-tab px-5 py-2 rounded-full text-xs sm:text-sm font-bold uppercase tracking-wider border transition-all duration-300 cursor-pointer bg-white/80 text-[#231B15] border-slate-200 hover:border-[#8B3A2B]/40 hover:text-[#8B3A2B]">
+          Sherwani
+        </button>
+        <button onclick="filterGallery('suits', this)" class="tf-gallery-tab px-5 py-2 rounded-full text-xs sm:text-sm font-bold uppercase tracking-wider border transition-all duration-300 cursor-pointer bg-white/80 text-[#231B15] border-slate-200 hover:border-[#8B3A2B]/40 hover:text-[#8B3A2B]">
+          Suits
+        </button>
+        <button onclick="filterGallery('trousers', this)" class="tf-gallery-tab px-5 py-2 rounded-full text-xs sm:text-sm font-bold uppercase tracking-wider border transition-all duration-300 cursor-pointer bg-white/80 text-[#231B15] border-slate-200 hover:border-[#8B3A2B]/40 hover:text-[#8B3A2B]">
+          Trousers
+        </button>
+      </div>
+
+      <!-- 3-Column Compact Gallery Grid (8 Premium Cards) -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 lg:gap-7" id="gallery-grid">
+        
+        <!-- Card 1: Royal Sherwani (Category: sherwani) -->
+        <div class="tf-gallery-item group relative rounded-2xl md:rounded-3xl overflow-hidden shadow-lg border border-[#8B3A2B]/15 bg-white h-[360px] sm:h-[380px] transition-all duration-500" data-category="sherwani">
+          <img src="assets/card_sherwani_v2.png" alt="Royal Handcrafted Sherwani" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700 ease-out">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent flex flex-col justify-end p-6">
+            <span class="text-[#F2D0A9] text-[10px] font-bold uppercase tracking-[0.3em] mb-1">Handcrafted Heritage</span>
+            <h3 class="text-white font-serif font-bold text-xl drop-shadow-md">Royal Sherwani</h3>
+          </div>
+        </div>
+
+        <!-- Card 2: Bespoke Jodhpuri (Category: jodhpuri) -->
+        <div class="tf-gallery-item group relative rounded-2xl md:rounded-3xl overflow-hidden shadow-lg border border-[#8B3A2B]/15 bg-white h-[360px] sm:h-[380px] transition-all duration-500" data-category="jodhpuri">
+          <img src="assets/card_jodhpuri_v2.png" alt="Bespoke Jodhpuri Suit" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700 ease-out">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent flex flex-col justify-end p-6">
+            <span class="text-[#F2D0A9] text-[10px] font-bold uppercase tracking-[0.3em] mb-1">Royalty Fit</span>
+            <h3 class="text-white font-serif font-bold text-xl drop-shadow-md">Bespoke Jodhpuri</h3>
+          </div>
+        </div>
+
+        <!-- Card 3: Custom Italian Suit (Category: suits) -->
+        <div class="tf-gallery-item group relative rounded-2xl md:rounded-3xl overflow-hidden shadow-lg border border-[#8B3A2B]/15 bg-white h-[360px] sm:h-[380px] transition-all duration-500" data-category="suits">
+          <img src="assets/card_suits_v2.png" alt="Custom Italian 3-Piece Suit" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700 ease-out">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent flex flex-col justify-end p-6">
+            <span class="text-[#F2D0A9] text-[10px] font-bold uppercase tracking-[0.3em] mb-1">Modern Formal</span>
+            <h3 class="text-white font-serif font-bold text-xl drop-shadow-md">Custom Italian Suit</h3>
+          </div>
+        </div>
+
+        <!-- Card 4: Executive Cotton Shirt (Category: shirts) -->
+        <div class="tf-gallery-item group relative rounded-2xl md:rounded-3xl overflow-hidden shadow-lg border border-[#8B3A2B]/15 bg-white h-[360px] sm:h-[380px] transition-all duration-500" data-category="shirts">
+          <img src="assets/card_shirt_v2.png" alt="Executive Cotton Shirt" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700 ease-out">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent flex flex-col justify-end p-6">
+            <span class="text-[#F2D0A9] text-[10px] font-bold uppercase tracking-[0.3em] mb-1">Everyday Executive</span>
+            <h3 class="text-white font-serif font-bold text-xl drop-shadow-md">Executive Shirt</h3>
+          </div>
+        </div>
+
+        <!-- Card 5: Tailored Slim Trousers (Category: trousers) -->
+        <div class="tf-gallery-item group relative rounded-2xl md:rounded-3xl overflow-hidden shadow-lg border border-[#8B3A2B]/15 bg-white h-[360px] sm:h-[380px] transition-all duration-500" data-category="trousers">
+          <img src="assets/card_trousers_v2.png" alt="Tailored Slim Fit Trousers" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700 ease-out">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent flex flex-col justify-end p-6">
+            <span class="text-[#F2D0A9] text-[10px] font-bold uppercase tracking-[0.3em] mb-1">Precision Cut</span>
+            <h3 class="text-white font-serif font-bold text-xl drop-shadow-md">Slim Fit Trousers</h3>
+          </div>
+        </div>
+
+        <!-- Card 6: Pleated Dress Pants (Category: pants) -->
+        <div class="tf-gallery-item group relative rounded-2xl md:rounded-3xl overflow-hidden shadow-lg border border-[#8B3A2B]/15 bg-white h-[360px] sm:h-[380px] transition-all duration-500" data-category="pants">
+          <img src="assets/card_pants_v2.png" alt="Pleated Custom Dress Pants" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700 ease-out">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent flex flex-col justify-end p-6">
+            <span class="text-[#F2D0A9] text-[10px] font-bold uppercase tracking-[0.3em] mb-1">Formal Staples</span>
+            <h3 class="text-white font-serif font-bold text-xl drop-shadow-md">Pleated Dress Pants</h3>
+          </div>
+        </div>
+
+        <!-- Card 7: Velvet Bandhgala Suit (Category: jodhpuri) -->
+        <div class="tf-gallery-item group relative rounded-2xl md:rounded-3xl overflow-hidden shadow-lg border border-[#8B3A2B]/15 bg-white h-[360px] sm:h-[380px] transition-all duration-500" data-category="jodhpuri">
+          <img src="assets/card_sadri_v2.png" alt="Velvet Royal Bandhgala" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700 ease-out">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent flex flex-col justify-end p-6">
+            <span class="text-[#F2D0A9] text-[10px] font-bold uppercase tracking-[0.3em] mb-1">Royal Heritage</span>
+            <h3 class="text-white font-serif font-bold text-xl drop-shadow-md">Velvet Bandhgala</h3>
+          </div>
+        </div>
+
+        <!-- Card 8: Luxury Indo-Western (Category: sherwani) -->
+        <div class="tf-gallery-item group relative rounded-2xl md:rounded-3xl overflow-hidden shadow-lg border border-[#8B3A2B]/15 bg-white h-[360px] sm:h-[380px] transition-all duration-500" data-category="sherwani">
+          <img src="assets/card_indowestern_v2.png" alt="Luxury Indo-Western Suit" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700 ease-out">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent flex flex-col justify-end p-6">
+            <span class="text-[#F2D0A9] text-[10px] font-bold uppercase tracking-[0.3em] mb-1">Groom Signature</span>
+            <h3 class="text-white font-serif font-bold text-xl drop-shadow-md">Indo-Western Tux</h3>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <script>
+    function filterGallery(category, btnElement) {
+      // Update Tab Pill Active Styling
+      const tabs = document.querySelectorAll('.tf-gallery-tab');
+      tabs.forEach(tab => {
+        tab.className = 'tf-gallery-tab px-5 py-2 rounded-full text-xs sm:text-sm font-bold uppercase tracking-wider border transition-all duration-300 cursor-pointer bg-white/80 text-[#231B15] border-slate-200 hover:border-[#8B3A2B]/40 hover:text-[#8B3A2B]';
+      });
+      if (btnElement) {
+        btnElement.className = 'tf-gallery-tab active px-5 py-2 rounded-full text-xs sm:text-sm font-bold uppercase tracking-wider border transition-all duration-300 cursor-pointer bg-[#8B3A2B] text-white border-[#8B3A2B] shadow-md';
+      }
+
+      // Filter Items in Gallery Grid
+      const items = document.querySelectorAll('.tf-gallery-item');
+      items.forEach(item => {
+        const itemCat = item.getAttribute('data-category');
+        if (category === 'all' || itemCat === category) {
+          item.style.display = 'block';
+          setTimeout(() => {
+            item.style.opacity = '1';
+            item.style.transform = 'scale(1)';
+          }, 50);
+        } else {
+          item.style.opacity = '0';
+          item.style.transform = 'scale(0.95)';
+          setTimeout(() => {
+            item.style.display = 'none';
+          }, 300);
+        }
+      });
+    }
+  </script>
+
+  <!-- ========================================================= -->
   <!-- EXPERIENCE TOOFIT, YOUR WAY — LUXURY 3-CARD SECTION       -->
   <!-- ========================================================= -->
   <section id="experience" class="py-10 md:py-14 bg-[#FAFAFA] relative overflow-hidden border-t border-slate-200/80">
