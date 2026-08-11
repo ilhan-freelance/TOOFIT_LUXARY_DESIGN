@@ -1926,27 +1926,27 @@
         </p>
       </div>
 
-      <!-- Category Filter Tabs (Serif Pill-shaped Buttons) -->
+      <!-- Category Filter Tabs (Serif Pill-shaped Buttons with Distinct Luxury Hover Colors) -->
       <div class="flex flex-wrap items-center justify-center gap-2.5 sm:gap-3 mb-10 md:mb-12" id="gallery-tabs">
-        <button onclick="filterGallery('all', this)" class="tf-gallery-tab active px-6 py-2.5 rounded-full text-xs sm:text-sm font-serif font-bold uppercase tracking-widest border transition-all duration-300 cursor-pointer bg-[#0A192F] text-white border-[#0A192F] shadow-md">
+        <button onclick="filterGallery('all', this)" data-active-bg="bg-[#0A192F] text-white border-[#0A192F]" class="tf-gallery-tab active px-6 py-2.5 rounded-full text-xs sm:text-sm font-serif font-bold uppercase tracking-widest border transition-all duration-300 cursor-pointer bg-[#0A192F] text-white border-[#0A192F] shadow-md hover:bg-[#0A192F] hover:text-white hover:border-[#0A192F]">
           All
         </button>
-        <button onclick="filterGallery('shirts', this)" class="tf-gallery-tab px-6 py-2.5 rounded-full text-xs sm:text-sm font-serif font-semibold uppercase tracking-widest border transition-all duration-300 cursor-pointer bg-white text-[#0F172A] border-slate-200 hover:border-[#0A192F] hover:text-[#0A192F] shadow-sm">
+        <button onclick="filterGallery('shirts', this)" data-active-bg="bg-[#1E3A8A] text-white border-[#1E3A8A]" class="tf-gallery-tab px-6 py-2.5 rounded-full text-xs sm:text-sm font-serif font-semibold uppercase tracking-widest border transition-all duration-300 cursor-pointer bg-white text-[#0A192F] border-slate-200 hover:bg-[#1E3A8A] hover:text-white hover:border-[#1E3A8A] shadow-sm">
           Shirts
         </button>
-        <button onclick="filterGallery('pants', this)" class="tf-gallery-tab px-6 py-2.5 rounded-full text-xs sm:text-sm font-serif font-semibold uppercase tracking-widest border transition-all duration-300 cursor-pointer bg-white text-[#0F172A] border-slate-200 hover:border-[#0A192F] hover:text-[#0A192F] shadow-sm">
+        <button onclick="filterGallery('pants', this)" data-active-bg="bg-[#047857] text-white border-[#047857]" class="tf-gallery-tab px-6 py-2.5 rounded-full text-xs sm:text-sm font-serif font-semibold uppercase tracking-widest border transition-all duration-300 cursor-pointer bg-white text-[#0A192F] border-slate-200 hover:bg-[#047857] hover:text-white hover:border-[#047857] shadow-sm">
           Pants
         </button>
-        <button onclick="filterGallery('jodhpuri', this)" class="tf-gallery-tab px-6 py-2.5 rounded-full text-xs sm:text-sm font-serif font-semibold uppercase tracking-widest border transition-all duration-300 cursor-pointer bg-white text-[#0F172A] border-slate-200 hover:border-[#0A192F] hover:text-[#0A192F] shadow-sm">
+        <button onclick="filterGallery('jodhpuri', this)" data-active-bg="bg-[#C59B27] text-white border-[#C59B27]" class="tf-gallery-tab px-6 py-2.5 rounded-full text-xs sm:text-sm font-serif font-semibold uppercase tracking-widest border transition-all duration-300 cursor-pointer bg-white text-[#0A192F] border-slate-200 hover:bg-[#C59B27] hover:text-white hover:border-[#C59B27] shadow-sm">
           Jodhpuri
         </button>
-        <button onclick="filterGallery('sherwani', this)" class="tf-gallery-tab px-6 py-2.5 rounded-full text-xs sm:text-sm font-serif font-semibold uppercase tracking-widest border transition-all duration-300 cursor-pointer bg-white text-[#0F172A] border-slate-200 hover:border-[#0A192F] hover:text-[#0A192F] shadow-sm">
+        <button onclick="filterGallery('sherwani', this)" data-active-bg="bg-[#991B1B] text-white border-[#991B1B]" class="tf-gallery-tab px-6 py-2.5 rounded-full text-xs sm:text-sm font-serif font-semibold uppercase tracking-widest border transition-all duration-300 cursor-pointer bg-white text-[#0A192F] border-slate-200 hover:bg-[#991B1B] hover:text-white hover:border-[#991B1B] shadow-sm">
           Sherwani
         </button>
-        <button onclick="filterGallery('suits', this)" class="tf-gallery-tab px-6 py-2.5 rounded-full text-xs sm:text-sm font-serif font-semibold uppercase tracking-widest border transition-all duration-300 cursor-pointer bg-white text-[#0F172A] border-slate-200 hover:border-[#0A192F] hover:text-[#0A192F] shadow-sm">
+        <button onclick="filterGallery('suits', this)" data-active-bg="bg-[#4338CA] text-white border-[#4338CA]" class="tf-gallery-tab px-6 py-2.5 rounded-full text-xs sm:text-sm font-serif font-semibold uppercase tracking-widest border transition-all duration-300 cursor-pointer bg-white text-[#0A192F] border-slate-200 hover:bg-[#4338CA] hover:text-white hover:border-[#4338CA] shadow-sm">
           Suits
         </button>
-        <button onclick="filterGallery('trousers', this)" class="tf-gallery-tab px-6 py-2.5 rounded-full text-xs sm:text-sm font-serif font-semibold uppercase tracking-widest border transition-all duration-300 cursor-pointer bg-white text-[#3D2505] border-slate-200 hover:border-[#8B3A2B] hover:text-[#8B3A2B] shadow-sm">
+        <button onclick="filterGallery('trousers', this)" data-active-bg="bg-[#7C2D12] text-white border-[#7C2D12]" class="tf-gallery-tab px-6 py-2.5 rounded-full text-xs sm:text-sm font-serif font-semibold uppercase tracking-widest border transition-all duration-300 cursor-pointer bg-white text-[#0A192F] border-slate-200 hover:bg-[#7C2D12] hover:text-white hover:border-[#7C2D12] shadow-sm">
           Trousers
         </button>
       </div>
@@ -2001,13 +2001,22 @@
 
   <script>
     function filterGallery(category, btnElement) {
-      // Update Tab Pill Active Styling with Serif Font Style
+      // Update Tab Pill Active Styling while preserving unique hover classes
       const tabs = document.querySelectorAll('.tf-gallery-tab');
       tabs.forEach(tab => {
-        tab.className = 'tf-gallery-tab px-6 py-2.5 rounded-full text-xs sm:text-sm font-serif font-semibold uppercase tracking-widest border transition-all duration-300 cursor-pointer bg-white/90 text-[#3D2505] border-[#8B3A2B]/20 hover:border-[#8B3A2B] hover:text-[#8B3A2B] shadow-sm';
+        tab.classList.remove('active', 'shadow-md');
+        const activeColor = tab.getAttribute('data-active-bg') || '';
+        activeColor.split(' ').forEach(cls => {
+          if (cls.startsWith('bg-[') || cls.startsWith('border-[')) tab.classList.remove(cls);
+        });
+        tab.classList.add('bg-white', 'text-[#0A192F]', 'border-slate-200', 'shadow-sm');
+        tab.classList.remove('text-white');
       });
       if (btnElement) {
-        btnElement.className = 'tf-gallery-tab active px-6 py-2.5 rounded-full text-xs sm:text-sm font-serif font-bold uppercase tracking-widest border transition-all duration-300 cursor-pointer bg-[#8B3A2B] text-white border-[#8B3A2B] shadow-md';
+        btnElement.classList.add('active', 'shadow-md');
+        btnElement.classList.remove('bg-white', 'text-[#0A192F]', 'border-slate-200', 'shadow-sm');
+        const activeColor = btnElement.getAttribute('data-active-bg') || '';
+        activeColor.split(' ').forEach(cls => btnElement.classList.add(cls));
       }
 
       // Filter Items in Gallery Grid
