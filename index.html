@@ -273,7 +273,7 @@
       align-self: center;
     }
 
-    /* Large & Highly Visible "since 1969" - Increased by 1px */
+    /* Large & Highly Visible "since 1969" - Creative Typography */
     .tf-since-column {
       display: flex;
       align-items: center;
@@ -282,15 +282,32 @@
     .tf-since-text {
       font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
       font-style: italic;
-      font-weight: 700;
+      font-weight: 500;
       font-size: calc(1.08rem + 1px);
-      letter-spacing: 0.12em;
-      color: #7A5B2B;
+      letter-spacing: 0.1em;
+      color: #6E5F52;
       line-height: 1;
       white-space: nowrap;
-      text-shadow: none;
-      opacity: 1;
-      -webkit-font-smoothing: antialiased;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .tf-since-year {
+      font-family: "Josefin Sans", 'Jost', sans-serif;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 14px;
+      letter-spacing: 0.18em;
+      color: #8B3A2B;
+      background: linear-gradient(135deg, #8B3A2B 0%, #C59B27 50%, #753023 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      padding: 2px 7px;
+      border-radius: 6px;
+      background-color: rgba(139, 58, 43, 0.05);
+      border: 1px solid rgba(139, 58, 43, 0.18);
+      box-shadow: 0 1px 2px rgba(139, 58, 43, 0.05);
     }
 
     /* ── Right: Header Actions (CTA + Mobile menu) ── */
@@ -701,9 +718,11 @@
           <!-- Faded vertical divider line -->
           <span class="tf-faded-vdivider"></span>
 
-          <!-- Prominent since 1969 -->
+          <!-- Prominent since 1969 with creative luxury typography -->
           <div class="tf-since-column">
-            <span class="tf-since-text">since 1969</span>
+            <span class="tf-since-text">
+              since <span class="tf-since-year">1969</span>
+            </span>
           </div>
 
         </div>
