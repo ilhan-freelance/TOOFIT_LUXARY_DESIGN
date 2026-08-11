@@ -273,7 +273,7 @@
       align-self: center;
     }
 
-    /* Large & Highly Visible "since 1969" - Creative Typography */
+    /* Large & Highly Visible "since 1969" - Pure Text Typography (No Borders/Boxes) */
     .tf-since-column {
       display: flex;
       align-items: center;
@@ -284,30 +284,30 @@
       font-style: italic;
       font-weight: 500;
       font-size: calc(1.08rem + 1px);
-      letter-spacing: 0.1em;
+      letter-spacing: 0.12em;
       color: #6E5F52;
       line-height: 1;
       white-space: nowrap;
       display: inline-flex;
-      align-items: center;
-      gap: 6px;
+      align-items: flex-baseline;
+      gap: 4px;
     }
 
     .tf-since-year {
-      font-family: "Josefin Sans", 'Jost', sans-serif;
+      font-family: 'Cormorant Garamond', 'Playfair Display', serif;
       font-style: normal;
       font-weight: 700;
-      font-size: 14px;
-      letter-spacing: 0.18em;
+      font-size: 1.15rem;
+      letter-spacing: 0.16em;
       color: #8B3A2B;
       background: linear-gradient(135deg, #8B3A2B 0%, #C59B27 50%, #753023 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      padding: 2px 7px;
-      border-radius: 6px;
-      background-color: rgba(139, 58, 43, 0.05);
-      border: 1px solid rgba(139, 58, 43, 0.18);
-      box-shadow: 0 1px 2px rgba(139, 58, 43, 0.05);
+      padding: 0;
+      margin: 0;
+      border: none;
+      background-color: transparent;
+      box-shadow: none;
     }
 
     /* ── Right: Header Actions (CTA + Mobile menu) ── */
