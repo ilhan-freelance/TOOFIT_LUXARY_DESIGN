@@ -45,7 +45,7 @@
         *, *::before, *::after { box-sizing: border-box; }
         
         body { 
-            background-color: #FAF6F0; 
+            background-color: rgb(255, 253, 250) !important; 
             color: #231B15; 
             font-family: 'Inter', sans-serif;
             overflow-x: hidden;
@@ -474,7 +474,7 @@
             display: none;
             flex-direction: column;
             gap: 0;
-            background: #FAF6F0;
+            background: #FFFFFF;
             border-top: 1px solid rgba(139, 58, 43, 0.1);
             overflow: hidden;
             max-height: 0;
@@ -646,9 +646,9 @@
     <!-- ========================================================= -->
     <!-- CLIENT DIARIES — DYNAMIC RANDOMIZED HERO & GALLERY        -->
     <!-- ========================================================= -->
-    <section class="bg-slate-950 text-white py-14 md:py-20 relative overflow-hidden">
+    <section class="bg-white text-slate-900 py-14 md:py-20 relative overflow-hidden border-b border-slate-200">
       <!-- Background Photo Grid -->
-      <div class="absolute inset-0 grid grid-cols-4 md:grid-cols-6 gap-1 opacity-35 pointer-events-none">
+      <div class="absolute inset-0 grid grid-cols-4 md:grid-cols-6 gap-1 opacity-25 pointer-events-none">
         <div class="h-full"><img src="assets/hero_sherwani_palace_4k.jpg" class="w-full h-full object-cover" alt="Client 1"></div>
         <div class="h-full"><img src="assets/hero_black_tie_tuxedo_5_1785437572507.png" class="w-full h-full object-cover object-top" alt="Client 2"></div>
         <div class="h-full"><img src="assets/wedding_groom.png" class="w-full h-full object-cover" alt="Client 3"></div>
@@ -656,7 +656,7 @@
         <div class="h-full"><img src="assets/hero_royal_sherwani_model_2_1785437525300.png" class="w-full h-full object-cover object-top" alt="Client 5"></div>
         <div class="h-full"><img src="assets/hero_mansion_suit_4k.jpg" class="w-full h-full object-cover" alt="Client 6"></div>
       </div>
-      <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/70 to-transparent pointer-events-none"></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-white via-white/70 to-transparent pointer-events-none"></div>
 
       <div class="max-w-[1000px] mx-auto px-6 relative z-10 text-center space-y-4 py-4">
         
@@ -668,12 +668,12 @@
         </div>
 
         <!-- Main Title -->
-        <h1 class="text-4xl sm:text-6xl md:text-7xl font-serif font-bold tracking-wide text-white drop-shadow-[0_4px_16px_rgba(0,0,0,0.95)]" style="font-family: 'Newsreader', 'Playfair Display', serif;">
-          Client <span class="text-[#F2D0A9] italic font-normal drop-shadow-[0_4px_16px_rgba(0,0,0,0.95)]" style="font-family: 'Cormorant Garamond', serif;">Diaries</span>
+        <h1 class="text-4xl sm:text-6xl md:text-7xl font-serif font-bold tracking-wide text-slate-900" style="font-family: 'Newsreader', 'Playfair Display', serif;">
+          Client <span class="text-[#8B3A2B] italic font-normal" style="font-family: 'Cormorant Garamond', serif;">Diaries</span>
         </h1>
 
-        <!-- High-Contrast Glassmorphic Subtitle -->
-        <p class="text-sm sm:text-base md:text-lg text-white font-medium max-w-2xl mx-auto tracking-wide drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)] bg-black/50 py-2.5 px-6 rounded-2xl backdrop-blur-md border border-white/15">
+        <!-- High-Contrast Subtitle -->
+        <p class="text-sm sm:text-base md:text-lg text-slate-700 font-medium max-w-2xl mx-auto tracking-wide bg-slate-100 py-2.5 px-6 rounded-2xl border border-slate-200">
           Dressing Grandfathers, Fathers &amp; Sons with Bespoke Craftsmanship
         </p>
 
@@ -763,7 +763,7 @@
     })();
     </script>
 
-<footer class="bg-slate-950 text-slate-300 py-16 px-6 md:px-10 border-t border-slate-800">
+<footer class="bg-white text-slate-700 py-16 px-6 md:px-10 border-t border-slate-200">
         <div class="max-w-[1400px] mx-auto space-y-12">
             
             <div class="grid grid-cols-1 md:grid-cols-4 gap-10 text-xs">
@@ -772,18 +772,18 @@
                 <div class="space-y-4">
                     <div class="flex items-center gap-2">
                         <div class="bg-mpfOrange text-white font-serif font-bold text-xl w-8 h-8 rounded flex items-center justify-center">T</div>
-                        <span class="text-2xl font-serif font-bold text-white tracking-wider">TOOFIT</span>
+                        <span class="text-2xl font-serif font-bold text-slate-900 tracking-wider">TOOFIT</span>
                     </div>
-                    <p class="text-slate-400 leading-relaxed">
+                    <p class="text-slate-600 leading-relaxed">
                         India's premier custom menswear brand offering bespoke suits, sherwanis, kurtas, jodhpuris, tuxedos and accessories. Founded in 1969.
                     </p>
-                    <p class="text-[#C9A030] font-semibold text-xs"><span class="text-white font-bold">Main Office:</span> Kota &bull; <span class="text-white font-bold">Branches:</span> Jaipur &bull; Dubai</p>
+                    <p class="text-[#C9A030] font-semibold text-xs"><span class="text-slate-900 font-bold">Main Office:</span> Kota &bull; <span class="text-slate-900 font-bold">Branches:</span> Jaipur &bull; Dubai</p>
                 </div>
 
                 <!-- Col 2: Categories -->
                 <div class="space-y-3">
-                    <h5 class="text-sm font-bold text-white font-serif uppercase">Shop Categories</h5>
-                    <ul class="space-y-2 text-slate-400">
+                    <h5 class="text-sm font-bold text-slate-900 font-serif uppercase">Shop Categories</h5>
+                    <ul class="space-y-2 text-slate-600">
                         <li><a href="#categories" class="hover:text-mpfOrange transition-colors">Royal Sherwanis</a></li>
                         <li><a href="#categories" class="hover:text-mpfOrange transition-colors">Bespoke Suits & Tuxedos</a></li>
                         <li><a href="#categories" class="hover:text-mpfOrange transition-colors">Jodhpuri & Band Gala</a></li>
@@ -794,8 +794,8 @@
 
                 <!-- Col 3: Useful Links -->
                 <div class="space-y-3">
-                    <h5 class="text-sm font-bold text-white font-serif uppercase">Toofit Atelier</h5>
-                    <ul class="space-y-2 text-slate-400">
+                    <h5 class="text-sm font-bold text-slate-900 font-serif uppercase">Toofit Atelier</h5>
+                    <ul class="space-y-2 text-slate-600">
                         <li><a href="#experience" class="hover:text-mpfOrange transition-colors">Why Choose Us</a></li>
                         <li><a href="#process" class="hover:text-mpfOrange transition-colors">How it Works</a></li>
                         <li><a href="#reviews" class="hover:text-mpfOrange transition-colors">Client Testimonials</a></li>
@@ -806,10 +806,10 @@
 
                 <!-- Col 4: Newsletter -->
                 <div class="space-y-4">
-                    <h5 class="text-sm font-bold text-white font-serif uppercase">Newsletter</h5>
-                    <p class="text-slate-400">Receive updates on new fabric arrivals & wedding styling guides.</p>
+                    <h5 class="text-sm font-bold text-slate-900 font-serif uppercase">Newsletter</h5>
+                    <p class="text-slate-600">Receive updates on new fabric arrivals & wedding styling guides.</p>
                     <form class="flex gap-2" onsubmit="event.preventDefault(); alert('Subscribed to Toofit Atelier newsletter!');">
-                        <input type="email" placeholder="Your Email Address" class="bg-slate-900 border border-slate-800 rounded px-3 py-2 text-xs w-full text-white focus:outline-none focus:border-mpfOrange" required>
+                        <input type="email" placeholder="Your Email Address" class="bg-white border border-slate-300 rounded px-3 py-2 text-xs w-full text-slate-900 focus:outline-none focus:border-mpfOrange" required>
                         <button type="submit" class="bg-mpfOrange text-white font-bold px-4 py-2 rounded text-xs hover:bg-orange-600 transition-colors">
                             Subscribe
                         </button>

@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,200;0,6..72,300;0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;0,6..96,700;1,6..96,400;1,6..96,600&family=Prata&family=Cinzel:wght@600;700;800;900&family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&family=Jost:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Josefin+Sans:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,200;0,6..72,300;0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;0,6..96,700;1,6..96,400;1,6..96,600&family=Prata&family=Cinzel:wght@600;700;800;900&family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&family=Jost:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap"
     rel="stylesheet">
 
   <!-- Tailwind CSS -->
@@ -23,16 +23,17 @@
         extend: {
           colors: {
             mpfNavy: '#0A192F',
-            mpfDarkSlate: '#1E293B',
-            mpfOrange: '#E27217',
-            mpfGold: '#D4AF37',
-            mpfBg: '#FAF9F6',
-            mpfLightGray: '#F8F9FA',
+            mpfDarkSlate: '#0F172A',
+            mpfOrange: '#C59B27',
+            mpfGold: '#C59B27',
+            mpfBg: '#FFFFFF',
+            mpfLightGray: '#FFFFFF',
             mpfBorder: '#E2E8F0',
           },
           fontFamily: {
-            sans: ['"Inter"', 'sans-serif'],
-            serif: ['"Playfair Display"', 'Georgia', 'serif'],
+            sans: ['"Montserrat"', '"Inter"', 'sans-serif'],
+            serif: ['"Cormorant Garamond"', '"Playfair Display"', 'Georgia', 'serif'],
+            display: ['"Montserrat"', 'sans-serif'],
           }
         }
       }
@@ -53,11 +54,84 @@
     }
 
     body {
-      background-color: #FAF6F0;
-      color: #231B15;
-      font-family: 'Inter', sans-serif;
+      background-color: #ffffff;
+      color: #0F172A;
+      font-family: 'Montserrat', 'Inter', sans-serif;
+      font-size: 0.875rem;
+      line-height: 1.6;
       overflow-x: hidden;
       -webkit-font-smoothing: antialiased;
+    }
+
+    html, body {
+      background-color: #ffffff !important;
+    }
+
+    /* ===== P N RAO BESPOKE TYPOGRAPHY RULES ===== */
+    h1, .pn-h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(2.25rem, 4.8vw, 3.0rem);
+      line-height: 1.0;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #0F172A;
+    }
+
+    h2, .pn-h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(1.75rem, 3.5vw, 2.25rem);
+      line-height: 1.1;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #0F172A;
+    }
+
+    h3, .pn-h3 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.125rem; /* 18px */
+      line-height: 1.2;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #0F172A;
+    }
+
+    /* Serif Accent Heading (Times / Cormorant Garamond for luxury emphasis) */
+    .pn-serif-accent {
+      font-family: 'Cormorant Garamond', 'Times New Roman', serif;
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    /* Subheadings / Section Introductions */
+    .pn-subheading {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1rem; /* 16px */
+      font-weight: 400;
+      line-height: 1.6;
+      color: #64748B;
+      text-transform: none;
+    }
+
+    /* Lead Body Intro Paragraphs */
+    .pn-lead-body {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.25rem; /* 20px */
+      font-weight: 400;
+      line-height: 1.6;
+      color: #334155;
+    }
+
+    /* Standard Body Paragraphs */
+    p, .pn-body {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.875rem; /* 14px */
+      font-weight: 400;
+      line-height: 1.6;
+      color: #334155;
     }
 
     /* ===== SLICK CAROUSEL HIDE SCROLLBAR ===== */
@@ -72,17 +146,17 @@
 
     /* ===== MPF BUTTON HOVER ===== */
     .btn-primary-mpf {
-      background-color: #8B3A2B;
-      color: #FAF6F0;
+      background-color: #0A192F;
+      color: #FFFFFF;
       font-weight: 600;
       transition: all 0.3s ease;
-      box-shadow: 0 4px 14px rgba(139, 58, 43, 0.25);
+      box-shadow: 0 4px 14px rgba(10, 25, 47, 0.25);
     }
 
     .btn-primary-mpf:hover {
-      background-color: #6e2c20;
+      background-color: #1E293B;
       transform: translateY(-1px);
-      box-shadow: 0 6px 20px rgba(139, 58, 43, 0.38);
+      box-shadow: 0 6px 20px rgba(10, 25, 47, 0.38);
     }
 
     .btn-secondary-mpf {
@@ -302,8 +376,8 @@
       font-weight: 700;
       font-size: 1.15rem;
       letter-spacing: 0.16em;
-      color: #8B3A2B;
-      background: linear-gradient(135deg, #8B3A2B 0%, #C59B27 50%, #753023 100%);
+      color: #0A192F;
+      background: linear-gradient(135deg, #0A192F 0%, #C59B27 50%, #0F172A 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       padding: 0;
@@ -324,7 +398,7 @@
     /* Separator Style A: Faded Gradient Hairline */
     .tf-separator-a {
       height: 1px;
-      background: linear-gradient(to right, transparent, rgba(139, 58, 43, 0.25), transparent);
+      background: linear-gradient(to right, transparent, rgba(10, 25, 47, 0.25), transparent);
       margin: 1px 48px 2px;
     }
 
@@ -364,7 +438,7 @@
       font-weight: 500;
       text-transform: uppercase;
       letter-spacing: 0.26em !important;
-      color: #7A6C5B;
+      color: #0F172A;
       text-decoration: none;
       position: relative;
       padding-bottom: 4px;
@@ -379,13 +453,13 @@
       transform: translateX(-50%);
       width: 0;
       height: 1.5px;
-      background: linear-gradient(to right, transparent, #8B3A2B, transparent);
+      background: linear-gradient(to right, transparent, #C59B27, transparent);
       transition: width 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     }
 
     .tf-nav-links li a:hover {
-      color: #8B3A2B;
-      text-shadow: 0 0 12px rgba(139, 58, 43, 0.18);
+      color: #0A192F;
+      text-shadow: 0 0 12px rgba(10, 25, 47, 0.18);
     }
 
     .tf-nav-links li a:hover::after {
@@ -393,65 +467,45 @@
     }
 
     /* === LUXURY FLUID LIQUID BUTTON === */
+    /* === SUBTLE ELEGANT HEADER CTA BUTTON === */
     .tf-liquid-btn {
       position: relative;
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      overflow: hidden;
       font-family: 'Jost', 'Inter', sans-serif;
-      font-weight: 700;
+      font-weight: 600;
       font-size: 0.72rem;
-      letter-spacing: 0.18em;
+      letter-spacing: 0.2em;
       text-transform: uppercase;
-      color: #8B3A2B !important;
-      background: #FFFDF8;
-      border: 1.5px solid #8B3A2B;
+      color: #0A192F !important;
+      background-color: transparent;
+      border: 1px solid rgba(10, 25, 47, 0.25);
       border-radius: 9999px;
-      padding: 10px 24px;
+      padding: 8px 20px;
       cursor: pointer;
       text-decoration: none;
-      transition: all 0.4s ease;
-      isolation: isolate;
-      box-shadow: 0 4px 15px rgba(139, 58, 43, 0.12);
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
-    }
-
-    .tf-liquid-btn::before {
-      content: '';
-      position: absolute;
-      top: 100%;
-      left: -10%;
-      width: 120%;
-      height: 200%;
-      background: linear-gradient(135deg, #7A281A 0%, #8B3A2B 60%, #B89248 100%);
-      border-radius: 50% 50% 0 0 / 30% 30% 0 0;
-      transition: top 0.5s cubic-bezier(0.33, 1, 0.68, 1),
-        border-radius 0.5s cubic-bezier(0.33, 1, 0.68, 1);
-      z-index: 1;
-    }
-
-    .tf-liquid-btn:hover::before {
-      top: -50%;
-      border-radius: 0 0 50% 50% / 0 0 30% 30%;
+      transition: all 0.3s ease;
+      box-shadow: none;
     }
 
     .tf-liquid-btn:hover {
-      border-color: #8B3A2B;
-      box-shadow: 0 6px 20px rgba(139, 58, 43, 0.25);
-      transform: translateY(-2px);
+      background-color: #0A192F;
+      border-color: #0A192F;
+      color: #FFFFFF !important;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(10, 25, 47, 0.15);
     }
 
     .tf-liquid-btn span {
       position: relative;
       z-index: 2;
-      color: #8B3A2B !important;
-      transition: color 0.4s ease;
+      color: #0A192F !important;
+      transition: color 0.3s ease;
       display: inline-flex;
       align-items: center;
-      gap: 8px;
-      font-weight: 700;
+      gap: 6px;
+      font-weight: 600;
     }
 
     .tf-liquid-btn:hover span {
@@ -518,7 +572,7 @@
       display: none;
       flex-direction: column;
       gap: 0;
-      background: #FAF6F0;
+      background: rgb(255, 253, 250);
       border-top: 1px solid rgba(139, 58, 43, 0.1);
       overflow: hidden;
       max-height: 0;
@@ -802,7 +856,7 @@
   <!-- 1. FULL-WIDTH HERO SECTION — AUTO SLIDESHOW   -->
   <!-- ============================================ -->
   <section
-    class="relative w-full min-h-[85vh] md:min-h-[88vh] lg:min-h-[90vh] flex items-end justify-start overflow-hidden bg-[#1D1714]"
+    class="relative w-full min-h-[85vh] md:min-h-[88vh] lg:min-h-[90vh] flex items-end justify-start overflow-hidden bg-white"
     id="hero">
 
     <!-- Slide 1: Bespoke Suits Lounge photoshoot -->
@@ -827,12 +881,12 @@
         class="w-full h-full object-cover" style="object-position: top center;">
     </div>
 
-    <!-- Lightened Subtle Gradient Overlay for Crisp Text Contrast -->
+    <!-- Subtle Gradient Overlay for Crisp Text Contrast -->
     <div
-      class="absolute inset-0 bg-gradient-to-r from-[#161210]/55 via-[#161210]/20 to-transparent z-1 pointer-events-none">
+      class="absolute inset-0 bg-gradient-to-r from-black/40 via-black/15 to-transparent z-1 pointer-events-none">
     </div>
     <div
-      class="absolute inset-0 bg-gradient-to-t from-[#161210]/65 via-[#161210]/20 to-transparent z-1 pointer-events-none">
+      class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent z-1 pointer-events-none">
     </div>
 
     <!-- Hero Content Overlay (Positioned in Bottom-Left Corner) -->
@@ -987,13 +1041,13 @@
   <!-- ============================================ -->
   <!-- BRAND MANIFESTO ATELIER SECTION              -->
   <!-- ============================================ -->
-  <section class="py-14 sm:py-16 md:py-24 px-4 sm:px-6 md:px-10 bg-[#FAF8F5] overflow-hidden" id="brand-manifesto">
+  <section class="py-14 sm:py-16 md:py-24 px-4 sm:px-6 md:px-10 bg-white overflow-hidden" id="brand-manifesto">
     <div class="max-w-[1480px] mx-auto flex items-end justify-center gap-6 md:gap-8 lg:gap-12 relative">
 
       <!-- Left Side: Wedding Sherwani Mannequin Cutout (No Background) -->
       <div
         class="hidden lg:block lg:w-[200px] xl:w-[260px] 2xl:w-[285px] shrink-0 transition-transform duration-500 hover:scale-105 self-end">
-        <img src="assets/mannequin_wedding_sherwani_transparent.png?v=9" alt="TOOFIT Bespoke Royal Wedding Sherwani"
+        <img src="assets/mannequin_wedding_sherwani_transparent.png?v=200" alt="TOOFIT Bespoke Royal Wedding Sherwani"
           class="w-full h-auto block filter drop-shadow-[0_12px_24px_rgba(0,0,0,0.18)]">
       </div>
 
@@ -1007,12 +1061,12 @@
         <div
           class="absolute bottom-6 sm:bottom-8 md:bottom-10 left-1/2 transform -translate-x-1/2 z-20 w-auto text-center">
           <a href="#story"
-            class="group/btn inline-flex items-center gap-2.5 text-[#231B15] hover:text-[#8B3A2B] text-xs sm:text-sm font-sans uppercase font-medium tracking-[0.28em] transition-colors duration-300">
+            class="group/btn inline-flex items-center gap-2.5 text-[#0A192F] hover:text-[#C59B27] text-xs sm:text-sm font-sans uppercase font-medium tracking-[0.28em] transition-colors duration-300">
             <span
-              class="underline underline-offset-8 decoration-1.5 decoration-[#8B3A2B] group-hover/btn:decoration-[#D4AF37] transition-colors">Our
+              class="underline underline-offset-8 decoration-1.5 decoration-[#0A192F] group-hover/btn:decoration-[#C59B27] transition-colors">Our
               Story</span>
             <svg
-              class="w-4 h-4 text-[#8B3A2B] group-hover/btn:text-[#D4AF37] transition-transform duration-300 group-hover/btn:translate-x-1"
+              class="w-4 h-4 text-[#0A192F] group-hover/btn:text-[#C59B27] transition-transform duration-300 group-hover/btn:translate-x-1"
               fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
@@ -1023,7 +1077,7 @@
       <!-- Right Side: Formal Suitwear Mannequin Cutout (No Background) -->
       <div
         class="hidden lg:block lg:w-[200px] xl:w-[260px] 2xl:w-[285px] shrink-0 transition-transform duration-500 hover:scale-105 self-end">
-        <img src="assets/mannequin_formal_suit_transparent.png?v=9" alt="TOOFIT Bespoke Formal Suitwear with Shoes"
+        <img src="assets/mannequin_formal_suit_transparent.png?v=200" alt="TOOFIT Bespoke Formal Suitwear with Shoes"
           class="w-full h-auto block filter drop-shadow-[0_12px_24px_rgba(0,0,0,0.18)]">
       </div>
 
@@ -1034,12 +1088,12 @@
   <!-- ============================================ -->
   <!-- 2. SHOP BY PRODUCT / CATEGORIES (CAROUSEL)   -->
   <!-- ============================================ -->
-  <section class="py-8 sm:py-10 px-6 md:px-10 bg-[#F7F7F7]" id="categories">
+  <section class="py-8 sm:py-10 px-6 md:px-10 bg-white" id="categories">
     <div class="max-w-[1400px] mx-auto space-y-5">
 
       <div class="flex flex-col items-center justify-center text-center">
-        <h2 class="text-3xl sm:text-4xl md:text-5xl font-serif font-light text-[#0F172A] tracking-tight">
-          Signature <span class="italic font-normal text-[#8B3A2B]">Styles</span>
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-sans font-medium uppercase tracking-[0.08em] text-[#0F172A]">
+          Signature <span class="pn-serif-accent font-normal text-[#C59B27]">Styles</span>
         </h2>
       </div>
 
@@ -1159,10 +1213,10 @@
 
         <!-- Frame Indicators (Pagination Dots) -->
         <div class="flex justify-center gap-2 pt-6">
-          <button onclick="goToFrame(0)" id="dot-frame-0" class="w-7 h-2.5 rounded-full bg-[#8B3A2B] transition-all"
+          <button onclick="goToFrame(0)" id="dot-frame-0" class="w-7 h-2.5 rounded-full bg-[#0A192F] transition-all"
             aria-label="Frame 1"></button>
           <button onclick="goToFrame(1)" id="dot-frame-1"
-            class="w-2.5 h-2.5 rounded-full bg-[#231B15]/20 hover:bg-[#8B3A2B]/60 transition-all"
+            class="w-2.5 h-2.5 rounded-full bg-[#0F172A]/20 hover:bg-[#C59B27]/60 transition-all"
             aria-label="Frame 2"></button>
         </div>
       </div>
@@ -1173,12 +1227,12 @@
   <!-- ============================================ -->
   <!-- 3. SHOP BY OCCASION (MY PERFECT FIT MATCH)  -->
   <!-- ============================================ -->
-  <section class="py-8 sm:py-10 px-6 md:px-10 bg-[#F7F7F7]" id="occasions">
+  <section class="py-8 sm:py-10 px-6 md:px-10 bg-white" id="occasions">
     <div class="max-w-[1400px] mx-auto space-y-5">
 
       <div class="flex flex-col items-center justify-center text-center">
-        <h2 class="text-3xl sm:text-4xl md:text-5xl font-serif font-light text-[#0F172A] tracking-tight">
-          Made for Every <span class="italic font-normal text-[#8B3A2B]">Occasion</span>
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-sans font-medium uppercase tracking-[0.08em] text-[#0F172A]">
+          Made for Every <span class="pn-serif-accent font-normal text-[#C59B27]">Occasion</span>
         </h2>
       </div>
 
@@ -1394,15 +1448,9 @@
   <!-- ============================================ -->
   <!-- 4. BESPOKE JOURNEY — VIDEO CAROUSEL (LIGHT) -->
   <!-- ============================================ -->
-  <section class="relative bg-[#F7F7F7] overflow-hidden py-8 md:py-12" id="process">
+  <section class="relative bg-white overflow-hidden py-8 md:py-12" id="process">
 
-    <!-- Subtle Ambient Background Light Spots -->
-    <div
-      class="absolute -top-32 -left-32 w-96 h-96 rounded-full bg-[radial-gradient(circle,_rgba(242,208,169,0.35)_0%,_transparent_70%)] blur-3xl pointer-events-none">
-    </div>
-    <div
-      class="absolute -bottom-32 -right-32 w-[500px] h-[500px] rounded-full bg-[radial-gradient(circle,_rgba(139,58,43,0.08)_0%,_transparent_70%)] blur-3xl pointer-events-none">
-    </div>
+    <!-- Subtle Ambient Background Light Spots Removed for Pure White Background -->
 
     <!-- Top Subtle Divider Line -->
     <div class="absolute top-0 inset-x-0 h-[1px] bg-gradient-to-r from-transparent via-slate-300/60 to-transparent">
@@ -1411,16 +1459,15 @@
     <!-- Header Bar -->
     <div class="max-w-[1200px] mx-auto px-6 md:px-10 mb-8 text-center relative z-10">
       <div class="inline-flex items-center justify-center gap-3 mb-2">
-        <span class="w-8 h-px bg-[#8B3A2B]/60"></span>
-        <span class="text-[#8B3A2B] text-[10.5px] uppercase tracking-[0.35em] font-extrabold">The Toofit Craft
+        <span class="w-8 h-px bg-[#C59B27]/60"></span>
+        <span class="text-[#C59B27] text-[10.5px] uppercase tracking-[0.35em] font-extrabold">The Toofit Craft
           Protocol</span>
-        <span class="w-8 h-px bg-[#8B3A2B]/60"></span>
+        <span class="w-8 h-px bg-[#C59B27]/60"></span>
       </div>
-      <h2 class="text-3xl sm:text-4xl md:text-5xl font-serif font-bold tracking-tight text-[#0F172A]"
-        style="font-family: Georgia, 'Playfair Display', serif;">
-        The <span class="italic font-normal text-[#8B3A2B]">Bespoke Journey</span>
+      <h2 class="text-2xl sm:text-3xl md:text-4xl font-sans font-bold uppercase tracking-[0.08em] text-[#0F172A]">
+        The <span class="pn-serif-accent font-normal text-[#C59B27]">Bespoke Journey</span>
       </h2>
-      <div class="w-12 h-0.5 bg-[#8B3A2B] mx-auto mt-3 rounded-full opacity-80"></div>
+      <div class="w-12 h-0.5 bg-[#C59B27] mx-auto mt-3 rounded-full opacity-80"></div>
     </div>
 
     <!-- Single-Step Video Viewport -->
@@ -1435,7 +1482,7 @@
           <div
             class="relative mx-auto rounded-2xl p-[2px] bg-gradient-to-b from-[#8B3A2B] via-[#8B3A2B]/40 to-[#231B15]/20 shadow-[0_20px_45px_rgba(139,58,43,0.18)]"
             style="max-width:1200px; height:clamp(320px,42vw,480px);">
-            <div class="relative w-full h-full rounded-2xl overflow-hidden bg-slate-900 border border-[#8B3A2B]/30">
+            <div class="relative w-full h-full rounded-2xl overflow-hidden bg-white border border-[#8B3A2B]/30">
               <video id="bj-vid-0" class="w-full h-full object-cover" src="assets/video_consultation.mp4" muted
                 playsinline preload="auto">
               </video>
@@ -1459,7 +1506,7 @@
           <div
             class="relative mx-auto rounded-2xl p-[2px] bg-gradient-to-b from-[#8B3A2B] via-[#8B3A2B]/40 to-[#231B15]/20 shadow-[0_20px_45px_rgba(139,58,43,0.18)]"
             style="max-width:1200px; height:clamp(320px,42vw,480px);">
-            <div class="relative w-full h-full rounded-2xl overflow-hidden bg-slate-900 border border-[#8B3A2B]/30">
+            <div class="relative w-full h-full rounded-2xl overflow-hidden bg-white border border-[#8B3A2B]/30">
               <video id="bj-vid-1" class="w-full h-full object-cover" src="assets/video_measurements.mp4" muted
                 playsinline preload="auto">
               </video>
@@ -1483,7 +1530,7 @@
           <div
             class="relative mx-auto rounded-2xl p-[2px] bg-gradient-to-b from-[#8B3A2B] via-[#8B3A2B]/40 to-[#231B15]/20 shadow-[0_20px_45px_rgba(139,58,43,0.18)]"
             style="max-width:1200px; height:clamp(320px,42vw,480px);">
-            <div class="relative w-full h-full rounded-2xl overflow-hidden bg-slate-900 border border-[#8B3A2B]/30">
+            <div class="relative w-full h-full rounded-2xl overflow-hidden bg-white border border-[#8B3A2B]/30">
               <video id="bj-vid-2" class="w-full h-full object-cover" src="assets/video_crafting.mp4" muted playsinline
                 preload="auto">
               </video>
@@ -1507,7 +1554,7 @@
           <div
             class="relative mx-auto rounded-2xl p-[2px] bg-gradient-to-b from-[#8B3A2B] via-[#8B3A2B]/40 to-[#231B15]/20 shadow-[0_20px_45px_rgba(139,58,43,0.18)]"
             style="max-width:1200px; height:clamp(320px,42vw,480px);">
-            <div class="relative w-full h-full rounded-2xl overflow-hidden bg-slate-900 border border-[#8B3A2B]/30">
+            <div class="relative w-full h-full rounded-2xl overflow-hidden bg-white border border-[#8B3A2B]/30">
               <video id="bj-vid-3" class="w-full h-full object-cover" src="assets/video_finalfitting.mp4" muted
                 playsinline preload="auto">
               </video>
@@ -1608,26 +1655,22 @@
   <!-- ========================================================= -->
   <!-- WEDDING PACKAGES SECTION (AESTHETIC DIAMOND BULLET LISTS) -->
   <!-- ========================================================= -->
-  <section id="wedding-packages" class="py-12 md:py-18 bg-[#FAF6F0] relative overflow-hidden border-t border-slate-200/80">
-    
-    <!-- Background Decorative Accents -->
-    <div class="absolute -top-24 -left-24 w-96 h-96 bg-[#8B3A2B]/5 rounded-full blur-3xl pointer-events-none"></div>
-    <div class="absolute -bottom-24 -right-24 w-96 h-96 bg-amber-500/5 rounded-full blur-3xl pointer-events-none"></div>
+  <section id="wedding-packages" class="py-14 md:py-20 bg-white relative overflow-hidden border-t border-slate-200/80">
 
     <div class="max-w-[1380px] mx-auto px-6 md:px-10 relative z-10">
 
       <!-- LUXURY SECTION HEADER (CLEAN & ATTRACTIVE DESIGN) -->
-      <div class="text-center max-w-xl mx-auto mb-10 md:mb-14">
+      <div class="text-center max-w-xl mx-auto mb-12 md:mb-16">
         <!-- Category Accent Pill -->
-        <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-[#8B3A2B]/8 border border-[#8B3A2B]/20 backdrop-blur-md mb-3.5 shadow-sm">
-          <span class="w-1.5 h-1.5 rotate-45 bg-[#8B3A2B]"></span>
-          <span class="text-xs font-bold uppercase tracking-[0.35em] text-[#8B3A2B]">Wedding Packages</span>
-          <span class="w-1.5 h-1.5 rotate-45 bg-[#8B3A2B]"></span>
+        <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white border border-slate-200 mb-4 shadow-sm">
+          <span class="w-1.5 h-1.5 rotate-45 bg-[#C59B27]"></span>
+          <span class="text-xs font-bold uppercase tracking-[0.35em] text-[#0A192F]">Wedding Packages</span>
+          <span class="w-1.5 h-1.5 rotate-45 bg-[#C59B27]"></span>
         </div>
 
-        <!-- Main Title with Elegant Typography & Curved Gold Underline -->
-        <h2 class="text-3xl sm:text-4xl md:text-5xl font-serif font-light text-[#0F172A] tracking-tight leading-tight">
-          Choose your <span class="relative inline-block italic font-normal text-[#8B3A2B]">
+        <!-- Main Title with PN Rao Uppercase Styling & Gold Accent -->
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-sans font-medium uppercase tracking-[0.08em] text-[#0F172A] leading-tight">
+          Choose your <span class="pn-serif-accent relative inline-block text-[#C59B27]">
             perfect package
             <svg class="absolute -bottom-1.5 left-0 w-full h-2 text-[#C59B27]" viewBox="0 0 100 20" preserveAspectRatio="none">
               <path d="M0 10 Q 50 20 100 10" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" />
@@ -1639,112 +1682,117 @@
       <!-- 3 PACKAGES GRID — AESTHETIC DIAMOND BULLETS -->
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10 items-stretch">
 
-        <!-- ── CARD 1: GROOM ESSENTIALS (WARM CREAM SILK) ── -->
-        <div class="group relative bg-gradient-to-b from-[#FFFDF8] via-[#FAF5EB] to-[#F5EFE0] rounded-3xl p-8 sm:p-9 md:p-10 border border-[#8B3A2B]/15 shadow-[0_15px_40px_rgba(139,58,43,0.06)] transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_25px_50px_rgba(139,58,43,0.12)] flex flex-col items-center justify-between">
+        <!-- ── CARD 1: GROOM ESSENTIALS ── -->
+        <div class="group relative bg-white rounded-3xl p-8 sm:p-9 md:p-10 border border-slate-200 shadow-md transition-all duration-300 hover:-translate-y-2 hover:shadow-xl flex flex-col items-center justify-between">
           <div class="w-full text-center">
             <!-- Title & Subtitle (with Emojis) -->
-            <h3 class="font-serif font-bold text-xl sm:text-2xl text-[#6E2317] tracking-[0.08em] uppercase mb-1.5">Groom Essentials</h3>
+            <h3 class="font-serif font-bold text-xl sm:text-2xl text-[#0F172A] tracking-[0.08em] uppercase mb-1.5">Groom Essentials</h3>
             <p class="text-xs sm:text-sm text-[#8B3A2B] font-semibold italic">👑 For the understated groom</p>
 
             <!-- Luxury Accent Line -->
             <div class="w-16 h-px bg-gradient-to-r from-transparent via-[#8B3A2B]/50 to-transparent mx-auto my-5"></div>
 
-            <!-- Structured Unordered List with Rich Burgundy Espresso Typography -->
-            <ul class="space-y-4 text-xs sm:text-sm text-[#4A1D16] font-semibold max-w-[290px] sm:max-w-[320px] mx-auto text-left">
+            <!-- Structured Unordered List with High-Contrast Slate Typography -->
+            <ul class="space-y-4 text-xs sm:text-sm text-slate-800 font-medium max-w-[290px] sm:max-w-[320px] mx-auto text-left">
               <li class="flex items-start gap-3.5 leading-relaxed">
-                <span class="w-2 h-2 rotate-45 bg-gradient-to-tr from-[#8B3A2B] to-[#B34A38] rounded-[1px] shrink-0 mt-1.5 shadow-[0_2px_4px_rgba(139,58,43,0.25)]"></span>
+                <span class="w-2 h-2 rotate-45 bg-gradient-to-tr from-[#8B3A2B] to-[#C59B27] rounded-[1px] shrink-0 mt-1.5 shadow-sm"></span>
                 <span>One sherwani or bandhgala suit</span>
               </li>
               <li class="flex items-start gap-3.5 leading-relaxed">
-                <span class="w-2 h-2 rotate-45 bg-gradient-to-tr from-[#8B3A2B] to-[#B34A38] rounded-[1px] shrink-0 mt-1.5 shadow-[0_2px_4px_rgba(139,58,43,0.25)]"></span>
+                <span class="w-2 h-2 rotate-45 bg-gradient-to-tr from-[#8B3A2B] to-[#C59B27] rounded-[1px] shrink-0 mt-1.5 shadow-sm"></span>
                 <span>Custom churidar or trousers</span>
               </li>
               <li class="flex items-start gap-3.5 leading-relaxed">
-                <span class="w-2 h-2 rotate-45 bg-gradient-to-tr from-[#8B3A2B] to-[#B34A38] rounded-[1px] shrink-0 mt-1.5 shadow-[0_2px_4px_rgba(139,58,43,0.25)]"></span>
+                <span class="w-2 h-2 rotate-45 bg-gradient-to-tr from-[#8B3A2B] to-[#C59B27] rounded-[1px] shrink-0 mt-1.5 shadow-sm"></span>
                 <span>Two fittings included</span>
               </li>
               <li class="flex items-start gap-3.5 leading-relaxed">
-                <span class="w-2 h-2 rotate-45 bg-gradient-to-tr from-[#8B3A2B] to-[#B34A38] rounded-[1px] shrink-0 mt-1.5 shadow-[0_2px_4px_rgba(139,58,43,0.25)]"></span>
+                <span class="w-2 h-2 rotate-45 bg-gradient-to-tr from-[#8B3A2B] to-[#C59B27] rounded-[1px] shrink-0 mt-1.5 shadow-sm"></span>
                 <span>Fabric selection guidance</span>
               </li>
               <li class="flex items-start gap-3.5 leading-relaxed">
-                <span class="w-2 h-2 rotate-45 bg-gradient-to-tr from-[#8B3A2B] to-[#B34A38] rounded-[1px] shrink-0 mt-1.5 shadow-[0_2px_4px_rgba(139,58,43,0.25)]"></span>
+                <span class="w-2 h-2 rotate-45 bg-gradient-to-tr from-[#8B3A2B] to-[#C59B27] rounded-[1px] shrink-0 mt-1.5 shadow-sm"></span>
                 <span>Post-wedding adjustments</span>
               </li>
             </ul>
           </div>
         </div>
 
-        <!-- ── CARD 2: GROOM SIGNATURE (VINTAGE CHAMPAGNE IVORY SHADE) ── -->
-        <div class="group relative bg-gradient-to-b from-[#FFFDF6] via-[#F8EFE0] to-[#EDE0CA] rounded-3xl p-8 sm:p-9 md:p-10 border-2 border-[#C59B27] shadow-[0_20px_50px_rgba(197,155,39,0.18)] transition-all duration-300 md:-translate-y-2 hover:-translate-y-4 hover:shadow-[0_30px_60px_rgba(197,155,39,0.3)] flex flex-col items-center justify-between">
-          <div class="w-full text-center">
+        <!-- ── CARD 2: GROOM SIGNATURE (FEATURED / MOST POPULAR) ── -->
+        <div class="group relative bg-white rounded-3xl p-8 sm:p-9 md:p-10 border-2 border-amber-500 shadow-md transition-all duration-300 md:-translate-y-2 hover:-translate-y-4 hover:shadow-xl flex flex-col items-center justify-between">
+          <!-- Featured Badge -->
+          <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-gradient-to-r from-[#8B3A2B] via-amber-600 to-[#8B3A2B] text-white text-[10px] font-extrabold uppercase tracking-[0.2em] px-4 py-1 rounded-full shadow-md border border-amber-300/40">
+            ✨ Most Popular
+          </div>
+
+          <div class="w-full text-center mt-1">
             <!-- Title & Subtitle (with Emojis) -->
-            <h3 class="font-serif font-bold text-xl sm:text-2xl text-[#543806] tracking-[0.08em] uppercase mb-1.5">Groom Signature</h3>
-            <p class="text-xs sm:text-sm text-[#8C6B1B] font-semibold italic">✨ For the groom who wants it all</p>
+            <h3 class="font-serif font-bold text-xl sm:text-2xl text-[#0F172A] tracking-[0.08em] uppercase mb-1.5">Groom Signature</h3>
+            <p class="text-xs sm:text-sm text-[#C59B27] font-bold italic">✨ For the groom who wants it all</p>
 
             <!-- Luxury Gold Divider -->
             <div class="w-20 h-px bg-gradient-to-r from-transparent via-[#C59B27] to-transparent mx-auto my-5"></div>
 
-            <!-- Structured Unordered List with Rich Cognac Gold Typography -->
-            <ul class="space-y-4 text-xs sm:text-sm text-[#3D2505] font-semibold max-w-[290px] sm:max-w-[320px] mx-auto text-left">
+            <!-- Structured Unordered List with High-Contrast Slate Typography -->
+            <ul class="space-y-4 text-xs sm:text-sm text-slate-800 font-medium max-w-[290px] sm:max-w-[320px] mx-auto text-left">
               <li class="flex items-start gap-3.5 leading-relaxed">
-                <span class="w-2 h-2 rotate-45 bg-gradient-to-tr from-[#C59B27] to-[#F3D375] rounded-[1px] shrink-0 mt-1.5 shadow-[0_2px_6px_rgba(197,155,39,0.35)]"></span>
+                <span class="w-2 h-2 rotate-45 bg-gradient-to-tr from-[#C59B27] to-[#F3D375] rounded-[1px] shrink-0 mt-1.5 shadow-sm"></span>
                 <span>Sherwani + reception bandhgala or suit</span>
               </li>
               <li class="flex items-start gap-3.5 leading-relaxed">
-                <span class="w-2 h-2 rotate-45 bg-gradient-to-tr from-[#C59B27] to-[#F3D375] rounded-[1px] shrink-0 mt-1.5 shadow-[0_2px_6px_rgba(197,155,39,0.35)]"></span>
+                <span class="w-2 h-2 rotate-45 bg-gradient-to-tr from-[#C59B27] to-[#F3D375] rounded-[1px] shrink-0 mt-1.5 shadow-sm"></span>
                 <span>Custom kurta &amp; trousers set</span>
               </li>
               <li class="flex items-start gap-3.5 leading-relaxed">
-                <span class="w-2 h-2 rotate-45 bg-gradient-to-tr from-[#C59B27] to-[#F3D375] rounded-[1px] shrink-0 mt-1.5 shadow-[0_2px_6px_rgba(197,155,39,0.35)]"></span>
+                <span class="w-2 h-2 rotate-45 bg-gradient-to-tr from-[#C59B27] to-[#F3D375] rounded-[1px] shrink-0 mt-1.5 shadow-sm"></span>
                 <span>Nehru jacket for sangeet/mehendi</span>
               </li>
               <li class="flex items-start gap-3.5 leading-relaxed">
-                <span class="w-2 h-2 rotate-45 bg-gradient-to-tr from-[#C59B27] to-[#F3D375] rounded-[1px] shrink-0 mt-1.5 shadow-[0_2px_6px_rgba(197,155,39,0.35)]"></span>
+                <span class="w-2 h-2 rotate-45 bg-gradient-to-tr from-[#C59B27] to-[#F3D375] rounded-[1px] shrink-0 mt-1.5 shadow-sm"></span>
                 <span>Three fittings &amp; priority scheduling</span>
               </li>
               <li class="flex items-start gap-3.5 leading-relaxed">
-                <span class="w-2 h-2 rotate-45 bg-gradient-to-tr from-[#C59B27] to-[#F3D375] rounded-[1px] shrink-0 mt-1.5 shadow-[0_2px_6px_rgba(197,155,39,0.35)]"></span>
+                <span class="w-2 h-2 rotate-45 bg-gradient-to-tr from-[#C59B27] to-[#F3D375] rounded-[1px] shrink-0 mt-1.5 shadow-sm"></span>
                 <span>Dedicated styling consultation</span>
               </li>
               <li class="flex items-start gap-3.5 leading-relaxed">
-                <span class="w-2 h-2 rotate-45 bg-gradient-to-tr from-[#C59B27] to-[#F3D375] rounded-[1px] shrink-0 mt-1.5 shadow-[0_2px_6px_rgba(197,155,39,0.35)]"></span>
+                <span class="w-2 h-2 rotate-45 bg-gradient-to-tr from-[#C59B27] to-[#F3D375] rounded-[1px] shrink-0 mt-1.5 shadow-sm"></span>
                 <span>Complimentary pocket square &amp; stole</span>
               </li>
             </ul>
           </div>
         </div>
 
-        <!-- ── CARD 3: FAMILY COLLECTIVE (WARM CREAM SILK) ── -->
-        <div class="group relative bg-gradient-to-b from-[#FFFDF8] via-[#FAF5EB] to-[#F5EFE0] rounded-3xl p-8 sm:p-9 md:p-10 border border-[#8B3A2B]/15 shadow-[0_15px_40px_rgba(139,58,43,0.06)] transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_25px_50px_rgba(139,58,43,0.12)] flex flex-col items-center justify-between">
+        <!-- ── CARD 3: FAMILY COLLECTIVE ── -->
+        <div class="group relative bg-white rounded-3xl p-8 sm:p-9 md:p-10 border border-slate-200 shadow-md transition-all duration-300 hover:-translate-y-2 hover:shadow-xl flex flex-col items-center justify-between">
           <div class="w-full text-center">
             <!-- Title & Subtitle (with Emojis) -->
-            <h3 class="font-serif font-bold text-xl sm:text-2xl text-[#6E2317] tracking-[0.08em] uppercase mb-1.5">Family Collective</h3>
+            <h3 class="font-serif font-bold text-xl sm:text-2xl text-[#0F172A] tracking-[0.08em] uppercase mb-1.5">Family Collective</h3>
             <p class="text-xs sm:text-sm text-[#8B3A2B] font-semibold italic">👨‍👩‍👧‍👦 Dress the whole family together</p>
 
             <!-- Luxury Accent Line -->
             <div class="w-16 h-px bg-gradient-to-r from-transparent via-[#8B3A2B]/50 to-transparent mx-auto my-5"></div>
 
-            <!-- Structured Unordered List with Rich Burgundy Espresso Typography -->
-            <ul class="space-y-4 text-xs sm:text-sm text-[#4A1D16] font-semibold max-w-[290px] sm:max-w-[320px] mx-auto text-left">
+            <!-- Structured Unordered List with High-Contrast Slate Typography -->
+            <ul class="space-y-4 text-xs sm:text-sm text-slate-800 font-medium max-w-[290px] sm:max-w-[320px] mx-auto text-left">
               <li class="flex items-start gap-3.5 leading-relaxed">
-                <span class="w-2 h-2 rotate-45 bg-gradient-to-tr from-[#8B3A2B] to-[#B34A38] rounded-[1px] shrink-0 mt-1.5 shadow-[0_2px_4px_rgba(139,58,43,0.25)]"></span>
+                <span class="w-2 h-2 rotate-45 bg-gradient-to-tr from-[#8B3A2B] to-[#C59B27] rounded-[1px] shrink-0 mt-1.5 shadow-sm"></span>
                 <span>Coordinated looks for 4+ members</span>
               </li>
               <li class="flex items-start gap-3.5 leading-relaxed">
-                <span class="w-2 h-2 rotate-45 bg-gradient-to-tr from-[#8B3A2B] to-[#B34A38] rounded-[1px] shrink-0 mt-1.5 shadow-[0_2px_4px_rgba(139,58,43,0.25)]"></span>
+                <span class="w-2 h-2 rotate-45 bg-gradient-to-tr from-[#8B3A2B] to-[#C59B27] rounded-[1px] shrink-0 mt-1.5 shadow-sm"></span>
                 <span>Matching palette &amp; fabric theme</span>
               </li>
               <li class="flex items-start gap-3.5 leading-relaxed">
-                <span class="w-2 h-2 rotate-45 bg-gradient-to-tr from-[#8B3A2B] to-[#B34A38] rounded-[1px] shrink-0 mt-1.5 shadow-[0_2px_4px_rgba(139,58,43,0.25)]"></span>
+                <span class="w-2 h-2 rotate-45 bg-gradient-to-tr from-[#8B3A2B] to-[#C59B27] rounded-[1px] shrink-0 mt-1.5 shadow-sm"></span>
                 <span>Baraat party coordination</span>
               </li>
               <li class="flex items-start gap-3.5 leading-relaxed">
-                <span class="w-2 h-2 rotate-45 bg-gradient-to-tr from-[#8B3A2B] to-[#B34A38] rounded-[1px] shrink-0 mt-1.5 shadow-[0_2px_4px_rgba(139,58,43,0.25)]"></span>
+                <span class="w-2 h-2 rotate-45 bg-gradient-to-tr from-[#8B3A2B] to-[#C59B27] rounded-[1px] shrink-0 mt-1.5 shadow-sm"></span>
                 <span>Group measurement sessions</span>
               </li>
               <li class="flex items-start gap-3.5 leading-relaxed">
-                <span class="w-2 h-2 rotate-45 bg-gradient-to-tr from-[#8B3A2B] to-[#B34A38] rounded-[1px] shrink-0 mt-1.5 shadow-[0_2px_4px_rgba(139,58,43,0.25)]"></span>
+                <span class="w-2 h-2 rotate-45 bg-gradient-to-tr from-[#8B3A2B] to-[#C59B27] rounded-[1px] shrink-0 mt-1.5 shadow-sm"></span>
                 <span>Special pricing for 5+ pieces</span>
               </li>
             </ul>
@@ -1757,7 +1805,7 @@
       <div class="flex justify-end items-center mt-8 md:mt-10 pt-2">
         <a href="#bespoke" 
            onclick="openBookingModal('studio'); return false;"
-           class="inline-flex items-center gap-2 text-sm sm:text-base font-serif font-semibold tracking-wide text-[#8B3A2B] hover:text-[#6E2317] underline underline-offset-8 decoration-1 decoration-[#8B3A2B]/50 hover:decoration-[#8B3A2B] transition-all duration-300 group">
+           class="inline-flex items-center gap-2 text-sm sm:text-base font-serif font-semibold tracking-wide text-[#0A192F] hover:text-[#C59B27] underline underline-offset-8 decoration-1 decoration-[#0A192F]/50 hover:decoration-[#C59B27] transition-all duration-300 group">
           <span>Explore More</span>
           <span class="transform group-hover:translate-x-1.5 transition-transform duration-300">&rarr;</span>
         </a>
@@ -1769,11 +1817,9 @@
   <!-- ========================================================= -->
   <!-- CORPORATE SOLUTIONS SECTION — LUXURY SOFT PASTEL UI       -->
   <!-- ========================================================= -->
-  <section id="corporate" class="py-14 md:py-20 bg-gradient-to-b from-[#FFFDF8] via-[#FAF6F0] to-[#FFFDF8] relative overflow-hidden border-t border-[#8B3A2B]/15">
+  <section id="corporate" class="py-14 md:py-20 bg-white relative overflow-hidden border-t border-slate-200">
     
-    <!-- Ambient Glow Background Accents -->
-    <div class="absolute top-0 right-0 w-[550px] h-[550px] bg-[#8B3A2B]/6 rounded-full blur-3xl pointer-events-none"></div>
-    <div class="absolute bottom-0 left-0 w-[550px] h-[550px] bg-[#C59B27]/8 rounded-full blur-3xl pointer-events-none"></div>
+    <!-- Ambient Glow Background Accents Removed for Pure White Background -->
 
     <div class="max-w-[1720px] mx-auto px-6 sm:px-10 md:px-14 lg:px-16 relative z-10">
       
@@ -1783,67 +1829,68 @@
         <div class="lg:col-span-7 flex flex-col justify-between">
           
           <!-- Category Accent Pill -->
-          <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-[#8B3A2B]/10 border border-[#8B3A2B]/25 backdrop-blur-md mb-3.5 shadow-sm w-fit">
-            <span class="w-2 h-2 rotate-45 bg-[#8B3A2B]"></span>
-            <span class="text-xs font-bold uppercase tracking-[0.35em] text-[#8B3A2B]">Corporate Solutions</span>
-            <span class="w-2 h-2 rotate-45 bg-[#8B3A2B]"></span>
+          <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white border border-slate-200 mb-3.5 shadow-sm w-fit">
+            <span class="w-2 h-2 rotate-45 bg-[#C59B27]"></span>
+            <span class="text-xs font-bold uppercase tracking-[0.35em] text-[#0A192F]">Corporate Solutions</span>
+            <span class="w-2 h-2 rotate-45 bg-[#C59B27]"></span>
           </div>
 
           <!-- Main Title -->
-          <h2 class="text-3xl sm:text-4xl md:text-5xl font-serif font-light text-[#0F172A] tracking-tight leading-tight mb-3">
-            Quality dress for <span class="italic font-normal text-[#8B3A2B]">your entire team</span>
+          <h2 class="text-2xl sm:text-3xl md:text-4xl font-sans font-medium uppercase tracking-[0.08em] text-[#0F172A] leading-tight mb-3">
+            Quality dress for <span class="pn-serif-accent text-[#C59B27]">your entire team</span>
           </h2>
 
           <!-- Subheadline Description -->
-          <p class="text-sm sm:text-base md:text-lg text-[#4A1D16]/85 leading-relaxed max-w-3xl mb-7 font-medium">
+          <p class="text-sm sm:text-base md:text-lg text-slate-700 leading-relaxed max-w-3xl mb-7 font-medium">
             Partner with Toofit for long-term, sustainable custom dress solutions that help your team present with confidence — at reasonable prices.
           </p>
 
-          <!-- 4 Feature Cards Grid — ULTRA-LIGHT LUXURY SILK COLORED BLOCKS -->
+          <!-- 4 Feature Cards Grid -->
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6 mb-6">
             
-            <!-- Card 1: Office Formals (Ultra-Light Warm Ivory Silk) -->
-            <div class="bg-[#FFFDF9] rounded-3xl p-6 border border-[#8B3A2B]/12 shadow-[0_4px_20px_rgba(139,58,43,0.03)] flex flex-col items-start justify-between">
-              <div class="w-11 h-11 rounded-2xl bg-[#8B3A2B]/8 text-[#8B3A2B] flex items-center justify-center mb-3 shadow-sm">
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-5.5 h-5.5 stroke-current" fill="none" viewBox="0 0 24 24" stroke-width="1.8">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+            <!-- Card 1 -->
+            <div class="bg-white rounded-3xl p-6 border border-slate-200 shadow-sm flex flex-col items-start justify-between">
+              <div class="w-11 h-11 rounded-2xl bg-slate-100 text-[#8B3A2B] flex items-center justify-center mb-3 shadow-sm">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
                 </svg>
               </div>
-              <h3 class="font-serif font-bold text-xl text-[#6E2317] mb-1">Office Formals</h3>
-              <p class="text-xs sm:text-sm text-[#4A1D16]/80 font-semibold leading-relaxed">Consistent, professional dress for your entire workforce.</p>
+              <h3 class="font-serif font-bold text-xl text-[#0F172A] mb-1">Office Formals</h3>
+              <p class="text-xs sm:text-sm text-slate-600 font-medium leading-relaxed">Consistent, professional dress for your entire workforce.</p>
             </div>
 
-            <!-- Card 2: Uniforms (Ultra-Light Soft Champagne Gold) -->
-            <div class="bg-[#FFFDF4] rounded-3xl p-6 border border-[#C59B27]/20 shadow-[0_4px_20px_rgba(197,155,39,0.03)] flex flex-col items-start justify-between">
-              <div class="w-11 h-11 rounded-2xl bg-[#C59B27]/10 text-[#543806] flex items-center justify-center mb-3 shadow-sm">
+            <!-- Card 2: Uniforms -->
+            <div class="bg-white rounded-3xl p-6 border border-slate-200 shadow-sm flex flex-col items-start justify-between">
+              <div class="w-11 h-11 rounded-2xl bg-slate-100 text-[#C59B27] flex items-center justify-center mb-3 shadow-sm">
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-5.5 h-5.5 stroke-current" fill="none" viewBox="0 0 24 24" stroke-width="1.8">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M9 6.75h1.5s0 0 0 0m-1.5 3h1.5s0 0 0 0m-1.5 3h1.5s0 0 0 0m3-6h1.5s0 0 0 0m-1.5 3h1.5s0 0 0 0m-1.5 3h1.5s0 0 0 0" />
                 </svg>
               </div>
-              <h3 class="font-serif font-bold text-xl text-[#543806] mb-1">Uniforms</h3>
-              <p class="text-xs sm:text-sm text-[#3D2505]/80 font-semibold leading-relaxed">Custom uniforms for hospitality, banking, and service industries.</p>
+              <h3 class="font-serif font-bold text-xl text-[#0F172A] mb-1">Uniforms</h3>
+              <p class="text-xs sm:text-sm text-slate-600 font-medium leading-relaxed">Custom uniforms for hospitality, banking, and service industries.</p>
             </div>
 
-            <!-- Card 3: Event Wear (Ultra-Light Pearl Copper Rose) -->
-            <div class="bg-[#FAF6F4] rounded-3xl p-6 border border-[#B87333]/15 shadow-[0_4px_20px_rgba(184,115,51,0.03)] flex flex-col items-start justify-between">
-              <div class="w-11 h-11 rounded-2xl bg-[#B87333]/10 text-[#B87333] flex items-center justify-center mb-3 shadow-sm">
+            <!-- Card 3: Event Wear -->
+            <div class="bg-white rounded-3xl p-6 border border-slate-200 shadow-sm flex flex-col items-start justify-between">
+              <div class="w-11 h-11 rounded-2xl bg-slate-100 text-[#8B3A2B] flex items-center justify-center mb-3 shadow-sm">
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-5.5 h-5.5 stroke-current" fill="none" viewBox="0 0 24 24" stroke-width="1.8">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 6v.75m0 3v.75m0 3v.75m0 3V18m-9-12v.75m0 3v.75m0 3v.75m0 3V18m3-12v.75m0 3v.75m0 3v.75m0 3V18M4.5 19.5h15a2.25 2.25 0 0 0 2.25-2.25V6.75A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25v10.5A2.25 2.25 0 0 0 4.5 19.5Z" />
                 </svg>
               </div>
-              <h3 class="font-serif font-bold text-xl text-[#6A2518] mb-1">Event Wear</h3>
-              <p class="text-xs sm:text-sm text-[#551E13]/80 font-semibold leading-relaxed">Coordinated outfits for conferences and corporate events.</p>
+              <h3 class="font-serif font-bold text-xl text-[#0F172A] mb-1">Event Wear</h3>
+              <p class="text-xs sm:text-sm text-slate-600 font-medium leading-relaxed">Coordinated outfits for conferences and corporate events.</p>
             </div>
 
-            <!-- Card 4: Bulk Orders (Ultra-Light Soft Linen Espresso) -->
-            <div class="bg-[#FAF8F5] rounded-3xl p-6 border border-[#231B15]/10 shadow-[0_4px_20px_rgba(35,27,21,0.03)] flex flex-col items-start justify-between">
-              <div class="w-11 h-11 rounded-2xl bg-[#231B15]/8 text-[#231B15] flex items-center justify-center mb-3 shadow-sm">
+            <!-- Card 4: Bulk Orders -->
+            <div class="bg-white rounded-3xl p-6 border border-slate-200 shadow-sm flex flex-col items-start justify-between">
+              <div class="w-11 h-11 rounded-2xl bg-slate-100 text-[#0F172A] flex items-center justify-center mb-3 shadow-sm">
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-5.5 h-5.5 stroke-current" fill="none" viewBox="0 0 24 24" stroke-width="1.8">
                   <path stroke-linecap="round" stroke-linejoin="round" d="m21 7.5-9-5.25L3 7.5m18 0-9 5.25m9-5.25v9l-9 5.25M3 7.5l9 5.25M3 7.5v9l9 5.25m0-9v9" />
                 </svg>
               </div>
-              <h3 class="font-serif font-bold text-xl text-[#231B15] mb-1">Bulk Orders</h3>
-              <p class="text-xs sm:text-sm text-[#33251D]/80 font-semibold leading-relaxed">Dedicated scheduling and pricing for teams of 10 or more.</p>
+              <h3 class="font-serif font-bold text-xl text-[#0F172A] mb-1">Bulk Orders</h3>
+              <p class="text-xs sm:text-sm text-slate-600 font-medium leading-relaxed">Dedicated scheduling and pricing for teams of 10 or more.</p>
             </div>
 
           </div>
@@ -1861,7 +1908,7 @@
         </div>
 
         <!-- ── RIGHT COLUMN: HIGH-END GENERATED CORPORATE EXECUTIVE IMAGE ── -->
-        <div class="lg:col-span-5 relative h-full min-h-[460px] lg:min-h-[580px] rounded-3xl overflow-hidden shadow-[0_20px_50px_rgba(139,58,43,0.14)] border-2 border-[#8B3A2B]/20">
+        <div class="lg:col-span-5 relative h-full min-h-[460px] lg:min-h-[580px] rounded-3xl overflow-hidden shadow-xl border border-slate-200">
           <img src="assets/toofit_corporate_solutions.png" 
                alt="TOOFIT Bespoke Corporate Executive Apparel" 
                class="w-full h-full object-cover object-center">
@@ -1876,45 +1923,43 @@
   <!-- ========================================================= -->
   <!-- PRODUCT SHOWCASE / GALLERY — OUR IN-HOUSE CREATIONS       -->
   <!-- ========================================================= -->
-  <section id="gallery" class="py-14 md:py-20 bg-[#FAF6F0] relative overflow-hidden border-t border-[#8B3A2B]/15">
+  <section id="gallery" class="py-14 md:py-20 bg-white relative overflow-hidden border-t border-slate-200">
     
-    <!-- Ambient Soft Glow Background -->
-    <div class="absolute -top-24 -left-24 w-96 h-96 bg-[#8B3A2B]/5 rounded-full blur-3xl pointer-events-none"></div>
-    <div class="absolute -bottom-24 -right-24 w-96 h-96 bg-[#C59B27]/8 rounded-full blur-3xl pointer-events-none"></div>
+    <!-- Ambient Soft Glow Background Removed for Pure White Background -->
 
     <div class="max-w-[1440px] mx-auto px-6 md:px-12 relative z-10">
       
-      <!-- Section Title & Subtitle Header (Clean, No Pill Badge) -->
+      <!-- Section Title & Subtitle Header (Clean PN Rao Style) -->
       <div class="text-center max-w-2xl mx-auto mb-8 md:mb-12">
-        <h2 class="text-3xl sm:text-4xl md:text-5xl font-serif font-light text-[#0F172A] tracking-tight leading-tight mb-3">
-          Our In-House <span class="italic font-normal text-[#8B3A2B]">Creations</span>
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-sans font-medium uppercase tracking-[0.08em] text-[#0F172A] mb-3">
+          Our In-House <span class="pn-serif-accent text-[#C59B27]">Creations</span>
         </h2>
-        <p class="text-sm sm:text-base md:text-lg text-[#4A1D16]/80 font-serif italic max-w-lg mx-auto leading-relaxed">
+        <p class="pn-subheading max-w-lg mx-auto">
           Designer solution exclusive by Toofit.
         </p>
       </div>
 
       <!-- Category Filter Tabs (Serif Pill-shaped Buttons) -->
       <div class="flex flex-wrap items-center justify-center gap-2.5 sm:gap-3 mb-10 md:mb-12" id="gallery-tabs">
-        <button onclick="filterGallery('all', this)" class="tf-gallery-tab active px-6 py-2.5 rounded-full text-xs sm:text-sm font-serif font-bold uppercase tracking-widest border transition-all duration-300 cursor-pointer bg-[#8B3A2B] text-white border-[#8B3A2B] shadow-md">
+        <button onclick="filterGallery('all', this)" class="tf-gallery-tab active px-6 py-2.5 rounded-full text-xs sm:text-sm font-serif font-bold uppercase tracking-widest border transition-all duration-300 cursor-pointer bg-[#0A192F] text-white border-[#0A192F] shadow-md">
           All
         </button>
-        <button onclick="filterGallery('shirts', this)" class="tf-gallery-tab px-6 py-2.5 rounded-full text-xs sm:text-sm font-serif font-semibold uppercase tracking-widest border transition-all duration-300 cursor-pointer bg-white/90 text-[#3D2505] border-[#8B3A2B]/20 hover:border-[#8B3A2B] hover:text-[#8B3A2B] shadow-sm">
+        <button onclick="filterGallery('shirts', this)" class="tf-gallery-tab px-6 py-2.5 rounded-full text-xs sm:text-sm font-serif font-semibold uppercase tracking-widest border transition-all duration-300 cursor-pointer bg-white text-[#0F172A] border-slate-200 hover:border-[#0A192F] hover:text-[#0A192F] shadow-sm">
           Shirts
         </button>
-        <button onclick="filterGallery('pants', this)" class="tf-gallery-tab px-6 py-2.5 rounded-full text-xs sm:text-sm font-serif font-semibold uppercase tracking-widest border transition-all duration-300 cursor-pointer bg-white/90 text-[#3D2505] border-[#8B3A2B]/20 hover:border-[#8B3A2B] hover:text-[#8B3A2B] shadow-sm">
+        <button onclick="filterGallery('pants', this)" class="tf-gallery-tab px-6 py-2.5 rounded-full text-xs sm:text-sm font-serif font-semibold uppercase tracking-widest border transition-all duration-300 cursor-pointer bg-white text-[#0F172A] border-slate-200 hover:border-[#0A192F] hover:text-[#0A192F] shadow-sm">
           Pants
         </button>
-        <button onclick="filterGallery('jodhpuri', this)" class="tf-gallery-tab px-6 py-2.5 rounded-full text-xs sm:text-sm font-serif font-semibold uppercase tracking-widest border transition-all duration-300 cursor-pointer bg-white/90 text-[#3D2505] border-[#8B3A2B]/20 hover:border-[#8B3A2B] hover:text-[#8B3A2B] shadow-sm">
+        <button onclick="filterGallery('jodhpuri', this)" class="tf-gallery-tab px-6 py-2.5 rounded-full text-xs sm:text-sm font-serif font-semibold uppercase tracking-widest border transition-all duration-300 cursor-pointer bg-white text-[#0F172A] border-slate-200 hover:border-[#0A192F] hover:text-[#0A192F] shadow-sm">
           Jodhpuri
         </button>
-        <button onclick="filterGallery('sherwani', this)" class="tf-gallery-tab px-6 py-2.5 rounded-full text-xs sm:text-sm font-serif font-semibold uppercase tracking-widest border transition-all duration-300 cursor-pointer bg-white/90 text-[#3D2505] border-[#8B3A2B]/20 hover:border-[#8B3A2B] hover:text-[#8B3A2B] shadow-sm">
+        <button onclick="filterGallery('sherwani', this)" class="tf-gallery-tab px-6 py-2.5 rounded-full text-xs sm:text-sm font-serif font-semibold uppercase tracking-widest border transition-all duration-300 cursor-pointer bg-white text-[#0F172A] border-slate-200 hover:border-[#0A192F] hover:text-[#0A192F] shadow-sm">
           Sherwani
         </button>
-        <button onclick="filterGallery('suits', this)" class="tf-gallery-tab px-6 py-2.5 rounded-full text-xs sm:text-sm font-serif font-semibold uppercase tracking-widest border transition-all duration-300 cursor-pointer bg-white/90 text-[#3D2505] border-[#8B3A2B]/20 hover:border-[#8B3A2B] hover:text-[#8B3A2B] shadow-sm">
+        <button onclick="filterGallery('suits', this)" class="tf-gallery-tab px-6 py-2.5 rounded-full text-xs sm:text-sm font-serif font-semibold uppercase tracking-widest border transition-all duration-300 cursor-pointer bg-white text-[#0F172A] border-slate-200 hover:border-[#0A192F] hover:text-[#0A192F] shadow-sm">
           Suits
         </button>
-        <button onclick="filterGallery('trousers', this)" class="tf-gallery-tab px-6 py-2.5 rounded-full text-xs sm:text-sm font-serif font-semibold uppercase tracking-widest border transition-all duration-300 cursor-pointer bg-white/90 text-[#3D2505] border-[#8B3A2B]/20 hover:border-[#8B3A2B] hover:text-[#8B3A2B] shadow-sm">
+        <button onclick="filterGallery('trousers', this)" class="tf-gallery-tab px-6 py-2.5 rounded-full text-xs sm:text-sm font-serif font-semibold uppercase tracking-widest border transition-all duration-300 cursor-pointer bg-white text-[#3D2505] border-slate-200 hover:border-[#8B3A2B] hover:text-[#8B3A2B] shadow-sm">
           Trousers
         </button>
       </div>
@@ -1923,42 +1968,42 @@
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8" id="gallery-grid">
         
         <!-- Card 1: Sherwani (Category: sherwani) -->
-        <div class="tf-gallery-item group relative rounded-2xl overflow-hidden shadow-lg border border-[#8B3A2B]/15 bg-white h-[350px] sm:h-[370px] transition-all duration-500" data-category="sherwani">
+        <div class="tf-gallery-item group relative rounded-2xl overflow-hidden shadow-md border border-slate-200 bg-white h-[350px] sm:h-[370px] transition-all duration-500" data-category="sherwani">
           <img src="assets/card_sherwani_v2.png" alt="Royal Handcrafted Sherwani" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500 ease-out">
         </div>
 
         <!-- Card 2: Jodhpuri (Category: jodhpuri) -->
-        <div class="tf-gallery-item group relative rounded-2xl overflow-hidden shadow-lg border border-[#8B3A2B]/15 bg-white h-[350px] sm:h-[370px] transition-all duration-500" data-category="jodhpuri">
+        <div class="tf-gallery-item group relative rounded-2xl overflow-hidden shadow-md border border-slate-200 bg-white h-[350px] sm:h-[370px] transition-all duration-500" data-category="jodhpuri">
           <img src="assets/card_jodhpuri_v2.png" alt="Bespoke Jodhpuri Suit" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500 ease-out">
         </div>
 
         <!-- Card 3: Suits (Category: suits) -->
-        <div class="tf-gallery-item group relative rounded-2xl overflow-hidden shadow-lg border border-[#8B3A2B]/15 bg-white h-[350px] sm:h-[370px] transition-all duration-500" data-category="suits">
+        <div class="tf-gallery-item group relative rounded-2xl overflow-hidden shadow-md border border-slate-200 bg-white h-[350px] sm:h-[370px] transition-all duration-500" data-category="suits">
           <img src="assets/card_suits_v2.png" alt="Italian 3-Piece Tuxedo Suit" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500 ease-out">
         </div>
 
         <!-- Card 4: Shirts (Category: shirts) -->
-        <div class="tf-gallery-item group relative rounded-2xl overflow-hidden shadow-lg border border-[#8B3A2B]/15 bg-white h-[350px] sm:h-[370px] transition-all duration-500" data-category="shirts">
+        <div class="tf-gallery-item group relative rounded-2xl overflow-hidden shadow-md border border-slate-200 bg-white h-[350px] sm:h-[370px] transition-all duration-500" data-category="shirts">
           <img src="assets/card_shirt_v2.png" alt="Executive Cotton Shirt" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500 ease-out">
         </div>
 
         <!-- Card 5: Trousers (Category: trousers) -->
-        <div class="tf-gallery-item group relative rounded-2xl overflow-hidden shadow-lg border border-[#8B3A2B]/15 bg-white h-[350px] sm:h-[370px] transition-all duration-500" data-category="trousers">
+        <div class="tf-gallery-item group relative rounded-2xl overflow-hidden shadow-md border border-slate-200 bg-white h-[350px] sm:h-[370px] transition-all duration-500" data-category="trousers">
           <img src="assets/card_trousers_v2.png" alt="Slim Fit Custom Trousers" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500 ease-out">
         </div>
 
         <!-- Card 6: Pants (Category: pants) -->
-        <div class="tf-gallery-item group relative rounded-2xl overflow-hidden shadow-lg border border-[#8B3A2B]/15 bg-white h-[350px] sm:h-[370px] transition-all duration-500" data-category="pants">
+        <div class="tf-gallery-item group relative rounded-2xl overflow-hidden shadow-md border border-slate-200 bg-white h-[350px] sm:h-[370px] transition-all duration-500" data-category="pants">
           <img src="assets/card_pants_v2.png" alt="Custom Pleated Dress Pants" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500 ease-out">
         </div>
 
         <!-- Card 7: Bandhgala (Category: jodhpuri) -->
-        <div class="tf-gallery-item group relative rounded-2xl overflow-hidden shadow-lg border border-[#8B3A2B]/15 bg-white h-[350px] sm:h-[370px] transition-all duration-500" data-category="jodhpuri">
+        <div class="tf-gallery-item group relative rounded-2xl overflow-hidden shadow-md border border-slate-200 bg-white h-[350px] sm:h-[370px] transition-all duration-500" data-category="jodhpuri">
           <img src="assets/card_sadri_v2.png" alt="Royal Velvet Bandhgala" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500 ease-out">
         </div>
 
         <!-- Card 8: Indo-Western (Category: sherwani) -->
-        <div class="tf-gallery-item group relative rounded-2xl overflow-hidden shadow-lg border border-[#8B3A2B]/15 bg-white h-[350px] sm:h-[370px] transition-all duration-500" data-category="sherwani">
+        <div class="tf-gallery-item group relative rounded-2xl overflow-hidden shadow-md border border-slate-200 bg-white h-[350px] sm:h-[370px] transition-all duration-500" data-category="sherwani">
           <img src="assets/card_indowestern_v2.png" alt="Indo-Western Tuxedo" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500 ease-out">
         </div>
 
@@ -2002,17 +2047,17 @@
   <!-- ========================================================= -->
   <!-- EXPERIENCE TOOFIT, YOUR WAY — LUXURY 3-CARD SECTION       -->
   <!-- ========================================================= -->
-  <section id="experience" class="py-10 md:py-14 bg-[#FAFAFA] relative overflow-hidden border-t border-slate-200/80">
+  <section id="experience" class="py-10 md:py-14 bg-white relative overflow-hidden border-t border-slate-200/80">
 
     <!-- Section Title -->
     <div class="max-w-[1720px] mx-auto px-6 md:px-12 mb-8 text-center space-y-2">
-      <h2 class="text-3xl sm:text-4xl md:text-5xl font-serif font-light text-[#0F172A] tracking-tight">
-        Experience Toofit, <span class="italic font-normal text-[#8B3A2B]">Your Way</span>
+      <h2 class="text-2xl sm:text-3xl md:text-4xl font-sans font-medium uppercase tracking-[0.08em] text-[#0F172A]">
+        Experience Toofit, <span class="pn-serif-accent text-[#C59B27]">Your Way</span>
       </h2>
-      <p class="text-sm sm:text-base md:text-lg text-[#4A1D16]/80 font-serif italic max-w-md mx-auto">
+      <p class="pn-subheading max-w-md mx-auto">
         Order from anywhere in the world.
       </p>
-      <div class="w-12 h-0.5 bg-[#8B3A2B] mx-auto mt-3 rounded-full opacity-80"></div>
+      <div class="w-12 h-0.5 bg-[#C59B27] mx-auto mt-3 rounded-full opacity-80"></div>
     </div>
 
     <!-- 3 Luxury Cards Container -->
@@ -2067,14 +2112,14 @@
 
         <!-- ── CARD 2: VISIT OUR STUDIO ── -->
         <div
-          class="group relative bg-[#FAF6F0] rounded-3xl overflow-hidden shadow-[0_10px_30px_rgba(0,0,0,0.06)] border border-amber-200/60 flex flex-col justify-between transition-all duration-300 hover:shadow-[0_20px_40px_rgba(184,115,51,0.14)] hover:-translate-y-1 h-[270px] sm:h-[285px]">
+          class="group relative bg-white rounded-3xl overflow-hidden shadow-[0_10px_30px_rgba(0,0,0,0.06)] border border-amber-200/60 flex flex-col justify-between transition-all duration-300 hover:shadow-[0_20px_40px_rgba(184,115,51,0.14)] hover:-translate-y-1 h-[270px] sm:h-[285px]">
           <!-- Right Background Image with S-Curve Divider -->
           <div class="absolute inset-y-0 right-0 w-[55%] pointer-events-none overflow-hidden">
             <img src="assets/atelier_interior.png" alt="Visit Our Studio"
               class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105">
             <!-- S-Curve SVG Overlay -->
             <svg viewBox="0 0 100 200" preserveAspectRatio="none"
-              class="absolute inset-y-0 -left-1 h-full w-24 text-[#FAF6F0] fill-current">
+              class="absolute inset-y-0 -left-1 h-full w-24 text-white fill-current">
               <path d="M0,0 L60,0 C20,60 90,140 20,200 L0,200 Z" />
             </svg>
           </div>
@@ -2113,14 +2158,14 @@
 
         <!-- ── CARD 3: VIDEO APPOINTMENT ── -->
         <div
-          class="group relative bg-[#F4F2F8] rounded-3xl overflow-hidden shadow-[0_10px_30px_rgba(0,0,0,0.06)] border border-purple-200/60 flex flex-col justify-between transition-all duration-300 hover:shadow-[0_20px_40px_rgba(67,56,92,0.14)] hover:-translate-y-1 h-[270px] sm:h-[285px]">
+          class="group relative bg-white rounded-3xl overflow-hidden shadow-[0_10px_30px_rgba(0,0,0,0.06)] border border-purple-200/60 flex flex-col justify-between transition-all duration-300 hover:shadow-[0_20px_40px_rgba(67,56,92,0.14)] hover:-translate-y-1 h-[270px] sm:h-[285px]">
           <!-- Right Background Image with Smartphone Mockup -->
           <div class="absolute inset-y-0 right-0 w-[55%] pointer-events-none overflow-hidden">
             <img src="assets/toofit_bespoke_fitting.png" alt="Video Appointment"
               class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105">
             <!-- S-Curve SVG Overlay -->
             <svg viewBox="0 0 100 200" preserveAspectRatio="none"
-              class="absolute inset-y-0 -left-1 h-full w-24 text-[#F4F2F8] fill-current">
+              class="absolute inset-y-0 -left-1 h-full w-24 text-white fill-current">
               <path d="M0,0 L60,0 C20,60 90,140 20,200 L0,200 Z" />
             </svg>
           </div>
@@ -2172,15 +2217,15 @@
       id="booking-modal-card">
 
       <!-- Modal Header -->
-      <div class="bg-gradient-to-r from-[#0F172A] via-[#1E293B] to-[#0F172A] p-6 text-white relative">
+      <div class="bg-white border-b border-slate-200 p-6 text-[#0F172A] relative">
         <button onclick="closeBookingModal()"
-          class="absolute top-5 right-5 text-slate-300 hover:text-white bg-white/10 hover:bg-white/20 w-8 h-8 rounded-full flex items-center justify-center transition-colors">
+          class="absolute top-5 right-5 text-slate-500 hover:text-slate-900 bg-slate-100 hover:bg-slate-200 w-8 h-8 rounded-full flex items-center justify-center transition-colors">
           ✕
         </button>
-        <span class="text-[10px] font-bold text-[#F2D0A9] uppercase tracking-[0.25em] block mb-1">Toofit Bespoke
+        <span class="text-[10px] font-bold text-[#8B3A2B] uppercase tracking-[0.25em] block mb-1">Toofit Bespoke
           Atelier</span>
         <h3 class="text-2xl font-serif font-bold">Schedule Consultation</h3>
-        <p class="text-xs text-slate-300 mt-1">Select mode & pick your preferred appointment slot</p>
+        <p class="text-xs text-slate-500 mt-1">Select mode & pick your preferred appointment slot</p>
 
         <!-- TOP TOGGLE BUTTONS: STUDIO VISIT vs VIDEO CALL -->
         <div class="flex bg-slate-900/80 p-1 rounded-xl mt-4 border border-slate-700/60">
@@ -2294,19 +2339,19 @@
       id="location-modal-card">
 
       <!-- Modal Header -->
-      <div class="bg-[#0F172A] p-6 text-white relative">
+      <div class="bg-white border-b border-slate-200 p-6 text-[#0F172A] relative">
         <button onclick="closeLocationModal()"
-          class="absolute top-5 right-5 text-slate-300 hover:text-white bg-white/10 hover:bg-white/20 w-8 h-8 rounded-full flex items-center justify-center transition-colors">
+          class="absolute top-5 right-5 text-slate-500 hover:text-slate-900 bg-slate-100 hover:bg-slate-200 w-8 h-8 rounded-full flex items-center justify-center transition-colors">
           ✕
         </button>
-        <span class="text-[10px] font-bold text-[#F2D0A9] uppercase tracking-[0.25em] block mb-1">Toofit Flagship
+        <span class="text-[10px] font-bold text-[#8B3A2B] uppercase tracking-[0.25em] block mb-1">Toofit Flagship
           Store</span>
         <h3 class="text-2xl font-serif font-bold">Visit Kota Atelier</h3>
-        <p class="text-xs text-slate-300 mt-1">Explore custom fabrics, master tailoring & fitting lounge</p>
+        <p class="text-xs text-slate-500 mt-1">Explore custom fabrics, master tailoring & fitting lounge</p>
       </div>
 
       <!-- Address & Details Box -->
-      <div class="p-6 bg-slate-50 border-b border-slate-200 grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
+      <div class="p-6 bg-white border-b border-slate-200 grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
         <div class="space-y-1.5">
           <div class="font-bold text-[#0F172A] flex items-center gap-1.5 text-sm">
             <span>📍</span>
@@ -2469,22 +2514,16 @@
   <!-- ========================================================= -->
   <!-- STYLED BY TOOFIT — CINEMATIC AMBIENT LIGHT SHADOW GLOW    -->
   <!-- ========================================================= -->
-  <section id="styled-by-toofit" class="bg-[#FDFBF7] py-14 md:py-20 relative overflow-hidden border-t border-slate-200">
+  <section id="styled-by-toofit" class="bg-white py-14 md:py-20 relative overflow-hidden border-t border-slate-200">
 
-    <!-- SOFT AMBIENT GOLDEN BACKLIGHT HALOS BEHIND BANNER IMAGE -->
-    <div
-      class="absolute top-1/2 left-1/4 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-[radial-gradient(circle,_rgba(242,208,169,0.35)_0%,_transparent_70%)] blur-3xl pointer-events-none">
-    </div>
-    <div
-      class="absolute top-1/2 right-1/4 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-[radial-gradient(circle,_rgba(217,119,6,0.25)_0%,_transparent_70%)] blur-3xl pointer-events-none">
-    </div>
+    <!-- SOFT AMBIENT GOLDEN BACKLIGHT HALOS REMOVED FOR PURE WHITE BACKGROUND -->
 
     <!-- CENTERED MAIN HERO COLLAGE BANNER IMAGE WITH AMBIENT LIGHT SHADOW -->
     <div class="max-w-[1380px] mx-auto px-6 md:px-12 relative z-10">
 
       <!-- Outer Backlight Shadow Layer -->
       <div
-        class="relative w-full rounded-3xl overflow-hidden shadow-[0_25px_70px_rgba(0,0,0,0.5),_0_0_90px_rgba(242,208,169,0.4)] h-[420px] sm:h-[500px] md:h-[580px] bg-slate-950 group border border-amber-500/20">
+        class="relative w-full rounded-3xl overflow-hidden shadow-xl h-[420px] sm:h-[500px] md:h-[580px] bg-white group border border-slate-200">
 
         <!-- Multi-Photo Collage Grid Background -->
         <div
@@ -2532,19 +2571,16 @@
   <!-- ========================================================= -->
   <!-- CLIENT TESTIMONIALS SECTION — LIQUID FLOW & REAL GOOGLE REVIEWS -->
   <!-- ========================================================= -->
-  <section id="testimonials" class="py-14 md:py-20 bg-[#F9F8F6] relative overflow-hidden border-t border-slate-200">
+  <section id="testimonials" class="py-14 md:py-20 bg-white relative overflow-hidden border-t border-slate-200">
 
-    <!-- Subtle Ambient Background Glow -->
-    <div
-      class="absolute -top-32 -left-32 w-96 h-96 rounded-full bg-[radial-gradient(circle,_rgba(242,208,169,0.25)_0%,_transparent_70%)] blur-3xl pointer-events-none">
-    </div>
+    <!-- Subtle Ambient Background Glow Removed for Pure White Background -->
 
     <!-- SINGLE MAIN SECTION TITLE -->
     <div class="max-w-[1380px] mx-auto px-6 md:px-10 mb-12 text-center relative z-10 space-y-2">
-      <h2 class="text-3xl sm:text-4xl md:text-5xl font-serif font-light text-[#0F172A] tracking-tight">
-        Client <span class="italic font-normal text-[#8B3A2B]">Testimonials</span>
+      <h2 class="text-2xl sm:text-3xl md:text-4xl font-sans font-medium uppercase tracking-[0.08em] text-[#0F172A]">
+        Client <span class="pn-serif-accent text-[#C59B27]">Testimonials</span>
       </h2>
-      <div class="w-12 h-0.5 bg-[#8B3A2B] mx-auto mt-3 rounded-full opacity-80"></div>
+      <div class="w-12 h-0.5 bg-[#C59B27] mx-auto mt-3 rounded-full opacity-80"></div>
     </div>
 
     <div class="max-w-[1380px] mx-auto px-4 sm:px-6 md:px-10 relative z-10 space-y-16">
@@ -2552,7 +2588,7 @@
       <!-- ── 1. VIDEO REVIEWS SUB-SECTION ── -->
       <div class="space-y-6">
         <div class="border-b border-slate-200/80 pb-3">
-          <span class="text-xs font-bold uppercase tracking-[0.25em] text-[#8B3A2B]">Video Reviews</span>
+          <span class="text-xs font-bold uppercase tracking-[0.25em] text-[#0A192F]">Video Reviews</span>
         </div>
 
         <!-- Video Reel Grid with Poster Thumbnails -->
@@ -2560,7 +2596,7 @@
 
           <!-- Video Card 1 -->
           <div
-            class="bg-slate-950 rounded-3xl overflow-hidden shadow-xl border border-slate-800 flex flex-col group transform hover:-translate-y-1.5 transition-all duration-300">
+            class="bg-white rounded-3xl overflow-hidden shadow-xl border border-slate-200 flex flex-col group transform hover:-translate-y-1.5 transition-all duration-300">
             <div class="relative w-full aspect-[9/14] bg-black overflow-hidden">
               <video id="v-tvid-1" class="w-full h-full object-cover" poster="assets/hero_sherwani_palace_4k.jpg"
                 src="assets/video_consultation.mp4" muted playsinline loop></video>
@@ -2570,7 +2606,7 @@
               <button onclick="toggleVidPlay('v-tvid-1', 'v-btn-1')" id="v-btn-1"
                 class="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/10 transition-colors">
                 <span
-                  class="w-14 h-14 rounded-full bg-[#8B3A2B] text-white flex items-center justify-center shadow-2xl text-xl transform group-hover:scale-110 transition-transform">▶</span>
+                  class="w-14 h-14 rounded-full bg-[#0A192F] text-white flex items-center justify-center shadow-2xl text-xl transform group-hover:scale-110 transition-transform">▶</span>
               </button>
               <div class="absolute bottom-0 inset-x-0 p-5 text-white">
                 <span class="bg-[#8B3A2B] text-[9px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded">Wedding
@@ -2583,7 +2619,7 @@
 
           <!-- Video Card 2 -->
           <div
-            class="bg-slate-950 rounded-3xl overflow-hidden shadow-xl border border-slate-800 flex flex-col group transform hover:-translate-y-1.5 transition-all duration-300">
+            class="bg-white rounded-3xl overflow-hidden shadow-xl border border-slate-200 flex flex-col group transform hover:-translate-y-1.5 transition-all duration-300">
             <div class="relative w-full aspect-[9/14] bg-black overflow-hidden">
               <video id="v-tvid-2" class="w-full h-full object-cover"
                 poster="assets/hero_black_tie_tuxedo_5_1785437572507.png" src="assets/video_measurements.mp4" muted
@@ -2607,7 +2643,7 @@
 
           <!-- Video Card 3 -->
           <div
-            class="bg-slate-950 rounded-3xl overflow-hidden shadow-xl border border-slate-800 flex flex-col group transform hover:-translate-y-1.5 transition-all duration-300">
+            class="bg-white rounded-3xl overflow-hidden shadow-xl border border-slate-200 flex flex-col group transform hover:-translate-y-1.5 transition-all duration-300">
             <div class="relative w-full aspect-[9/14] bg-black overflow-hidden">
               <video id="v-tvid-3" class="w-full h-full object-cover"
                 poster="assets/hero_modern_gentleman_suit_4_1785437549474.png" src="assets/video_crafting.mp4" muted
@@ -2631,7 +2667,7 @@
 
           <!-- Video Card 4 -->
           <div
-            class="bg-slate-950 rounded-3xl overflow-hidden shadow-xl border border-slate-800 flex flex-col group transform hover:-translate-y-1.5 transition-all duration-300">
+            class="bg-white rounded-3xl overflow-hidden shadow-xl border border-slate-200 flex flex-col group transform hover:-translate-y-1.5 transition-all duration-300">
             <div class="relative w-full aspect-[9/14] bg-black overflow-hidden">
               <video id="v-tvid-4" class="w-full h-full object-cover" poster="assets/card_jodhpuri_v2.png"
                 src="assets/video_finalfitting.mp4" muted playsinline loop></video>
@@ -5708,21 +5744,18 @@
   <!-- DEFINED BY STYLE. KNOWN FOR CRAFTSMANSHIP — TRUST & SOCIAL -->
   <!-- ========================================================= -->
   <section id="craftsmanship-trust"
-    class="py-16 md:py-24 bg-[#F8F7F5] border-t border-slate-200 text-center relative overflow-hidden">
+    class="py-16 md:py-24 bg-white border-t border-slate-200 text-center relative overflow-hidden">
 
-    <!-- Ambient Glow Background -->
-    <div
-      class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] rounded-full bg-[radial-gradient(circle,_rgba(242,208,169,0.18)_0%,_transparent_70%)] blur-3xl pointer-events-none">
-    </div>
+    <!-- Ambient Glow Background Removed for Pure White Background -->
 
     <div class="max-w-[1280px] mx-auto px-6 relative z-10 space-y-16">
 
       <!-- MAIN SECTION HEADING -->
       <div class="space-y-3">
-        <h2 class="text-3xl sm:text-4xl md:text-5xl font-serif font-light text-[#0F172A] tracking-tight">
-          Defined by Style. <span class="italic font-normal text-[#8B3A2B]">Known for Craftsmanship</span>
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-sans font-medium uppercase tracking-[0.08em] text-[#0F172A]">
+          Defined by Style. <span class="pn-serif-accent text-[#C59B27]">Known for Craftsmanship</span>
         </h2>
-        <div class="w-16 h-0.5 bg-[#8B3A2B] mx-auto rounded-full opacity-80"></div>
+        <div class="w-16 h-0.5 bg-[#C59B27] mx-auto rounded-full opacity-80"></div>
       </div>
 
       <!-- ── 1. RATING BADGES TRIAD (GOOGLE, JUSTDIAL, WEDMEGOOD) ── -->
@@ -5730,9 +5763,9 @@
 
         <!-- Google Reviews Badge -->
         <div
-          class="space-y-3 p-6 bg-white/80 backdrop-blur-sm rounded-3xl border border-slate-200/80 shadow-[0_10px_25px_rgba(0,0,0,0.03)] hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+          class="space-y-3 p-6 bg-white rounded-3xl border border-slate-200 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
           <div
-            class="w-16 h-16 rounded-full bg-red-50/90 border border-red-100 flex items-center justify-center mx-auto shadow-sm">
+            class="w-16 h-16 rounded-full bg-slate-50 border border-slate-200 flex items-center justify-center mx-auto shadow-sm">
             <svg class="w-9 h-9" viewBox="0 0 24 24">
               <path fill="#4285F4"
                 d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
@@ -5753,9 +5786,9 @@
 
         <!-- WedMeGood / Wedding Reviews Badge -->
         <div
-          class="space-y-3 p-6 bg-white/80 backdrop-blur-sm rounded-3xl border border-slate-200/80 shadow-[0_10px_25px_rgba(0,0,0,0.03)] hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+          class="space-y-3 p-6 bg-white rounded-3xl border border-slate-200 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
           <div
-            class="w-16 h-16 rounded-full bg-pink-50/90 border border-pink-100 flex items-center justify-center mx-auto shadow-sm">
+            class="w-16 h-16 rounded-full bg-slate-50 border border-slate-200 flex items-center justify-center mx-auto shadow-sm">
             <!-- WedMeGood Heart Ribbon SVG -->
             <svg class="w-9 h-9" viewBox="0 0 24 24" fill="none">
               <path
@@ -5772,9 +5805,9 @@
 
         <!-- Justdial Ratings Badge -->
         <div
-          class="space-y-3 p-6 bg-white/80 backdrop-blur-sm rounded-3xl border border-slate-200/80 shadow-[0_10px_25px_rgba(0,0,0,0.03)] hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+          class="space-y-3 p-6 bg-white rounded-3xl border border-slate-200 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
           <div
-            class="w-16 h-16 rounded-full bg-blue-50/90 border border-blue-100 flex items-center justify-center mx-auto shadow-sm">
+            class="w-16 h-16 rounded-full bg-slate-50 border border-slate-200 flex items-center justify-center mx-auto shadow-sm">
             <!-- Justdial Jd Logo SVG -->
             <span class="text-2xl font-black text-[#1877F2] font-sans tracking-tighter">Jd</span>
           </div>
@@ -6116,23 +6149,23 @@
     </div>
 
     <!-- ═══════════════════════════════════════════════════════ -->
-    <!-- SECTION 3 — THIN DARK FOOTER BAR: POLICIES + COPYRIGHT -->
+    <!-- SECTION 3 — THIN WHITE FOOTER BAR: POLICIES + COPYRIGHT -->
     <!-- ═══════════════════════════════════════════════════════ -->
-    <div class="relative bg-[#111827] text-white py-4 px-6 border-t border-slate-800">
+    <div class="relative bg-white text-slate-700 py-4 px-6 border-t border-slate-200">
       <div
-        class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3 text-[10px] sm:text-xs font-sans text-slate-400">
+        class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3 text-[10px] sm:text-xs font-sans text-slate-600">
 
         <!-- Privacy Policies & Terms -->
         <div class="flex flex-wrap items-center justify-center gap-4 sm:gap-6 font-medium uppercase tracking-wider">
-          <a href="#privacy" class="hover:text-white transition-colors">Privacy Policy</a>
-          <span class="text-slate-600">•</span>
-          <a href="#terms" class="hover:text-white transition-colors">Terms &amp; Conditions</a>
-          <span class="text-slate-600">•</span>
-          <a href="#faq" class="hover:text-white transition-colors">FAQ</a>
+          <a href="#privacy" class="hover:text-slate-900 transition-colors">Privacy Policy</a>
+          <span class="text-slate-300">•</span>
+          <a href="#terms" class="hover:text-slate-900 transition-colors">Terms &amp; Conditions</a>
+          <span class="text-slate-300">•</span>
+          <a href="#faq" class="hover:text-slate-900 transition-colors">FAQ</a>
         </div>
 
         <!-- Copyright at the end -->
-        <div class="text-slate-400 font-normal tracking-wide">
+        <div class="text-slate-600 font-normal tracking-wide">
           &copy; 2026. All rights reserved.
         </div>
 
