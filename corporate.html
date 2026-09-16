@@ -257,18 +257,9 @@
               <button onclick="filterCategory('all', this)" class="cat-item active w-full text-left px-3 py-2.5 rounded-lg flex items-center justify-between text-slate-700 hover:text-[#C59B27] hover:bg-[#FAF6EF] transition-all">
                 <span class="flex items-center gap-2">
                   <span class="cat-arrow transition-transform text-slate-400">▸</span>
-                  <span>All Corporate</span>
+                  <span>All Corporate Attire</span>
                 </span>
                 <span class="text-[10px] text-slate-400 font-semibold">6</span>
-              </button>
-            </li>
-            <li>
-              <button onclick="filterCategory('boardroom-2piece', this)" class="cat-item w-full text-left px-3 py-2.5 rounded-lg flex items-center justify-between text-slate-700 hover:text-[#C59B27] hover:bg-[#FAF6EF] transition-all">
-                <span class="flex items-center gap-2">
-                  <span class="cat-arrow transition-transform text-slate-400">▸</span>
-                  <span>Boardroom 2-Piece Suits</span>
-                </span>
-                <span class="text-[10px] text-slate-400 font-semibold">1</span>
               </button>
             </li>
             <li>
@@ -281,10 +272,19 @@
               </button>
             </li>
             <li>
-              <button onclick="filterCategory('business-blazers', this)" class="cat-item w-full text-left px-3 py-2.5 rounded-lg flex items-center justify-between text-slate-700 hover:text-[#C59B27] hover:bg-[#FAF6EF] transition-all">
+              <button onclick="filterCategory('boardroom-2piece', this)" class="cat-item w-full text-left px-3 py-2.5 rounded-lg flex items-center justify-between text-slate-700 hover:text-[#C59B27] hover:bg-[#FAF6EF] transition-all">
                 <span class="flex items-center gap-2">
                   <span class="cat-arrow transition-transform text-slate-400">▸</span>
-                  <span>Business Casual Blazers</span>
+                  <span>2-Button Boardroom Suits</span>
+                </span>
+                <span class="text-[10px] text-slate-400 font-semibold">1</span>
+              </button>
+            </li>
+            <li>
+              <button onclick="filterCategory('power-blazers', this)" class="cat-item w-full text-left px-3 py-2.5 rounded-lg flex items-center justify-between text-slate-700 hover:text-[#C59B27] hover:bg-[#FAF6EF] transition-all">
+                <span class="flex items-center gap-2">
+                  <span class="cat-arrow transition-transform text-slate-400">▸</span>
+                  <span>Designer Coats & Power Blazers</span>
                 </span>
                 <span class="text-[10px] text-slate-400 font-semibold">1</span>
               </button>
@@ -293,16 +293,7 @@
               <button onclick="filterCategory('formal-shirts', this)" class="cat-item w-full text-left px-3 py-2.5 rounded-lg flex items-center justify-between text-slate-700 hover:text-[#C59B27] hover:bg-[#FAF6EF] transition-all">
                 <span class="flex items-center gap-2">
                   <span class="cat-arrow transition-transform text-slate-400">▸</span>
-                  <span>Formal Business Shirts</span>
-                </span>
-                <span class="text-[10px] text-slate-400 font-semibold">1</span>
-              </button>
-            </li>
-            <li>
-              <button onclick="filterCategory('traveler-suits', this)" class="cat-item w-full text-left px-3 py-2.5 rounded-lg flex items-center justify-between text-slate-700 hover:text-[#C59B27] hover:bg-[#FAF6EF] transition-all">
-                <span class="flex items-center gap-2">
-                  <span class="cat-arrow transition-transform text-slate-400">▸</span>
-                  <span>Wrinkle-Free Traveler Suits</span>
+                  <span>Formal Shirting</span>
                 </span>
                 <span class="text-[10px] text-slate-400 font-semibold">1</span>
               </button>
@@ -311,7 +302,7 @@
               <button onclick="filterCategory('executive-trousers', this)" class="cat-item w-full text-left px-3 py-2.5 rounded-lg flex items-center justify-between text-slate-700 hover:text-[#C59B27] hover:bg-[#FAF6EF] transition-all">
                 <span class="flex items-center gap-2">
                   <span class="cat-arrow transition-transform text-slate-400">▸</span>
-                  <span>Executive Trousers</span>
+                  <span>Gurkha & Executive Trousers</span>
                 </span>
                 <span class="text-[10px] text-slate-400 font-semibold">1</span>
               </button>
@@ -324,35 +315,35 @@
           <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 sm:gap-6">
 
             <!-- Card 1 -->
-            <div class="product-card group bg-white rounded-xl border border-[#E5DFD5] p-3 shadow-sm hover:shadow-xl transition-all duration-300" data-category="boardroom-2piece">
-              <div class="h-80 sm:h-96 rounded-lg overflow-hidden bg-slate-100 relative">
-                <img src="assets/corporate_tailored_suit.png" alt="Boardroom 2-Piece Suit" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-              </div>
-              <div class="pt-3 pb-1 text-center space-y-1">
-                <h4 class="font-serif font-bold text-base text-[#0A192F]">Boardroom 2-Piece Suit</h4>
-                <p class="text-[10px] text-slate-400 uppercase tracking-widest">Boardroom 2-Piece</p>
-              </div>
-            </div>
-
-            <!-- Card 2 -->
             <div class="product-card group bg-white rounded-xl border border-[#E5DFD5] p-3 shadow-sm hover:shadow-xl transition-all duration-300" data-category="executive-3piece">
               <div class="h-80 sm:h-96 rounded-lg overflow-hidden bg-slate-100 relative">
                 <img src="assets/hero_mansion_suit_4k.jpg" alt="3-Piece Executive Suit" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
               </div>
               <div class="pt-3 pb-1 text-center space-y-1">
                 <h4 class="font-serif font-bold text-base text-[#0A192F]">3-Piece Executive Suit</h4>
-                <p class="text-[10px] text-slate-400 uppercase tracking-widest">3-Piece Executive</p>
+                <p class="text-[10px] text-slate-400 uppercase tracking-widest">3-Piece Category</p>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="product-card group bg-white rounded-xl border border-[#E5DFD5] p-3 shadow-sm hover:shadow-xl transition-all duration-300" data-category="boardroom-2piece">
+              <div class="h-80 sm:h-96 rounded-lg overflow-hidden bg-slate-100 relative">
+                <img src="assets/corporate_tailored_suit.png" alt="Boardroom 2-Piece Suit" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              </div>
+              <div class="pt-3 pb-1 text-center space-y-1">
+                <h4 class="font-serif font-bold text-base text-[#0A192F]">2-Button Boardroom Suit</h4>
+                <p class="text-[10px] text-slate-400 uppercase tracking-widest">2-Button Category</p>
               </div>
             </div>
 
             <!-- Card 3 -->
-            <div class="product-card group bg-white rounded-xl border border-[#E5DFD5] p-3 shadow-sm hover:shadow-xl transition-all duration-300" data-category="business-blazers">
+            <div class="product-card group bg-white rounded-xl border border-[#E5DFD5] p-3 shadow-sm hover:shadow-xl transition-all duration-300" data-category="power-blazers">
               <div class="h-80 sm:h-96 rounded-lg overflow-hidden bg-slate-100 relative">
-                <img src="assets/garment_blazers.png" alt="Business Casual Blazer" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <img src="assets/garment_blazers.png" alt="Designer Coat Blazer" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
               </div>
               <div class="pt-3 pb-1 text-center space-y-1">
-                <h4 class="font-serif font-bold text-base text-[#0A192F]">Business Casual Blazer</h4>
-                <p class="text-[10px] text-slate-400 uppercase tracking-widest">Business Blazers</p>
+                <h4 class="font-serif font-bold text-base text-[#0A192F]">Designer Coat & Power Blazer</h4>
+                <p class="text-[10px] text-slate-400 uppercase tracking-widest">Designer Coat Category</p>
               </div>
             </div>
 
@@ -363,29 +354,18 @@
               </div>
               <div class="pt-3 pb-1 text-center space-y-1">
                 <h4 class="font-serif font-bold text-base text-[#0A192F]">Spread Collar Formal Shirt</h4>
-                <p class="text-[10px] text-slate-400 uppercase tracking-widest">Formal Shirts</p>
+                <p class="text-[10px] text-slate-400 uppercase tracking-widest">Formal Shirting Category</p>
               </div>
             </div>
 
             <!-- Card 5 -->
-            <div class="product-card group bg-white rounded-xl border border-[#E5DFD5] p-3 shadow-sm hover:shadow-xl transition-all duration-300" data-category="traveler-suits">
-              <div class="h-80 sm:h-96 rounded-lg overflow-hidden bg-slate-100 relative">
-                <img src="assets/everyday_shirt_trouser.png" alt="Wrinkle-Free Traveler Suit" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-              </div>
-              <div class="pt-3 pb-1 text-center space-y-1">
-                <h4 class="font-serif font-bold text-base text-[#0A192F]">Wrinkle-Free Traveler Suit</h4>
-                <p class="text-[10px] text-slate-400 uppercase tracking-widest">Traveler Suits</p>
-              </div>
-            </div>
-
-            <!-- Card 6 -->
             <div class="product-card group bg-white rounded-xl border border-[#E5DFD5] p-3 shadow-sm hover:shadow-xl transition-all duration-300" data-category="executive-trousers">
               <div class="h-80 sm:h-96 rounded-lg overflow-hidden bg-slate-100 relative">
-                <img src="assets/card_trousers_v2.png" alt="Executive Trousers" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <img src="assets/card_trousers_v2.png" alt="Gurkha Trousers" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
               </div>
               <div class="pt-3 pb-1 text-center space-y-1">
-                <h4 class="font-serif font-bold text-base text-[#0A192F]">Precision Executive Trousers</h4>
-                <p class="text-[10px] text-slate-400 uppercase tracking-widest">Executive Trousers</p>
+                <h4 class="font-serif font-bold text-base text-[#0A192F]">Pleated Gurkha & Formal Trousers</h4>
+                <p class="text-[10px] text-slate-400 uppercase tracking-widest">Gurkha / Trouser Category</p>
               </div>
             </div>
 
