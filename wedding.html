@@ -260,7 +260,6 @@
                   <span class="cat-arrow transition-transform text-slate-400">▸</span>
                   <span>All Wedding Wear</span>
                 </span>
-                <span class="text-[10px] text-slate-400 font-semibold">6</span>
               </button>
             </li>
             <li>
@@ -269,7 +268,6 @@
                   <span class="cat-arrow transition-transform text-slate-400">▸</span>
                   <span>Sherwani & Achkan</span>
                 </span>
-                <span class="text-[10px] text-slate-400 font-semibold">1</span>
               </button>
             </li>
             <li>
@@ -278,7 +276,14 @@
                   <span class="cat-arrow transition-transform text-slate-400">▸</span>
                   <span>Jodhpuri Bandgala Suits</span>
                 </span>
-                <span class="text-[10px] text-slate-400 font-semibold">1</span>
+              </button>
+            </li>
+            <li>
+              <button onclick="filterCategory('designer-coat', this)" class="cat-item w-full text-left px-3 py-2.5 rounded-lg flex items-center justify-between text-slate-700 hover:text-[#C59B27] hover:bg-[#FAF6EF] transition-all">
+                <span class="flex items-center gap-2">
+                  <span class="cat-arrow transition-transform text-slate-400">▸</span>
+                  <span>Designer Coats & Blazers</span>
+                </span>
               </button>
             </li>
             <li>
@@ -287,7 +292,6 @@
                   <span class="cat-arrow transition-transform text-slate-400">▸</span>
                   <span>Wedding Wear (Main Ceremony)</span>
                 </span>
-                <span class="text-[10px] text-slate-400 font-semibold">1</span>
               </button>
             </li>
             <li>
@@ -296,7 +300,6 @@
                   <span class="cat-arrow transition-transform text-slate-400">▸</span>
                   <span>Engagement & Sagan Wear</span>
                 </span>
-                <span class="text-[10px] text-slate-400 font-semibold">1</span>
               </button>
             </li>
             <li>
@@ -305,7 +308,6 @@
                   <span class="cat-arrow transition-transform text-slate-400">▸</span>
                   <span>Haldi & Mehndi Ensembles</span>
                 </span>
-                <span class="text-[10px] text-slate-400 font-semibold">1</span>
               </button>
             </li>
             <li>
@@ -314,7 +316,14 @@
                   <span class="cat-arrow transition-transform text-slate-400">▸</span>
                   <span>Indo-Western & Tuxedos</span>
                 </span>
-                <span class="text-[10px] text-slate-400 font-semibold">1</span>
+              </button>
+            </li>
+            <li>
+              <button onclick="filterCategory('hand-painted-shirt', this)" class="cat-item w-full text-left px-3 py-2.5 rounded-lg flex items-center justify-between text-slate-700 hover:text-[#C59B27] hover:bg-[#FAF6EF] transition-all">
+                <span class="flex items-center gap-2">
+                  <span class="cat-arrow transition-transform text-slate-400">▸</span>
+                  <span>Hand Painted Shirts & Outfits</span>
+                </span>
               </button>
             </li>
           </ul>
@@ -347,6 +356,17 @@
             </div>
 
             <!-- Card 3 -->
+            <div class="product-card group bg-white rounded-xl border border-[#E5DFD5] p-3 shadow-sm hover:shadow-xl transition-all duration-300" data-category="designer-coat">
+              <div class="h-80 sm:h-96 rounded-lg overflow-hidden bg-slate-100 relative">
+                <img src="assets/garment_blazers.png" alt="Designer Coat & Blazer" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              </div>
+              <div class="pt-3 pb-1 text-center space-y-1">
+                <h4 class="font-serif font-bold text-base text-[#0A192F]">Designer Coat & Velvet Blazer</h4>
+                <p class="text-[10px] text-slate-400 uppercase tracking-widest">Designer Coat Category</p>
+              </div>
+            </div>
+
+            <!-- Card 4 -->
             <div class="product-card group bg-white rounded-xl border border-[#E5DFD5] p-3 shadow-sm hover:shadow-xl transition-all duration-300" data-category="wedding-wear">
               <div class="h-80 sm:h-96 rounded-lg overflow-hidden bg-slate-100 relative">
                 <img src="assets/footer_img_sherwani_groom.png" alt="Wedding Wear" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
@@ -357,7 +377,7 @@
               </div>
             </div>
 
-            <!-- Card 4 -->
+            <!-- Card 5 -->
             <div class="product-card group bg-white rounded-xl border border-[#E5DFD5] p-3 shadow-sm hover:shadow-xl transition-all duration-300" data-category="engagement">
               <div class="h-80 sm:h-96 rounded-lg overflow-hidden bg-slate-100 relative">
                 <img src="assets/card_indowestern_v2.png" alt="Engagement Wear" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
@@ -368,7 +388,7 @@
               </div>
             </div>
 
-            <!-- Card 5 -->
+            <!-- Card 6 -->
             <div class="product-card group bg-white rounded-xl border border-[#E5DFD5] p-3 shadow-sm hover:shadow-xl transition-all duration-300" data-category="haldi-mehndi">
               <div class="h-80 sm:h-96 rounded-lg overflow-hidden bg-slate-100 relative">
                 <img src="assets/card_sadri_v2.png" alt="Haldi Mehndi Set" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
@@ -379,7 +399,7 @@
               </div>
             </div>
 
-            <!-- Card 6 -->
+            <!-- Card 7 -->
             <div class="product-card group bg-white rounded-xl border border-[#E5DFD5] p-3 shadow-sm hover:shadow-xl transition-all duration-300" data-category="indo-western">
               <div class="h-80 sm:h-96 rounded-lg overflow-hidden bg-slate-100 relative">
                 <img src="assets/card_suits_v2.png" alt="Indo-Western Tuxedo" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
@@ -387,6 +407,17 @@
               <div class="pt-3 pb-1 text-center space-y-1">
                 <h4 class="font-serif font-bold text-base text-[#0A192F]">Indo-Western Tuxedo</h4>
                 <p class="text-[10px] text-slate-400 uppercase tracking-widest">Indo-Western / Tuxedo Category</p>
+              </div>
+            </div>
+
+            <!-- Card 8 -->
+            <div class="product-card group bg-white rounded-xl border border-[#E5DFD5] p-3 shadow-sm hover:shadow-xl transition-all duration-300" data-category="hand-painted-shirt">
+              <div class="h-80 sm:h-96 rounded-lg overflow-hidden bg-slate-100 relative">
+                <img src="assets/garment_shirts.png" alt="Hand Painted Outfit" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              </div>
+              <div class="pt-3 pb-1 text-center space-y-1">
+                <h4 class="font-serif font-bold text-base text-[#0A192F]">Artisanal Hand Painted Outfit</h4>
+                <p class="text-[10px] text-slate-400 uppercase tracking-widest">Hand Painted Category</p>
               </div>
             </div>
 
