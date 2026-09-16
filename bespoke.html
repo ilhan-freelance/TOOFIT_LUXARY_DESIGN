@@ -10,7 +10,7 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Newsreader:ital,wght@0,300;0,400;0,600;1,400&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Newsreader:ital,wght@0,300;0,400;0,600;1,400&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
 
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -196,7 +196,7 @@
   </style>
 </head>
 
-<body class="bg-slate-50 text-slate-900 font-sans antialiased min-h-screen flex flex-col justify-between">
+<body class="bg-[#FAF8F5] text-slate-900 font-sans antialiased min-h-screen flex flex-col justify-between">
 
   <!-- ============================================ -->
   <!-- LUXURY NAVBAR                                -->
@@ -251,36 +251,213 @@
   </nav>
 
   <!-- ============================================ -->
-  <!-- HERO HEADER — BESPOKE PAGE                   -->
+  <!-- HERO HEADER — BESPOKE PAGE (NEW 16:9 BANNER) -->
   <!-- ============================================ -->
   <main class="flex-grow">
-    <section class="relative bg-[#0A192F] text-white py-28 px-6 md:px-12 text-center overflow-hidden flex items-center justify-center min-h-[450px]">
-      <div class="absolute inset-0 bg-cover bg-center filter brightness-90" style="background-image: url('assets/page_hero_bespoke.jpg');"></div>
-      <div class="absolute inset-0 bg-gradient-to-t from-[#0A192F] via-[#0A192F]/65 to-[#0A192F]/35 z-1"></div>
-      <div class="relative z-10 max-w-4xl mx-auto space-y-5">
-        <span class="text-[#C59B27] text-xs sm:text-sm font-bold tracking-[0.35em] uppercase drop-shadow">TOOFIT SUIT ATELIER</span>
-        <h1 class="text-4xl sm:text-5xl md:text-6xl font-serif font-light text-white tracking-wide drop-shadow-md">
-          Bespoke Collection
+    <section class="relative bg-[#0A192F] text-white py-24 sm:py-32 px-6 md:px-12 text-center overflow-hidden flex items-center justify-center min-h-[420px] sm:min-h-[500px]">
+      <!-- New Wide Widescreen Atelier Studio Banner (No single person) -->
+      <div class="absolute inset-0 bg-cover bg-center filter brightness-75 transition-transform duration-1000 scale-105"
+        style="background-image: url('assets/hero_bespoke_banner.png');"></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-[#0A192F] via-[#0A192F]/65 to-[#0A192F]/40"></div>
+      
+      <div class="relative z-10 max-w-4xl mx-auto space-y-4">
+        <div class="flex items-center justify-center gap-2">
+          <span class="w-8 h-px bg-[#C59B27]"></span>
+          <span class="text-[#C59B27] text-xs sm:text-sm font-semibold tracking-[0.35em] uppercase">TOOFIT MASTER ATELIER</span>
+          <span class="w-8 h-px bg-[#C59B27]"></span>
+        </div>
+        <h1 class="text-3xl sm:text-5xl md:text-6xl font-serif font-light text-white tracking-wide leading-tight drop-shadow-lg">
+          The Art of Bespoke Tailoring
         </h1>
-        <p class="text-slate-200 text-base sm:text-lg font-light max-w-2xl mx-auto leading-relaxed drop-shadow">
-          Handcrafted master-stitched 3-piece tuxedos, custom suits, and blazers tailored to your exact measurements.
+        <p class="text-slate-200 text-sm sm:text-base md:text-lg font-light max-w-2xl mx-auto leading-relaxed drop-shadow">
+          Handcrafted 3-piece tuxedos, custom suits, and blazers tailored to your exact posture and 40+ body measurements.
         </p>
       </div>
     </section>
 
-    <!-- CONTENT PLACEHOLDER -->
-    <section class="max-w-6xl mx-auto py-20 px-6 text-center">
-      <div class="p-12 rounded-3xl bg-white border border-slate-200 shadow-xl max-w-2xl mx-auto space-y-4">
-        <div class="w-16 h-16 rounded-full bg-[#C59B27]/10 text-[#C59B27] flex items-center justify-center mx-auto text-2xl font-serif">
-          ◆
+    <!-- ============================================ -->
+    <!-- 1. THE 4 PILLARS OF BESPOKE CRAFTSMANSHIP   -->
+    <!-- ============================================ -->
+    <section class="py-16 sm:py-20 px-6 md:px-12 max-w-[1380px] mx-auto">
+      <div class="text-center space-y-3 mb-12">
+        <span class="text-xs text-[#C59B27] font-bold tracking-[0.3em] uppercase">UNCOMPROMISING PRECISION</span>
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-sans font-medium uppercase tracking-[0.08em] text-[#0A192F]">
+          OUR BESPOKE PROCESS
+        </h2>
+        <div class="w-12 h-0.5 bg-[#C59B27] mx-auto"></div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+
+        <!-- Pillar 1 -->
+        <div class="bg-white rounded-2xl p-6 sm:p-8 border border-[#E5DFD5] shadow-sm hover:shadow-xl hover:border-[#C59B27] transition-all duration-300 flex flex-col justify-between group">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-xl bg-[#FAF6EE] border border-[#E8DFC8] flex items-center justify-center text-[#C59B27] font-serif font-bold text-xl group-hover:bg-[#C59B27] group-hover:text-white transition-colors">
+              01
+            </div>
+            <h3 class="text-lg font-sans font-semibold text-[#0A192F] uppercase tracking-wide">40+ Body Measurements</h3>
+            <p class="text-xs sm:text-sm text-slate-600 font-light leading-relaxed">
+              We analyze shoulder slope, stance, chest arc, and posture dynamics to build a truly personalized fitting profile.
+            </p>
+          </div>
+          <span class="text-[10px] text-[#C59B27] font-semibold tracking-[0.2em] uppercase mt-6 block">Step 01 • Consultation</span>
         </div>
-        <h2 class="text-2xl font-serif font-semibold text-slate-900">Bespoke Page Created</h2>
-        <p class="text-slate-600 text-sm leading-relaxed">
-          This page is ready for custom content, tailored suit collections, swatches, and fitting details.
+
+        <!-- Pillar 2 -->
+        <div class="bg-white rounded-2xl p-6 sm:p-8 border border-[#E5DFD5] shadow-sm hover:shadow-xl hover:border-[#C59B27] transition-all duration-300 flex flex-col justify-between group">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-xl bg-[#FAF6EE] border border-[#E8DFC8] flex items-center justify-center text-[#C59B27] font-serif font-bold text-xl group-hover:bg-[#C59B27] group-hover:text-white transition-colors">
+              02
+            </div>
+            <h3 class="text-lg font-sans font-semibold text-[#0A192F] uppercase tracking-wide">Individual Paper Pattern</h3>
+            <p class="text-xs sm:text-sm text-slate-600 font-light leading-relaxed">
+              Unlike made-to-measure block templates, every TOOFIT suit receives a brand-new hand-drafted paper pattern cut from scratch.
+            </p>
+          </div>
+          <span class="text-[10px] text-[#C59B27] font-semibold tracking-[0.2em] uppercase mt-6 block">Step 02 • Drafting</span>
+        </div>
+
+        <!-- Pillar 3 -->
+        <div class="bg-white rounded-2xl p-6 sm:p-8 border border-[#E5DFD5] shadow-sm hover:shadow-xl hover:border-[#C59B27] transition-all duration-300 flex flex-col justify-between group">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-xl bg-[#FAF6EE] border border-[#E8DFC8] flex items-center justify-center text-[#C59B27] font-serif font-bold text-xl group-hover:bg-[#C59B27] group-hover:text-white transition-colors">
+              03
+            </div>
+            <h3 class="text-lg font-sans font-semibold text-[#0A192F] uppercase tracking-wide">Floating Full Canvas</h3>
+            <p class="text-xs sm:text-sm text-slate-600 font-light leading-relaxed">
+              Hand-stitched horsehair and wool canvas inside the jacket molds naturally to your silhouette over time for unparalleled comfort.
+            </p>
+          </div>
+          <span class="text-[10px] text-[#C59B27] font-semibold tracking-[0.2em] uppercase mt-6 block">Step 03 • Construction</span>
+        </div>
+
+        <!-- Pillar 4 -->
+        <div class="bg-white rounded-2xl p-6 sm:p-8 border border-[#E5DFD5] shadow-sm hover:shadow-xl hover:border-[#C59B27] transition-all duration-300 flex flex-col justify-between group">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-xl bg-[#FAF6EE] border border-[#E8DFC8] flex items-center justify-center text-[#C59B27] font-serif font-bold text-xl group-hover:bg-[#C59B27] group-hover:text-white transition-colors">
+              04
+            </div>
+            <h3 class="text-lg font-sans font-semibold text-[#0A192F] uppercase tracking-wide">Hand Finishing & Monogram</h3>
+            <p class="text-xs sm:text-sm text-slate-600 font-light leading-relaxed">
+              Real horn buttons, silk buttonholes, hand-padded lapels, and custom embroidered initials inside your suit lining.
+            </p>
+          </div>
+          <span class="text-[10px] text-[#C59B27] font-semibold tracking-[0.2em] uppercase mt-6 block">Step 04 • Finishing</span>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- 2. BESPOKE COLLECTION SHOWCASE GRID          -->
+    <!-- ============================================ -->
+    <section class="py-16 bg-white border-t border-b border-slate-200 px-6 md:px-12">
+      <div class="max-w-[1380px] mx-auto space-y-12">
+        <div class="text-center space-y-3">
+          <span class="text-xs text-[#C59B27] font-bold tracking-[0.3em] uppercase">CURATED BESPOKE STYLES</span>
+          <h2 class="text-2xl sm:text-3xl md:text-4xl font-sans font-medium uppercase tracking-[0.08em] text-[#0A192F]">
+            SIGNATURE BESPOKE ATTIRE
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+
+          <!-- Card 1 -->
+          <div class="bg-[#FAF8F5] rounded-2xl overflow-hidden border border-[#E5DFD5] group hover:shadow-xl transition-all duration-300">
+            <div class="h-64 sm:h-72 overflow-hidden relative">
+              <img src="assets/garment_suits.png" alt="3-Piece Tuxedo" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+              <span class="absolute top-4 left-4 bg-[#0A192F] text-white text-[9px] font-bold tracking-[0.2em] uppercase px-3 py-1 rounded-full">Formal Bespoke</span>
+            </div>
+            <div class="p-6 space-y-2">
+              <h3 class="font-serif font-bold text-xl text-[#0A192F]">The Italian Cut Tuxedo</h3>
+              <p class="text-xs text-slate-600 font-light leading-relaxed">
+                Silk satin shawl lapel, Super 150s midnight navy wool, tailored cummerbund, and satin side-stripe trousers.
+              </p>
+              <div class="pt-3 flex items-center justify-between border-t border-slate-200/60">
+                <span class="text-[10px] font-semibold text-[#C59B27] tracking-wider uppercase">Scabal & Raymond Fabrics</span>
+                <a href="index.html#booking" class="text-xs font-bold text-[#0A192F] hover:text-[#C59B27] uppercase tracking-wider">Book Fitting →</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="bg-[#FAF8F5] rounded-2xl overflow-hidden border border-[#E5DFD5] group hover:shadow-xl transition-all duration-300">
+            <div class="h-64 sm:h-72 overflow-hidden relative">
+              <img src="assets/card_suits_v2.png" alt="Lounge Suit" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+              <span class="absolute top-4 left-4 bg-[#0A192F] text-white text-[9px] font-bold tracking-[0.2em] uppercase px-3 py-1 rounded-full">Executive Suit</span>
+            </div>
+            <div class="p-6 space-y-2">
+              <h3 class="font-serif font-bold text-xl text-[#0A192F]">The 3-Piece Lounge Suit</h3>
+              <p class="text-xs text-slate-600 font-light leading-relaxed">
+                Double-breasted waistcoat, peak lapel suiting jacket, pick-stitched edges, and tapered flat-front trousers.
+              </p>
+              <div class="pt-3 flex items-center justify-between border-t border-slate-200/60">
+                <span class="text-[10px] font-semibold text-[#C59B27] tracking-wider uppercase">Fine Merino Wool</span>
+                <a href="index.html#booking" class="text-xs font-bold text-[#0A192F] hover:text-[#C59B27] uppercase tracking-wider">Book Fitting →</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="bg-[#FAF8F5] rounded-2xl overflow-hidden border border-[#E5DFD5] group hover:shadow-xl transition-all duration-300">
+            <div class="h-64 sm:h-72 overflow-hidden relative">
+              <img src="assets/garment_blazers.png" alt="Bespoke Blazer" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+              <span class="absolute top-4 left-4 bg-[#0A192F] text-white text-[9px] font-bold tracking-[0.2em] uppercase px-3 py-1 rounded-full">Casual Luxury</span>
+            </div>
+            <div class="p-6 space-y-2">
+              <h3 class="font-serif font-bold text-xl text-[#0A192F]">The Hand-Stitched Blazer</h3>
+              <p class="text-xs text-slate-600 font-light leading-relaxed">
+                Unstructured shoulders, patch pockets, mother-of-pearl buttons, crafted in Italian hopsack wool & linen.
+              </p>
+              <div class="pt-3 flex items-center justify-between border-t border-slate-200/60">
+                <span class="text-[10px] font-semibold text-[#C59B27] tracking-wider uppercase">Linen Club & Söktaş</span>
+                <a href="index.html#booking" class="text-xs font-bold text-[#0A192F] hover:text-[#C59B27] uppercase tracking-wider">Book Fitting →</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="bg-[#FAF8F5] rounded-2xl overflow-hidden border border-[#E5DFD5] group hover:shadow-xl transition-all duration-300">
+            <div class="h-64 sm:h-72 overflow-hidden relative">
+              <img src="assets/garment_shirts.png" alt="Custom Shirt" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+              <span class="absolute top-4 left-4 bg-[#0A192F] text-white text-[9px] font-bold tracking-[0.2em] uppercase px-3 py-1 rounded-full">Custom Shirting</span>
+            </div>
+            <div class="p-6 space-y-2">
+              <h3 class="font-serif font-bold text-xl text-[#0A192F]">Custom Egyptian Cotton Shirt</h3>
+              <p class="text-xs text-slate-600 font-light leading-relaxed">
+                2-ply Giza 87 Egyptian cotton, removable brass collar stays, split yoke, and personalized cuff monogramming.
+              </p>
+              <div class="pt-3 flex items-center justify-between border-t border-slate-200/60">
+                <span class="text-[10px] font-semibold text-[#C59B27] tracking-wider uppercase">Arvind & Söktaş Cotton</span>
+                <a href="index.html#booking" class="text-xs font-bold text-[#0A192F] hover:text-[#C59B27] uppercase tracking-wider">Book Fitting →</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- 3. BOOKING CONSULTANT CTA SECTION            -->
+    <!-- ============================================ -->
+    <section class="py-16 sm:py-24 px-6 md:px-12 bg-[#0A192F] text-white text-center relative overflow-hidden">
+      <div class="max-w-3xl mx-auto space-y-6 relative z-10">
+        <span class="text-xs font-bold text-[#C59B27] tracking-[0.35em] uppercase block">EXPERIENCE ATELIER LUXURY</span>
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-serif text-white tracking-wide">
+          Ready for Your Perfect Fit?
+        </h2>
+        <p class="text-slate-300 text-sm sm:text-base font-light leading-relaxed">
+          Book a private 1-on-1 consultation with our Master Tailors in Jaipur, Kota, or request a VIP Doorstep Fitting anywhere in UAE & India.
         </p>
-        <a href="index.html" class="inline-block mt-4 px-6 py-2.5 rounded-full bg-slate-900 text-white text-xs font-bold tracking-widest uppercase hover:bg-[#C59B27] transition-colors">
-          Back to Home
-        </a>
+        <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="index.html#booking" class="w-full sm:w-auto px-8 py-4 rounded-full bg-[#C59B27] text-[#0A192F] font-bold text-xs tracking-[0.2em] uppercase hover:bg-white transition-all shadow-lg">
+            Schedule Private Appointment
+          </a>
+          <a href="tel:+919829000000" class="w-full sm:w-auto px-8 py-4 rounded-full border border-slate-600 text-white font-semibold text-xs tracking-[0.2em] uppercase hover:border-[#C59B27] hover:text-[#C59B27] transition-all">
+            Call Master Tailor
+          </a>
+        </div>
       </div>
     </section>
   </main>
