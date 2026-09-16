@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Corporate & Executive Suiting | TOOFIT Suit Atelier</title>
-  <meta name="description" content="Discover TOOFIT Corporate Collection — Executive business suits, spread collar shirting, pure silk neckties, pocket squares, and doorstep C-suite tailoring.">
+  <meta name="description" content="Discover TOOFIT Corporate Creations — Browse Boardroom Suits, 3-Piece Suits, Blazers, Shirting, and Trousers by category.">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -54,22 +54,9 @@
       width: auto;
       object-fit: contain;
     }
-    .tf-brand-center {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .tf-brand-row-wrapper {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-    }
-    .tf-toofit-column {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      line-height: 1;
-    }
+    .tf-brand-center { display: flex; align-items: center; justify-content: center; }
+    .tf-brand-row-wrapper { display: flex; align-items: center; gap: 16px; }
+    .tf-toofit-column { display: flex; flex-direction: column; align-items: flex-start; line-height: 1; }
     .tf-brand-name-link { text-decoration: none; }
     .tf-brand-name {
       font-family: 'Montserrat', sans-serif;
@@ -92,12 +79,7 @@
       background: linear-gradient(to bottom, transparent, #CBD5E1, transparent);
     }
     .tf-since-column { display: flex; align-items: center; }
-    .tf-since-text {
-      font-family: 'Newsreader', serif;
-      font-size: 0.88rem;
-      font-style: italic;
-      color: #64748B;
-    }
+    .tf-since-text { font-family: 'Newsreader', serif; font-size: 0.88rem; font-style: italic; color: #64748B; }
     .tf-since-year { font-weight: 600; color: #0F172A; font-style: normal; }
     .tf-nav-right { display: flex; align-items: center; gap: 16px; }
     .tf-liquid-btn {
@@ -132,12 +114,7 @@
     .tf-nav-links a:hover,
     .tf-nav-links a.active { color: #C59B27; }
     .tf-hamburger {
-      display: none;
-      background: none;
-      border: none;
-      cursor: pointer;
-      flex-direction: column;
-      gap: 5px;
+      display: none; background: none; border: none; cursor: pointer; flex-direction: column; gap: 5px;
     }
     .tf-hamburger span { width: 24px; height: 2px; background-color: #0F172A; }
     @media (max-width: 768px) {
@@ -146,21 +123,23 @@
       .tf-nav-row { display: none; }
     }
     .tf-mobile-drawer {
-      display: none;
-      flex-direction: column;
-      background: #FFFFFF;
-      padding: 16px 24px;
-      border-top: 1px solid #E2E8F0;
+      display: none; flex-direction: column; background: #FFFFFF; padding: 16px 24px; border-top: 1px solid #E2E8F0;
     }
     .tf-mobile-drawer.open { display: flex; }
     .tf-mobile-drawer a {
-      padding: 12px 0;
-      font-weight: 600;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: #0F172A;
-      text-decoration: none;
-      border-bottom: 1px solid #F1F5F9;
+      padding: 12px 0; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: #0F172A; text-decoration: none; border-bottom: 1px solid #F1F5F9;
+    }
+
+    /* Category Sidebar active styles */
+    .cat-item.active {
+      color: #C59B27;
+      font-weight: 700;
+      background-color: #FAF6EF;
+      border-left: 3px solid #C59B27;
+    }
+    .cat-item.active .cat-arrow {
+      color: #C59B27;
+      transform: translateX(3px);
     }
   </style>
 </head>
@@ -222,7 +201,6 @@
   <!-- ============================================ -->
   <main class="flex-grow">
     <section class="relative bg-[#0A192F] text-white py-28 sm:py-36 px-6 md:px-12 text-left overflow-hidden flex items-center min-h-[480px] sm:min-h-[540px]">
-      <!-- High-resolution corporate executive background image provided by user -->
       <div class="absolute inset-0 bg-cover bg-center filter brightness-[0.80] transition-transform duration-1000 scale-105"
         style="background-image: url('assets/hero_corporate_user_executive.png'); background-position: right center;"></div>
       <div class="absolute inset-0 bg-gradient-to-r from-[#0A192F] via-[#0A192F]/85 to-transparent"></div>
@@ -237,6 +215,177 @@
         </h1>
       </div>
     </section>
+
+    <!-- ============================================ -->
+    <!-- OUR CREATIONS — CATEGORIES & GRID GALLERY    -->
+    <!-- ============================================ -->
+    <section class="py-12 sm:py-16 px-4 sm:px-8 md:px-12 max-w-[1440px] mx-auto">
+      
+      <!-- Section Header matching reference screenshot -->
+      <div class="flex items-center justify-center gap-4 sm:gap-8 mb-10 text-center">
+        <span class="h-px bg-[#0A192F]/20 flex-grow max-w-[180px] sm:max-w-[280px]"></span>
+        <div>
+          <h2 class="text-2xl sm:text-3xl md:text-4xl font-sans font-bold uppercase tracking-[0.12em] text-[#0A192F]">
+            OUR CREATIONS
+          </h2>
+          <p class="text-[10px] sm:text-xs text-slate-500 font-semibold tracking-[0.25em] uppercase mt-1">
+            GIVES YOU DURABILITY AND COMFORT
+          </p>
+        </div>
+        <span class="h-px bg-[#0A192F]/20 flex-grow max-w-[180px] sm:max-w-[280px]"></span>
+      </div>
+
+      <!-- Category Filter Layout: Left Sidebar + Right Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-4 gap-8 items-start">
+
+        <!-- ── LEFT SIDEBAR: CATEGORY LIST ── -->
+        <div class="bg-white rounded-xl border border-[#E5DFD5] p-5 shadow-sm space-y-4 lg:sticky lg:top-24">
+          <h3 class="text-xs font-bold text-[#0A192F] uppercase tracking-[0.2em] pb-3 border-b border-slate-200">
+            CORPORATE CATEGORIES
+          </h3>
+
+          <ul class="space-y-1 text-xs">
+            <li>
+              <button onclick="filterCategory('all', this)" class="cat-item active w-full text-left px-3 py-2.5 rounded-lg flex items-center justify-between text-slate-700 hover:text-[#C59B27] hover:bg-[#FAF6EF] transition-all">
+                <span class="flex items-center gap-2">
+                  <span class="cat-arrow transition-transform text-slate-400">▸</span>
+                  <span>All Corporate</span>
+                </span>
+                <span class="text-[10px] text-slate-400 font-semibold">6</span>
+              </button>
+            </li>
+            <li>
+              <button onclick="filterCategory('boardroom-2piece', this)" class="cat-item w-full text-left px-3 py-2.5 rounded-lg flex items-center justify-between text-slate-700 hover:text-[#C59B27] hover:bg-[#FAF6EF] transition-all">
+                <span class="flex items-center gap-2">
+                  <span class="cat-arrow transition-transform text-slate-400">▸</span>
+                  <span>Boardroom 2-Piece Suits</span>
+                </span>
+                <span class="text-[10px] text-slate-400 font-semibold">1</span>
+              </button>
+            </li>
+            <li>
+              <button onclick="filterCategory('executive-3piece', this)" class="cat-item w-full text-left px-3 py-2.5 rounded-lg flex items-center justify-between text-slate-700 hover:text-[#C59B27] hover:bg-[#FAF6EF] transition-all">
+                <span class="flex items-center gap-2">
+                  <span class="cat-arrow transition-transform text-slate-400">▸</span>
+                  <span>3-Piece Executive Suits</span>
+                </span>
+                <span class="text-[10px] text-slate-400 font-semibold">1</span>
+              </button>
+            </li>
+            <li>
+              <button onclick="filterCategory('business-blazers', this)" class="cat-item w-full text-left px-3 py-2.5 rounded-lg flex items-center justify-between text-slate-700 hover:text-[#C59B27] hover:bg-[#FAF6EF] transition-all">
+                <span class="flex items-center gap-2">
+                  <span class="cat-arrow transition-transform text-slate-400">▸</span>
+                  <span>Business Casual Blazers</span>
+                </span>
+                <span class="text-[10px] text-slate-400 font-semibold">1</span>
+              </button>
+            </li>
+            <li>
+              <button onclick="filterCategory('formal-shirts', this)" class="cat-item w-full text-left px-3 py-2.5 rounded-lg flex items-center justify-between text-slate-700 hover:text-[#C59B27] hover:bg-[#FAF6EF] transition-all">
+                <span class="flex items-center gap-2">
+                  <span class="cat-arrow transition-transform text-slate-400">▸</span>
+                  <span>Formal Business Shirts</span>
+                </span>
+                <span class="text-[10px] text-slate-400 font-semibold">1</span>
+              </button>
+            </li>
+            <li>
+              <button onclick="filterCategory('traveler-suits', this)" class="cat-item w-full text-left px-3 py-2.5 rounded-lg flex items-center justify-between text-slate-700 hover:text-[#C59B27] hover:bg-[#FAF6EF] transition-all">
+                <span class="flex items-center gap-2">
+                  <span class="cat-arrow transition-transform text-slate-400">▸</span>
+                  <span>Wrinkle-Free Traveler Suits</span>
+                </span>
+                <span class="text-[10px] text-slate-400 font-semibold">1</span>
+              </button>
+            </li>
+            <li>
+              <button onclick="filterCategory('executive-trousers', this)" class="cat-item w-full text-left px-3 py-2.5 rounded-lg flex items-center justify-between text-slate-700 hover:text-[#C59B27] hover:bg-[#FAF6EF] transition-all">
+                <span class="flex items-center gap-2">
+                  <span class="cat-arrow transition-transform text-slate-400">▸</span>
+                  <span>Executive Trousers</span>
+                </span>
+                <span class="text-[10px] text-slate-400 font-semibold">1</span>
+              </button>
+            </li>
+          </ul>
+        </div>
+
+        <!-- ── RIGHT MAIN AREA: PRODUCT IMAGE GRID ── -->
+        <div class="lg:col-span-3">
+          <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 sm:gap-6">
+
+            <!-- Card 1 -->
+            <div class="product-card group bg-white rounded-xl border border-[#E5DFD5] p-3 shadow-sm hover:shadow-xl transition-all duration-300" data-category="boardroom-2piece">
+              <div class="h-80 sm:h-96 rounded-lg overflow-hidden bg-slate-100 relative">
+                <img src="assets/corporate_tailored_suit.png" alt="Boardroom 2-Piece Suit" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              </div>
+              <div class="pt-3 pb-1 text-center space-y-1">
+                <h4 class="font-serif font-bold text-base text-[#0A192F]">Boardroom 2-Piece Suit</h4>
+                <p class="text-[10px] text-slate-400 uppercase tracking-widest">Boardroom 2-Piece</p>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="product-card group bg-white rounded-xl border border-[#E5DFD5] p-3 shadow-sm hover:shadow-xl transition-all duration-300" data-category="executive-3piece">
+              <div class="h-80 sm:h-96 rounded-lg overflow-hidden bg-slate-100 relative">
+                <img src="assets/hero_mansion_suit_4k.jpg" alt="3-Piece Executive Suit" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              </div>
+              <div class="pt-3 pb-1 text-center space-y-1">
+                <h4 class="font-serif font-bold text-base text-[#0A192F]">3-Piece Executive Suit</h4>
+                <p class="text-[10px] text-slate-400 uppercase tracking-widest">3-Piece Executive</p>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="product-card group bg-white rounded-xl border border-[#E5DFD5] p-3 shadow-sm hover:shadow-xl transition-all duration-300" data-category="business-blazers">
+              <div class="h-80 sm:h-96 rounded-lg overflow-hidden bg-slate-100 relative">
+                <img src="assets/garment_blazers.png" alt="Business Casual Blazer" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              </div>
+              <div class="pt-3 pb-1 text-center space-y-1">
+                <h4 class="font-serif font-bold text-base text-[#0A192F]">Business Casual Blazer</h4>
+                <p class="text-[10px] text-slate-400 uppercase tracking-widest">Business Blazers</p>
+              </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="product-card group bg-white rounded-xl border border-[#E5DFD5] p-3 shadow-sm hover:shadow-xl transition-all duration-300" data-category="formal-shirts">
+              <div class="h-80 sm:h-96 rounded-lg overflow-hidden bg-slate-100 relative">
+                <img src="assets/card_shirt_v2.png" alt="Formal Business Shirt" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              </div>
+              <div class="pt-3 pb-1 text-center space-y-1">
+                <h4 class="font-serif font-bold text-base text-[#0A192F]">Spread Collar Formal Shirt</h4>
+                <p class="text-[10px] text-slate-400 uppercase tracking-widest">Formal Shirts</p>
+              </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="product-card group bg-white rounded-xl border border-[#E5DFD5] p-3 shadow-sm hover:shadow-xl transition-all duration-300" data-category="traveler-suits">
+              <div class="h-80 sm:h-96 rounded-lg overflow-hidden bg-slate-100 relative">
+                <img src="assets/everyday_shirt_trouser.png" alt="Wrinkle-Free Traveler Suit" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              </div>
+              <div class="pt-3 pb-1 text-center space-y-1">
+                <h4 class="font-serif font-bold text-base text-[#0A192F]">Wrinkle-Free Traveler Suit</h4>
+                <p class="text-[10px] text-slate-400 uppercase tracking-widest">Traveler Suits</p>
+              </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="product-card group bg-white rounded-xl border border-[#E5DFD5] p-3 shadow-sm hover:shadow-xl transition-all duration-300" data-category="executive-trousers">
+              <div class="h-80 sm:h-96 rounded-lg overflow-hidden bg-slate-100 relative">
+                <img src="assets/card_trousers_v2.png" alt="Executive Trousers" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              </div>
+              <div class="pt-3 pb-1 text-center space-y-1">
+                <h4 class="font-serif font-bold text-base text-[#0A192F]">Precision Executive Trousers</h4>
+                <p class="text-[10px] text-slate-400 uppercase tracking-widest">Executive Trousers</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
   </main>
 
   <!-- FOOTER -->
@@ -248,9 +397,26 @@
   </footer>
 
   <script>
+    // Hamburger Menu
     document.getElementById('tf-hamburger').addEventListener('click', function () {
       document.getElementById('tf-mobile-drawer').classList.toggle('open');
     });
+
+    // Category Filter Mechanism
+    function filterCategory(cat, btn) {
+      const buttons = document.querySelectorAll('.cat-item');
+      buttons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const cards = document.querySelectorAll('.product-card');
+      cards.forEach(card => {
+        if (cat === 'all' || card.getAttribute('data-category') === cat) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
   </script>
 </body>
 </html>

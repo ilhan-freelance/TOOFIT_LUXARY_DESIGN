@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Royal Wedding & Groom Collection | TOOFIT Suit Atelier</title>
-  <meta name="description" content="Discover TOOFIT Wedding Collection — Hand-embroidered Royal Sherwanis, Jodhpuris, Indo-Western ensembles, and bride-groom palette harmonization.">
+  <meta name="description" content="Discover TOOFIT Wedding Creations — Browse Royal Sherwanis, Jodhpuris, Indo-Western suits, Sadris, and Groomsmen attire by category.">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -54,22 +54,9 @@
       width: auto;
       object-fit: contain;
     }
-    .tf-brand-center {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .tf-brand-row-wrapper {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-    }
-    .tf-toofit-column {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      line-height: 1;
-    }
+    .tf-brand-center { display: flex; align-items: center; justify-content: center; }
+    .tf-brand-row-wrapper { display: flex; align-items: center; gap: 16px; }
+    .tf-toofit-column { display: flex; flex-direction: column; align-items: flex-start; line-height: 1; }
     .tf-brand-name-link { text-decoration: none; }
     .tf-brand-name {
       font-family: 'Montserrat', sans-serif;
@@ -92,12 +79,7 @@
       background: linear-gradient(to bottom, transparent, #CBD5E1, transparent);
     }
     .tf-since-column { display: flex; align-items: center; }
-    .tf-since-text {
-      font-family: 'Newsreader', serif;
-      font-size: 0.88rem;
-      font-style: italic;
-      color: #64748B;
-    }
+    .tf-since-text { font-family: 'Newsreader', serif; font-size: 0.88rem; font-style: italic; color: #64748B; }
     .tf-since-year { font-weight: 600; color: #0F172A; font-style: normal; }
     .tf-nav-right { display: flex; align-items: center; gap: 16px; }
     .tf-liquid-btn {
@@ -132,12 +114,7 @@
     .tf-nav-links a:hover,
     .tf-nav-links a.active { color: #C59B27; }
     .tf-hamburger {
-      display: none;
-      background: none;
-      border: none;
-      cursor: pointer;
-      flex-direction: column;
-      gap: 5px;
+      display: none; background: none; border: none; cursor: pointer; flex-direction: column; gap: 5px;
     }
     .tf-hamburger span { width: 24px; height: 2px; background-color: #0F172A; }
     @media (max-width: 768px) {
@@ -146,21 +123,23 @@
       .tf-nav-row { display: none; }
     }
     .tf-mobile-drawer {
-      display: none;
-      flex-direction: column;
-      background: #FFFFFF;
-      padding: 16px 24px;
-      border-top: 1px solid #E2E8F0;
+      display: none; flex-direction: column; background: #FFFFFF; padding: 16px 24px; border-top: 1px solid #E2E8F0;
     }
     .tf-mobile-drawer.open { display: flex; }
     .tf-mobile-drawer a {
-      padding: 12px 0;
-      font-weight: 600;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: #0F172A;
-      text-decoration: none;
-      border-bottom: 1px solid #F1F5F9;
+      padding: 12px 0; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: #0F172A; text-decoration: none; border-bottom: 1px solid #F1F5F9;
+    }
+
+    /* Category Sidebar active styles */
+    .cat-item.active {
+      color: #C59B27;
+      font-weight: 700;
+      background-color: #FAF6EF;
+      border-left: 3px solid #C59B27;
+    }
+    .cat-item.active .cat-arrow {
+      color: #C59B27;
+      transform: translateX(3px);
     }
   </style>
 </head>
@@ -222,7 +201,6 @@
   <!-- ============================================ -->
   <main class="flex-grow">
     <section class="relative bg-[#0A192F] text-white py-28 sm:py-36 px-6 md:px-12 text-center overflow-hidden flex items-center justify-center min-h-[480px] sm:min-h-[540px]">
-      <!-- High-resolution wedding hands background image provided by user -->
       <div class="absolute inset-0 bg-cover bg-center filter brightness-[0.70] transition-transform duration-1000 scale-105"
         style="background-image: url('assets/hero_wedding_user_hands.jpg'); background-position: center 40%;"></div>
       <div class="absolute inset-0 bg-gradient-to-t from-[#0A192F] via-[#0A192F]/60 to-[#0A192F]/30"></div>
@@ -238,6 +216,177 @@
         </h1>
       </div>
     </section>
+
+    <!-- ============================================ -->
+    <!-- OUR CREATIONS — CATEGORIES & GRID GALLERY    -->
+    <!-- ============================================ -->
+    <section class="py-12 sm:py-16 px-4 sm:px-8 md:px-12 max-w-[1440px] mx-auto">
+      
+      <!-- Section Header matching reference screenshot -->
+      <div class="flex items-center justify-center gap-4 sm:gap-8 mb-10 text-center">
+        <span class="h-px bg-[#0A192F]/20 flex-grow max-w-[180px] sm:max-w-[280px]"></span>
+        <div>
+          <h2 class="text-2xl sm:text-3xl md:text-4xl font-sans font-bold uppercase tracking-[0.12em] text-[#0A192F]">
+            OUR CREATIONS
+          </h2>
+          <p class="text-[10px] sm:text-xs text-slate-500 font-semibold tracking-[0.25em] uppercase mt-1">
+            GIVES YOU DURABILITY AND COMFORT
+          </p>
+        </div>
+        <span class="h-px bg-[#0A192F]/20 flex-grow max-w-[180px] sm:max-w-[280px]"></span>
+      </div>
+
+      <!-- Category Filter Layout: Left Sidebar + Right Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-4 gap-8 items-start">
+
+        <!-- ── LEFT SIDEBAR: CATEGORY LIST ── -->
+        <div class="bg-white rounded-xl border border-[#E5DFD5] p-5 shadow-sm space-y-4 lg:sticky lg:top-24">
+          <h3 class="text-xs font-bold text-[#0A192F] uppercase tracking-[0.2em] pb-3 border-b border-slate-200">
+            WEDDING CATEGORIES
+          </h3>
+
+          <ul class="space-y-1 text-xs">
+            <li>
+              <button onclick="filterCategory('all', this)" class="cat-item active w-full text-left px-3 py-2.5 rounded-lg flex items-center justify-between text-slate-700 hover:text-[#C59B27] hover:bg-[#FAF6EF] transition-all">
+                <span class="flex items-center gap-2">
+                  <span class="cat-arrow transition-transform text-slate-400">▸</span>
+                  <span>All Wedding Attire</span>
+                </span>
+                <span class="text-[10px] text-slate-400 font-semibold">6</span>
+              </button>
+            </li>
+            <li>
+              <button onclick="filterCategory('sherwanis', this)" class="cat-item w-full text-left px-3 py-2.5 rounded-lg flex items-center justify-between text-slate-700 hover:text-[#C59B27] hover:bg-[#FAF6EF] transition-all">
+                <span class="flex items-center gap-2">
+                  <span class="cat-arrow transition-transform text-slate-400">▸</span>
+                  <span>Royal Sherwanis</span>
+                </span>
+                <span class="text-[10px] text-slate-400 font-semibold">1</span>
+              </button>
+            </li>
+            <li>
+              <button onclick="filterCategory('jodhpuris', this)" class="cat-item w-full text-left px-3 py-2.5 rounded-lg flex items-center justify-between text-slate-700 hover:text-[#C59B27] hover:bg-[#FAF6EF] transition-all">
+                <span class="flex items-center gap-2">
+                  <span class="cat-arrow transition-transform text-slate-400">▸</span>
+                  <span>Jodhpuri Bandgalas</span>
+                </span>
+                <span class="text-[10px] text-slate-400 font-semibold">1</span>
+              </button>
+            </li>
+            <li>
+              <button onclick="filterCategory('indo-western', this)" class="cat-item w-full text-left px-3 py-2.5 rounded-lg flex items-center justify-between text-slate-700 hover:text-[#C59B27] hover:bg-[#FAF6EF] transition-all">
+                <span class="flex items-center gap-2">
+                  <span class="cat-arrow transition-transform text-slate-400">▸</span>
+                  <span>Indo-Western Suits</span>
+                </span>
+                <span class="text-[10px] text-slate-400 font-semibold">1</span>
+              </button>
+            </li>
+            <li>
+              <button onclick="filterCategory('sadris', this)" class="cat-item w-full text-left px-3 py-2.5 rounded-lg flex items-center justify-between text-slate-700 hover:text-[#C59B27] hover:bg-[#FAF6EF] transition-all">
+                <span class="flex items-center gap-2">
+                  <span class="cat-arrow transition-transform text-slate-400">▸</span>
+                  <span>Sadri & Silk Kurta Sets</span>
+                </span>
+                <span class="text-[10px] text-slate-400 font-semibold">1</span>
+              </button>
+            </li>
+            <li>
+              <button onclick="filterCategory('groomsmen', this)" class="cat-item w-full text-left px-3 py-2.5 rounded-lg flex items-center justify-between text-slate-700 hover:text-[#C59B27] hover:bg-[#FAF6EF] transition-all">
+                <span class="flex items-center gap-2">
+                  <span class="cat-arrow transition-transform text-slate-400">▸</span>
+                  <span>Groomsmen Suits</span>
+                </span>
+                <span class="text-[10px] text-slate-400 font-semibold">1</span>
+              </button>
+            </li>
+            <li>
+              <button onclick="filterCategory('velvet-jackets', this)" class="cat-item w-full text-left px-3 py-2.5 rounded-lg flex items-center justify-between text-slate-700 hover:text-[#C59B27] hover:bg-[#FAF6EF] transition-all">
+                <span class="flex items-center gap-2">
+                  <span class="cat-arrow transition-transform text-slate-400">▸</span>
+                  <span>Velvet & Brocade Jackets</span>
+                </span>
+                <span class="text-[10px] text-slate-400 font-semibold">1</span>
+              </button>
+            </li>
+          </ul>
+        </div>
+
+        <!-- ── RIGHT MAIN AREA: PRODUCT IMAGE GRID ── -->
+        <div class="lg:col-span-3">
+          <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 sm:gap-6">
+
+            <!-- Card 1 -->
+            <div class="product-card group bg-white rounded-xl border border-[#E5DFD5] p-3 shadow-sm hover:shadow-xl transition-all duration-300" data-category="sherwanis">
+              <div class="h-80 sm:h-96 rounded-lg overflow-hidden bg-slate-100 relative">
+                <img src="assets/card_sherwani_v2.png" alt="Royal Sherwani" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              </div>
+              <div class="pt-3 pb-1 text-center space-y-1">
+                <h4 class="font-serif font-bold text-base text-[#0A192F]">Grand Zardozi Sherwani</h4>
+                <p class="text-[10px] text-slate-400 uppercase tracking-widest">Royal Sherwanis</p>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="product-card group bg-white rounded-xl border border-[#E5DFD5] p-3 shadow-sm hover:shadow-xl transition-all duration-300" data-category="jodhpuris">
+              <div class="h-80 sm:h-96 rounded-lg overflow-hidden bg-slate-100 relative">
+                <img src="assets/card_jodhpuri_v2.png" alt="Royal Jodhpuri" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              </div>
+              <div class="pt-3 pb-1 text-center space-y-1">
+                <h4 class="font-serif font-bold text-base text-[#0A192F]">Royal Jodhpuri Bandgala</h4>
+                <p class="text-[10px] text-slate-400 uppercase tracking-widest">Jodhpuri Bandgalas</p>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="product-card group bg-white rounded-xl border border-[#E5DFD5] p-3 shadow-sm hover:shadow-xl transition-all duration-300" data-category="indo-western">
+              <div class="h-80 sm:h-96 rounded-lg overflow-hidden bg-slate-100 relative">
+                <img src="assets/card_indowestern_v2.png" alt="Indo-Western Suit" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              </div>
+              <div class="pt-3 pb-1 text-center space-y-1">
+                <h4 class="font-serif font-bold text-base text-[#0A192F]">Bespoke Indo-Western</h4>
+                <p class="text-[10px] text-slate-400 uppercase tracking-widest">Indo-Western Suits</p>
+              </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="product-card group bg-white rounded-xl border border-[#E5DFD5] p-3 shadow-sm hover:shadow-xl transition-all duration-300" data-category="sadris">
+              <div class="h-80 sm:h-96 rounded-lg overflow-hidden bg-slate-100 relative">
+                <img src="assets/card_sadri_v2.png" alt="Sadri & Kurta Set" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              </div>
+              <div class="pt-3 pb-1 text-center space-y-1">
+                <h4 class="font-serif font-bold text-base text-[#0A192F]">Sadri & Silk Kurta Set</h4>
+                <p class="text-[10px] text-slate-400 uppercase tracking-widest">Sadri & Kurta Sets</p>
+              </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="product-card group bg-white rounded-xl border border-[#E5DFD5] p-3 shadow-sm hover:shadow-xl transition-all duration-300" data-category="groomsmen">
+              <div class="h-80 sm:h-96 rounded-lg overflow-hidden bg-slate-100 relative">
+                <img src="assets/hero_wedding.png" alt="Groomsmen Suit" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              </div>
+              <div class="pt-3 pb-1 text-center space-y-1">
+                <h4 class="font-serif font-bold text-base text-[#0A192F]">Groomsmen Package Set</h4>
+                <p class="text-[10px] text-slate-400 uppercase tracking-widest">Groomsmen Suits</p>
+              </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="product-card group bg-white rounded-xl border border-[#E5DFD5] p-3 shadow-sm hover:shadow-xl transition-all duration-300" data-category="velvet-jackets">
+              <div class="h-80 sm:h-96 rounded-lg overflow-hidden bg-slate-100 relative">
+                <img src="assets/footer_img_sherwani_groom.png" alt="Velvet Brocade Jacket" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              </div>
+              <div class="pt-3 pb-1 text-center space-y-1">
+                <h4 class="font-serif font-bold text-base text-[#0A192F]">Royal Velvet Brocade Jacket</h4>
+                <p class="text-[10px] text-slate-400 uppercase tracking-widest">Velvet & Brocade</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
   </main>
 
   <!-- FOOTER -->
@@ -249,9 +398,26 @@
   </footer>
 
   <script>
+    // Hamburger Menu
     document.getElementById('tf-hamburger').addEventListener('click', function () {
       document.getElementById('tf-mobile-drawer').classList.toggle('open');
     });
+
+    // Category Filter Mechanism
+    function filterCategory(cat, btn) {
+      const buttons = document.querySelectorAll('.cat-item');
+      buttons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const cards = document.querySelectorAll('.product-card');
+      cards.forEach(card => {
+        if (cat === 'all' || card.getAttribute('data-category') === cat) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
   </script>
 </body>
 </html>
