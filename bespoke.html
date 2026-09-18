@@ -253,60 +253,60 @@
             ATELIER SELECTIONS
           </h3>
 
-          <ul class="space-y-1 text-xs">
-            <li>
-              <button onclick="filterCategory('all', this)" class="cat-item active w-full text-left px-3 py-2.5 rounded-lg flex items-center justify-between text-slate-700 hover:text-[#C59B27] hover:bg-[#FAF6EF] transition-all">
+          <ul class="flex lg:flex-col overflow-x-auto gap-2 lg:gap-1 text-xs pb-1 lg:pb-0 scrollbar-none max-w-full">
+            <li class="flex-shrink-0">
+              <button onclick="filterCategory('all', this)" class="cat-item active whitespace-nowrap lg:whitespace-normal w-auto lg:w-full text-left px-3 py-2.5 rounded-lg flex items-center justify-between text-slate-700 hover:text-[#C59B27] hover:bg-[#FAF6EF] transition-all">
                 <span class="flex items-center gap-2">
                   <span class="cat-arrow transition-transform text-slate-400">▸</span>
                   <span>All Bespoke Creations</span>
                 </span>
               </button>
             </li>
-            <li>
-              <button onclick="filterCategory('3piece', this)" class="cat-item w-full text-left px-3 py-2.5 rounded-lg flex items-center justify-between text-slate-700 hover:text-[#C59B27] hover:bg-[#FAF6EF] transition-all">
+            <li class="flex-shrink-0">
+              <button onclick="filterCategory('3piece', this)" class="cat-item whitespace-nowrap lg:whitespace-normal w-auto lg:w-full text-left px-3 py-2.5 rounded-lg flex items-center justify-between text-slate-700 hover:text-[#C59B27] hover:bg-[#FAF6EF] transition-all">
                 <span class="flex items-center gap-2">
                   <span class="cat-arrow transition-transform text-slate-400">▸</span>
                   <span>3-Piece Suits</span>
                 </span>
               </button>
             </li>
-            <li>
-              <button onclick="filterCategory('2button', this)" class="cat-item w-full text-left px-3 py-2.5 rounded-lg flex items-center justify-between text-slate-700 hover:text-[#C59B27] hover:bg-[#FAF6EF] transition-all">
+            <li class="flex-shrink-0">
+              <button onclick="filterCategory('2button', this)" class="cat-item whitespace-nowrap lg:whitespace-normal w-auto lg:w-full text-left px-3 py-2.5 rounded-lg flex items-center justify-between text-slate-700 hover:text-[#C59B27] hover:bg-[#FAF6EF] transition-all">
                 <span class="flex items-center gap-2">
                   <span class="cat-arrow transition-transform text-slate-400">▸</span>
                   <span>2-Button Classic Suits</span>
                 </span>
               </button>
             </li>
-            <li>
-              <button onclick="filterCategory('tuxedo', this)" class="cat-item w-full text-left px-3 py-2.5 rounded-lg flex items-center justify-between text-slate-700 hover:text-[#C59B27] hover:bg-[#FAF6EF] transition-all">
+            <li class="flex-shrink-0">
+              <button onclick="filterCategory('tuxedo', this)" class="cat-item whitespace-nowrap lg:whitespace-normal w-auto lg:w-full text-left px-3 py-2.5 rounded-lg flex items-center justify-between text-slate-700 hover:text-[#C59B27] hover:bg-[#FAF6EF] transition-all">
                 <span class="flex items-center gap-2">
                   <span class="cat-arrow transition-transform text-slate-400">▸</span>
-                  <span>Tuxedos & Evening Suits</span>
+                  <span>Tuxedos</span>
                 </span>
               </button>
             </li>
-            <li>
-              <button onclick="filterCategory('gurkha-pant', this)" class="cat-item w-full text-left px-3 py-2.5 rounded-lg flex items-center justify-between text-slate-700 hover:text-[#C59B27] hover:bg-[#FAF6EF] transition-all">
+            <li class="flex-shrink-0">
+              <button onclick="filterCategory('gurkha-pant', this)" class="cat-item whitespace-nowrap lg:whitespace-normal w-auto lg:w-full text-left px-3 py-2.5 rounded-lg flex items-center justify-between text-slate-700 hover:text-[#C59B27] hover:bg-[#FAF6EF] transition-all">
                 <span class="flex items-center gap-2">
                   <span class="cat-arrow transition-transform text-slate-400">▸</span>
                   <span>Gurkha Trousers</span>
                 </span>
               </button>
             </li>
-            <li>
-              <button onclick="filterCategory('bell-bottom', this)" class="cat-item w-full text-left px-3 py-2.5 rounded-lg flex items-center justify-between text-slate-700 hover:text-[#C59B27] hover:bg-[#FAF6EF] transition-all">
+            <li class="flex-shrink-0">
+              <button onclick="filterCategory('bell-bottom', this)" class="cat-item whitespace-nowrap lg:whitespace-normal w-auto lg:w-full text-left px-3 py-2.5 rounded-lg flex items-center justify-between text-slate-700 hover:text-[#C59B27] hover:bg-[#FAF6EF] transition-all">
                 <span class="flex items-center gap-2">
                   <span class="cat-arrow transition-transform text-slate-400">▸</span>
                   <span>Bell Bottom Pants</span>
                 </span>
               </button>
             </li>
-            <li>
-              <button onclick="filterCategory('embroidered-shirt', this)" class="cat-item w-full text-left px-3 py-2.5 rounded-lg flex items-center justify-between text-slate-700 hover:text-[#C59B27] hover:bg-[#FAF6EF] transition-all">
+            <li class="flex-shrink-0">
+              <button onclick="filterCategory('embroidered-shirt', this)" class="cat-item whitespace-nowrap lg:whitespace-normal w-auto lg:w-full text-left px-3 py-2.5 rounded-lg flex items-center justify-between text-slate-700 hover:text-[#C59B27] hover:bg-[#FAF6EF] transition-all">
                 <span class="flex items-center gap-2">
                   <span class="cat-arrow transition-transform text-slate-400">▸</span>
-                  <span>Embroidered Shirts</span>
+                  <span>Formal shirts</span>
                 </span>
               </button>
             </li>
@@ -315,13 +315,995 @@
 
         <!-- ── RIGHT MAIN AREA: PRODUCT IMAGE GRID ── -->
         <div class="lg:col-span-3">
-                              <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 sm:gap-6 min-h-[350px] flex items-center justify-center">
-            <div class="col-span-full text-center py-20 bg-white/70 rounded-2xl border border-dashed border-[#C59B27]/40 p-8 shadow-sm space-y-3">
-              <div class="w-12 h-12 mx-auto rounded-full bg-[#FAF6EF] flex items-center justify-center text-[#C59B27]">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                                        <div id="product-grid" class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-6 min-h-[300px]">
+            <!-- Card 1 -->
+            <div class="product-card group bg-white rounded-xl border border-[#E5DFD5] p-1.5 sm:p-2 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden" data-category="2button" onclick="openLightbox('assets/gallery/bespoke/bespoke_01_2button.jpg', 'Classic 2-Button Italian Cut Suit', '2Button')">
+              <div class="h-60 sm:h-80 md:h-96 rounded-lg overflow-hidden bg-slate-100 relative">
+                <img src="assets/gallery/bespoke/bespoke_01_2button.jpg" alt="Classic 2-Button Italian Cut Suit" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <span class="bg-white/90 text-slate-900 text-[10px] sm:text-xs font-semibold px-3 py-1.5 sm:px-4 sm:py-2 rounded-full shadow-md tracking-wider uppercase">View Photo</span>
+                </div>
               </div>
-              <h3 class="font-serif font-semibold text-lg text-[#0A192F]">Curated Collection Gallery</h3>
-              <p class="text-xs text-slate-500 max-w-md mx-auto uppercase tracking-wider">Category filtering ready &bull; Select a category from the sidebar or upload raw images to populate this gallery</p>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="product-card group bg-white rounded-xl border border-[#E5DFD5] p-1.5 sm:p-2 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden" data-category="3piece" onclick="openLightbox('assets/gallery/bespoke/bespoke_01_3piece.jpg', 'Bespoke 3-Piece Suit', '3Piece')">
+              <div class="h-60 sm:h-80 md:h-96 rounded-lg overflow-hidden bg-slate-100 relative">
+                <img src="assets/gallery/bespoke/bespoke_01_3piece.jpg" alt="Bespoke 3-Piece Suit" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <span class="bg-white/90 text-slate-900 text-[10px] sm:text-xs font-semibold px-3 py-1.5 sm:px-4 sm:py-2 rounded-full shadow-md tracking-wider uppercase">View Photo</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="product-card group bg-white rounded-xl border border-[#E5DFD5] p-1.5 sm:p-2 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden" data-category="bell-bottom" onclick="openLightbox('assets/gallery/bespoke/bespoke_01_bell-bottom.jpg', 'Retro Flare Bell Bottom Pants', 'Bell Bottom')">
+              <div class="h-60 sm:h-80 md:h-96 rounded-lg overflow-hidden bg-slate-100 relative">
+                <img src="assets/gallery/bespoke/bespoke_01_bell-bottom.jpg" alt="Retro Flare Bell Bottom Pants" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <span class="bg-white/90 text-slate-900 text-[10px] sm:text-xs font-semibold px-3 py-1.5 sm:px-4 sm:py-2 rounded-full shadow-md tracking-wider uppercase">View Photo</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="product-card group bg-white rounded-xl border border-[#E5DFD5] p-1.5 sm:p-2 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden" data-category="embroidered-shirt" onclick="openLightbox('assets/gallery/bespoke/bespoke_01_embroidered-shirt.jpg', 'Luxury Formal Shirt', 'Embroidered Shirt')">
+              <div class="h-60 sm:h-80 md:h-96 rounded-lg overflow-hidden bg-slate-100 relative">
+                <img src="assets/gallery/bespoke/bespoke_01_embroidered-shirt.jpg" alt="Luxury Formal Shirt" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <span class="bg-white/90 text-slate-900 text-[10px] sm:text-xs font-semibold px-3 py-1.5 sm:px-4 sm:py-2 rounded-full shadow-md tracking-wider uppercase">View Photo</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="product-card group bg-white rounded-xl border border-[#E5DFD5] p-1.5 sm:p-2 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden" data-category="gurkha-pant" onclick="openLightbox('assets/gallery/bespoke/bespoke_01_gurkha-pant.jpg', 'Pleated Gurkha Trousers', 'Gurkha Pant')">
+              <div class="h-60 sm:h-80 md:h-96 rounded-lg overflow-hidden bg-slate-100 relative">
+                <img src="assets/gallery/bespoke/bespoke_01_gurkha-pant.jpg" alt="Pleated Gurkha Trousers" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <span class="bg-white/90 text-slate-900 text-[10px] sm:text-xs font-semibold px-3 py-1.5 sm:px-4 sm:py-2 rounded-full shadow-md tracking-wider uppercase">View Photo</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="product-card group bg-white rounded-xl border border-[#E5DFD5] p-1.5 sm:p-2 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden" data-category="tuxedo" onclick="openLightbox('assets/gallery/bespoke/bespoke_01_tuxedo.jpg', 'Bespoke Tuxedo', 'Tuxedo')">
+              <div class="h-60 sm:h-80 md:h-96 rounded-lg overflow-hidden bg-slate-100 relative">
+                <img src="assets/gallery/bespoke/bespoke_01_tuxedo.jpg" alt="Bespoke Tuxedo" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <span class="bg-white/90 text-slate-900 text-[10px] sm:text-xs font-semibold px-3 py-1.5 sm:px-4 sm:py-2 rounded-full shadow-md tracking-wider uppercase">View Photo</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 7 -->
+            <div class="product-card group bg-white rounded-xl border border-[#E5DFD5] p-1.5 sm:p-2 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden" data-category="2button" onclick="openLightbox('assets/gallery/bespoke/bespoke_02_2button.jpg', 'Classic 2-Button Italian Cut Suit', '2Button')">
+              <div class="h-60 sm:h-80 md:h-96 rounded-lg overflow-hidden bg-slate-100 relative">
+                <img src="assets/gallery/bespoke/bespoke_02_2button.jpg" alt="Classic 2-Button Italian Cut Suit" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <span class="bg-white/90 text-slate-900 text-[10px] sm:text-xs font-semibold px-3 py-1.5 sm:px-4 sm:py-2 rounded-full shadow-md tracking-wider uppercase">View Photo</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 8 -->
+            <div class="product-card group bg-white rounded-xl border border-[#E5DFD5] p-1.5 sm:p-2 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden" data-category="3piece" onclick="openLightbox('assets/gallery/bespoke/bespoke_02_3piece.jpg', 'Bespoke 3-Piece Suit', '3Piece')">
+              <div class="h-60 sm:h-80 md:h-96 rounded-lg overflow-hidden bg-slate-100 relative">
+                <img src="assets/gallery/bespoke/bespoke_02_3piece.jpg" alt="Bespoke 3-Piece Suit" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <span class="bg-white/90 text-slate-900 text-[10px] sm:text-xs font-semibold px-3 py-1.5 sm:px-4 sm:py-2 rounded-full shadow-md tracking-wider uppercase">View Photo</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 9 -->
+            <div class="product-card group bg-white rounded-xl border border-[#E5DFD5] p-1.5 sm:p-2 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden" data-category="bell-bottom" onclick="openLightbox('assets/gallery/bespoke/bespoke_02_bell-bottom.jpg', 'Retro Flare Bell Bottom Pants', 'Bell Bottom')">
+              <div class="h-60 sm:h-80 md:h-96 rounded-lg overflow-hidden bg-slate-100 relative">
+                <img src="assets/gallery/bespoke/bespoke_02_bell-bottom.jpg" alt="Retro Flare Bell Bottom Pants" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <span class="bg-white/90 text-slate-900 text-[10px] sm:text-xs font-semibold px-3 py-1.5 sm:px-4 sm:py-2 rounded-full shadow-md tracking-wider uppercase">View Photo</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 10 -->
+            <div class="product-card group bg-white rounded-xl border border-[#E5DFD5] p-1.5 sm:p-2 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden" data-category="embroidered-shirt" onclick="openLightbox('assets/gallery/bespoke/bespoke_02_embroidered-shirt.jpg', 'Luxury Formal Shirt', 'Embroidered Shirt')">
+              <div class="h-60 sm:h-80 md:h-96 rounded-lg overflow-hidden bg-slate-100 relative">
+                <img src="assets/gallery/bespoke/bespoke_02_embroidered-shirt.jpg" alt="Luxury Formal Shirt" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <span class="bg-white/90 text-slate-900 text-[10px] sm:text-xs font-semibold px-3 py-1.5 sm:px-4 sm:py-2 rounded-full shadow-md tracking-wider uppercase">View Photo</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 11 -->
+            <div class="product-card group bg-white rounded-xl border border-[#E5DFD5] p-1.5 sm:p-2 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden" data-category="gurkha-pant" onclick="openLightbox('assets/gallery/bespoke/bespoke_02_gurkha-pant.jpg', 'Pleated Gurkha Trousers', 'Gurkha Pant')">
+              <div class="h-60 sm:h-80 md:h-96 rounded-lg overflow-hidden bg-slate-100 relative">
+                <img src="assets/gallery/bespoke/bespoke_02_gurkha-pant.jpg" alt="Pleated Gurkha Trousers" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <span class="bg-white/90 text-slate-900 text-[10px] sm:text-xs font-semibold px-3 py-1.5 sm:px-4 sm:py-2 rounded-full shadow-md tracking-wider uppercase">View Photo</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 12 -->
+            <div class="product-card group bg-white rounded-xl border border-[#E5DFD5] p-1.5 sm:p-2 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden" data-category="tuxedo" onclick="openLightbox('assets/gallery/bespoke/bespoke_02_tuxedo.jpg', 'Bespoke Tuxedo', 'Tuxedo')">
+              <div class="h-60 sm:h-80 md:h-96 rounded-lg overflow-hidden bg-slate-100 relative">
+                <img src="assets/gallery/bespoke/bespoke_02_tuxedo.jpg" alt="Bespoke Tuxedo" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <span class="bg-white/90 text-slate-900 text-[10px] sm:text-xs font-semibold px-3 py-1.5 sm:px-4 sm:py-2 rounded-full shadow-md tracking-wider uppercase">View Photo</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 13 -->
+            <div class="product-card group bg-white rounded-xl border border-[#E5DFD5] p-1.5 sm:p-2 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden" data-category="2button" onclick="openLightbox('assets/gallery/bespoke/bespoke_03_2button.jpg', 'Classic 2-Button Italian Cut Suit', '2Button')">
+              <div class="h-60 sm:h-80 md:h-96 rounded-lg overflow-hidden bg-slate-100 relative">
+                <img src="assets/gallery/bespoke/bespoke_03_2button.jpg" alt="Classic 2-Button Italian Cut Suit" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <span class="bg-white/90 text-slate-900 text-[10px] sm:text-xs font-semibold px-3 py-1.5 sm:px-4 sm:py-2 rounded-full shadow-md tracking-wider uppercase">View Photo</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 14 -->
+            <div class="product-card group bg-white rounded-xl border border-[#E5DFD5] p-1.5 sm:p-2 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden" data-category="3piece" onclick="openLightbox('assets/gallery/bespoke/bespoke_03_3piece.jpg', 'Bespoke 3-Piece Suit', '3Piece')">
+              <div class="h-60 sm:h-80 md:h-96 rounded-lg overflow-hidden bg-slate-100 relative">
+                <img src="assets/gallery/bespoke/bespoke_03_3piece.jpg" alt="Bespoke 3-Piece Suit" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <span class="bg-white/90 text-slate-900 text-[10px] sm:text-xs font-semibold px-3 py-1.5 sm:px-4 sm:py-2 rounded-full shadow-md tracking-wider uppercase">View Photo</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 15 -->
+            <div class="product-card group bg-white rounded-xl border border-[#E5DFD5] p-1.5 sm:p-2 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden" data-category="bell-bottom" onclick="openLightbox('assets/gallery/bespoke/bespoke_03_bell-bottom.jpg', 'Retro Flare Bell Bottom Pants', 'Bell Bottom')">
+              <div class="h-60 sm:h-80 md:h-96 rounded-lg overflow-hidden bg-slate-100 relative">
+                <img src="assets/gallery/bespoke/bespoke_03_bell-bottom.jpg" alt="Retro Flare Bell Bottom Pants" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <span class="bg-white/90 text-slate-900 text-[10px] sm:text-xs font-semibold px-3 py-1.5 sm:px-4 sm:py-2 rounded-full shadow-md tracking-wider uppercase">View Photo</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 16 -->
+            <div class="product-card group bg-white rounded-xl border border-[#E5DFD5] p-1.5 sm:p-2 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden" data-category="embroidered-shirt" onclick="openLightbox('assets/gallery/bespoke/bespoke_03_embroidered-shirt.jpg', 'Luxury Formal Shirt', 'Embroidered Shirt')">
+              <div class="h-60 sm:h-80 md:h-96 rounded-lg overflow-hidden bg-slate-100 relative">
+                <img src="assets/gallery/bespoke/bespoke_03_embroidered-shirt.jpg" alt="Luxury Formal Shirt" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <span class="bg-white/90 text-slate-900 text-[10px] sm:text-xs font-semibold px-3 py-1.5 sm:px-4 sm:py-2 rounded-full shadow-md tracking-wider uppercase">View Photo</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 17 -->
+            <div class="product-card group bg-white rounded-xl border border-[#E5DFD5] p-1.5 sm:p-2 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden" data-category="gurkha-pant" onclick="openLightbox('assets/gallery/bespoke/bespoke_03_gurkha-pant.jpg', 'Pleated Gurkha Trousers', 'Gurkha Pant')">
+              <div class="h-60 sm:h-80 md:h-96 rounded-lg overflow-hidden bg-slate-100 relative">
+                <img src="assets/gallery/bespoke/bespoke_03_gurkha-pant.jpg" alt="Pleated Gurkha Trousers" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <span class="bg-white/90 text-slate-900 text-[10px] sm:text-xs font-semibold px-3 py-1.5 sm:px-4 sm:py-2 rounded-full shadow-md tracking-wider uppercase">View Photo</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 18 -->
+            <div class="product-card group bg-white rounded-xl border border-[#E5DFD5] p-1.5 sm:p-2 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden" data-category="tuxedo" onclick="openLightbox('assets/gallery/bespoke/bespoke_03_tuxedo.jpg', 'Bespoke Tuxedo', 'Tuxedo')">
+              <div class="h-60 sm:h-80 md:h-96 rounded-lg overflow-hidden bg-slate-100 relative">
+                <img src="assets/gallery/bespoke/bespoke_03_tuxedo.jpg" alt="Bespoke Tuxedo" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <span class="bg-white/90 text-slate-900 text-[10px] sm:text-xs font-semibold px-3 py-1.5 sm:px-4 sm:py-2 rounded-full shadow-md tracking-wider uppercase">View Photo</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 19 -->
+            <div class="product-card group bg-white rounded-xl border border-[#E5DFD5] p-1.5 sm:p-2 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden" data-category="2button" onclick="openLightbox('assets/gallery/bespoke/bespoke_04_2button.jpg', 'Classic 2-Button Italian Cut Suit', '2Button')">
+              <div class="h-60 sm:h-80 md:h-96 rounded-lg overflow-hidden bg-slate-100 relative">
+                <img src="assets/gallery/bespoke/bespoke_04_2button.jpg" alt="Classic 2-Button Italian Cut Suit" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <span class="bg-white/90 text-slate-900 text-[10px] sm:text-xs font-semibold px-3 py-1.5 sm:px-4 sm:py-2 rounded-full shadow-md tracking-wider uppercase">View Photo</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 20 -->
+            <div class="product-card group bg-white rounded-xl border border-[#E5DFD5] p-1.5 sm:p-2 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden" data-category="3piece" onclick="openLightbox('assets/gallery/bespoke/bespoke_04_3piece.jpg', 'Bespoke 3-Piece Suit', '3Piece')">
+              <div class="h-60 sm:h-80 md:h-96 rounded-lg overflow-hidden bg-slate-100 relative">
+                <img src="assets/gallery/bespoke/bespoke_04_3piece.jpg" alt="Bespoke 3-Piece Suit" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <span class="bg-white/90 text-slate-900 text-[10px] sm:text-xs font-semibold px-3 py-1.5 sm:px-4 sm:py-2 rounded-full shadow-md tracking-wider uppercase">View Photo</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 21 -->
+            <div class="product-card group bg-white rounded-xl border border-[#E5DFD5] p-1.5 sm:p-2 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden" data-category="bell-bottom" onclick="openLightbox('assets/gallery/bespoke/bespoke_04_bell-bottom.jpg', 'Retro Flare Bell Bottom Pants', 'Bell Bottom')">
+              <div class="h-60 sm:h-80 md:h-96 rounded-lg overflow-hidden bg-slate-100 relative">
+                <img src="assets/gallery/bespoke/bespoke_04_bell-bottom.jpg" alt="Retro Flare Bell Bottom Pants" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <span class="bg-white/90 text-slate-900 text-[10px] sm:text-xs font-semibold px-3 py-1.5 sm:px-4 sm:py-2 rounded-full shadow-md tracking-wider uppercase">View Photo</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 22 -->
+            <div class="product-card group bg-white rounded-xl border border-[#E5DFD5] p-1.5 sm:p-2 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden" data-category="embroidered-shirt" onclick="openLightbox('assets/gallery/bespoke/bespoke_04_embroidered-shirt.jpg', 'Luxury Formal Shirt', 'Embroidered Shirt')">
+              <div class="h-60 sm:h-80 md:h-96 rounded-lg overflow-hidden bg-slate-100 relative">
+                <img src="assets/gallery/bespoke/bespoke_04_embroidered-shirt.jpg" alt="Luxury Formal Shirt" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <span class="bg-white/90 text-slate-900 text-[10px] sm:text-xs font-semibold px-3 py-1.5 sm:px-4 sm:py-2 rounded-full shadow-md tracking-wider uppercase">View Photo</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 23 -->
+            <div class="product-card group bg-white rounded-xl border border-[#E5DFD5] p-1.5 sm:p-2 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden" data-category="gurkha-pant" onclick="openLightbox('assets/gallery/bespoke/bespoke_04_gurkha-pant.jpg', 'Pleated Gurkha Trousers', 'Gurkha Pant')">
+              <div class="h-60 sm:h-80 md:h-96 rounded-lg overflow-hidden bg-slate-100 relative">
+                <img src="assets/gallery/bespoke/bespoke_04_gurkha-pant.jpg" alt="Pleated Gurkha Trousers" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <span class="bg-white/90 text-slate-900 text-[10px] sm:text-xs font-semibold px-3 py-1.5 sm:px-4 sm:py-2 rounded-full shadow-md tracking-wider uppercase">View Photo</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 24 -->
+            <div class="product-card group bg-white rounded-xl border border-[#E5DFD5] p-1.5 sm:p-2 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden" data-category="tuxedo" onclick="openLightbox('assets/gallery/bespoke/bespoke_04_tuxedo.jpg', 'Bespoke Tuxedo', 'Tuxedo')">
+              <div class="h-60 sm:h-80 md:h-96 rounded-lg overflow-hidden bg-slate-100 relative">
+                <img src="assets/gallery/bespoke/bespoke_04_tuxedo.jpg" alt="Bespoke Tuxedo" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <span class="bg-white/90 text-slate-900 text-[10px] sm:text-xs font-semibold px-3 py-1.5 sm:px-4 sm:py-2 rounded-full shadow-md tracking-wider uppercase">View Photo</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 25 -->
+            <div class="product-card group bg-white rounded-xl border border-[#E5DFD5] p-1.5 sm:p-2 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden" data-category="2button" onclick="openLightbox('assets/gallery/bespoke/bespoke_05_2button.jpg', 'Classic 2-Button Italian Cut Suit', '2Button')">
+              <div class="h-60 sm:h-80 md:h-96 rounded-lg overflow-hidden bg-slate-100 relative">
+                <img src="assets/gallery/bespoke/bespoke_05_2button.jpg" alt="Classic 2-Button Italian Cut Suit" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <span class="bg-white/90 text-slate-900 text-[10px] sm:text-xs font-semibold px-3 py-1.5 sm:px-4 sm:py-2 rounded-full shadow-md tracking-wider uppercase">View Photo</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 26 -->
+            <div class="product-card group bg-white rounded-xl border border-[#E5DFD5] p-1.5 sm:p-2 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden" data-category="3piece" onclick="openLightbox('assets/gallery/bespoke/bespoke_05_3piece.jpg', 'Bespoke 3-Piece Suit', '3Piece')">
+              <div class="h-60 sm:h-80 md:h-96 rounded-lg overflow-hidden bg-slate-100 relative">
+                <img src="assets/gallery/bespoke/bespoke_05_3piece.jpg" alt="Bespoke 3-Piece Suit" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <span class="bg-white/90 text-slate-900 text-[10px] sm:text-xs font-semibold px-3 py-1.5 sm:px-4 sm:py-2 rounded-full shadow-md tracking-wider uppercase">View Photo</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 27 -->
+            <div class="product-card group bg-white rounded-xl border border-[#E5DFD5] p-1.5 sm:p-2 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden" data-category="bell-bottom" onclick="openLightbox('assets/gallery/bespoke/bespoke_05_bell-bottom.jpg', 'Retro Flare Bell Bottom Pants', 'Bell Bottom')">
+              <div class="h-60 sm:h-80 md:h-96 rounded-lg overflow-hidden bg-slate-100 relative">
+                <img src="assets/gallery/bespoke/bespoke_05_bell-bottom.jpg" alt="Retro Flare Bell Bottom Pants" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <span class="bg-white/90 text-slate-900 text-[10px] sm:text-xs font-semibold px-3 py-1.5 sm:px-4 sm:py-2 rounded-full shadow-md tracking-wider uppercase">View Photo</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 28 -->
+            <div class="product-card group bg-white rounded-xl border border-[#E5DFD5] p-1.5 sm:p-2 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden" data-category="embroidered-shirt" onclick="openLightbox('assets/gallery/bespoke/bespoke_05_embroidered-shirt.jpg', 'Luxury Formal Shirt', 'Embroidered Shirt')">
+              <div class="h-60 sm:h-80 md:h-96 rounded-lg overflow-hidden bg-slate-100 relative">
+                <img src="assets/gallery/bespoke/bespoke_05_embroidered-shirt.jpg" alt="Luxury Formal Shirt" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <span class="bg-white/90 text-slate-900 text-[10px] sm:text-xs font-semibold px-3 py-1.5 sm:px-4 sm:py-2 rounded-full shadow-md tracking-wider uppercase">View Photo</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 29 -->
+            <div class="product-card group bg-white rounded-xl border border-[#E5DFD5] p-1.5 sm:p-2 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden" data-category="gurkha-pant" onclick="openLightbox('assets/gallery/bespoke/bespoke_05_gurkha-pant.jpg', 'Pleated Gurkha Trousers', 'Gurkha Pant')">
+              <div class="h-60 sm:h-80 md:h-96 rounded-lg overflow-hidden bg-slate-100 relative">
+                <img src="assets/gallery/bespoke/bespoke_05_gurkha-pant.jpg" alt="Pleated Gurkha Trousers" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <span class="bg-white/90 text-slate-900 text-[10px] sm:text-xs font-semibold px-3 py-1.5 sm:px-4 sm:py-2 rounded-full shadow-md tracking-wider uppercase">View Photo</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 30 -->
+            <div class="product-card group bg-white rounded-xl border border-[#E5DFD5] p-1.5 sm:p-2 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden" data-category="tuxedo" onclick="openLightbox('assets/gallery/bespoke/bespoke_05_tuxedo.jpg', 'Bespoke Tuxedo', 'Tuxedo')">
+              <div class="h-60 sm:h-80 md:h-96 rounded-lg overflow-hidden bg-slate-100 relative">
+                <img src="assets/gallery/bespoke/bespoke_05_tuxedo.jpg" alt="Bespoke Tuxedo" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <span class="bg-white/90 text-slate-900 text-[10px] sm:text-xs font-semibold px-3 py-1.5 sm:px-4 sm:py-2 rounded-full shadow-md tracking-wider uppercase">View Photo</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 31 -->
+            <div class="product-card group bg-white rounded-xl border border-[#E5DFD5] p-1.5 sm:p-2 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden" data-category="2button" onclick="openLightbox('assets/gallery/bespoke/bespoke_06_2button.jpg', 'Classic 2-Button Italian Cut Suit', '2Button')">
+              <div class="h-60 sm:h-80 md:h-96 rounded-lg overflow-hidden bg-slate-100 relative">
+                <img src="assets/gallery/bespoke/bespoke_06_2button.jpg" alt="Classic 2-Button Italian Cut Suit" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <span class="bg-white/90 text-slate-900 text-[10px] sm:text-xs font-semibold px-3 py-1.5 sm:px-4 sm:py-2 rounded-full shadow-md tracking-wider uppercase">View Photo</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 32 -->
+            <div class="product-card group bg-white rounded-xl border border-[#E5DFD5] p-1.5 sm:p-2 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden" data-category="3piece" onclick="openLightbox('assets/gallery/bespoke/bespoke_06_3piece.jpg', 'Bespoke 3-Piece Suit', '3Piece')">
+              <div class="h-60 sm:h-80 md:h-96 rounded-lg overflow-hidden bg-slate-100 relative">
+                <img src="assets/gallery/bespoke/bespoke_06_3piece.jpg" alt="Bespoke 3-Piece Suit" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <span class="bg-white/90 text-slate-900 text-[10px] sm:text-xs font-semibold px-3 py-1.5 sm:px-4 sm:py-2 rounded-full shadow-md tracking-wider uppercase">View Photo</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 33 -->
+            <div class="product-card group bg-white rounded-xl border border-[#E5DFD5] p-1.5 sm:p-2 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden" data-category="bell-bottom" onclick="openLightbox('assets/gallery/bespoke/bespoke_06_bell-bottom.jpg', 'Retro Flare Bell Bottom Pants', 'Bell Bottom')">
+              <div class="h-60 sm:h-80 md:h-96 rounded-lg overflow-hidden bg-slate-100 relative">
+                <img src="assets/gallery/bespoke/bespoke_06_bell-bottom.jpg" alt="Retro Flare Bell Bottom Pants" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <span class="bg-white/90 text-slate-900 text-[10px] sm:text-xs font-semibold px-3 py-1.5 sm:px-4 sm:py-2 rounded-full shadow-md tracking-wider uppercase">View Photo</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 34 -->
+            <div class="product-card group bg-white rounded-xl border border-[#E5DFD5] p-1.5 sm:p-2 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden" data-category="embroidered-shirt" onclick="openLightbox('assets/gallery/bespoke/bespoke_06_embroidered-shirt.jpg', 'Luxury Formal Shirt', 'Embroidered Shirt')">
+              <div class="h-60 sm:h-80 md:h-96 rounded-lg overflow-hidden bg-slate-100 relative">
+                <img src="assets/gallery/bespoke/bespoke_06_embroidered-shirt.jpg" alt="Luxury Formal Shirt" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <span class="bg-white/90 text-slate-900 text-[10px] sm:text-xs font-semibold px-3 py-1.5 sm:px-4 sm:py-2 rounded-full shadow-md tracking-wider uppercase">View Photo</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 35 -->
+            <div class="product-card group bg-white rounded-xl border border-[#E5DFD5] p-1.5 sm:p-2 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden" data-category="gurkha-pant" onclick="openLightbox('assets/gallery/bespoke/bespoke_06_gurkha-pant.jpg', 'Pleated Gurkha Trousers', 'Gurkha Pant')">
+              <div class="h-60 sm:h-80 md:h-96 rounded-lg overflow-hidden bg-slate-100 relative">
+                <img src="assets/gallery/bespoke/bespoke_06_gurkha-pant.jpg" alt="Pleated Gurkha Trousers" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <span class="bg-white/90 text-slate-900 text-[10px] sm:text-xs font-semibold px-3 py-1.5 sm:px-4 sm:py-2 rounded-full shadow-md tracking-wider uppercase">View Photo</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 36 -->
+            <div class="product-card group bg-white rounded-xl border border-[#E5DFD5] p-1.5 sm:p-2 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden" data-category="tuxedo" onclick="openLightbox('assets/gallery/bespoke/bespoke_06_tuxedo.jpg', 'Bespoke Tuxedo', 'Tuxedo')">
+              <div class="h-60 sm:h-80 md:h-96 rounded-lg overflow-hidden bg-slate-100 relative">
+                <img src="assets/gallery/bespoke/bespoke_06_tuxedo.jpg" alt="Bespoke Tuxedo" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <span class="bg-white/90 text-slate-900 text-[10px] sm:text-xs font-semibold px-3 py-1.5 sm:px-4 sm:py-2 rounded-full shadow-md tracking-wider uppercase">View Photo</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 37 -->
+            <div class="product-card group bg-white rounded-xl border border-[#E5DFD5] p-1.5 sm:p-2 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden" data-category="2button" onclick="openLightbox('assets/gallery/bespoke/bespoke_07_2button.jpg', 'Classic 2-Button Italian Cut Suit', '2Button')">
+              <div class="h-60 sm:h-80 md:h-96 rounded-lg overflow-hidden bg-slate-100 relative">
+                <img src="assets/gallery/bespoke/bespoke_07_2button.jpg" alt="Classic 2-Button Italian Cut Suit" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <span class="bg-white/90 text-slate-900 text-[10px] sm:text-xs font-semibold px-3 py-1.5 sm:px-4 sm:py-2 rounded-full shadow-md tracking-wider uppercase">View Photo</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 38 -->
+            <div class="product-card group bg-white rounded-xl border border-[#E5DFD5] p-1.5 sm:p-2 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden" data-category="3piece" onclick="openLightbox('assets/gallery/bespoke/bespoke_07_3piece.jpg', 'Bespoke 3-Piece Suit', '3Piece')">
+              <div class="h-60 sm:h-80 md:h-96 rounded-lg overflow-hidden bg-slate-100 relative">
+                <img src="assets/gallery/bespoke/bespoke_07_3piece.jpg" alt="Bespoke 3-Piece Suit" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <span class="bg-white/90 text-slate-900 text-[10px] sm:text-xs font-semibold px-3 py-1.5 sm:px-4 sm:py-2 rounded-full shadow-md tracking-wider uppercase">View Photo</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 39 -->
+            <div class="product-card group bg-white rounded-xl border border-[#E5DFD5] p-1.5 sm:p-2 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden" data-category="bell-bottom" onclick="openLightbox('assets/gallery/bespoke/bespoke_07_bell-bottom.jpg', 'Retro Flare Bell Bottom Pants', 'Bell Bottom')">
+              <div class="h-60 sm:h-80 md:h-96 rounded-lg overflow-hidden bg-slate-100 relative">
+                <img src="assets/gallery/bespoke/bespoke_07_bell-bottom.jpg" alt="Retro Flare Bell Bottom Pants" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <span class="bg-white/90 text-slate-900 text-[10px] sm:text-xs font-semibold px-3 py-1.5 sm:px-4 sm:py-2 rounded-full shadow-md tracking-wider uppercase">View Photo</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 40 -->
+            <div class="product-card group bg-white rounded-xl border border-[#E5DFD5] p-1.5 sm:p-2 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden" data-category="embroidered-shirt" onclick="openLightbox('assets/gallery/bespoke/bespoke_07_embroidered-shirt.jpg', 'Luxury Formal Shirt', 'Embroidered Shirt')">
+              <div class="h-60 sm:h-80 md:h-96 rounded-lg overflow-hidden bg-slate-100 relative">
+                <img src="assets/gallery/bespoke/bespoke_07_embroidered-shirt.jpg" alt="Luxury Formal Shirt" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <span class="bg-white/90 text-slate-900 text-[10px] sm:text-xs font-semibold px-3 py-1.5 sm:px-4 sm:py-2 rounded-full shadow-md tracking-wider uppercase">View Photo</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 41 -->
+            <div class="product-card group bg-white rounded-xl border border-[#E5DFD5] p-1.5 sm:p-2 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden" data-category="gurkha-pant" onclick="openLightbox('assets/gallery/bespoke/bespoke_07_gurkha-pant.jpg', 'Pleated Gurkha Trousers', 'Gurkha Pant')">
+              <div class="h-60 sm:h-80 md:h-96 rounded-lg overflow-hidden bg-slate-100 relative">
+                <img src="assets/gallery/bespoke/bespoke_07_gurkha-pant.jpg" alt="Pleated Gurkha Trousers" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <span class="bg-white/90 text-slate-900 text-[10px] sm:text-xs font-semibold px-3 py-1.5 sm:px-4 sm:py-2 rounded-full shadow-md tracking-wider uppercase">View Photo</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 42 -->
+            <div class="product-card group bg-white rounded-xl border border-[#E5DFD5] p-1.5 sm:p-2 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden" data-category="tuxedo" onclick="openLightbox('assets/gallery/bespoke/bespoke_07_tuxedo.jpg', 'Bespoke Tuxedo', 'Tuxedo')">
+              <div class="h-60 sm:h-80 md:h-96 rounded-lg overflow-hidden bg-slate-100 relative">
+                <img src="assets/gallery/bespoke/bespoke_07_tuxedo.jpg" alt="Bespoke Tuxedo" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <span class="bg-white/90 text-slate-900 text-[10px] sm:text-xs font-semibold px-3 py-1.5 sm:px-4 sm:py-2 rounded-full shadow-md tracking-wider uppercase">View Photo</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 43 -->
+            <div class="product-card group bg-white rounded-xl border border-[#E5DFD5] p-1.5 sm:p-2 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden" data-category="2button" onclick="openLightbox('assets/gallery/bespoke/bespoke_08_2button.jpg', 'Classic 2-Button Italian Cut Suit', '2Button')">
+              <div class="h-60 sm:h-80 md:h-96 rounded-lg overflow-hidden bg-slate-100 relative">
+                <img src="assets/gallery/bespoke/bespoke_08_2button.jpg" alt="Classic 2-Button Italian Cut Suit" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <span class="bg-white/90 text-slate-900 text-[10px] sm:text-xs font-semibold px-3 py-1.5 sm:px-4 sm:py-2 rounded-full shadow-md tracking-wider uppercase">View Photo</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 44 -->
+            <div class="product-card group bg-white rounded-xl border border-[#E5DFD5] p-1.5 sm:p-2 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden" data-category="3piece" onclick="openLightbox('assets/gallery/bespoke/bespoke_08_3piece.jpg', 'Bespoke 3-Piece Suit', '3Piece')">
+              <div class="h-60 sm:h-80 md:h-96 rounded-lg overflow-hidden bg-slate-100 relative">
+                <img src="assets/gallery/bespoke/bespoke_08_3piece.jpg" alt="Bespoke 3-Piece Suit" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <span class="bg-white/90 text-slate-900 text-[10px] sm:text-xs font-semibold px-3 py-1.5 sm:px-4 sm:py-2 rounded-full shadow-md tracking-wider uppercase">View Photo</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 45 -->
+            <div class="product-card group bg-white rounded-xl border border-[#E5DFD5] p-1.5 sm:p-2 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden" data-category="bell-bottom" onclick="openLightbox('assets/gallery/bespoke/bespoke_08_bell-bottom.jpg', 'Retro Flare Bell Bottom Pants', 'Bell Bottom')">
+              <div class="h-60 sm:h-80 md:h-96 rounded-lg overflow-hidden bg-slate-100 relative">
+                <img src="assets/gallery/bespoke/bespoke_08_bell-bottom.jpg" alt="Retro Flare Bell Bottom Pants" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <span class="bg-white/90 text-slate-900 text-[10px] sm:text-xs font-semibold px-3 py-1.5 sm:px-4 sm:py-2 rounded-full shadow-md tracking-wider uppercase">View Photo</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 46 -->
+            <div class="product-card group bg-white rounded-xl border border-[#E5DFD5] p-1.5 sm:p-2 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden" data-category="embroidered-shirt" onclick="openLightbox('assets/gallery/bespoke/bespoke_08_embroidered-shirt.jpg', 'Luxury Formal Shirt', 'Embroidered Shirt')">
+              <div class="h-60 sm:h-80 md:h-96 rounded-lg overflow-hidden bg-slate-100 relative">
+                <img src="assets/gallery/bespoke/bespoke_08_embroidered-shirt.jpg" alt="Luxury Formal Shirt" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <span class="bg-white/90 text-slate-900 text-[10px] sm:text-xs font-semibold px-3 py-1.5 sm:px-4 sm:py-2 rounded-full shadow-md tracking-wider uppercase">View Photo</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 47 -->
+            <div class="product-card group bg-white rounded-xl border border-[#E5DFD5] p-1.5 sm:p-2 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden" data-category="gurkha-pant" onclick="openLightbox('assets/gallery/bespoke/bespoke_08_gurkha-pant.jpg', 'Pleated Gurkha Trousers', 'Gurkha Pant')">
+              <div class="h-60 sm:h-80 md:h-96 rounded-lg overflow-hidden bg-slate-100 relative">
+                <img src="assets/gallery/bespoke/bespoke_08_gurkha-pant.jpg" alt="Pleated Gurkha Trousers" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <span class="bg-white/90 text-slate-900 text-[10px] sm:text-xs font-semibold px-3 py-1.5 sm:px-4 sm:py-2 rounded-full shadow-md tracking-wider uppercase">View Photo</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 48 -->
+            <div class="product-card group bg-white rounded-xl border border-[#E5DFD5] p-1.5 sm:p-2 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden" data-category="tuxedo" onclick="openLightbox('assets/gallery/bespoke/bespoke_08_tuxedo.jpg', 'Bespoke Tuxedo', 'Tuxedo')">
+              <div class="h-60 sm:h-80 md:h-96 rounded-lg overflow-hidden bg-slate-100 relative">
+                <img src="assets/gallery/bespoke/bespoke_08_tuxedo.jpg" alt="Bespoke Tuxedo" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <span class="bg-white/90 text-slate-900 text-[10px] sm:text-xs font-semibold px-3 py-1.5 sm:px-4 sm:py-2 rounded-full shadow-md tracking-wider uppercase">View Photo</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 49 -->
+            <div class="product-card group bg-white rounded-xl border border-[#E5DFD5] p-1.5 sm:p-2 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden" data-category="2button" onclick="openLightbox('assets/gallery/bespoke/bespoke_09_2button.jpg', 'Classic 2-Button Italian Cut Suit', '2Button')">
+              <div class="h-60 sm:h-80 md:h-96 rounded-lg overflow-hidden bg-slate-100 relative">
+                <img src="assets/gallery/bespoke/bespoke_09_2button.jpg" alt="Classic 2-Button Italian Cut Suit" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <span class="bg-white/90 text-slate-900 text-[10px] sm:text-xs font-semibold px-3 py-1.5 sm:px-4 sm:py-2 rounded-full shadow-md tracking-wider uppercase">View Photo</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 50 -->
+            <div class="product-card group bg-white rounded-xl border border-[#E5DFD5] p-1.5 sm:p-2 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden" data-category="3piece" onclick="openLightbox('assets/gallery/bespoke/bespoke_09_3piece.jpg', 'Bespoke 3-Piece Suit', '3Piece')">
+              <div class="h-60 sm:h-80 md:h-96 rounded-lg overflow-hidden bg-slate-100 relative">
+                <img src="assets/gallery/bespoke/bespoke_09_3piece.jpg" alt="Bespoke 3-Piece Suit" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <span class="bg-white/90 text-slate-900 text-[10px] sm:text-xs font-semibold px-3 py-1.5 sm:px-4 sm:py-2 rounded-full shadow-md tracking-wider uppercase">View Photo</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 51 -->
+            <div class="product-card group bg-white rounded-xl border border-[#E5DFD5] p-1.5 sm:p-2 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden" data-category="bell-bottom" onclick="openLightbox('assets/gallery/bespoke/bespoke_09_bell-bottom.jpg', 'Retro Flare Bell Bottom Pants', 'Bell Bottom')">
+              <div class="h-60 sm:h-80 md:h-96 rounded-lg overflow-hidden bg-slate-100 relative">
+                <img src="assets/gallery/bespoke/bespoke_09_bell-bottom.jpg" alt="Retro Flare Bell Bottom Pants" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <span class="bg-white/90 text-slate-900 text-[10px] sm:text-xs font-semibold px-3 py-1.5 sm:px-4 sm:py-2 rounded-full shadow-md tracking-wider uppercase">View Photo</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 52 -->
+            <div class="product-card group bg-white rounded-xl border border-[#E5DFD5] p-1.5 sm:p-2 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden" data-category="embroidered-shirt" onclick="openLightbox('assets/gallery/bespoke/bespoke_09_embroidered-shirt.jpg', 'Luxury Formal Shirt', 'Embroidered Shirt')">
+              <div class="h-60 sm:h-80 md:h-96 rounded-lg overflow-hidden bg-slate-100 relative">
+                <img src="assets/gallery/bespoke/bespoke_09_embroidered-shirt.jpg" alt="Luxury Formal Shirt" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <span class="bg-white/90 text-slate-900 text-[10px] sm:text-xs font-semibold px-3 py-1.5 sm:px-4 sm:py-2 rounded-full shadow-md tracking-wider uppercase">View Photo</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 53 -->
+            <div class="product-card group bg-white rounded-xl border border-[#E5DFD5] p-1.5 sm:p-2 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden" data-category="gurkha-pant" onclick="openLightbox('assets/gallery/bespoke/bespoke_09_gurkha-pant.jpg', 'Pleated Gurkha Trousers', 'Gurkha Pant')">
+              <div class="h-60 sm:h-80 md:h-96 rounded-lg overflow-hidden bg-slate-100 relative">
+                <img src="assets/gallery/bespoke/bespoke_09_gurkha-pant.jpg" alt="Pleated Gurkha Trousers" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <span class="bg-white/90 text-slate-900 text-[10px] sm:text-xs font-semibold px-3 py-1.5 sm:px-4 sm:py-2 rounded-full shadow-md tracking-wider uppercase">View Photo</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 54 -->
+            <div class="product-card group bg-white rounded-xl border border-[#E5DFD5] p-1.5 sm:p-2 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden" data-category="tuxedo" onclick="openLightbox('assets/gallery/bespoke/bespoke_09_tuxedo.jpg', 'Bespoke Tuxedo', 'Tuxedo')">
+              <div class="h-60 sm:h-80 md:h-96 rounded-lg overflow-hidden bg-slate-100 relative">
+                <img src="assets/gallery/bespoke/bespoke_09_tuxedo.jpg" alt="Bespoke Tuxedo" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <span class="bg-white/90 text-slate-900 text-[10px] sm:text-xs font-semibold px-3 py-1.5 sm:px-4 sm:py-2 rounded-full shadow-md tracking-wider uppercase">View Photo</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 55 -->
+            <div class="product-card group bg-white rounded-xl border border-[#E5DFD5] p-1.5 sm:p-2 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden" data-category="2button" onclick="openLightbox('assets/gallery/bespoke/bespoke_10_2button.jpg', 'Classic 2-Button Italian Cut Suit', '2Button')">
+              <div class="h-60 sm:h-80 md:h-96 rounded-lg overflow-hidden bg-slate-100 relative">
+                <img src="assets/gallery/bespoke/bespoke_10_2button.jpg" alt="Classic 2-Button Italian Cut Suit" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <span class="bg-white/90 text-slate-900 text-[10px] sm:text-xs font-semibold px-3 py-1.5 sm:px-4 sm:py-2 rounded-full shadow-md tracking-wider uppercase">View Photo</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 56 -->
+            <div class="product-card group bg-white rounded-xl border border-[#E5DFD5] p-1.5 sm:p-2 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden" data-category="3piece" onclick="openLightbox('assets/gallery/bespoke/bespoke_10_3piece.jpg', 'Bespoke 3-Piece Suit', '3Piece')">
+              <div class="h-60 sm:h-80 md:h-96 rounded-lg overflow-hidden bg-slate-100 relative">
+                <img src="assets/gallery/bespoke/bespoke_10_3piece.jpg" alt="Bespoke 3-Piece Suit" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <span class="bg-white/90 text-slate-900 text-[10px] sm:text-xs font-semibold px-3 py-1.5 sm:px-4 sm:py-2 rounded-full shadow-md tracking-wider uppercase">View Photo</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 57 -->
+            <div class="product-card group bg-white rounded-xl border border-[#E5DFD5] p-1.5 sm:p-2 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden" data-category="bell-bottom" onclick="openLightbox('assets/gallery/bespoke/bespoke_10_bell-bottom.jpg', 'Retro Flare Bell Bottom Pants', 'Bell Bottom')">
+              <div class="h-60 sm:h-80 md:h-96 rounded-lg overflow-hidden bg-slate-100 relative">
+                <img src="assets/gallery/bespoke/bespoke_10_bell-bottom.jpg" alt="Retro Flare Bell Bottom Pants" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <span class="bg-white/90 text-slate-900 text-[10px] sm:text-xs font-semibold px-3 py-1.5 sm:px-4 sm:py-2 rounded-full shadow-md tracking-wider uppercase">View Photo</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 58 -->
+            <div class="product-card group bg-white rounded-xl border border-[#E5DFD5] p-1.5 sm:p-2 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden" data-category="embroidered-shirt" onclick="openLightbox('assets/gallery/bespoke/bespoke_10_embroidered-shirt.jpg', 'Luxury Formal Shirt', 'Embroidered Shirt')">
+              <div class="h-60 sm:h-80 md:h-96 rounded-lg overflow-hidden bg-slate-100 relative">
+                <img src="assets/gallery/bespoke/bespoke_10_embroidered-shirt.jpg" alt="Luxury Formal Shirt" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <span class="bg-white/90 text-slate-900 text-[10px] sm:text-xs font-semibold px-3 py-1.5 sm:px-4 sm:py-2 rounded-full shadow-md tracking-wider uppercase">View Photo</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 59 -->
+            <div class="product-card group bg-white rounded-xl border border-[#E5DFD5] p-1.5 sm:p-2 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden" data-category="gurkha-pant" onclick="openLightbox('assets/gallery/bespoke/bespoke_10_gurkha-pant.jpg', 'Pleated Gurkha Trousers', 'Gurkha Pant')">
+              <div class="h-60 sm:h-80 md:h-96 rounded-lg overflow-hidden bg-slate-100 relative">
+                <img src="assets/gallery/bespoke/bespoke_10_gurkha-pant.jpg" alt="Pleated Gurkha Trousers" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <span class="bg-white/90 text-slate-900 text-[10px] sm:text-xs font-semibold px-3 py-1.5 sm:px-4 sm:py-2 rounded-full shadow-md tracking-wider uppercase">View Photo</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 60 -->
+            <div class="product-card group bg-white rounded-xl border border-[#E5DFD5] p-1.5 sm:p-2 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden" data-category="tuxedo" onclick="openLightbox('assets/gallery/bespoke/bespoke_10_tuxedo.jpg', 'Bespoke Tuxedo', 'Tuxedo')">
+              <div class="h-60 sm:h-80 md:h-96 rounded-lg overflow-hidden bg-slate-100 relative">
+                <img src="assets/gallery/bespoke/bespoke_10_tuxedo.jpg" alt="Bespoke Tuxedo" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <span class="bg-white/90 text-slate-900 text-[10px] sm:text-xs font-semibold px-3 py-1.5 sm:px-4 sm:py-2 rounded-full shadow-md tracking-wider uppercase">View Photo</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 61 -->
+            <div class="product-card group bg-white rounded-xl border border-[#E5DFD5] p-1.5 sm:p-2 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden" data-category="2button" onclick="openLightbox('assets/gallery/bespoke/bespoke_11_2button.jpg', 'Classic 2-Button Italian Cut Suit', '2Button')">
+              <div class="h-60 sm:h-80 md:h-96 rounded-lg overflow-hidden bg-slate-100 relative">
+                <img src="assets/gallery/bespoke/bespoke_11_2button.jpg" alt="Classic 2-Button Italian Cut Suit" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <span class="bg-white/90 text-slate-900 text-[10px] sm:text-xs font-semibold px-3 py-1.5 sm:px-4 sm:py-2 rounded-full shadow-md tracking-wider uppercase">View Photo</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 62 -->
+            <div class="product-card group bg-white rounded-xl border border-[#E5DFD5] p-1.5 sm:p-2 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden" data-category="3piece" onclick="openLightbox('assets/gallery/bespoke/bespoke_11_3piece.jpg', 'Bespoke 3-Piece Suit', '3Piece')">
+              <div class="h-60 sm:h-80 md:h-96 rounded-lg overflow-hidden bg-slate-100 relative">
+                <img src="assets/gallery/bespoke/bespoke_11_3piece.jpg" alt="Bespoke 3-Piece Suit" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <span class="bg-white/90 text-slate-900 text-[10px] sm:text-xs font-semibold px-3 py-1.5 sm:px-4 sm:py-2 rounded-full shadow-md tracking-wider uppercase">View Photo</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 63 -->
+            <div class="product-card group bg-white rounded-xl border border-[#E5DFD5] p-1.5 sm:p-2 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden" data-category="bell-bottom" onclick="openLightbox('assets/gallery/bespoke/bespoke_11_bell-bottom.jpg', 'Retro Flare Bell Bottom Pants', 'Bell Bottom')">
+              <div class="h-60 sm:h-80 md:h-96 rounded-lg overflow-hidden bg-slate-100 relative">
+                <img src="assets/gallery/bespoke/bespoke_11_bell-bottom.jpg" alt="Retro Flare Bell Bottom Pants" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <span class="bg-white/90 text-slate-900 text-[10px] sm:text-xs font-semibold px-3 py-1.5 sm:px-4 sm:py-2 rounded-full shadow-md tracking-wider uppercase">View Photo</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 64 -->
+            <div class="product-card group bg-white rounded-xl border border-[#E5DFD5] p-1.5 sm:p-2 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden" data-category="embroidered-shirt" onclick="openLightbox('assets/gallery/bespoke/bespoke_11_embroidered-shirt.jpg', 'Luxury Formal Shirt', 'Embroidered Shirt')">
+              <div class="h-60 sm:h-80 md:h-96 rounded-lg overflow-hidden bg-slate-100 relative">
+                <img src="assets/gallery/bespoke/bespoke_11_embroidered-shirt.jpg" alt="Luxury Formal Shirt" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <span class="bg-white/90 text-slate-900 text-[10px] sm:text-xs font-semibold px-3 py-1.5 sm:px-4 sm:py-2 rounded-full shadow-md tracking-wider uppercase">View Photo</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 65 -->
+            <div class="product-card group bg-white rounded-xl border border-[#E5DFD5] p-1.5 sm:p-2 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden" data-category="gurkha-pant" onclick="openLightbox('assets/gallery/bespoke/bespoke_11_gurkha-pant.jpg', 'Pleated Gurkha Trousers', 'Gurkha Pant')">
+              <div class="h-60 sm:h-80 md:h-96 rounded-lg overflow-hidden bg-slate-100 relative">
+                <img src="assets/gallery/bespoke/bespoke_11_gurkha-pant.jpg" alt="Pleated Gurkha Trousers" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <span class="bg-white/90 text-slate-900 text-[10px] sm:text-xs font-semibold px-3 py-1.5 sm:px-4 sm:py-2 rounded-full shadow-md tracking-wider uppercase">View Photo</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 66 -->
+            <div class="product-card group bg-white rounded-xl border border-[#E5DFD5] p-1.5 sm:p-2 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden" data-category="tuxedo" onclick="openLightbox('assets/gallery/bespoke/bespoke_11_tuxedo.jpg', 'Bespoke Tuxedo', 'Tuxedo')">
+              <div class="h-60 sm:h-80 md:h-96 rounded-lg overflow-hidden bg-slate-100 relative">
+                <img src="assets/gallery/bespoke/bespoke_11_tuxedo.jpg" alt="Bespoke Tuxedo" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <span class="bg-white/90 text-slate-900 text-[10px] sm:text-xs font-semibold px-3 py-1.5 sm:px-4 sm:py-2 rounded-full shadow-md tracking-wider uppercase">View Photo</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 67 -->
+            <div class="product-card group bg-white rounded-xl border border-[#E5DFD5] p-1.5 sm:p-2 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden" data-category="2button" onclick="openLightbox('assets/gallery/bespoke/bespoke_12_2button.jpg', 'Classic 2-Button Italian Cut Suit', '2Button')">
+              <div class="h-60 sm:h-80 md:h-96 rounded-lg overflow-hidden bg-slate-100 relative">
+                <img src="assets/gallery/bespoke/bespoke_12_2button.jpg" alt="Classic 2-Button Italian Cut Suit" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <span class="bg-white/90 text-slate-900 text-[10px] sm:text-xs font-semibold px-3 py-1.5 sm:px-4 sm:py-2 rounded-full shadow-md tracking-wider uppercase">View Photo</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 68 -->
+            <div class="product-card group bg-white rounded-xl border border-[#E5DFD5] p-1.5 sm:p-2 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden" data-category="3piece" onclick="openLightbox('assets/gallery/bespoke/bespoke_12_3piece.jpg', 'Bespoke 3-Piece Suit', '3Piece')">
+              <div class="h-60 sm:h-80 md:h-96 rounded-lg overflow-hidden bg-slate-100 relative">
+                <img src="assets/gallery/bespoke/bespoke_12_3piece.jpg" alt="Bespoke 3-Piece Suit" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <span class="bg-white/90 text-slate-900 text-[10px] sm:text-xs font-semibold px-3 py-1.5 sm:px-4 sm:py-2 rounded-full shadow-md tracking-wider uppercase">View Photo</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 69 -->
+            <div class="product-card group bg-white rounded-xl border border-[#E5DFD5] p-1.5 sm:p-2 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden" data-category="embroidered-shirt" onclick="openLightbox('assets/gallery/bespoke/bespoke_12_embroidered-shirt.jpg', 'Luxury Formal Shirt', 'Embroidered Shirt')">
+              <div class="h-60 sm:h-80 md:h-96 rounded-lg overflow-hidden bg-slate-100 relative">
+                <img src="assets/gallery/bespoke/bespoke_12_embroidered-shirt.jpg" alt="Luxury Formal Shirt" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <span class="bg-white/90 text-slate-900 text-[10px] sm:text-xs font-semibold px-3 py-1.5 sm:px-4 sm:py-2 rounded-full shadow-md tracking-wider uppercase">View Photo</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 70 -->
+            <div class="product-card group bg-white rounded-xl border border-[#E5DFD5] p-1.5 sm:p-2 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden" data-category="gurkha-pant" onclick="openLightbox('assets/gallery/bespoke/bespoke_12_gurkha-pant.jpg', 'Pleated Gurkha Trousers', 'Gurkha Pant')">
+              <div class="h-60 sm:h-80 md:h-96 rounded-lg overflow-hidden bg-slate-100 relative">
+                <img src="assets/gallery/bespoke/bespoke_12_gurkha-pant.jpg" alt="Pleated Gurkha Trousers" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <span class="bg-white/90 text-slate-900 text-[10px] sm:text-xs font-semibold px-3 py-1.5 sm:px-4 sm:py-2 rounded-full shadow-md tracking-wider uppercase">View Photo</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 71 -->
+            <div class="product-card group bg-white rounded-xl border border-[#E5DFD5] p-1.5 sm:p-2 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden" data-category="tuxedo" onclick="openLightbox('assets/gallery/bespoke/bespoke_12_tuxedo.jpg', 'Bespoke Tuxedo', 'Tuxedo')">
+              <div class="h-60 sm:h-80 md:h-96 rounded-lg overflow-hidden bg-slate-100 relative">
+                <img src="assets/gallery/bespoke/bespoke_12_tuxedo.jpg" alt="Bespoke Tuxedo" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <span class="bg-white/90 text-slate-900 text-[10px] sm:text-xs font-semibold px-3 py-1.5 sm:px-4 sm:py-2 rounded-full shadow-md tracking-wider uppercase">View Photo</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 72 -->
+            <div class="product-card group bg-white rounded-xl border border-[#E5DFD5] p-1.5 sm:p-2 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden" data-category="2button" onclick="openLightbox('assets/gallery/bespoke/bespoke_13_2button.jpg', 'Classic 2-Button Italian Cut Suit', '2Button')">
+              <div class="h-60 sm:h-80 md:h-96 rounded-lg overflow-hidden bg-slate-100 relative">
+                <img src="assets/gallery/bespoke/bespoke_13_2button.jpg" alt="Classic 2-Button Italian Cut Suit" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <span class="bg-white/90 text-slate-900 text-[10px] sm:text-xs font-semibold px-3 py-1.5 sm:px-4 sm:py-2 rounded-full shadow-md tracking-wider uppercase">View Photo</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 73 -->
+            <div class="product-card group bg-white rounded-xl border border-[#E5DFD5] p-1.5 sm:p-2 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden" data-category="3piece" onclick="openLightbox('assets/gallery/bespoke/bespoke_13_3piece.jpg', 'Bespoke 3-Piece Suit', '3Piece')">
+              <div class="h-60 sm:h-80 md:h-96 rounded-lg overflow-hidden bg-slate-100 relative">
+                <img src="assets/gallery/bespoke/bespoke_13_3piece.jpg" alt="Bespoke 3-Piece Suit" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <span class="bg-white/90 text-slate-900 text-[10px] sm:text-xs font-semibold px-3 py-1.5 sm:px-4 sm:py-2 rounded-full shadow-md tracking-wider uppercase">View Photo</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 74 -->
+            <div class="product-card group bg-white rounded-xl border border-[#E5DFD5] p-1.5 sm:p-2 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden" data-category="embroidered-shirt" onclick="openLightbox('assets/gallery/bespoke/bespoke_13_embroidered-shirt.jpg', 'Luxury Formal Shirt', 'Embroidered Shirt')">
+              <div class="h-60 sm:h-80 md:h-96 rounded-lg overflow-hidden bg-slate-100 relative">
+                <img src="assets/gallery/bespoke/bespoke_13_embroidered-shirt.jpg" alt="Luxury Formal Shirt" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <span class="bg-white/90 text-slate-900 text-[10px] sm:text-xs font-semibold px-3 py-1.5 sm:px-4 sm:py-2 rounded-full shadow-md tracking-wider uppercase">View Photo</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 75 -->
+            <div class="product-card group bg-white rounded-xl border border-[#E5DFD5] p-1.5 sm:p-2 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden" data-category="gurkha-pant" onclick="openLightbox('assets/gallery/bespoke/bespoke_13_gurkha-pant.jpg', 'Pleated Gurkha Trousers', 'Gurkha Pant')">
+              <div class="h-60 sm:h-80 md:h-96 rounded-lg overflow-hidden bg-slate-100 relative">
+                <img src="assets/gallery/bespoke/bespoke_13_gurkha-pant.jpg" alt="Pleated Gurkha Trousers" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <span class="bg-white/90 text-slate-900 text-[10px] sm:text-xs font-semibold px-3 py-1.5 sm:px-4 sm:py-2 rounded-full shadow-md tracking-wider uppercase">View Photo</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 76 -->
+            <div class="product-card group bg-white rounded-xl border border-[#E5DFD5] p-1.5 sm:p-2 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden" data-category="tuxedo" onclick="openLightbox('assets/gallery/bespoke/bespoke_13_tuxedo.jpg', 'Bespoke Tuxedo', 'Tuxedo')">
+              <div class="h-60 sm:h-80 md:h-96 rounded-lg overflow-hidden bg-slate-100 relative">
+                <img src="assets/gallery/bespoke/bespoke_13_tuxedo.jpg" alt="Bespoke Tuxedo" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <span class="bg-white/90 text-slate-900 text-[10px] sm:text-xs font-semibold px-3 py-1.5 sm:px-4 sm:py-2 rounded-full shadow-md tracking-wider uppercase">View Photo</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 77 -->
+            <div class="product-card group bg-white rounded-xl border border-[#E5DFD5] p-1.5 sm:p-2 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden" data-category="2button" onclick="openLightbox('assets/gallery/bespoke/bespoke_14_2button.jpg', 'Classic 2-Button Italian Cut Suit', '2Button')">
+              <div class="h-60 sm:h-80 md:h-96 rounded-lg overflow-hidden bg-slate-100 relative">
+                <img src="assets/gallery/bespoke/bespoke_14_2button.jpg" alt="Classic 2-Button Italian Cut Suit" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <span class="bg-white/90 text-slate-900 text-[10px] sm:text-xs font-semibold px-3 py-1.5 sm:px-4 sm:py-2 rounded-full shadow-md tracking-wider uppercase">View Photo</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 78 -->
+            <div class="product-card group bg-white rounded-xl border border-[#E5DFD5] p-1.5 sm:p-2 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden" data-category="3piece" onclick="openLightbox('assets/gallery/bespoke/bespoke_14_3piece.jpg', 'Bespoke 3-Piece Suit', '3Piece')">
+              <div class="h-60 sm:h-80 md:h-96 rounded-lg overflow-hidden bg-slate-100 relative">
+                <img src="assets/gallery/bespoke/bespoke_14_3piece.jpg" alt="Bespoke 3-Piece Suit" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <span class="bg-white/90 text-slate-900 text-[10px] sm:text-xs font-semibold px-3 py-1.5 sm:px-4 sm:py-2 rounded-full shadow-md tracking-wider uppercase">View Photo</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 79 -->
+            <div class="product-card group bg-white rounded-xl border border-[#E5DFD5] p-1.5 sm:p-2 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden" data-category="embroidered-shirt" onclick="openLightbox('assets/gallery/bespoke/bespoke_14_embroidered-shirt.jpg', 'Luxury Formal Shirt', 'Embroidered Shirt')">
+              <div class="h-60 sm:h-80 md:h-96 rounded-lg overflow-hidden bg-slate-100 relative">
+                <img src="assets/gallery/bespoke/bespoke_14_embroidered-shirt.jpg" alt="Luxury Formal Shirt" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <span class="bg-white/90 text-slate-900 text-[10px] sm:text-xs font-semibold px-3 py-1.5 sm:px-4 sm:py-2 rounded-full shadow-md tracking-wider uppercase">View Photo</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 80 -->
+            <div class="product-card group bg-white rounded-xl border border-[#E5DFD5] p-1.5 sm:p-2 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden" data-category="gurkha-pant" onclick="openLightbox('assets/gallery/bespoke/bespoke_14_gurkha-pant.jpg', 'Pleated Gurkha Trousers', 'Gurkha Pant')">
+              <div class="h-60 sm:h-80 md:h-96 rounded-lg overflow-hidden bg-slate-100 relative">
+                <img src="assets/gallery/bespoke/bespoke_14_gurkha-pant.jpg" alt="Pleated Gurkha Trousers" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <span class="bg-white/90 text-slate-900 text-[10px] sm:text-xs font-semibold px-3 py-1.5 sm:px-4 sm:py-2 rounded-full shadow-md tracking-wider uppercase">View Photo</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 81 -->
+            <div class="product-card group bg-white rounded-xl border border-[#E5DFD5] p-1.5 sm:p-2 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden" data-category="tuxedo" onclick="openLightbox('assets/gallery/bespoke/bespoke_14_tuxedo.jpg', 'Bespoke Tuxedo', 'Tuxedo')">
+              <div class="h-60 sm:h-80 md:h-96 rounded-lg overflow-hidden bg-slate-100 relative">
+                <img src="assets/gallery/bespoke/bespoke_14_tuxedo.jpg" alt="Bespoke Tuxedo" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <span class="bg-white/90 text-slate-900 text-[10px] sm:text-xs font-semibold px-3 py-1.5 sm:px-4 sm:py-2 rounded-full shadow-md tracking-wider uppercase">View Photo</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 82 -->
+            <div class="product-card group bg-white rounded-xl border border-[#E5DFD5] p-1.5 sm:p-2 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden" data-category="2button" onclick="openLightbox('assets/gallery/bespoke/bespoke_15_2button.jpg', 'Classic 2-Button Italian Cut Suit', '2Button')">
+              <div class="h-60 sm:h-80 md:h-96 rounded-lg overflow-hidden bg-slate-100 relative">
+                <img src="assets/gallery/bespoke/bespoke_15_2button.jpg" alt="Classic 2-Button Italian Cut Suit" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <span class="bg-white/90 text-slate-900 text-[10px] sm:text-xs font-semibold px-3 py-1.5 sm:px-4 sm:py-2 rounded-full shadow-md tracking-wider uppercase">View Photo</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 83 -->
+            <div class="product-card group bg-white rounded-xl border border-[#E5DFD5] p-1.5 sm:p-2 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden" data-category="3piece" onclick="openLightbox('assets/gallery/bespoke/bespoke_15_3piece.jpg', 'Bespoke 3-Piece Suit', '3Piece')">
+              <div class="h-60 sm:h-80 md:h-96 rounded-lg overflow-hidden bg-slate-100 relative">
+                <img src="assets/gallery/bespoke/bespoke_15_3piece.jpg" alt="Bespoke 3-Piece Suit" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <span class="bg-white/90 text-slate-900 text-[10px] sm:text-xs font-semibold px-3 py-1.5 sm:px-4 sm:py-2 rounded-full shadow-md tracking-wider uppercase">View Photo</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 84 -->
+            <div class="product-card group bg-white rounded-xl border border-[#E5DFD5] p-1.5 sm:p-2 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden" data-category="embroidered-shirt" onclick="openLightbox('assets/gallery/bespoke/bespoke_15_embroidered-shirt.jpg', 'Luxury Formal Shirt', 'Embroidered Shirt')">
+              <div class="h-60 sm:h-80 md:h-96 rounded-lg overflow-hidden bg-slate-100 relative">
+                <img src="assets/gallery/bespoke/bespoke_15_embroidered-shirt.jpg" alt="Luxury Formal Shirt" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <span class="bg-white/90 text-slate-900 text-[10px] sm:text-xs font-semibold px-3 py-1.5 sm:px-4 sm:py-2 rounded-full shadow-md tracking-wider uppercase">View Photo</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 85 -->
+            <div class="product-card group bg-white rounded-xl border border-[#E5DFD5] p-1.5 sm:p-2 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden" data-category="gurkha-pant" onclick="openLightbox('assets/gallery/bespoke/bespoke_15_gurkha-pant.jpg', 'Pleated Gurkha Trousers', 'Gurkha Pant')">
+              <div class="h-60 sm:h-80 md:h-96 rounded-lg overflow-hidden bg-slate-100 relative">
+                <img src="assets/gallery/bespoke/bespoke_15_gurkha-pant.jpg" alt="Pleated Gurkha Trousers" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <span class="bg-white/90 text-slate-900 text-[10px] sm:text-xs font-semibold px-3 py-1.5 sm:px-4 sm:py-2 rounded-full shadow-md tracking-wider uppercase">View Photo</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 86 -->
+            <div class="product-card group bg-white rounded-xl border border-[#E5DFD5] p-1.5 sm:p-2 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden" data-category="tuxedo" onclick="openLightbox('assets/gallery/bespoke/bespoke_15_tuxedo.jpg', 'Bespoke Tuxedo', 'Tuxedo')">
+              <div class="h-60 sm:h-80 md:h-96 rounded-lg overflow-hidden bg-slate-100 relative">
+                <img src="assets/gallery/bespoke/bespoke_15_tuxedo.jpg" alt="Bespoke Tuxedo" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <span class="bg-white/90 text-slate-900 text-[10px] sm:text-xs font-semibold px-3 py-1.5 sm:px-4 sm:py-2 rounded-full shadow-md tracking-wider uppercase">View Photo</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 87 -->
+            <div class="product-card group bg-white rounded-xl border border-[#E5DFD5] p-1.5 sm:p-2 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden" data-category="2button" onclick="openLightbox('assets/gallery/bespoke/bespoke_16_2button.jpg', 'Classic 2-Button Italian Cut Suit', '2Button')">
+              <div class="h-60 sm:h-80 md:h-96 rounded-lg overflow-hidden bg-slate-100 relative">
+                <img src="assets/gallery/bespoke/bespoke_16_2button.jpg" alt="Classic 2-Button Italian Cut Suit" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <span class="bg-white/90 text-slate-900 text-[10px] sm:text-xs font-semibold px-3 py-1.5 sm:px-4 sm:py-2 rounded-full shadow-md tracking-wider uppercase">View Photo</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 88 -->
+            <div class="product-card group bg-white rounded-xl border border-[#E5DFD5] p-1.5 sm:p-2 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden" data-category="3piece" onclick="openLightbox('assets/gallery/bespoke/bespoke_16_3piece.jpg', 'Bespoke 3-Piece Suit', '3Piece')">
+              <div class="h-60 sm:h-80 md:h-96 rounded-lg overflow-hidden bg-slate-100 relative">
+                <img src="assets/gallery/bespoke/bespoke_16_3piece.jpg" alt="Bespoke 3-Piece Suit" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <span class="bg-white/90 text-slate-900 text-[10px] sm:text-xs font-semibold px-3 py-1.5 sm:px-4 sm:py-2 rounded-full shadow-md tracking-wider uppercase">View Photo</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 89 -->
+            <div class="product-card group bg-white rounded-xl border border-[#E5DFD5] p-1.5 sm:p-2 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden" data-category="embroidered-shirt" onclick="openLightbox('assets/gallery/bespoke/bespoke_16_embroidered-shirt.jpg', 'Luxury Formal Shirt', 'Embroidered Shirt')">
+              <div class="h-60 sm:h-80 md:h-96 rounded-lg overflow-hidden bg-slate-100 relative">
+                <img src="assets/gallery/bespoke/bespoke_16_embroidered-shirt.jpg" alt="Luxury Formal Shirt" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <span class="bg-white/90 text-slate-900 text-[10px] sm:text-xs font-semibold px-3 py-1.5 sm:px-4 sm:py-2 rounded-full shadow-md tracking-wider uppercase">View Photo</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 90 -->
+            <div class="product-card group bg-white rounded-xl border border-[#E5DFD5] p-1.5 sm:p-2 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden" data-category="tuxedo" onclick="openLightbox('assets/gallery/bespoke/bespoke_16_tuxedo.jpg', 'Bespoke Tuxedo', 'Tuxedo')">
+              <div class="h-60 sm:h-80 md:h-96 rounded-lg overflow-hidden bg-slate-100 relative">
+                <img src="assets/gallery/bespoke/bespoke_16_tuxedo.jpg" alt="Bespoke Tuxedo" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <span class="bg-white/90 text-slate-900 text-[10px] sm:text-xs font-semibold px-3 py-1.5 sm:px-4 sm:py-2 rounded-full shadow-md tracking-wider uppercase">View Photo</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 91 -->
+            <div class="product-card group bg-white rounded-xl border border-[#E5DFD5] p-1.5 sm:p-2 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden" data-category="2button" onclick="openLightbox('assets/gallery/bespoke/bespoke_17_2button.jpg', 'Classic 2-Button Italian Cut Suit', '2Button')">
+              <div class="h-60 sm:h-80 md:h-96 rounded-lg overflow-hidden bg-slate-100 relative">
+                <img src="assets/gallery/bespoke/bespoke_17_2button.jpg" alt="Classic 2-Button Italian Cut Suit" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <span class="bg-white/90 text-slate-900 text-[10px] sm:text-xs font-semibold px-3 py-1.5 sm:px-4 sm:py-2 rounded-full shadow-md tracking-wider uppercase">View Photo</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 92 -->
+            <div class="product-card group bg-white rounded-xl border border-[#E5DFD5] p-1.5 sm:p-2 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden" data-category="3piece" onclick="openLightbox('assets/gallery/bespoke/bespoke_17_3piece.jpg', 'Bespoke 3-Piece Suit', '3Piece')">
+              <div class="h-60 sm:h-80 md:h-96 rounded-lg overflow-hidden bg-slate-100 relative">
+                <img src="assets/gallery/bespoke/bespoke_17_3piece.jpg" alt="Bespoke 3-Piece Suit" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <span class="bg-white/90 text-slate-900 text-[10px] sm:text-xs font-semibold px-3 py-1.5 sm:px-4 sm:py-2 rounded-full shadow-md tracking-wider uppercase">View Photo</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 93 -->
+            <div class="product-card group bg-white rounded-xl border border-[#E5DFD5] p-1.5 sm:p-2 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden" data-category="2button" onclick="openLightbox('assets/gallery/bespoke/bespoke_18_2button.jpg', 'Classic 2-Button Italian Cut Suit', '2Button')">
+              <div class="h-60 sm:h-80 md:h-96 rounded-lg overflow-hidden bg-slate-100 relative">
+                <img src="assets/gallery/bespoke/bespoke_18_2button.jpg" alt="Classic 2-Button Italian Cut Suit" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <span class="bg-white/90 text-slate-900 text-[10px] sm:text-xs font-semibold px-3 py-1.5 sm:px-4 sm:py-2 rounded-full shadow-md tracking-wider uppercase">View Photo</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 94 -->
+            <div class="product-card group bg-white rounded-xl border border-[#E5DFD5] p-1.5 sm:p-2 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden" data-category="3piece" onclick="openLightbox('assets/gallery/bespoke/bespoke_18_3piece.jpg', 'Bespoke 3-Piece Suit', '3Piece')">
+              <div class="h-60 sm:h-80 md:h-96 rounded-lg overflow-hidden bg-slate-100 relative">
+                <img src="assets/gallery/bespoke/bespoke_18_3piece.jpg" alt="Bespoke 3-Piece Suit" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <span class="bg-white/90 text-slate-900 text-[10px] sm:text-xs font-semibold px-3 py-1.5 sm:px-4 sm:py-2 rounded-full shadow-md tracking-wider uppercase">View Photo</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 95 -->
+            <div class="product-card group bg-white rounded-xl border border-[#E5DFD5] p-1.5 sm:p-2 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden" data-category="2button" onclick="openLightbox('assets/gallery/bespoke/bespoke_19_2button.jpg', 'Classic 2-Button Italian Cut Suit', '2Button')">
+              <div class="h-60 sm:h-80 md:h-96 rounded-lg overflow-hidden bg-slate-100 relative">
+                <img src="assets/gallery/bespoke/bespoke_19_2button.jpg" alt="Classic 2-Button Italian Cut Suit" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <span class="bg-white/90 text-slate-900 text-[10px] sm:text-xs font-semibold px-3 py-1.5 sm:px-4 sm:py-2 rounded-full shadow-md tracking-wider uppercase">View Photo</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 96 -->
+            <div class="product-card group bg-white rounded-xl border border-[#E5DFD5] p-1.5 sm:p-2 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden" data-category="3piece" onclick="openLightbox('assets/gallery/bespoke/bespoke_19_3piece.jpg', 'Bespoke 3-Piece Suit', '3Piece')">
+              <div class="h-60 sm:h-80 md:h-96 rounded-lg overflow-hidden bg-slate-100 relative">
+                <img src="assets/gallery/bespoke/bespoke_19_3piece.jpg" alt="Bespoke 3-Piece Suit" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <span class="bg-white/90 text-slate-900 text-[10px] sm:text-xs font-semibold px-3 py-1.5 sm:px-4 sm:py-2 rounded-full shadow-md tracking-wider uppercase">View Photo</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 97 -->
+            <div class="product-card group bg-white rounded-xl border border-[#E5DFD5] p-1.5 sm:p-2 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden" data-category="3piece" onclick="openLightbox('assets/gallery/bespoke/bespoke_20_3piece.jpg', 'Bespoke 3-Piece Suit', '3Piece')">
+              <div class="h-60 sm:h-80 md:h-96 rounded-lg overflow-hidden bg-slate-100 relative">
+                <img src="assets/gallery/bespoke/bespoke_20_3piece.jpg" alt="Bespoke 3-Piece Suit" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <span class="bg-white/90 text-slate-900 text-[10px] sm:text-xs font-semibold px-3 py-1.5 sm:px-4 sm:py-2 rounded-full shadow-md tracking-wider uppercase">View Photo</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 98 -->
+            <div class="product-card group bg-white rounded-xl border border-[#E5DFD5] p-1.5 sm:p-2 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden" data-category="2button" onclick="openLightbox('assets/gallery/bespoke/bespoke_21_2button.jpg', 'Classic 2-Button Italian Cut Suit', '2Button')">
+              <div class="h-60 sm:h-80 md:h-96 rounded-lg overflow-hidden bg-slate-100 relative">
+                <img src="assets/gallery/bespoke/bespoke_21_2button.jpg" alt="Classic 2-Button Italian Cut Suit" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <span class="bg-white/90 text-slate-900 text-[10px] sm:text-xs font-semibold px-3 py-1.5 sm:px-4 sm:py-2 rounded-full shadow-md tracking-wider uppercase">View Photo</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 99 -->
+            <div class="product-card group bg-white rounded-xl border border-[#E5DFD5] p-1.5 sm:p-2 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden" data-category="2button" onclick="openLightbox('assets/gallery/bespoke/bespoke_22_2button.jpg', 'Classic 2-Button Italian Cut Suit', '2Button')">
+              <div class="h-60 sm:h-80 md:h-96 rounded-lg overflow-hidden bg-slate-100 relative">
+                <img src="assets/gallery/bespoke/bespoke_22_2button.jpg" alt="Classic 2-Button Italian Cut Suit" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <span class="bg-white/90 text-slate-900 text-[10px] sm:text-xs font-semibold px-3 py-1.5 sm:px-4 sm:py-2 rounded-full shadow-md tracking-wider uppercase">View Photo</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>

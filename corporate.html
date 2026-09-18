@@ -252,49 +252,49 @@
             EXECUTIVE SPECIFICATIONS
           </h3>
 
-          <ul class="space-y-1 text-xs">
-            <li>
-              <button onclick="filterCategory('all', this)" class="cat-item active w-full text-left px-3 py-2.5 rounded-lg flex items-center justify-between text-slate-700 hover:text-[#C59B27] hover:bg-[#FAF6EF] transition-all">
+          <ul class="flex lg:flex-col overflow-x-auto gap-2 lg:gap-1 text-xs pb-1 lg:pb-0 scrollbar-none max-w-full">
+            <li class="flex-shrink-0">
+              <button onclick="filterCategory('all', this)" class="cat-item active whitespace-nowrap lg:whitespace-normal w-auto lg:w-full text-left px-3 py-2.5 rounded-lg flex items-center justify-between text-slate-700 hover:text-[#C59B27] hover:bg-[#FAF6EF] transition-all">
                 <span class="flex items-center gap-2">
                   <span class="cat-arrow transition-transform text-slate-400">▸</span>
                   <span>All Corporate Attire</span>
                 </span>
               </button>
             </li>
-            <li>
-              <button onclick="filterCategory('executive-3piece', this)" class="cat-item w-full text-left px-3 py-2.5 rounded-lg flex items-center justify-between text-slate-700 hover:text-[#C59B27] hover:bg-[#FAF6EF] transition-all">
+            <li class="flex-shrink-0">
+              <button onclick="filterCategory('executive-3piece', this)" class="cat-item whitespace-nowrap lg:whitespace-normal w-auto lg:w-full text-left px-3 py-2.5 rounded-lg flex items-center justify-between text-slate-700 hover:text-[#C59B27] hover:bg-[#FAF6EF] transition-all">
                 <span class="flex items-center gap-2">
                   <span class="cat-arrow transition-transform text-slate-400">▸</span>
                   <span>3-Piece Executive Suits</span>
                 </span>
               </button>
             </li>
-            <li>
-              <button onclick="filterCategory('boardroom-2piece', this)" class="cat-item w-full text-left px-3 py-2.5 rounded-lg flex items-center justify-between text-slate-700 hover:text-[#C59B27] hover:bg-[#FAF6EF] transition-all">
+            <li class="flex-shrink-0">
+              <button onclick="filterCategory('boardroom-2piece', this)" class="cat-item whitespace-nowrap lg:whitespace-normal w-auto lg:w-full text-left px-3 py-2.5 rounded-lg flex items-center justify-between text-slate-700 hover:text-[#C59B27] hover:bg-[#FAF6EF] transition-all">
                 <span class="flex items-center gap-2">
                   <span class="cat-arrow transition-transform text-slate-400">▸</span>
                   <span>2-Button Boardroom Suits</span>
                 </span>
               </button>
             </li>
-            <li>
-              <button onclick="filterCategory('power-blazers', this)" class="cat-item w-full text-left px-3 py-2.5 rounded-lg flex items-center justify-between text-slate-700 hover:text-[#C59B27] hover:bg-[#FAF6EF] transition-all">
+            <li class="flex-shrink-0">
+              <button onclick="filterCategory('power-blazers', this)" class="cat-item whitespace-nowrap lg:whitespace-normal w-auto lg:w-full text-left px-3 py-2.5 rounded-lg flex items-center justify-between text-slate-700 hover:text-[#C59B27] hover:bg-[#FAF6EF] transition-all">
                 <span class="flex items-center gap-2">
                   <span class="cat-arrow transition-transform text-slate-400">▸</span>
                   <span>Power Blazers & Executive Coats</span>
                 </span>
               </button>
             </li>
-            <li>
-              <button onclick="filterCategory('formal-shirts', this)" class="cat-item w-full text-left px-3 py-2.5 rounded-lg flex items-center justify-between text-slate-700 hover:text-[#C59B27] hover:bg-[#FAF6EF] transition-all">
+            <li class="flex-shrink-0">
+              <button onclick="filterCategory('formal-shirts', this)" class="cat-item whitespace-nowrap lg:whitespace-normal w-auto lg:w-full text-left px-3 py-2.5 rounded-lg flex items-center justify-between text-slate-700 hover:text-[#C59B27] hover:bg-[#FAF6EF] transition-all">
                 <span class="flex items-center gap-2">
                   <span class="cat-arrow transition-transform text-slate-400">▸</span>
                   <span>Formal Shirts & Business Shirting</span>
                 </span>
               </button>
             </li>
-            <li>
-              <button onclick="filterCategory('executive-trousers', this)" class="cat-item w-full text-left px-3 py-2.5 rounded-lg flex items-center justify-between text-slate-700 hover:text-[#C59B27] hover:bg-[#FAF6EF] transition-all">
+            <li class="flex-shrink-0">
+              <button onclick="filterCategory('executive-trousers', this)" class="cat-item whitespace-nowrap lg:whitespace-normal w-auto lg:w-full text-left px-3 py-2.5 rounded-lg flex items-center justify-between text-slate-700 hover:text-[#C59B27] hover:bg-[#FAF6EF] transition-all">
                 <span class="flex items-center gap-2">
                   <span class="cat-arrow transition-transform text-slate-400">▸</span>
                   <span>Gurkha & Executive Trousers</span>
@@ -306,14 +306,8 @@
 
         <!-- ── RIGHT MAIN AREA: PRODUCT IMAGE GRID ── -->
         <div class="lg:col-span-3">
-                              <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 sm:gap-6 min-h-[350px] flex items-center justify-center">
-            <div class="col-span-full text-center py-20 bg-white/70 rounded-2xl border border-dashed border-[#C59B27]/40 p-8 shadow-sm space-y-3">
-              <div class="w-12 h-12 mx-auto rounded-full bg-[#FAF6EF] flex items-center justify-center text-[#C59B27]">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
-              </div>
-              <h3 class="font-serif font-semibold text-lg text-[#0A192F]">Curated Collection Gallery</h3>
-              <p class="text-xs text-slate-500 max-w-md mx-auto uppercase tracking-wider">Category filtering ready &bull; Select a category from the sidebar or upload raw images to populate this gallery</p>
-            </div>
+                                        <div id="product-grid" class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-6 min-h-[300px]">
+
           </div>
         </div>
       </div>
