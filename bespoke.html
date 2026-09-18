@@ -130,17 +130,25 @@
       padding: 12px 0; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: #0F172A; text-decoration: none; border-bottom: 1px solid #F1F5F9;
     }
 
-    /* Category Sidebar active styles */
+
+    /* Category active styles — pill on mobile, sidebar on desktop */
     .cat-item.active {
       color: #C59B27;
       font-weight: 700;
       background-color: #FAF6EF;
-      border-left: 3px solid #C59B27;
+      border-color: #C59B27 !important;
+    }
+    @media (min-width: 1024px) {
+      .cat-item.active {
+        border-left: 3px solid #C59B27;
+        border-radius: 0.5rem;
+      }
     }
     .cat-item.active .cat-arrow {
       color: #C59B27;
-      transform: translateX(3px);
+      transform: translateX(2px);
     }
+
   </style>
 </head>
 
@@ -253,64 +261,51 @@
             ATELIER SELECTIONS
           </h3>
 
-          <ul class="flex lg:flex-col overflow-x-auto gap-2 lg:gap-1 text-xs pb-1 lg:pb-0 scrollbar-none max-w-full">
-            <li class="flex-shrink-0">
-              <button onclick="filterCategory('all', this)" class="cat-item active whitespace-nowrap lg:whitespace-normal w-auto lg:w-full text-left px-3 py-2.5 rounded-lg flex items-center justify-between text-slate-700 hover:text-[#C59B27] hover:bg-[#FAF6EF] transition-all">
-                <span class="flex items-center gap-2">
-                  <span class="cat-arrow transition-transform text-slate-400">▸</span>
-                  <span>All Bespoke Creations</span>
-                </span>
+          <ul class="flex flex-wrap gap-2 lg:flex-col lg:gap-1 text-xs pb-1 lg:pb-0">
+            <li>
+              <button onclick="filterCategory('all', this)" class="cat-item active whitespace-nowrap lg:whitespace-normal text-left px-3 py-2 rounded-full lg:rounded-lg lg:w-full flex items-center gap-1.5 text-slate-700 bg-[#FAF6EF] lg:bg-transparent border border-[#E5DFD5] lg:border-0 hover:text-[#C59B27] hover:bg-[#FAF6EF] transition-all text-[11px] lg:text-xs">
+                <span class="cat-arrow transition-transform text-[#C59B27] lg:text-slate-400">▸</span>
+                <span>All Creations</span>
               </button>
             </li>
-            <li class="flex-shrink-0">
-              <button onclick="filterCategory('3piece', this)" class="cat-item whitespace-nowrap lg:whitespace-normal w-auto lg:w-full text-left px-3 py-2.5 rounded-lg flex items-center justify-between text-slate-700 hover:text-[#C59B27] hover:bg-[#FAF6EF] transition-all">
-                <span class="flex items-center gap-2">
-                  <span class="cat-arrow transition-transform text-slate-400">▸</span>
-                  <span>3-Piece Suits</span>
-                </span>
+            <li>
+              <button onclick="filterCategory('3piece', this)" class="cat-item whitespace-nowrap lg:whitespace-normal text-left px-3 py-2 rounded-full lg:rounded-lg lg:w-full flex items-center gap-1.5 text-slate-700 border border-[#E5DFD5] lg:border-0 hover:text-[#C59B27] hover:bg-[#FAF6EF] transition-all text-[11px] lg:text-xs">
+                <span class="cat-arrow transition-transform text-slate-400">▸</span>
+                <span>3-Piece Suits</span>
               </button>
             </li>
-            <li class="flex-shrink-0">
-              <button onclick="filterCategory('2button', this)" class="cat-item whitespace-nowrap lg:whitespace-normal w-auto lg:w-full text-left px-3 py-2.5 rounded-lg flex items-center justify-between text-slate-700 hover:text-[#C59B27] hover:bg-[#FAF6EF] transition-all">
-                <span class="flex items-center gap-2">
-                  <span class="cat-arrow transition-transform text-slate-400">▸</span>
-                  <span>2-Button Classic Suits</span>
-                </span>
+            <li>
+              <button onclick="filterCategory('2button', this)" class="cat-item whitespace-nowrap lg:whitespace-normal text-left px-3 py-2 rounded-full lg:rounded-lg lg:w-full flex items-center gap-1.5 text-slate-700 border border-[#E5DFD5] lg:border-0 hover:text-[#C59B27] hover:bg-[#FAF6EF] transition-all text-[11px] lg:text-xs">
+                <span class="cat-arrow transition-transform text-slate-400">▸</span>
+                <span>2-Button Suits</span>
               </button>
             </li>
-            <li class="flex-shrink-0">
-              <button onclick="filterCategory('tuxedo', this)" class="cat-item whitespace-nowrap lg:whitespace-normal w-auto lg:w-full text-left px-3 py-2.5 rounded-lg flex items-center justify-between text-slate-700 hover:text-[#C59B27] hover:bg-[#FAF6EF] transition-all">
-                <span class="flex items-center gap-2">
-                  <span class="cat-arrow transition-transform text-slate-400">▸</span>
-                  <span>Tuxedos</span>
-                </span>
+            <li>
+              <button onclick="filterCategory('tuxedo', this)" class="cat-item whitespace-nowrap lg:whitespace-normal text-left px-3 py-2 rounded-full lg:rounded-lg lg:w-full flex items-center gap-1.5 text-slate-700 border border-[#E5DFD5] lg:border-0 hover:text-[#C59B27] hover:bg-[#FAF6EF] transition-all text-[11px] lg:text-xs">
+                <span class="cat-arrow transition-transform text-slate-400">▸</span>
+                <span>Tuxedos</span>
               </button>
             </li>
-            <li class="flex-shrink-0">
-              <button onclick="filterCategory('gurkha-pant', this)" class="cat-item whitespace-nowrap lg:whitespace-normal w-auto lg:w-full text-left px-3 py-2.5 rounded-lg flex items-center justify-between text-slate-700 hover:text-[#C59B27] hover:bg-[#FAF6EF] transition-all">
-                <span class="flex items-center gap-2">
-                  <span class="cat-arrow transition-transform text-slate-400">▸</span>
-                  <span>Gurkha Trousers</span>
-                </span>
+            <li>
+              <button onclick="filterCategory('gurkha-pant', this)" class="cat-item whitespace-nowrap lg:whitespace-normal text-left px-3 py-2 rounded-full lg:rounded-lg lg:w-full flex items-center gap-1.5 text-slate-700 border border-[#E5DFD5] lg:border-0 hover:text-[#C59B27] hover:bg-[#FAF6EF] transition-all text-[11px] lg:text-xs">
+                <span class="cat-arrow transition-transform text-slate-400">▸</span>
+                <span>Gurkha Trousers</span>
               </button>
             </li>
-            <li class="flex-shrink-0">
-              <button onclick="filterCategory('bell-bottom', this)" class="cat-item whitespace-nowrap lg:whitespace-normal w-auto lg:w-full text-left px-3 py-2.5 rounded-lg flex items-center justify-between text-slate-700 hover:text-[#C59B27] hover:bg-[#FAF6EF] transition-all">
-                <span class="flex items-center gap-2">
-                  <span class="cat-arrow transition-transform text-slate-400">▸</span>
-                  <span>Bell Bottom Pants</span>
-                </span>
+            <li>
+              <button onclick="filterCategory('bell-bottom', this)" class="cat-item whitespace-nowrap lg:whitespace-normal text-left px-3 py-2 rounded-full lg:rounded-lg lg:w-full flex items-center gap-1.5 text-slate-700 border border-[#E5DFD5] lg:border-0 hover:text-[#C59B27] hover:bg-[#FAF6EF] transition-all text-[11px] lg:text-xs">
+                <span class="cat-arrow transition-transform text-slate-400">▸</span>
+                <span>Bell Bottoms</span>
               </button>
             </li>
-            <li class="flex-shrink-0">
-              <button onclick="filterCategory('embroidered-shirt', this)" class="cat-item whitespace-nowrap lg:whitespace-normal w-auto lg:w-full text-left px-3 py-2.5 rounded-lg flex items-center justify-between text-slate-700 hover:text-[#C59B27] hover:bg-[#FAF6EF] transition-all">
-                <span class="flex items-center gap-2">
-                  <span class="cat-arrow transition-transform text-slate-400">▸</span>
-                  <span>Formal shirts</span>
-                </span>
+            <li>
+              <button onclick="filterCategory('embroidered-shirt', this)" class="cat-item whitespace-nowrap lg:whitespace-normal text-left px-3 py-2 rounded-full lg:rounded-lg lg:w-full flex items-center gap-1.5 text-slate-700 border border-[#E5DFD5] lg:border-0 hover:text-[#C59B27] hover:bg-[#FAF6EF] transition-all text-[11px] lg:text-xs">
+                <span class="cat-arrow transition-transform text-slate-400">▸</span>
+                <span>Formal Shirts</span>
               </button>
             </li>
           </ul>
+
         </div>
 
         <!-- ── RIGHT MAIN AREA: PRODUCT IMAGE GRID ── -->
