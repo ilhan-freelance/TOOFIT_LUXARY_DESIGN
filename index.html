@@ -802,7 +802,7 @@
     <div class="tf-separator-a"></div>
 
     <!-- ── Nav Links Row: Full Length Layout (Adjusted without Fabrics) ── -->
-    <div class="tf-nav-row flex justify-center items-center w-full text-center">
+    <div class="tf-nav-row hidden md:flex justify-center items-center w-full text-center">
       <ul class="tf-nav-links flex items-center justify-center gap-12 sm:gap-20 md:gap-24 lg:gap-28 mx-auto text-center">
         <li><a href="index.html#story">Our Story</a></li>
         <li><a href="bespoke.html">Bespoke</a></li>
@@ -889,11 +889,11 @@
 
     <!-- Hero Content Overlay (Positioned in Bottom-Left Corner) -->
     <div
-      class="relative z-10 w-full max-w-[1400px] ml-0 sm:ml-4 md:ml-8 lg:ml-12 px-6 md:px-10 pb-16 md:pb-28 pt-24 flex flex-col items-start justify-end space-y-5 text-left">
+      class="relative z-10 w-full max-w-[1400px] ml-0 sm:ml-4 md:ml-8 lg:ml-12 px-5 sm:px-6 md:px-10 pb-8 sm:pb-14 md:pb-24 pt-20 sm:pt-24 flex flex-col items-start justify-end space-y-3 sm:space-y-5 text-left">
 
-      <!-- Category Line (Exact from 2nd SS) -->
+      <!-- Category Line (Exact 1-Line Fit on Mobile) -->
       <div
-        class="flex flex-wrap items-center justify-start gap-2 sm:gap-3 text-white/95 text-[11px] sm:text-xs md:text-sm font-sans tracking-[0.16em] sm:tracking-[0.28em] uppercase font-light drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
+        class="flex flex-wrap items-center justify-start gap-1.5 sm:gap-3 text-white/95 text-[9px] sm:text-xs md:text-sm font-sans tracking-[0.12em] sm:tracking-[0.28em] uppercase font-light drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
         <span>SUITS</span>
         <span class="text-[#D4AF37]">|</span>
         <span>SHERWANIS</span>
@@ -905,7 +905,7 @@
 
       <!-- Main Headline -->
       <h1
-        class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white font-serif font-light leading-[1.08] tracking-tight drop-shadow-[0_4px_12px_rgba(0,0,0,0.85)] text-left"
+        class="text-3xl sm:text-5xl md:text-6xl lg:text-7xl text-white font-serif font-light leading-[1.08] tracking-tight drop-shadow-[0_4px_12px_rgba(0,0,0,0.85)] text-left"
         style="font-family: 'Newsreader', 'Cormorant Garamond', serif;">
         Crafted to fit. <br>
         <span class="italic font-serif font-normal text-[#FAF6F0]"
@@ -913,30 +913,30 @@
       </h1>
 
       <!-- Subtitle Description -->
-      <p class="text-[#FAF6F0] text-base sm:text-lg md:text-xl font-light tracking-wide max-w-xl leading-relaxed pt-1 drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)] text-left"
+      <p class="text-[#FAF6F0] text-xs sm:text-base md:text-xl font-light tracking-wide max-w-xl leading-relaxed pt-0.5 sm:pt-1 drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)] text-left"
         style="font-family: 'Jost', sans-serif;">
         Premium master-stitched men's wear tailored to your exact measurements and refined taste.
       </p>
 
-      <!-- CTA Buttons -->
-      <div class="flex flex-wrap items-center justify-start gap-5 pt-4">
+      <!-- CTA Buttons (Side by Side on Mobile) -->
+      <div class="flex flex-row items-center justify-start gap-2.5 sm:gap-5 pt-2 sm:pt-4">
 
-        <!-- Button 1: Explore Bespoke (Transparent Glassmorphic Hero Button) -->
-        <a href="#bespoke" class="tf-liquid-btn tf-hero-btn"
-          style="padding: 13px 36px; font-size: 0.72rem; letter-spacing: 0.22em;">
-          <span class="text-white flex items-center gap-2">
-            <svg class="w-3.5 h-3.5 text-[#D4AF37]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <!-- Button 1: Explore Bespoke -->
+        <a href="#bespoke" class="tf-liquid-btn tf-hero-btn !px-4 !py-2.5 sm:!px-8 sm:!py-3 text-[10px] sm:text-[0.72rem]"
+          style="letter-spacing: 0.18em;">
+          <span class="text-white flex items-center gap-1.5 sm:gap-2">
+            <svg class="w-3 h-3 sm:w-3.5 sm:h-3.5 text-[#D4AF37]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M14 5l7 7m0 0l-7 7m7-7H3" />
             </svg>
             Explore Bespoke
           </span>
         </a>
 
-        <!-- Button 2: Call us (Transparent Glassmorphic Hero Button) -->
-        <a href="tel:+919829000000" class="tf-liquid-btn tf-hero-btn"
-          style="padding: 13px 34px; font-size: 0.72rem; letter-spacing: 0.22em;">
-          <span class="text-white flex items-center gap-2">
-            <svg class="w-3.5 h-3.5 text-[#D4AF37]" fill="currentColor" viewBox="0 0 24 24">
+        <!-- Button 2: Call us -->
+        <a href="tel:+919829000000" class="tf-liquid-btn tf-hero-btn !px-4 !py-2.5 sm:!px-8 sm:!py-3 text-[10px] sm:text-[0.72rem]"
+          style="letter-spacing: 0.18em;">
+          <span class="text-white flex items-center gap-1.5 sm:gap-2">
+            <svg class="w-3 h-3 sm:w-3.5 sm:h-3.5 text-[#D4AF37]" fill="currentColor" viewBox="0 0 24 24">
               <path
                 d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
             </svg>
@@ -948,17 +948,17 @@
 
     </div>
 
-    <!-- Slide Indicators & Controls (Bottom Right) -->
+    <!-- Slide Indicators & Controls (Positioned bottom-left on mobile to prevent WhatsApp overlap) -->
     <div
-      class="absolute bottom-6 right-8 md:right-16 z-20 flex items-center gap-3 bg-black/40 backdrop-blur-md border border-white/20 px-4 py-2 rounded-full">
+      class="absolute bottom-4 left-5 sm:left-auto sm:right-12 z-20 flex items-center gap-2.5 sm:gap-3 bg-black/40 backdrop-blur-md border border-white/20 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full">
       <button onclick="setHeroSlide(0)" id="tf-slide-dot-0"
-        class="w-3 h-3 rounded-full bg-[#D4AF37] transition-all duration-300 transform scale-110"
+        class="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-[#D4AF37] transition-all duration-300 transform scale-110"
         aria-label="Slide 1: Bespoke Suits"></button>
       <button onclick="setHeroSlide(1)" id="tf-slide-dot-1"
-        class="w-3 h-3 rounded-full bg-white/40 hover:bg-white transition-all duration-300"
+        class="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-white/40 hover:bg-white transition-all duration-300"
         aria-label="Slide 2: Royal Sherwanis"></button>
       <button onclick="setHeroSlide(2)" id="tf-slide-dot-2"
-        class="w-3 h-3 rounded-full bg-white/40 hover:bg-white transition-all duration-300"
+        class="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-white/40 hover:bg-white transition-all duration-300"
         aria-label="Slide 3: Mansion Tuxedo"></button>
     </div>
 
