@@ -144,12 +144,21 @@
       scrollbar-width: none;
     }
 
-    @media (max-width: 768px) {
-      #tf-slide-2 img {
-        object-position: center 25% !important;
+    /* ===== MOBILE HERO — Full image visible, no cropping ===== */
+    @media (max-width: 639px) {
+      #hero {
+        height: 56vw !important;  /* 16:9 natural landscape ratio */
+        min-height: 220px !important;
+        max-height: 420px !important;
       }
-      #tf-slide-1 img {
-        object-position: center 20% !important;
+      #hero img {
+        object-fit: contain !important;
+        object-position: center center !important;
+      }
+    }
+    @media (min-width: 640px) and (max-width: 1024px) {
+      #hero {
+        min-height: 75vh;
       }
     }
 
@@ -1002,12 +1011,23 @@
     })();
   </script>
 
-  <!-- Fix real viewport height on mobile (avoids 100vh address-bar overlap) -->
+  <!-- Fix real viewport height on DESKTOP only (mobile handled by CSS) -->
   <script>
     (function () {
       function setHeroHeight() {
         var hero = document.getElementById('hero');
-        if (hero) hero.style.height = window.innerHeight + 'px';
+        if (!hero) return;
+        if (window.innerWidth >= 640) {
+          // Desktop: use real viewport height
+          hero.style.height = window.innerHeight + 'px';
+          hero.style.minHeight = '600px';
+          hero.style.maxHeight = '';
+        } else {
+          // Mobile: remove inline height — CSS handles it (56vw rule)
+          hero.style.height = '';
+          hero.style.minHeight = '';
+          hero.style.maxHeight = '';
+        }
       }
       setHeroHeight();
       window.addEventListener('resize', setHeroHeight);
