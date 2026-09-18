@@ -144,6 +144,15 @@
       scrollbar-width: none;
     }
 
+    @media (max-width: 768px) {
+      #tf-slide-3 img {
+        object-position: 84% 20% !important;
+      }
+      #tf-slide-1 img {
+        object-position: 75% center !important;
+      }
+    }
+
     /* ===== MPF BUTTON HOVER ===== */
     .btn-primary-mpf {
       background-color: #0A192F;
@@ -1915,9 +1924,17 @@
           </h2>
 
           <!-- Subheadline Description (Clean, subtle slate typography) -->
-          <p class="text-sm sm:text-base md:text-lg text-slate-600 leading-relaxed max-w-3xl mb-7 font-normal">
+          <p class="text-sm sm:text-base md:text-lg text-slate-600 leading-relaxed max-w-3xl mb-4 lg:mb-7 font-normal">
             Quality dress for your entire team. Partner with Toofit for long-term, sustainable custom dress solutions that help your team present with confidence.
           </p>
+
+          <!-- Mobile Executive Showcase Image (Shown right under subheading on mobile view) -->
+          <div class="block lg:hidden my-4 h-60 sm:h-72 rounded-2xl overflow-hidden shadow-md border border-slate-200 relative">
+            <img src="assets/toofit_corporate_solutions.png" 
+                 alt="TOOFIT Bespoke Corporate Executive Apparel" 
+                 class="w-full h-full object-cover object-center">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent pointer-events-none"></div>
+          </div>
 
           <!-- 4 Feature Cards Grid -->
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6 mb-6">
@@ -1981,8 +1998,8 @@
 
         </div>
 
-        <!-- ── RIGHT COLUMN: HIGH-END GENERATED CORPORATE EXECUTIVE IMAGE ── -->
-        <div class="lg:col-span-5 relative h-full min-h-[460px] lg:min-h-[580px] rounded-3xl overflow-hidden shadow-xl border border-slate-200">
+        <!-- ── RIGHT COLUMN: HIGH-END GENERATED CORPORATE EXECUTIVE IMAGE (Desktop Only) ── -->
+        <div class="hidden lg:block lg:col-span-5 relative h-full min-h-[460px] lg:min-h-[580px] rounded-3xl overflow-hidden shadow-xl border border-slate-200">
           <img src="assets/toofit_corporate_solutions.png" 
                alt="TOOFIT Bespoke Corporate Executive Apparel" 
                class="w-full h-full object-cover object-center">
