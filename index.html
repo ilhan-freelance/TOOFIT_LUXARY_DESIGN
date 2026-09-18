@@ -147,15 +147,22 @@
     /* ===== MOBILE HERO — Proper responsive ===== */
     @media (max-width: 639px) {
       #hero {
-        height: 60vh !important;
-        min-height: 300px !important;
-        max-height: 480px !important;
+        height: 65vh !important;
+        min-height: 320px !important;
+        max-height: 500px !important;
       }
-      #hero img {
+      /* Slide 1: model on right side — shift crop window right + top */
+      #tf-slide-1 img {
         object-fit: cover !important;
-        object-position: center 25% !important;
+        object-position: 78% top !important;
+      }
+      /* Slide 2: adjust for second image */
+      #tf-slide-2 img {
+        object-fit: cover !important;
+        object-position: 70% top !important;
       }
     }
+
 
     /* ===== MPF BUTTON HOVER ===== */
     .btn-primary-mpf {
