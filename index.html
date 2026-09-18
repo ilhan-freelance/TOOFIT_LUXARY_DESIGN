@@ -144,21 +144,16 @@
       scrollbar-width: none;
     }
 
-    /* ===== MOBILE HERO — Full image visible, no cropping ===== */
+    /* ===== MOBILE HERO — Proper responsive ===== */
     @media (max-width: 639px) {
       #hero {
-        height: 56vw !important;  /* 16:9 natural landscape ratio */
-        min-height: 220px !important;
-        max-height: 420px !important;
+        height: 60vh !important;
+        min-height: 300px !important;
+        max-height: 480px !important;
       }
       #hero img {
-        object-fit: contain !important;
-        object-position: center center !important;
-      }
-    }
-    @media (min-width: 640px) and (max-width: 1024px) {
-      #hero {
-        min-height: 75vh;
+        object-fit: cover !important;
+        object-position: center 25% !important;
       }
     }
 
@@ -872,7 +867,7 @@
   <!-- 1. FULL-WIDTH HERO SECTION — AUTO SLIDESHOW   -->
   <!-- ============================================ -->
   <section
-    class="relative w-full flex items-end justify-start overflow-hidden bg-black"
+    class="relative w-full flex items-end justify-start overflow-hidden"
     id="hero"
     style="height: 100vh; min-height: 600px;">
 
@@ -880,7 +875,7 @@
     <div class="tf-hero-slide absolute inset-0 w-full h-full opacity-100 transition-opacity duration-1000 ease-in-out z-0"
       id="tf-slide-1">
       <img src="assets/hero_lounge_suits_4k.jpg" alt="TOOFIT Bespoke Suits Atelier" class="w-full h-full object-cover"
-        style="object-position: center 20%;">
+        style="object-position: center 25%;">
     </div>
 
     <!-- Slide 2: 3-Piece Luxury Bespoke Suits photoshoot -->
@@ -1011,19 +1006,18 @@
     })();
   </script>
 
-  <!-- Fix real viewport height on DESKTOP only (mobile handled by CSS) -->
+  <!-- Hero viewport height: full on desktop, 60vh on mobile -->
   <script>
     (function () {
       function setHeroHeight() {
         var hero = document.getElementById('hero');
         if (!hero) return;
         if (window.innerWidth >= 640) {
-          // Desktop: use real viewport height
           hero.style.height = window.innerHeight + 'px';
           hero.style.minHeight = '600px';
           hero.style.maxHeight = '';
         } else {
-          // Mobile: remove inline height — CSS handles it (56vw rule)
+          // Clear inline styles — let CSS rule handle it
           hero.style.height = '';
           hero.style.minHeight = '';
           hero.style.maxHeight = '';
