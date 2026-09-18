@@ -863,8 +863,9 @@
   <!-- 1. FULL-WIDTH HERO SECTION — AUTO SLIDESHOW   -->
   <!-- ============================================ -->
   <section
-    class="relative w-full h-[100svh] min-h-[600px] sm:h-auto sm:min-h-[85vh] flex items-end justify-start overflow-hidden bg-white"
-    id="hero">
+    class="relative w-full flex items-end justify-start overflow-hidden bg-black"
+    id="hero"
+    style="height: 100vh; min-height: 600px;">
 
     <!-- Slide 1: Bespoke Suits Lounge photoshoot -->
     <div class="tf-hero-slide absolute inset-0 w-full h-full opacity-100 transition-opacity duration-1000 ease-in-out z-0"
@@ -1001,7 +1002,20 @@
     })();
   </script>
 
+  <!-- Fix real viewport height on mobile (avoids 100vh address-bar overlap) -->
+  <script>
+    (function () {
+      function setHeroHeight() {
+        var hero = document.getElementById('hero');
+        if (hero) hero.style.height = window.innerHeight + 'px';
+      }
+      setHeroHeight();
+      window.addEventListener('resize', setHeroHeight);
+    })();
+  </script>
+
   <!-- JS Switcher Script for Hero Media Reel -->
+
   <script>
     function switchHeroMedia(type, src, btnElement) {
       var videoEl = document.getElementById('tf-hero-video');
@@ -5684,12 +5698,12 @@
         </div>
 
         <!-- COMPACT 'MORE REVIEWS' BUTTON PLACED ON BOTTOM-RIGHT SIDE -->
-        <div class="flex justify-end pt-2 pr-2 sm:pr-0">
+        <div class="flex justify-end pt-3 px-1">
           <a href="https://www.google.com/search?kgmid=/g/1th47t60&q=TOOFIT+Tailors+%26+Fabrics+-+Raymond+Fabric+Store"
             target="_blank" rel="noopener"
-            class="inline-flex items-center gap-2 bg-[#4285F4] hover:bg-[#3367D6] text-white text-xs font-bold uppercase tracking-wider px-5 py-2.5 rounded-full shadow-md hover:shadow-lg transition-all cursor-pointer">
+            class="inline-flex items-center gap-1.5 bg-[#4285F4] hover:bg-[#3367D6] text-white text-[11px] font-bold uppercase tracking-wide px-4 py-2.5 rounded-full shadow-md hover:shadow-lg transition-all cursor-pointer whitespace-nowrap">
             <span>More Reviews</span>
-            <span class="text-sm">&rarr;</span>
+            <span>&#x2192;</span>
           </a>
         </div>
 
