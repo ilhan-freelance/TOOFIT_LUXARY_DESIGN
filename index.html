@@ -1013,27 +1013,39 @@
     })();
   </script>
 
-  <!-- Hero viewport height: full on desktop, 60vh on mobile -->
+  <!-- Hero height = viewport minus navbar (so content doesn't overflow) -->
   <script>
     (function () {
       function setHeroHeight() {
         var hero = document.getElementById('hero');
+        var nav  = document.getElementById('toofit-nav');
         if (!hero) return;
+
+        var navH = nav ? nav.offsetHeight : 0;
+
         if (window.innerWidth >= 640) {
-          hero.style.height = window.innerHeight + 'px';
-          hero.style.minHeight = '600px';
+          // Desktop: hero fills exactly what's visible below the sticky nav
+          var available = window.innerHeight - navH;
+          hero.style.height    = Math.max(available, 500) + 'px';
+          hero.style.minHeight = '500px';
           hero.style.maxHeight = '';
         } else {
-          // Clear inline styles — let CSS rule handle it
-          hero.style.height = '';
+          // Mobile: CSS handles it (65vh rule in <style>)
+          hero.style.height    = '';
           hero.style.minHeight = '';
           hero.style.maxHeight = '';
         }
       }
-      setHeroHeight();
+      // Run after DOM ready so nav height is measured correctly
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', setHeroHeight);
+      } else {
+        setHeroHeight();
+      }
       window.addEventListener('resize', setHeroHeight);
     })();
   </script>
+
 
   <!-- JS Switcher Script for Hero Media Reel -->
 
