@@ -61,7 +61,16 @@
     }
     .tf-logo-since-text { font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 700; font-size: 0.88rem; letter-spacing: 0.16em; color: #0B212D; margin-top: 3px; line-height: 1; display: inline-flex; align-items: flex-baseline; gap: 4px; }
     .tf-since-year { font-weight: 800; font-style: normal; color: #D82027; letter-spacing: 0.10em; }
-    .tf-brand-center { display: flex; align-items: center; justify-content: center; }
+    .tf-brand-center {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 10;
+    }
     .tf-brand-row-wrapper { display: flex; align-items: center; gap: 16px; }
     .tf-toofit-column { display: flex; flex-direction: column; align-items: center; line-height: 1; text-align: center; }
     .tf-brand-name-link { text-decoration: none; }
@@ -128,13 +137,15 @@
     .tf-hamburger span { width: 24px; height: 2px; background-color: #0F172A; }
     @media (max-width: 900px) {
       .tf-brand-header { padding: 10px 16px 6px; }
-      .tf-brand-name { font-size: 26px; letter-spacing: 0.18em; }
-      .tf-logo-since-text { font-size: 0.78rem; }
-      .tf-standalone-logo-img { height: 44px; }
+      .tf-brand-name { font-size: 22px; letter-spacing: 0.14em; }
+      .tf-brand-caption { font-size: 0.52rem; letter-spacing: 0.28em; }
+      .tf-logo-since-text { font-size: 0.72rem; }
+      .tf-standalone-logo-img { height: 42px; }
       .tf-nav-links,
-      .tf-nav-row { display: none !important; }
-      .tf-liquid-btn.desktop-only { display: none; }
-      .tf-hamburger { display: flex; }
+      .tf-nav-row,
+      .desktop-only,
+      .tf-liquid-btn.desktop-only { display: none !important; }
+      .tf-hamburger { display: flex !important; }
       .tf-mobile-drawer { display: flex; }
     }
     @media (max-width: 640px) {

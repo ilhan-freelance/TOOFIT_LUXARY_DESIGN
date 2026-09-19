@@ -35,21 +35,26 @@
 
   <style>
     #toofit-nav {
+      background-color: #FFFFFF !important;
+      border-bottom: 1px solid rgba(139, 58, 43, 0.12);
       position: sticky;
       top: 0;
-      z-index: 1000;
-      background: #FFFFFF;
-      border-bottom: 1px solid #E2E8F0;
+      z-index: 9999;
+      width: 100%;
+      box-shadow: 0 4px 20px rgba(35, 27, 21, 0.04);
     }
     .tf-brand-header {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 12px 24px;
+      padding: 8px 24px 4px;
+      position: relative;
+      background-color: #FFFFFF !important;
+      min-height: 64px;
       max-width: 1400px;
       margin: 0 auto;
     }
-    .tf-logo-container { display: flex; align-items: center; }
+    .tf-logo-container { display: flex; align-items: center; justify-content: flex-start; z-index: 11; }
     .tf-logo-group { display: inline-flex; flex-direction: column; align-items: center; justify-content: center; text-decoration: none; line-height: 1; }
     .tf-standalone-logo-img {
       height: 52px;
@@ -59,9 +64,19 @@
       filter: drop-shadow(0 2px 5px rgba(10,25,47,0.08));
       transition: transform 0.35s ease;
     }
+    .tf-logo-group:hover .tf-standalone-logo-img { transform: scale(1.04); }
     .tf-logo-since-text { font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 700; font-size: 0.88rem; letter-spacing: 0.16em; color: #0B212D; margin-top: 3px; line-height: 1; display: inline-flex; align-items: flex-baseline; gap: 4px; }
     .tf-since-year { font-weight: 800; font-style: normal; color: #D82027; letter-spacing: 0.10em; }
-    .tf-brand-center { display: flex; align-items: center; justify-content: center; }
+    .tf-brand-center {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 10;
+    }
     .tf-brand-row-wrapper { display: flex; align-items: center; gap: 16px; }
     .tf-toofit-column { display: flex; flex-direction: column; align-items: center; line-height: 1; text-align: center; }
     .tf-brand-name-link { text-decoration: none; }
@@ -90,23 +105,44 @@
       width: 100%;
       opacity: 0.88;
     }
-    .tf-nav-right { display: flex; align-items: center; gap: 16px; }
+    .tf-nav-right { display: flex; align-items: center; justify-content: flex-end; gap: 16px; z-index: 11; }
     .tf-liquid-btn {
-      display: inline-block;
-      padding: 10px 22px;
-      font-size: 0.7rem;
-      font-weight: 700;
-      letter-spacing: 0.22em;
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Jost', 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 0.72rem;
+      letter-spacing: 0.2em;
       text-transform: uppercase;
-      color: #FFFFFF;
-      background: #0F172A;
+      color: #0A192F !important;
+      background-color: transparent;
+      border: 1px solid rgba(10, 25, 47, 0.25);
       border-radius: 9999px;
+      padding: 8px 20px;
+      cursor: pointer;
       text-decoration: none;
       transition: all 0.3s ease;
     }
     .tf-liquid-btn:hover {
-      background: #C59B27;
-      box-shadow: 0 4px 14px rgba(197, 155, 39, 0.35);
+      background-color: #0A192F;
+      border-color: #0A192F;
+      color: #FFFFFF !important;
+      transform: translateY(-1px);
+    }
+    .tf-liquid-btn span {
+      position: relative;
+      z-index: 2;
+      color: #0A192F !important;
+      transition: color 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-weight: 600;
+    }
+    .tf-liquid-btn:hover span {
+      color: #FFFFFF !important;
     }
     .tf-nav-row { padding: 10px 0; border-top: 1px solid #F1F5F9; }
     .tf-nav-links { list-style: none; margin: 0; padding: 0; }
@@ -123,35 +159,57 @@
     .tf-nav-links a:hover,
     .tf-nav-links a.active { color: #C59B27; }
     .tf-hamburger {
-      display: none; background: none; border: none; cursor: pointer; flex-direction: column; gap: 5px;
+      display: none; background: none; border: none; cursor: pointer; flex-direction: column; gap: 5px; padding: 4px;
     }
-    .tf-hamburger span { width: 24px; height: 2px; background-color: #0F172A; }
+    .tf-hamburger span { width: 24px; height: 1.5px; background-color: #0F172A; transition: all 0.35s ease; }
+    .tf-hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+    .tf-hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+    .tf-hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+    .tf-mobile-drawer {
+      display: none;
+      flex-direction: column;
+      gap: 0;
+      background: rgb(255, 253, 250);
+      border-top: 1px solid rgba(139, 58, 43, 0.1);
+      overflow: hidden;
+      max-height: 0;
+      transition: max-height 0.5s cubic-bezier(0.33, 1, 0.68, 1);
+    }
+    .tf-mobile-drawer.open { max-height: 400px; }
+    .tf-mobile-drawer a {
+      font-family: 'Jost', 'Inter', sans-serif;
+      font-size: 13px !important;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #231B15;
+      text-decoration: none;
+      padding: 14px 32px;
+      border-bottom: 1px solid rgba(139, 58, 43, 0.06);
+      transition: background 0.25s, color 0.25s;
+    }
+    .tf-mobile-drawer a:hover { background: rgba(139, 58, 43, 0.06); color: #8B3A2B; }
+
     /* Responsive Navbar media queries */
     @media (max-width: 900px) {
       .tf-brand-header { padding: 10px 16px 6px; }
-      .tf-brand-name { font-size: 26px; letter-spacing: 0.18em; }
-      .tf-logo-since-text { font-size: 0.78rem; }
-      .tf-standalone-logo-img { height: 44px; }
-      .tf-nav-links,
-      .tf-nav-row { display: none !important; }
-      .tf-liquid-btn.desktop-only { display: none; }
-      .tf-hamburger { display: flex; }
-      .tf-mobile-drawer { display: flex; }
-    }
-    @media (max-width: 640px) {
-      .tf-brand-header { padding: 8px 12px 6px; }
-      .tf-brand-row-wrapper { gap: 6px; }
       .tf-brand-name { font-size: 22px; letter-spacing: 0.14em; }
       .tf-brand-caption { font-size: 0.52rem; letter-spacing: 0.28em; }
-      .tf-logo-since-text { font-size: 0.70rem; }
-      .tf-standalone-logo-img { height: 38px; }
+      .tf-logo-since-text { font-size: 0.72rem; }
+      .tf-standalone-logo-img { height: 42px; }
+      .tf-nav-links,
+      .tf-nav-row,
+      .desktop-only,
+      .tf-liquid-btn.desktop-only { display: none !important; }
+      .tf-hamburger { display: flex !important; }
+      .tf-mobile-drawer { display: flex; }
     }
-    @media (max-width: 400px) {
-      .tf-brand-header { padding: 6px 8px 4px; }
+    @media (max-width: 480px) {
+      .tf-brand-header { padding: 8px 12px 6px; }
       .tf-brand-name { font-size: 18px; letter-spacing: 0.12em; }
-      .tf-brand-caption { font-size: 0.46rem; letter-spacing: 0.20em; }
-      .tf-logo-since-text { font-size: 0.62rem; }
-      .tf-standalone-logo-img { height: 32px; }
+      .tf-brand-caption { font-size: 0.44rem; letter-spacing: 0.20em; }
+      .tf-logo-since-text { font-size: 0.65rem; }
+      .tf-standalone-logo-img { height: 36px; }
     }
 
     /* Category Sidebar active styles */
@@ -232,10 +290,6 @@
   </nav>
 
   <!-- ============================================ -->
-  <!-- HERO HEADER — CORPORATE PAGE                 -->
-  <!-- ============================================ -->
-  <main class="flex-grow">
-"  <!-- ============================================ -->
   <!-- HERO HEADER — CORPORATE PAGE                 -->
   <!-- ============================================ -->
   <main class="flex-grow">
@@ -353,13 +407,71 @@
                 </span>
               </button>
             </li>
-"          </ul>
+          </ul>
         </div>
 
         <!-- ── RIGHT MAIN AREA: PRODUCT IMAGE GRID ── -->
         <div class="lg:col-span-3">
           <div id="product-grid" class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-6 min-h-[300px]">
+            <!-- Card 1 -->
+            <div class="product-card group bg-white rounded-xl border border-[#E5DFD5] p-1.5 sm:p-2 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden" data-category="executive-3piece" onclick="openLightbox('assets/gallery/bespoke/bespoke_01_3piece.jpg', 'Midnight Navy 3-Piece Suit', '3-Piece Executive Suit')">
+              <div class="h-60 sm:h-80 md:h-96 rounded-lg overflow-hidden bg-slate-100 relative">
+                <img src="assets/gallery/bespoke/bespoke_01_3piece.jpg" alt="Midnight Navy 3-Piece Suit" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <span class="bg-white/90 text-slate-900 text-[10px] sm:text-xs font-semibold px-3 py-1.5 sm:px-4 sm:py-2 rounded-full shadow-md tracking-wider uppercase">View Detail</span>
+                </div>
+              </div>
+            </div>
 
+            <!-- Card 2 -->
+            <div class="product-card group bg-white rounded-xl border border-[#E5DFD5] p-1.5 sm:p-2 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden" data-category="boardroom-2piece" onclick="openLightbox('assets/gallery/bespoke/bespoke_01_2button.jpg', 'Royal Italian 2-Button Suit', '2-Button Boardroom Suit')">
+              <div class="h-60 sm:h-80 md:h-96 rounded-lg overflow-hidden bg-slate-100 relative">
+                <img src="assets/gallery/bespoke/bespoke_01_2button.jpg" alt="Royal Italian 2-Button Suit" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <span class="bg-white/90 text-slate-900 text-[10px] sm:text-xs font-semibold px-3 py-1.5 sm:px-4 sm:py-2 rounded-full shadow-md tracking-wider uppercase">View Detail</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="product-card group bg-white rounded-xl border border-[#E5DFD5] p-1.5 sm:p-2 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden" data-category="power-blazers" onclick="openLightbox('assets/gallery/bespoke/bespoke_01_tuxedo.jpg', 'Power Tuxedo & Executive Blazer', 'Power Blazer')">
+              <div class="h-60 sm:h-80 md:h-96 rounded-lg overflow-hidden bg-slate-100 relative">
+                <img src="assets/gallery/bespoke/bespoke_01_tuxedo.jpg" alt="Power Tuxedo & Executive Blazer" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <span class="bg-white/90 text-slate-900 text-[10px] sm:text-xs font-semibold px-3 py-1.5 sm:px-4 sm:py-2 rounded-full shadow-md tracking-wider uppercase">View Detail</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="product-card group bg-white rounded-xl border border-[#E5DFD5] p-1.5 sm:p-2 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden" data-category="formal-shirts" onclick="openLightbox('assets/gallery/bespoke/bespoke_01_embroidered-shirt.jpg', 'Handcrafted Egyptian Cotton Shirt', 'Formal Shirting')">
+              <div class="h-60 sm:h-80 md:h-96 rounded-lg overflow-hidden bg-slate-100 relative">
+                <img src="assets/gallery/bespoke/bespoke_01_embroidered-shirt.jpg" alt="Handcrafted Egyptian Cotton Shirt" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <span class="bg-white/90 text-slate-900 text-[10px] sm:text-xs font-semibold px-3 py-1.5 sm:px-4 sm:py-2 rounded-full shadow-md tracking-wider uppercase">View Detail</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="product-card group bg-white rounded-xl border border-[#E5DFD5] p-1.5 sm:p-2 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden" data-category="executive-trousers" onclick="openLightbox('assets/gallery/bespoke/bespoke_01_gurkha-pant.jpg', 'Tailored Gurkha Executive Trousers', 'Executive Trousers')">
+              <div class="h-60 sm:h-80 md:h-96 rounded-lg overflow-hidden bg-slate-100 relative">
+                <img src="assets/gallery/bespoke/bespoke_01_gurkha-pant.jpg" alt="Tailored Gurkha Executive Trousers" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <span class="bg-white/90 text-slate-900 text-[10px] sm:text-xs font-semibold px-3 py-1.5 sm:px-4 sm:py-2 rounded-full shadow-md tracking-wider uppercase">View Detail</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="product-card group bg-white rounded-xl border border-[#E5DFD5] p-1.5 sm:p-2 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden" data-category="executive-3piece" onclick="openLightbox('assets/gallery/bespoke/bespoke_02_3piece.jpg', 'Charcoal Pinstripe 3-Piece Suit', '3-Piece Executive Suit')">
+              <div class="h-60 sm:h-80 md:h-96 rounded-lg overflow-hidden bg-slate-100 relative">
+                <img src="assets/gallery/bespoke/bespoke_02_3piece.jpg" alt="Charcoal Pinstripe 3-Piece Suit" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <span class="bg-white/90 text-slate-900 text-[10px] sm:text-xs font-semibold px-3 py-1.5 sm:px-4 sm:py-2 rounded-full shadow-md tracking-wider uppercase">View Detail</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
