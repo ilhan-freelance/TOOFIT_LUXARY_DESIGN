@@ -49,39 +49,48 @@
       max-width: 1400px;
       margin: 0 auto;
     }
-    .tf-logo-container { display: flex; align-items: center; gap: 10px; }
+    .tf-logo-container { display: flex; align-items: center; }
+    .tf-logo-group { display: inline-flex; flex-direction: column; align-items: center; justify-content: center; text-decoration: none; line-height: 1; }
     .tf-standalone-logo-img {
-      height: 48px;
+      height: 52px;
       width: auto;
+      max-width: 240px;
       object-fit: contain;
+      filter: drop-shadow(0 2px 5px rgba(10,25,47,0.08));
+      transition: transform 0.35s ease;
     }
+    .tf-logo-group:hover .tf-standalone-logo-img { transform: scale(1.04); }
+    .tf-logo-since-text { font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 600; font-size: 0.86rem; letter-spacing: 0.16em; color: #C59B27; margin-top: 3px; line-height: 1; }
+    .tf-since-year { font-weight: 700; color: #0F172A; }
     .tf-brand-center { display: flex; align-items: center; justify-content: center; }
     .tf-brand-row-wrapper { display: flex; align-items: center; gap: 16px; }
-    .tf-toofit-column { display: flex; flex-direction: column; align-items: flex-start; line-height: 1; }
+    .tf-toofit-column { display: flex; flex-direction: column; align-items: center; line-height: 1; text-align: center; }
     .tf-brand-name-link { text-decoration: none; }
     .tf-brand-name {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 1.5rem;
-      font-weight: 800;
-      letter-spacing: 0.28em;
-      color: #0F172A;
+      font-family: 'Newsreader', 'Cormorant Garamond', serif;
+      font-weight: 700;
+      font-size: 38px;
+      letter-spacing: 0.22em;
+      color: #16080A;
+      background: linear-gradient(135deg, #110507 0%, #3D141A 45%, #18090C 85%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.32));
+      line-height: 1;
+      transition: all 0.3s ease;
     }
     .tf-brand-caption {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 0.58rem;
+      font-family: 'Jost', 'Montserrat', sans-serif;
+      font-size: 0.6rem;
       font-weight: 700;
-      letter-spacing: 0.38em;
-      color: #C59B27;
-      margin-top: 2px;
+      letter-spacing: 0.46em;
+      color: #6B4D30;
+      margin-top: 1px;
+      text-transform: uppercase;
+      text-align: center;
+      width: 100%;
+      opacity: 0.88;
     }
-    .tf-faded-vdivider {
-      width: 1px;
-      height: 28px;
-      background: linear-gradient(to bottom, transparent, #CBD5E1, transparent);
-    }
-    .tf-since-column { display: flex; align-items: center; }
-    .tf-since-text { font-family: 'Newsreader', serif; font-size: 0.88rem; font-style: italic; color: #64748B; }
-    .tf-since-year { font-weight: 600; color: #0F172A; font-style: normal; }
     .tf-nav-right { display: flex; align-items: center; gap: 16px; }
     .tf-liquid-btn {
       display: inline-block;
@@ -118,13 +127,12 @@
       display: none; background: none; border: none; cursor: pointer; flex-direction: column; gap: 5px;
     }
     .tf-hamburger span { width: 24px; height: 2px; background-color: #0F172A; }
-"    /* Responsive Navbar media queries */
+    /* Responsive Navbar media queries */
     @media (max-width: 900px) {
       .tf-brand-header { padding: 10px 16px 6px; }
-      .tf-brand-name { font-size: 18px; letter-spacing: 0.18em; }
-      .tf-since-text { font-size: 0.85rem; }
-      .tf-faded-vdivider { height: 20px; margin: 0 8px; }
-      .tf-standalone-logo-img { height: 46px; }
+      .tf-brand-name { font-size: 26px; letter-spacing: 0.18em; }
+      .tf-logo-since-text { font-size: 0.78rem; }
+      .tf-standalone-logo-img { height: 44px; }
       .tf-nav-links { display: none; }
       .tf-liquid-btn.desktop-only { display: none; }
       .tf-hamburger { display: flex; }
@@ -133,21 +141,17 @@
     @media (max-width: 640px) {
       .tf-brand-header { padding: 8px 12px 6px; }
       .tf-brand-row-wrapper { gap: 6px; }
-      .tf-brand-name { font-size: 15px; letter-spacing: 0.12em; }
-      .tf-brand-caption { font-size: 0.48rem; letter-spacing: 0.22em; }
-      .tf-faded-vdivider { height: 18px; margin: 0 4px; display: inline-block !important; }
-      .tf-since-column { display: flex !important; align-items: center; }
-      .tf-since-text { font-size: 0.72rem; }
-      .tf-since-year { font-weight: 600; }
+      .tf-brand-name { font-size: 22px; letter-spacing: 0.14em; }
+      .tf-brand-caption { font-size: 0.52rem; letter-spacing: 0.28em; }
+      .tf-logo-since-text { font-size: 0.70rem; }
       .tf-standalone-logo-img { height: 38px; }
     }
     @media (max-width: 400px) {
       .tf-brand-header { padding: 6px 8px 4px; }
-      .tf-brand-name { font-size: 13px; letter-spacing: 0.10em; }
-      .tf-brand-caption { font-size: 0.44rem; letter-spacing: 0.18em; }
-      .tf-since-text { font-size: 0.68rem; }
-      .tf-faded-vdivider { height: 16px; margin: 0 3px; }
-      .tf-standalone-logo-img { height: 34px; }
+      .tf-brand-name { font-size: 18px; letter-spacing: 0.12em; }
+      .tf-brand-caption { font-size: 0.46rem; letter-spacing: 0.20em; }
+      .tf-logo-since-text { font-size: 0.62rem; }
+      .tf-standalone-logo-img { height: 32px; }
     }
 
     /* Category Sidebar active styles */
@@ -184,13 +188,10 @@
   <nav id="toofit-nav" aria-label="Main Navigation">
     <div class="tf-brand-header">
       <div class="tf-logo-container">
-        <a href="index.html" class="tf-logo-link" title="TOOFIT Bespoke Atelier">
+        <a href="index.html" class="tf-logo-group" title="TOOFIT Bespoke Atelier">
           <img src="assets/official_toofit_logo_dark.png" alt="TOOFIT Official Logo" class="tf-standalone-logo-img">
+          <span class="tf-logo-since-text">since <span class="tf-since-year">1969</span></span>
         </a>
-        <span class="tf-faded-vdivider"></span>
-        <div class="tf-since-column">
-          <span class="tf-since-text">since <span class="tf-since-year">1969</span></span>
-        </div>
       </div>
       <div class="tf-brand-center">
         <div class="tf-brand-row-wrapper">

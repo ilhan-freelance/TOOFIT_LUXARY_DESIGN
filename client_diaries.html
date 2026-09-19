@@ -142,39 +142,58 @@
             z-index: 10;
         }
 
-        /* ── Top Left: Standalone Logo ── */
         .tf-logo-container {
             display: flex;
             align-items: center;
             flex: 1;
             justify-content: flex-start;
-            gap: 10px;
         }
 
-        .tf-logo-link {
+        .tf-logo-group {
             display: inline-flex;
+            flex-direction: column;
             align-items: center;
+            justify-content: center;
             text-decoration: none;
+            line-height: 1;
         }
 
         .tf-standalone-logo-img {
-            height: 60px;
+            height: 52px;
             width: auto;
-            max-width: 170px;
+            max-width: 240px;
             object-fit: contain;
             background: transparent !important;
             border: none !important;
             box-shadow: none !important;
             outline: none !important;
-            filter: contrast(1.15) saturate(1.2);
+            filter: drop-shadow(0 2px 5px rgba(10, 25, 47, 0.08));
             transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
         }
 
-        .tf-logo-link:hover .tf-standalone-logo-img {
-            transform: scale(1.05);
+        .tf-logo-group:hover .tf-standalone-logo-img {
+            transform: scale(1.04);
         }
 
+        .tf-logo-since-text {
+            font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+            font-style: italic;
+            font-weight: 600;
+            font-size: 0.86rem;
+            letter-spacing: 0.16em;
+            color: #C59B27;
+            line-height: 1;
+            white-space: nowrap;
+            margin-top: 3px;
+            display: inline-flex;
+            align-items: flex-baseline;
+            gap: 3px;
+        }
 
+        .tf-since-year {
+            font-weight: 700;
+            color: #0A192F;
+        }
 
         .tf-brand-row-wrapper {
             display: inline-flex;
@@ -197,12 +216,15 @@
         }
 
         .tf-brand-name {
-            font-family: 'Newsreader', serif;
-            font-weight: 600;
-            font-size: 34px;
-            letter-spacing: 0.10em;
-            color: #6E1420;
-            background-color: transparent;
+            font-family: 'Newsreader', 'Playfair Display', serif;
+            font-weight: 700;
+            font-size: 38px;
+            letter-spacing: 0.22em;
+            color: #16080A;
+            background: linear-gradient(135deg, #110507 0%, #3D141A 45%, #18090C 85%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.32));
             text-transform: none;
             text-decoration: none;
             text-align: center;
@@ -211,7 +233,7 @@
         }
 
         .tf-brand-name-link:hover .tf-brand-name {
-            color: #931F2F;
+            filter: drop-shadow(0 2px 6px rgba(139, 58, 43, 0.4));
             transform: translateY(-1px);
         }
 
@@ -511,19 +533,14 @@
                 padding: 10px 16px 6px;
             }
             .tf-brand-name {
-                font-size: 18px;
-                letter-spacing: 0.10em;
-                color: #110305;
+                font-size: 26px;
+                letter-spacing: 0.18em;
             }
-            .tf-since-text {
-                font-size: 0.95rem;
-            }
-            .tf-faded-vdivider {
-                height: 24px;
-                margin: 0 12px;
+            .tf-logo-since-text {
+                font-size: 0.78rem;
             }
             .tf-standalone-logo-img {
-                height: 50px;
+                height: 44px;
             }
             .tf-nav-links { display: none; }
             .tf-liquid-btn.desktop-only { display: none; }
@@ -532,6 +549,21 @@
             .tf-nav-row { padding: 6px 20px 10px; }
             .tf-separator-a { margin: 2px 20px 4px; }
             .tf-nav-divider { margin: 0 20px; }
+        }
+        @media (max-width: 640px) {
+            .tf-brand-header { padding: 8px 12px 6px; }
+            .tf-brand-row-wrapper { gap: 6px; }
+            .tf-brand-name { font-size: 22px; letter-spacing: 0.14em; }
+            .tf-brand-caption { font-size: 0.52rem; letter-spacing: 0.28em; }
+            .tf-logo-since-text { font-size: 0.70rem; }
+            .tf-standalone-logo-img { height: 38px; }
+        }
+        @media (max-width: 400px) {
+            .tf-brand-header { padding: 6px 8px 4px; }
+            .tf-brand-name { font-size: 18px; letter-spacing: 0.12em; }
+            .tf-brand-caption { font-size: 0.46rem; letter-spacing: 0.20em; }
+            .tf-logo-since-text { font-size: 0.62rem; }
+            .tf-standalone-logo-img { height: 32px; }
         }
     </style>
 </head>
@@ -545,15 +577,12 @@
         <!-- ── Brand Header Row (3 Columns: Standalone Big Logo Top-Left, Company Name + Aligned Suit Atelier + Faded Line + Since 1969 Center, CTA Right) ── -->
         <div class="tf-brand-header">
             
-            <!-- Top-Left Corner: Official Transparent Logo + since 1969 -->
+            <!-- Top-Left Corner: Official Logo Image with stacked year underneath -->
             <div class="tf-logo-container">
-                <a href="#" class="tf-logo-link" title="TOOFIT Bespoke Atelier">
+                <a href="index.html" class="tf-logo-group" title="TOOFIT Bespoke Atelier">
                     <img src="assets/official_toofit_logo_dark.png" alt="TOOFIT Official Logo" class="tf-standalone-logo-img">
+                    <span class="tf-logo-since-text">since <span class="tf-since-year">1969</span></span>
                 </a>
-                <span class="tf-faded-vdivider"></span>
-                <div class="tf-since-column">
-                    <span class="tf-since-text">since 1969</span>
-                </div>
             </div>
 
             <!-- Center: TOOFIT + SUIT ATELIER (Column) -->

@@ -62,23 +62,18 @@
       justify-content: center;
       z-index: 10;
     }
-    .tf-logo-container { display: flex; align-items: center; flex: 1; justify-content: flex-start; gap: 10px; }
-    .tf-logo-link { display: inline-flex; align-items: center; text-decoration: none; }
-    .tf-standalone-logo-img {
-      height: 75px; width: auto; max-width: 280px; object-fit: contain;
-      background: transparent !important; border: none !important;
-      box-shadow: none !important; outline: none !important;
-      filter: drop-shadow(0 2px 5px rgba(10,25,47,0.08));
-      transition: transform 0.35s cubic-bezier(0.34,1.56,0.64,1);
-      margin-top: -6px; margin-bottom: -6px;
-    }
-    .tf-logo-link:hover .tf-standalone-logo-img { transform: scale(1.04); }
+    .tf-logo-container { display: flex; align-items: center; flex: 1; justify-content: flex-start; }
+    .tf-logo-group { display: inline-flex; flex-direction: column; align-items: center; justify-content: center; text-decoration: none; line-height: 1; }
+    .tf-standalone-logo-img { height: 52px; width: auto; max-width: 240px; object-fit: contain; filter: drop-shadow(0 2px 5px rgba(10,25,47,0.08)); transition: transform 0.35s ease; }
+    .tf-logo-group:hover .tf-standalone-logo-img { transform: scale(1.04); }
+    .tf-logo-since-text { font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 600; font-size: 0.86rem; letter-spacing: 0.16em; color: #C59B27; margin-top: 3px; line-height: 1; }
+    .tf-since-year { font-weight: 700; color: #0A192F; }
     .tf-brand-row-wrapper { display: inline-flex; align-items: center; justify-content: center; }
     .tf-toofit-column { display: flex; flex-direction: column; align-items: center; text-align: center; }
     .tf-brand-name-link { text-decoration: none; display: block; line-height: 1; }
     .tf-brand-name {
       font-family: 'Newsreader', 'Cormorant Garamond', serif;
-      font-weight: 600; font-size: 36px; letter-spacing: 0.2em;
+      font-weight: 700; font-size: 38px; letter-spacing: 0.22em;
       color: #16080A;
       background: linear-gradient(135deg, #110507 0%, #3D141A 45%, #18090C 85%);
       -webkit-background-clip: text; -webkit-text-fill-color: transparent;
@@ -175,33 +170,29 @@
     .tf-mobile-drawer .tf-liquid-btn { margin: 16px 32px; width: calc(100% - 64px); justify-content: center; }
     @media (max-width: 900px) {
       .tf-brand-header { padding: 10px 16px 6px; }
-      .tf-brand-name { font-size: 18px; letter-spacing: 0.18em; }
-      .tf-since-text { font-size: 0.85rem; }
-      .tf-faded-vdivider { height: 20px; margin: 0 8px; }
-      .tf-standalone-logo-img { height: 46px; }
+      .tf-brand-name { font-size: 26px; letter-spacing: 0.18em; }
+      .tf-logo-since-text { font-size: 0.78rem; }
+      .tf-standalone-logo-img { height: 44px; }
       .tf-nav-links { display: none; }
       .tf-liquid-btn.desktop-only { display: none; }
       .tf-hamburger { display: flex; }
       .tf-mobile-drawer { display: flex; }
     }
-"    @media (max-width: 640px) {
+    @media (max-width: 640px) {
       .tf-brand-header { padding: 8px 12px 6px; }
       .tf-brand-row-wrapper { gap: 6px; }
-      .tf-brand-name { font-size: 15px; letter-spacing: 0.12em; }
-      .tf-brand-caption { font-size: 0.48rem; letter-spacing: 0.22em; }
-      .tf-faded-vdivider { height: 18px; margin: 0 4px; display: inline-block !important; }
-      .tf-since-column { display: flex !important; align-items: center; }
-      .tf-since-text { font-size: 0.72rem; }
-      .tf-since-year { font-weight: 600; }
+      .tf-brand-name { font-size: 22px; letter-spacing: 0.14em; }
+      .tf-brand-caption { font-size: 0.52rem; letter-spacing: 0.28em; }
+      .tf-logo-since-text { font-size: 0.70rem; }
       .tf-standalone-logo-img { height: 38px; }
     }
     @media (max-width: 400px) {
       .tf-brand-header { padding: 6px 8px 4px; }
-      .tf-brand-name { font-size: 13px; letter-spacing: 0.10em; }
-      .tf-brand-caption { font-size: 0.44rem; letter-spacing: 0.18em; }
-      .tf-since-text { font-size: 0.68rem; }
-      .tf-faded-vdivider { height: 16px; margin: 0 3px; }
-"    }"
+      .tf-brand-name { font-size: 18px; letter-spacing: 0.12em; }
+      .tf-brand-caption { font-size: 0.46rem; letter-spacing: 0.20em; }
+      .tf-logo-since-text { font-size: 0.62rem; }
+      .tf-standalone-logo-img { height: 32px; }
+    }
 
     /* Category Sidebar active styles */
     .cat-item.active {
@@ -233,13 +224,10 @@
   <nav id="toofit-nav" aria-label="Main Navigation">
     <div class="tf-brand-header">
       <div class="tf-logo-container">
-        <a href="index.html" class="tf-logo-link" title="TOOFIT Bespoke Atelier">
+        <a href="index.html" class="tf-logo-group" title="TOOFIT Bespoke Atelier">
           <img src="assets/official_toofit_logo_dark.png" alt="TOOFIT Official Logo" class="tf-standalone-logo-img">
+          <span class="tf-logo-since-text">since <span class="tf-since-year">1969</span></span>
         </a>
-        <span class="tf-faded-vdivider"></span>
-        <div class="tf-since-column">
-          <span class="tf-since-text">since <span class="tf-since-year">1969</span></span>
-        </div>
       </div>
       <div class="tf-brand-center">
         <div class="tf-brand-row-wrapper">
