@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Josefin+Sans:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,200;0,6..72,300;0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;0,6..96,700;1,6..96,400;1,6..96,600&family=Prata&family=Cinzel:wght@600;700;800;900&family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&family=Jost:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Dancing+Script:wght@700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Josefin+Sans:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,200;0,6..72,300;0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;0,6..96,700;1,6..96,400;1,6..96,600&family=Prata&family=Cinzel:wght@600;700;800;900&family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&family=Jost:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap"
     rel="stylesheet">
 
   <!-- Tailwind CSS -->
@@ -264,12 +264,13 @@
       z-index: 10;
     }
 
-    /* ── Top Left: Standalone Logo ── */
+    /* ── Top Left: Standalone Logo + since 1969 ── */
     .tf-logo-container {
       display: flex;
       align-items: center;
       flex: 1;
       justify-content: flex-start;
+      gap: 10px;
     }
 
     .tf-logo-link {
@@ -364,9 +365,9 @@
     .tf-faded-vdivider {
       display: inline-block;
       width: 1px;
-      height: 28px;
+      height: 26px;
       background: linear-gradient(to bottom, transparent, rgba(139, 58, 43, 0.45), transparent);
-      margin: 0 16px;
+      margin: 0 4px;
       align-self: center;
     }
 
@@ -678,42 +679,64 @@
       }
     }
 
-    @media (max-width: 640px) {
-
-      .tf-faded-vdivider,
-      .tf-since-column {
-        display: none !important;
+"    @media (max-width: 640px) {
+      .tf-brand-header {
+        padding: 8px 12px 6px;
       }
-
+      .tf-brand-row-wrapper {
+        gap: 6px;
+      }
       .tf-brand-name {
-        font-size: 16px;
-        letter-spacing: 0.15em;
+        font-size: 15px;
+        letter-spacing: 0.12em;
       }
-
       .tf-brand-caption {
-        font-size: 0.5rem;
-        letter-spacing: 0.28em;
+        font-size: 0.48rem;
+        letter-spacing: 0.22em;
       }
-
+      .tf-faded-vdivider {
+        height: 18px;
+        margin: 0 4px;
+        display: inline-block !important;
+      }
+      .tf-since-column {
+        display: flex !important;
+        align-items: center;
+      }
+      .tf-since-text {
+        font-size: 0.72rem;
+      }
+      .tf-since-year {
+        font-weight: 600;
+      }
       .tf-standalone-logo-img {
-        height: 40px;
+        height: 38px;
       }
     }
 
     @media (max-width: 400px) {
       .tf-brand-header {
-        padding: 8px 10px 4px;
+        padding: 6px 8px 4px;
       }
-
       .tf-brand-name {
-        font-size: 14px;
-        letter-spacing: 0.12em;
+        font-size: 13px;
+        letter-spacing: 0.10em;
       }
-
+      .tf-brand-caption {
+        font-size: 0.44rem;
+        letter-spacing: 0.18em;
+      }
+      .tf-since-text {
+        font-size: 0.68rem;
+      }
+      .tf-faded-vdivider {
+        height: 16px;
+        margin: 0 3px;
+      }
       .tf-standalone-logo-img {
-        height: 36px;
+        height: 34px;
       }
-    }
+    }"
 
     /* Responsive Anatomy Section Detail Cards */
     @media (max-width: 1023px) {
@@ -770,20 +793,25 @@
   <!-- ============================================ -->
   <nav id="toofit-nav" aria-label="Main Navigation">
 
-    <!-- ── Brand Header Row (3 Columns: Standalone Big Logo Top-Left, Company Name + Aligned Suit Atelier + Faded Line + Since 1969 Center, CTA Right) ── -->
+    <!-- ── Brand Header Row (3 Columns: Standalone Logo + since 1969 Top-Left, Company Name + Aligned Suit Atelier Center, CTA Right) ── -->
     <div class="tf-brand-header">
 
-      <!-- Top-Left Corner: Official Transparent Logo (Direct on Navbar) -->
+      <!-- Top-Left Corner: Official Transparent Logo + since 1969 -->
       <div class="tf-logo-container">
         <a href="index.html" class="tf-logo-link" title="TOOFIT Bespoke Atelier">
           <img src="assets/official_toofit_logo_dark.png" alt="TOOFIT Official Logo" class="tf-standalone-logo-img">
         </a>
+        <span class="tf-faded-vdivider"></span>
+        <div class="tf-since-column">
+          <span class="tf-since-text">
+            since <span class="tf-since-year">1969</span>
+          </span>
+        </div>
       </div>
 
-      <!-- Center: TOOFIT + SUIT ATELIER (Column) | Faded Line | since 1969 -->
+      <!-- Center: TOOFIT + SUIT ATELIER (Column) -->
       <div class="tf-brand-center">
         <div class="tf-brand-row-wrapper">
-
           <!-- TOOFIT & SUIT ATELIER stacked together for perfect alignment -->
           <div class="tf-toofit-column">
             <a href="index.html" class="tf-brand-name-link">
@@ -791,17 +819,6 @@
             </a>
             <div class="tf-brand-caption">SUIT ATELIER</div>
           </div>
-
-          <!-- Faded vertical divider line -->
-          <span class="tf-faded-vdivider"></span>
-
-          <!-- Prominent since 1969 with creative luxury typography -->
-          <div class="tf-since-column">
-            <span class="tf-since-text">
-              since <span class="tf-since-year">1969</span>
-            </span>
-          </div>
-
         </div>
       </div>
 
@@ -1108,104 +1125,92 @@
       <!-- 6-Brand Luxury Grid -->
       <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 sm:gap-5">
 
-        <!-- ── Card 1: Raymond ── -->
-        <div class="group bg-white rounded-xl border border-[#E5DFD5] p-5 shadow-[0_4px_16px_rgba(10,25,47,0.03)] hover:shadow-[0_12px_28px_rgba(197,155,39,0.18)] hover:border-[#C59B27] transition-all duration-300 transform hover:-translate-y-1.5 flex flex-col items-center justify-center text-center min-h-[160px] relative overflow-hidden">
-          <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#C8102E] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-          
+        <!-- ── Card 1: Raymond (White Card) ── -->
+        <div class="group bg-white rounded-xl border border-[#E5DFD5] p-5 shadow-[0_4px_16px_rgba(10,25,47,0.03)] hover:shadow-[0_12px_28px_rgba(197,155,39,0.18)] hover:border-[#C59B27] hover:scale-[1.03] transition-all duration-300 flex flex-col items-center justify-center text-center min-h-[160px] relative overflow-hidden">
           <div class="flex flex-col items-center justify-center py-2">
-            <!-- Raymond Authentic Red Script Logo -->
-            <span class="text-[#C8102E] font-bold block leading-none tracking-tight uppercase select-none"
-              style="font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-size:26px;">RAYMOND</span>
-            <span class="text-[8px] text-[#C59B27] font-semibold tracking-[0.25em] uppercase block mt-2.5">The Complete Man</span>
+            <!-- Raymond Authentic Red Cursive Script Logo -->
+            <span class="text-[#C8102E] font-bold block leading-none select-none tracking-normal drop-shadow-sm"
+              style="font-family:'Alex Brush','Dancing Script','Brush Script MT',cursive;font-size:42px;font-style:italic;line-height:0.9;">Raymond</span>
+            <span class="text-[8px] text-[#C59B27] font-semibold tracking-[0.28em] uppercase block mt-3">The Complete Man</span>
           </div>
         </div>
 
-        <!-- ── Card 2: Linen Club ── -->
-        <div class="group bg-white rounded-xl border border-[#E5DFD5] p-5 shadow-[0_4px_16px_rgba(10,25,47,0.03)] hover:shadow-[0_12px_28px_rgba(197,155,39,0.18)] hover:border-[#C59B27] transition-all duration-300 transform hover:-translate-y-1.5 flex flex-col items-center justify-center text-center min-h-[160px] relative overflow-hidden">
-          <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#0A192F] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-          
+        <!-- ── Card 2: Linen Club (White Card) ── -->
+        <div class="group bg-white rounded-xl border border-[#E5DFD5] p-5 shadow-[0_4px_16px_rgba(10,25,47,0.03)] hover:shadow-[0_12px_28px_rgba(197,155,39,0.18)] hover:border-[#C59B27] hover:scale-[1.03] transition-all duration-300 flex flex-col items-center justify-center text-center min-h-[160px] relative overflow-hidden">
           <div class="flex flex-col items-center justify-center py-2">
-            <!-- Linen Club Minimalist Weave Icon -->
-            <div class="flex items-center gap-1 mb-2">
-              <div class="w-5 h-0.5 bg-[#0A192F]"></div>
-              <div class="w-5 h-0.5 bg-[#C59B27]"></div>
-              <div class="w-5 h-0.5 bg-[#0A192F]"></div>
+            <!-- Linen Club Authentic Logo matching photo -->
+            <div class="flex items-center gap-1.5">
+              <span class="text-[#7A1C2C] font-semibold uppercase tracking-[0.14em] select-none"
+                style="font-family:'Cinzel','Playfair Display',serif;font-size:17px;line-height:1;">LINEN CLUB</span>
+              <!-- 4-Petal Flax Flower Emblem -->
+              <svg viewBox="0 0 24 24" class="w-4 h-4 text-[#7A1C2C] -mt-1" fill="currentColor">
+                <path d="M12 2 C13.5 6 16 8.5 20 10 C16 11.5 13.5 14 12 18 C10.5 14 8 11.5 4 10 C8 8.5 10.5 6 12 2 Z"/>
+                <circle cx="12" cy="10" r="1.5" fill="#C59B27"/>
+              </svg>
             </div>
-            <!-- Linen Club Authentic Logo -->
-            <span class="text-[#0A192F] block leading-none tracking-[0.06em] uppercase select-none"
-              style="font-family:'Montserrat',sans-serif;font-size:16px;font-weight:300;">Linen<strong style="font-weight:800;" class="text-[#0A192F]">Club</strong></span>
             <span class="text-[8px] text-[#C59B27] font-semibold tracking-[0.25em] uppercase block mt-2.5">100% European Linen</span>
           </div>
         </div>
 
-        <!-- ── Card 3: Arvind (Original Logo from Screenshot) ── -->
-        <div class="group bg-white rounded-xl border border-[#E5DFD5] p-5 shadow-[0_4px_16px_rgba(10,25,47,0.03)] hover:shadow-[0_12px_28px_rgba(197,155,39,0.18)] hover:border-[#C59B27] transition-all duration-300 transform hover:-translate-y-1.5 flex flex-col items-center justify-center text-center min-h-[160px] relative overflow-hidden">
-          <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#B81C28] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-          
+        <!-- ── Card 3: Arvind (White Card) ── -->
+        <div class="group bg-white rounded-xl border border-[#E5DFD5] p-5 shadow-[0_4px_16px_rgba(10,25,47,0.03)] hover:shadow-[0_12px_28px_rgba(197,155,39,0.18)] hover:border-[#C59B27] hover:scale-[1.03] transition-all duration-300 flex flex-col items-center justify-center text-center min-h-[160px] relative overflow-hidden">
           <div class="flex flex-col items-center justify-center py-2">
-            <!-- Arvind Authentic Logo Typography matching screenshot -->
-            <span class="text-[#B81C28] font-bold block leading-none tracking-tight select-none"
-              style="font-family:'Cormorant Garamond',Georgia,serif;font-size:26px;letter-spacing:-0.5px;">ArvinD</span>
-            <span class="text-[8px] text-[#C59B27] font-semibold tracking-[0.25em] uppercase block mt-2.5">Fashioning Possibilities</span>
+            <!-- Arvind Authentic Logo matching photo -->
+            <span class="text-[#A31C24] font-bold block leading-none select-none tracking-tight"
+              style="font-family:'Cinzel','Bodoni Moda','Cormorant Garamond',serif;font-size:26px;">Arvind</span>
+            <span class="text-[8px] text-[#A31C24] font-semibold tracking-[0.22em] uppercase block mt-2">FASHIONING POSSIBILITIES</span>
           </div>
         </div>
 
-        <!-- ── Card 4: Söktaş (Original Logo from Screenshot) ── -->
-        <div class="group bg-white rounded-xl border border-[#E5DFD5] p-5 shadow-[0_4px_16px_rgba(10,25,47,0.03)] hover:shadow-[0_12px_28px_rgba(197,155,39,0.18)] hover:border-[#C59B27] transition-all duration-300 transform hover:-translate-y-1.5 flex flex-col items-center justify-center text-center min-h-[160px] relative overflow-hidden">
-          <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#1A1A1A] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-          
-          <div class="flex items-center justify-center gap-1.5 py-2">
-            <!-- Söktaş Ornate Flourish Monogram SVG from screenshot -->
-            <svg viewBox="0 0 40 40" class="w-8 h-8 text-[#1A1A1A]" fill="none" stroke="currentColor" stroke-width="1.8">
-              <path d="M20 6 C12 6 8 13 15 19 C24 26 28 30 20 37 C12 43 6 34 13 27" stroke-linecap="round"/>
-              <circle cx="20" cy="20" r="14" stroke-width="1" stroke-dasharray="2 2" opacity="0.3"/>
-            </svg>
-            <!-- Söktaş Text with Accent Dots -->
-            <span class="text-[#1A1A1A] font-light leading-none tracking-[0.14em] uppercase"
-              style="font-family:'Montserrat',sans-serif;font-size:13px;font-weight:400;">SÖKTAŞ</span>
-          </div>
-          <span class="text-[8px] text-[#C59B27] font-semibold tracking-[0.25em] uppercase block mt-1">Global Luxury Fabrics</span>
-        </div>
-
-        <!-- ── Card 5: Scabal (Original Logo from Screenshot) ── -->
-        <div class="group bg-white rounded-xl border border-[#E5DFD5] p-5 shadow-[0_4px_16px_rgba(10,25,47,0.03)] hover:shadow-[0_12px_28px_rgba(197,155,39,0.18)] hover:border-[#C59B27] transition-all duration-300 transform hover:-translate-y-1.5 flex flex-col items-center justify-center text-center min-h-[160px] relative overflow-hidden">
-          <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#0D1B2A] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-          
-          <div class="flex flex-col items-center justify-center py-1">
-            <!-- Scabal Crowned Lion S Crest SVG matching screenshot -->
-            <svg viewBox="0 0 50 34" class="w-10 h-7 text-[#0D1B2A]" fill="currentColor">
-              <!-- Crown -->
-              <path d="M21 2 L23 6 L25 0 L27 6 L29 2 L28 8 L22 8 Z" fill="#C59B27"/>
-              <!-- Lion & S Emblem -->
-              <path d="M15 22 C15 16 20 12 25 12 C28 12 30 14 30 16 C30 20 22 20 22 24 C22 27 26 27 29 25" stroke="#0D1B2A" stroke-width="2" fill="none"/>
-              <!-- Base Arch -->
-              <path d="M10 29 Q25 25 40 29" stroke="#0D1B2A" stroke-width="1.5" fill="none"/>
-            </svg>
-            <!-- Scabal Wordmark -->
-            <span class="font-bold leading-none tracking-[0.28em] uppercase text-[#0D1B2A] mt-1"
-              style="font-family:'Montserrat',sans-serif;font-size:12px;">SCABAL</span>
-            <span class="text-[8px] text-[#C59B27] font-semibold tracking-[0.25em] uppercase block mt-2">Savile Row Luxury</span>
-          </div>
-        </div>
-
-        <!-- ── Card 6: Ethnix by Raymond (Original Logo from Screenshot) ── -->
-        <div class="group bg-white rounded-xl border border-[#E5DFD5] p-5 shadow-[0_4px_16px_rgba(10,25,47,0.03)] hover:shadow-[0_12px_28px_rgba(197,155,39,0.18)] hover:border-[#C59B27] transition-all duration-300 transform hover:-translate-y-1.5 flex flex-col items-center justify-center text-center min-h-[160px] relative overflow-hidden">
-          <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#E8630A] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-          
-          <div class="flex flex-col items-center justify-center py-1">
-            <!-- Ethnix Main Logo matching screenshot -->
-            <div class="relative">
-              <span class="font-bold block leading-none select-none"
-                style="font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-size:22px;color:#C58B2B;">ethnix</span>
-              <!-- Crimson Ribbon Swoosh Under Ethnix -->
-              <svg viewBox="0 0 70 8" class="w-full h-2 text-[#C8102E] mt-[-2px]">
-                <path d="M2 2 Q25 9 45 3 T68 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+        <!-- ── Card 4: Söktaş (White Card) ── -->
+        <div class="group bg-white rounded-xl border border-[#E5DFD5] p-5 shadow-[0_4px_16px_rgba(10,25,47,0.03)] hover:shadow-[0_12px_28px_rgba(197,155,39,0.18)] hover:border-[#C59B27] hover:scale-[1.03] transition-all duration-300 flex flex-col items-center justify-center text-center min-h-[160px] relative overflow-hidden">
+          <div class="flex flex-col items-center justify-center py-1.5">
+            <div class="flex items-center justify-center gap-2 mb-1">
+              <!-- Söktaş Ornate Twin Loop Monogram SVG in Deep Purple -->
+              <svg viewBox="0 0 44 44" class="w-7 h-7 text-[#4A2E5A]" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M 22 8 C 14 8 10 14 16 20 C 22 26 28 28 22 34 C 16 40 10 34 18 28" stroke-linecap="round"/>
+                <path d="M 22 36 C 30 36 34 30 28 24 C 22 18 16 16 22 10 C 28 4 34 10 26 16" stroke-linecap="round" opacity="0.8"/>
               </svg>
+              <span class="text-[#351D42] font-semibold leading-none tracking-[0.18em] uppercase select-none"
+                style="font-family:'Cinzel','Montserrat',sans-serif;font-size:16px;">SÖKTAŞ</span>
             </div>
-            <!-- by Raymond -->
-            <span class="text-[11px] text-[#C8102E] font-bold block leading-none mt-1 tracking-wide"
-              style="font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;">by Raymond</span>
-            <span class="text-[8px] text-[#C59B27] font-semibold tracking-[0.2em] uppercase block mt-2">Royal Heritage Wear</span>
+            <span class="text-[8px] text-[#C59B27] font-semibold tracking-[0.25em] uppercase block mt-1">Global Luxury Fabrics</span>
+          </div>
+        </div>
+
+        <!-- ── Card 5: Scabal (White Card) ── -->
+        <div class="group bg-white rounded-xl border border-[#E5DFD5] p-5 shadow-[0_4px_16px_rgba(10,25,47,0.03)] hover:shadow-[0_12px_28px_rgba(197,155,39,0.18)] hover:border-[#C59B27] hover:scale-[1.03] transition-all duration-300 flex flex-col items-center justify-center text-center min-h-[160px] relative overflow-hidden">
+          <div class="flex flex-col items-center justify-center py-1">
+            <!-- Scabal Crowned Lion Crest SVG matching photo -->
+            <svg viewBox="0 0 60 38" class="w-10 h-7 text-[#0A192F]" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M 24 4 L 27 10 L 30 2 L 33 10 L 36 4 L 35 12 L 25 12 Z" fill="#C59B27"/>
+              <path d="M 20 28 C 18 22 22 16 30 16 C 35 16 38 19 37 23 C 36 27 28 27 28 31 C 28 34 33 34 37 32" stroke="#0A192F" stroke-width="2.2" stroke-linecap="round"/>
+              <circle cx="30" cy="14" r="2" fill="#C59B27"/>
+              <path d="M 12 36 Q 30 31 48 36" stroke="#C59B27" stroke-width="1.8" stroke-linecap="round"/>
+            </svg>
+            <span class="font-bold leading-none tracking-[0.28em] uppercase text-[#0A192F] mt-1 select-none"
+              style="font-family:'Playfair Display','Montserrat',sans-serif;font-size:13px;">SCABAL</span>
+            <span class="text-[7.5px] text-[#C59B27] font-semibold tracking-[0.22em] uppercase block mt-1.5">A PASSION FOR CLOTH</span>
+          </div>
+        </div>
+
+        <!-- ── Card 6: Ethnix by Raymond (White Card) ── -->
+        <div class="group bg-white rounded-xl border border-[#E5DFD5] p-5 shadow-[0_4px_16px_rgba(10,25,47,0.03)] hover:shadow-[0_12px_28px_rgba(197,155,39,0.18)] hover:border-[#C59B27] hover:scale-[1.03] transition-all duration-300 flex flex-col items-center justify-center text-center min-h-[160px] relative overflow-hidden">
+          <div class="flex flex-col items-center justify-center py-1 select-none">
+            <!-- Ethnix by Raymond Authentic SVG Logo matching photo -->
+            <svg viewBox="0 0 170 54" class="w-auto h-12" xmlns="http://www.w3.org/2000/svg">
+              <!-- 'eth' in Crimson Red -->
+              <text x="10" y="32" fill="#C8102E" font-family="'Playfair Display', 'Cormorant Garamond', Georgia, serif" font-size="34" font-weight="600" letter-spacing="-0.5">eth</text>
+              <!-- 'nix' in Ochre Gold -->
+              <text x="64" y="32" fill="#C58B2B" font-family="'Playfair Display', 'Cormorant Garamond', Georgia, serif" font-size="34" font-weight="600" letter-spacing="-0.5">nix</text>
+              <!-- Graceful Ribbon Swoosh loop -->
+              <path d="M 28 34 Q 55 43 85 34 T 115 32" fill="none" stroke="#C8102E" stroke-width="1.8" stroke-linecap="round"/>
+              <!-- 'by' in Crimson Red -->
+              <text x="64" y="48" fill="#C8102E" font-family="'Montserrat', sans-serif" font-size="9" font-weight="600">by</text>
+              <!-- 'Raymond' in signature cursive script -->
+              <text x="78" y="49" fill="#C8102E" font-family="'Alex Brush', 'Dancing Script', cursive" font-size="16" font-style="italic" font-weight="bold">Raymond</text>
+            </svg>
+            <span class="text-[8px] text-[#C59B27] font-semibold tracking-[0.2em] uppercase block mt-1">Royal Heritage Wear</span>
           </div>
         </div>
 
@@ -6105,8 +6110,8 @@
             <span
               class="text-[13px] font-bold uppercase tracking-widest text-[#8B3A2B] min-h-[20px] flex items-center justify-center">Email
               Inquiry</span>
-            <p class="font-bold text-[#1a0f09] text-sm">contact@toofittailors.com</p>
-            <p class="text-xs text-slate-400">support@toofittailors.com</p>
+            <a href="mailto:Toofit.office@gmail.com" class="font-bold text-[#1a0f09] text-sm hover:text-[#C59B27] transition-colors">Toofit.office@gmail.com</a>
+            <a href="mailto:Toofit.kota@gmail.com" class="text-xs text-slate-500 hover:text-[#C59B27] transition-colors">Toofit.kota@gmail.com</a>
           </div>
 
           <!-- 3. Main Office (Kota) -->

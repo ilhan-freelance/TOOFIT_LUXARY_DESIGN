@@ -49,6 +49,7 @@
       max-width: 1400px;
       margin: 0 auto;
     }
+    .tf-logo-container { display: flex; align-items: center; gap: 10px; }
     .tf-standalone-logo-img {
       height: 48px;
       width: auto;
@@ -117,17 +118,36 @@
       display: none; background: none; border: none; cursor: pointer; flex-direction: column; gap: 5px;
     }
     .tf-hamburger span { width: 24px; height: 2px; background-color: #0F172A; }
-    @media (max-width: 768px) {
+"    /* Responsive Navbar media queries */
+    @media (max-width: 900px) {
+      .tf-brand-header { padding: 10px 16px 6px; }
+      .tf-brand-name { font-size: 18px; letter-spacing: 0.18em; }
+      .tf-since-text { font-size: 0.85rem; }
+      .tf-faded-vdivider { height: 20px; margin: 0 8px; }
+      .tf-standalone-logo-img { height: 46px; }
+      .tf-nav-links { display: none; }
+      .tf-liquid-btn.desktop-only { display: none; }
       .tf-hamburger { display: flex; }
-      .desktop-only { display: none; }
-      .tf-nav-row { display: none; }
+      .tf-mobile-drawer { display: flex; }
     }
-    .tf-mobile-drawer {
-      display: none; flex-direction: column; background: #FFFFFF; padding: 16px 24px; border-top: 1px solid #E2E8F0;
+    @media (max-width: 640px) {
+      .tf-brand-header { padding: 8px 12px 6px; }
+      .tf-brand-row-wrapper { gap: 6px; }
+      .tf-brand-name { font-size: 15px; letter-spacing: 0.12em; }
+      .tf-brand-caption { font-size: 0.48rem; letter-spacing: 0.22em; }
+      .tf-faded-vdivider { height: 18px; margin: 0 4px; display: inline-block !important; }
+      .tf-since-column { display: flex !important; align-items: center; }
+      .tf-since-text { font-size: 0.72rem; }
+      .tf-since-year { font-weight: 600; }
+      .tf-standalone-logo-img { height: 38px; }
     }
-    .tf-mobile-drawer.open { display: flex; }
-    .tf-mobile-drawer a {
-      padding: 12px 0; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: #0F172A; text-decoration: none; border-bottom: 1px solid #F1F5F9;
+    @media (max-width: 400px) {
+      .tf-brand-header { padding: 6px 8px 4px; }
+      .tf-brand-name { font-size: 13px; letter-spacing: 0.10em; }
+      .tf-brand-caption { font-size: 0.44rem; letter-spacing: 0.18em; }
+      .tf-since-text { font-size: 0.68rem; }
+      .tf-faded-vdivider { height: 16px; margin: 0 3px; }
+      .tf-standalone-logo-img { height: 34px; }
     }
 
     /* Category Sidebar active styles */
@@ -141,6 +161,20 @@
       color: #C59B27;
       transform: translateX(3px);
     }
+
+    /* Mobile category dropdown styling */
+    .mobile-cat-select {
+      width: 100%; padding: 12px 16px; font-size: 13px; font-weight: 600;
+      letter-spacing: 0.08em; text-transform: uppercase;
+      border: 1.5px solid #E5DFD5; border-radius: 12px;
+      background: #FFFFFF; color: #0A192F;
+      appearance: none; -webkit-appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23C59B27' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+      background-repeat: no-repeat; background-position: right 14px center;
+      padding-right: 40px; cursor: pointer;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+    .mobile-cat-select:focus { outline: none; border-color: #C59B27; box-shadow: 0 0 0 3px rgba(197,155,39,0.15); }
   </style>
 </head>
 
@@ -153,6 +187,10 @@
         <a href="index.html" class="tf-logo-link" title="TOOFIT Bespoke Atelier">
           <img src="assets/official_toofit_logo_dark.png" alt="TOOFIT Official Logo" class="tf-standalone-logo-img">
         </a>
+        <span class="tf-faded-vdivider"></span>
+        <div class="tf-since-column">
+          <span class="tf-since-text">since <span class="tf-since-year">1969</span></span>
+        </div>
       </div>
       <div class="tf-brand-center">
         <div class="tf-brand-row-wrapper">
@@ -161,10 +199,6 @@
               <span class="tf-brand-name">TOOFIT</span>
             </a>
             <div class="tf-brand-caption">SUIT ATELIER</div>
-          </div>
-          <span class="tf-faded-vdivider"></span>
-          <div class="tf-since-column">
-            <span class="tf-since-text">since <span class="tf-since-year">1969</span></span>
           </div>
         </div>
       </div>
@@ -200,23 +234,28 @@
   <!-- HERO HEADER — CORPORATE PAGE                 -->
   <!-- ============================================ -->
   <main class="flex-grow">
-    <section class="relative bg-[#0A192F] text-white px-6 md:px-12 text-left overflow-hidden flex flex-col justify-center items-start min-h-[calc(100vh-105px)] py-12">
-      <div class="absolute inset-0 bg-cover bg-center filter brightness-[0.80] transition-transform duration-1000 scale-105"
-        style="background-image: url('assets/hero_corporate_user_executive.png'); background-position: right center;"></div>
-      <div class="absolute inset-0 bg-gradient-to-r from-[#0A192F] via-[#0A192F]/85 to-transparent"></div>
+"  <!-- ============================================ -->
+  <!-- HERO HEADER — CORPORATE PAGE                 -->
+  <!-- ============================================ -->
+  <main class="flex-grow">
+    <section class="relative bg-[#0A192F] text-white px-5 sm:px-8 md:px-12 text-center md:text-left overflow-hidden flex flex-col justify-center items-center md:items-start min-h-[55vh] sm:min-h-[65vh] md:min-h-[calc(100vh-105px)] py-10 sm:py-16">
+      <div class="absolute inset-0 bg-cover bg-[position:center_center] sm:bg-[position:right_center] filter brightness-[0.85] transition-transform duration-1000 scale-105"
+        style="background-image: url('assets/hero_corporate_user_executive.png');"></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-[#0A192F] via-[#0A192F]/70 to-[#0A192F]/25 md:bg-gradient-to-r md:from-[#0A192F] md:via-[#0A192F]/85 md:to-transparent"></div>
       
-      <div class="relative z-10 max-w-2xl mx-0 sm:ml-12 space-y-4">
-        <div class="flex items-center gap-2">
+      <div class="relative z-10 max-w-2xl mx-auto md:mx-0 md:ml-12 space-y-3 sm:space-y-4 px-2">
+        <div class="flex items-center justify-center md:justify-start gap-2">
           <span class="w-8 h-px bg-[#C59B27]"></span>
-          <span class="text-[#C59B27] text-xs sm:text-sm font-semibold tracking-[0.35em] uppercase">C-SUITE SUITING & POWER DRESSING</span>
+          <span class="text-[#C59B27] text-[11px] sm:text-xs md:text-sm font-semibold tracking-[0.3em] uppercase">C-SUITE SUITING & POWER DRESSING</span>
+          <span class="w-8 h-px bg-[#C59B27] md:hidden"></span>
         </div>
-        <h1 class="text-3xl sm:text-5xl md:text-6xl font-serif font-light text-white tracking-wide leading-tight drop-shadow-lg">
+        <h1 class="text-2xl sm:text-4xl md:text-6xl font-serif font-light text-white tracking-wide leading-tight drop-shadow-lg">
           The Architecture of Executive Elegance
         </h1>
       </div>
 
       <!-- Scroll Indicator -->
-      <a href="#gallery-section" class="absolute bottom-6 left-1/2 -translate-x-1/2 z-10 text-center flex flex-col items-center gap-1 opacity-80 hover:opacity-100 transition-opacity cursor-pointer">
+      <a href="#gallery-section" class="absolute bottom-4 sm:bottom-6 left-1/2 -translate-x-1/2 z-10 text-center flex flex-col items-center gap-1 opacity-80 hover:opacity-100 transition-opacity cursor-pointer">
         <span class="text-[9px] uppercase tracking-[0.3em] text-[#C59B27] font-semibold">Explore Portfolio</span>
         <svg class="w-4 h-4 text-[#C59B27] animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
@@ -227,16 +266,16 @@
     <!-- ============================================ -->
     <!-- OUR CREATIONS — CATEGORIES & GRID GALLERY    -->
     <!-- ============================================ -->
-    <section id="gallery-section" class="py-12 sm:py-16 px-4 sm:px-8 md:px-12 max-w-[1440px] mx-auto">
+    <section id="gallery-section" class="py-8 sm:py-16 px-4 sm:px-8 md:px-12 max-w-[1440px] mx-auto">
       
       <!-- Section Header unique to Corporate Page -->
-      <div class="flex items-center justify-center gap-4 sm:gap-8 mb-10 text-center">
+      <div class="flex items-center justify-center gap-4 sm:gap-8 mb-6 sm:mb-10 text-center">
         <span class="h-px bg-[#0A192F]/30 flex-grow max-w-[180px] sm:max-w-[280px]"></span>
         <div>
-          <h2 class="text-2xl sm:text-3xl md:text-4xl font-sans font-extrabold uppercase tracking-[0.14em] text-[#0A192F]">
+          <h2 class="text-xl sm:text-3xl md:text-4xl font-sans font-extrabold uppercase tracking-[0.14em] text-[#0A192F]">
             EXECUTIVE SUIT PORTFOLIO
           </h2>
-          <p class="text-[10px] sm:text-xs text-[#0A192F]/70 font-semibold tracking-[0.25em] uppercase mt-1">
+          <p class="text-[9px] sm:text-xs text-[#0A192F]/70 font-semibold tracking-[0.2em] sm:tracking-[0.25em] uppercase mt-1">
             PRECISION TAILORED FOR BOARDROOM AUTHORITY & C-SUITE ELEGANCE
           </p>
         </div>
@@ -246,67 +285,79 @@
       <!-- Category Filter Layout: Left Sidebar + Right Grid -->
       <div class="grid grid-cols-1 lg:grid-cols-4 gap-8 items-start">
 
-        <!-- ── LEFT SIDEBAR: CATEGORY LIST ── -->
-        <div class="bg-white rounded-xl border border-[#E5DFD5] p-5 shadow-sm space-y-4 lg:sticky lg:top-24">
+        <!-- ── MOBILE ONLY: Clean Category Dropdown ── -->
+        <div class="lg:hidden mb-2">
+          <select class="mobile-cat-select" onchange="filterCategoryMobile(this.value)">
+            <option value="all">All Corporate Attire</option>
+            <option value="executive-3piece">3-Piece Executive Suits</option>
+            <option value="boardroom-2piece">2-Button Boardroom Suits</option>
+            <option value="power-blazers">Power Blazers & Executive Coats</option>
+            <option value="formal-shirts">Formal Shirts & Business Shirting</option>
+            <option value="executive-trousers">Gurkha & Executive Trousers</option>
+          </select>
+        </div>
+
+        <!-- ── LEFT SIDEBAR: CATEGORY LIST (DESKTOP ONLY) ── -->
+        <div class="hidden lg:block bg-white rounded-xl border border-[#E5DFD5] p-5 shadow-sm space-y-4 lg:sticky lg:top-24">
           <h3 class="text-xs font-bold text-[#0A192F] uppercase tracking-[0.2em] pb-3 border-b border-slate-200">
             EXECUTIVE SPECIFICATIONS
           </h3>
 
-          <ul class="flex lg:flex-col overflow-x-auto gap-2 lg:gap-1 text-xs pb-1 lg:pb-0 scrollbar-none max-w-full">
-            <li class="flex-shrink-0">
-              <button onclick="filterCategory('all', this)" class="cat-item active whitespace-nowrap lg:whitespace-normal w-auto lg:w-full text-left px-3 py-2.5 rounded-lg flex items-center justify-between text-slate-700 hover:text-[#C59B27] hover:bg-[#FAF6EF] transition-all">
+          <ul class="flex flex-col gap-1 text-xs">
+            <li>
+              <button onclick="filterCategory('all', this)" class="cat-item active w-full text-left px-3 py-2.5 rounded-lg flex items-center justify-between text-slate-700 hover:text-[#C59B27] hover:bg-[#FAF6EF] transition-all">
                 <span class="flex items-center gap-2">
                   <span class="cat-arrow transition-transform text-slate-400">▸</span>
                   <span>All Corporate Attire</span>
                 </span>
               </button>
             </li>
-            <li class="flex-shrink-0">
-              <button onclick="filterCategory('executive-3piece', this)" class="cat-item whitespace-nowrap lg:whitespace-normal w-auto lg:w-full text-left px-3 py-2.5 rounded-lg flex items-center justify-between text-slate-700 hover:text-[#C59B27] hover:bg-[#FAF6EF] transition-all">
+            <li>
+              <button onclick="filterCategory('executive-3piece', this)" class="cat-item w-full text-left px-3 py-2.5 rounded-lg flex items-center justify-between text-slate-700 hover:text-[#C59B27] hover:bg-[#FAF6EF] transition-all">
                 <span class="flex items-center gap-2">
                   <span class="cat-arrow transition-transform text-slate-400">▸</span>
                   <span>3-Piece Executive Suits</span>
                 </span>
               </button>
             </li>
-            <li class="flex-shrink-0">
-              <button onclick="filterCategory('boardroom-2piece', this)" class="cat-item whitespace-nowrap lg:whitespace-normal w-auto lg:w-full text-left px-3 py-2.5 rounded-lg flex items-center justify-between text-slate-700 hover:text-[#C59B27] hover:bg-[#FAF6EF] transition-all">
+            <li>
+              <button onclick="filterCategory('boardroom-2piece', this)" class="cat-item w-full text-left px-3 py-2.5 rounded-lg flex items-center justify-between text-slate-700 hover:text-[#C59B27] hover:bg-[#FAF6EF] transition-all">
                 <span class="flex items-center gap-2">
                   <span class="cat-arrow transition-transform text-slate-400">▸</span>
                   <span>2-Button Boardroom Suits</span>
                 </span>
               </button>
             </li>
-            <li class="flex-shrink-0">
-              <button onclick="filterCategory('power-blazers', this)" class="cat-item whitespace-nowrap lg:whitespace-normal w-auto lg:w-full text-left px-3 py-2.5 rounded-lg flex items-center justify-between text-slate-700 hover:text-[#C59B27] hover:bg-[#FAF6EF] transition-all">
+            <li>
+              <button onclick="filterCategory('power-blazers', this)" class="cat-item w-full text-left px-3 py-2.5 rounded-lg flex items-center justify-between text-slate-700 hover:text-[#C59B27] hover:bg-[#FAF6EF] transition-all">
                 <span class="flex items-center gap-2">
                   <span class="cat-arrow transition-transform text-slate-400">▸</span>
                   <span>Power Blazers & Executive Coats</span>
                 </span>
               </button>
             </li>
-            <li class="flex-shrink-0">
-              <button onclick="filterCategory('formal-shirts', this)" class="cat-item whitespace-nowrap lg:whitespace-normal w-auto lg:w-full text-left px-3 py-2.5 rounded-lg flex items-center justify-between text-slate-700 hover:text-[#C59B27] hover:bg-[#FAF6EF] transition-all">
+            <li>
+              <button onclick="filterCategory('formal-shirts', this)" class="cat-item w-full text-left px-3 py-2.5 rounded-lg flex items-center justify-between text-slate-700 hover:text-[#C59B27] hover:bg-[#FAF6EF] transition-all">
                 <span class="flex items-center gap-2">
                   <span class="cat-arrow transition-transform text-slate-400">▸</span>
                   <span>Formal Shirts & Business Shirting</span>
                 </span>
               </button>
             </li>
-            <li class="flex-shrink-0">
-              <button onclick="filterCategory('executive-trousers', this)" class="cat-item whitespace-nowrap lg:whitespace-normal w-auto lg:w-full text-left px-3 py-2.5 rounded-lg flex items-center justify-between text-slate-700 hover:text-[#C59B27] hover:bg-[#FAF6EF] transition-all">
+            <li>
+              <button onclick="filterCategory('executive-trousers', this)" class="cat-item w-full text-left px-3 py-2.5 rounded-lg flex items-center justify-between text-slate-700 hover:text-[#C59B27] hover:bg-[#FAF6EF] transition-all">
                 <span class="flex items-center gap-2">
                   <span class="cat-arrow transition-transform text-slate-400">▸</span>
                   <span>Gurkha & Executive Trousers</span>
                 </span>
               </button>
             </li>
-          </ul>
+"          </ul>
         </div>
 
         <!-- ── RIGHT MAIN AREA: PRODUCT IMAGE GRID ── -->
         <div class="lg:col-span-3">
-                                        <div id="product-grid" class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-6 min-h-[300px]">
+          <div id="product-grid" class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-6 min-h-[300px]">
 
           </div>
         </div>
@@ -332,7 +383,7 @@
     function filterCategory(cat, btn) {
       const buttons = document.querySelectorAll('.cat-item');
       buttons.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
+      if (btn) btn.classList.add('active');
 
       const cards = document.querySelectorAll('.product-card');
       cards.forEach(card => {
@@ -342,6 +393,21 @@
           card.style.display = 'none';
         }
       });
+      const select = document.querySelector('.mobile-cat-select');
+      if (select) select.value = cat;
+    }
+
+    function filterCategoryMobile(cat) {
+      const cards = document.querySelectorAll('.product-card');
+      cards.forEach(card => {
+        if (cat === 'all' || card.getAttribute('data-category') === cat) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+      const select = document.querySelector('.mobile-cat-select');
+      if (select) select.value = cat;
     }
   </script>
 

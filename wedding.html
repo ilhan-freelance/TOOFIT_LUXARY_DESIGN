@@ -62,7 +62,7 @@
       justify-content: center;
       z-index: 10;
     }
-    .tf-logo-container { display: flex; align-items: center; flex: 1; justify-content: flex-start; }
+    .tf-logo-container { display: flex; align-items: center; flex: 1; justify-content: flex-start; gap: 10px; }
     .tf-logo-link { display: inline-flex; align-items: center; text-decoration: none; }
     .tf-standalone-logo-img {
       height: 75px; width: auto; max-width: 280px; object-fit: contain;
@@ -184,12 +184,24 @@
       .tf-hamburger { display: flex; }
       .tf-mobile-drawer { display: flex; }
     }
-    @media (max-width: 640px) {
-      .tf-faded-vdivider, .tf-since-column { display: none !important; }
-      .tf-brand-name { font-size: 16px; letter-spacing: 0.15em; }
-      .tf-brand-caption { font-size: 0.5rem; letter-spacing: 0.28em; }
-      .tf-standalone-logo-img { height: 40px; }
+"    @media (max-width: 640px) {
+      .tf-brand-header { padding: 8px 12px 6px; }
+      .tf-brand-row-wrapper { gap: 6px; }
+      .tf-brand-name { font-size: 15px; letter-spacing: 0.12em; }
+      .tf-brand-caption { font-size: 0.48rem; letter-spacing: 0.22em; }
+      .tf-faded-vdivider { height: 18px; margin: 0 4px; display: inline-block !important; }
+      .tf-since-column { display: flex !important; align-items: center; }
+      .tf-since-text { font-size: 0.72rem; }
+      .tf-since-year { font-weight: 600; }
+      .tf-standalone-logo-img { height: 38px; }
     }
+    @media (max-width: 400px) {
+      .tf-brand-header { padding: 6px 8px 4px; }
+      .tf-brand-name { font-size: 13px; letter-spacing: 0.10em; }
+      .tf-brand-caption { font-size: 0.44rem; letter-spacing: 0.18em; }
+      .tf-since-text { font-size: 0.68rem; }
+      .tf-faded-vdivider { height: 16px; margin: 0 3px; }
+"    }"
 
     /* Category Sidebar active styles */
     .cat-item.active {
@@ -224,6 +236,10 @@
         <a href="index.html" class="tf-logo-link" title="TOOFIT Bespoke Atelier">
           <img src="assets/official_toofit_logo_dark.png" alt="TOOFIT Official Logo" class="tf-standalone-logo-img">
         </a>
+        <span class="tf-faded-vdivider"></span>
+        <div class="tf-since-column">
+          <span class="tf-since-text">since <span class="tf-since-year">1969</span></span>
+        </div>
       </div>
       <div class="tf-brand-center">
         <div class="tf-brand-row-wrapper">
@@ -232,10 +248,6 @@
               <span class="tf-brand-name">TOOFIT</span>
             </a>
             <div class="tf-brand-caption">SUIT ATELIER</div>
-          </div>
-          <span class="tf-faded-vdivider"></span>
-          <div class="tf-since-column">
-            <span class="tf-since-text">since <span class="tf-since-year">1969</span></span>
           </div>
         </div>
       </div>
