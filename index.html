@@ -381,53 +381,6 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    /* Faded vertical divider line */
-    .tf-faded-vdivider {
-      display: inline-block;
-      width: 1px;
-      height: 26px;
-      background: linear-gradient(to bottom, transparent, rgba(139, 58, 43, 0.45), transparent);
-      margin: 0 4px;
-      align-self: center;
-    }
-
-    /* Large & Highly Visible "since 1969" - Pure Text Typography (No Borders/Boxes) */
-    .tf-since-column {
-      display: flex;
-      align-items: center;
-    }
-
-    .tf-since-text {
-      font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
-      font-style: italic;
-      font-weight: 500;
-      font-size: calc(1.08rem + 1px);
-      letter-spacing: 0.12em;
-      color: #6E5F52;
-      line-height: 1;
-      white-space: nowrap;
-      display: inline-flex;
-      align-items: flex-baseline;
-      gap: 4px;
-    }
-
-    .tf-since-year {
-      font-family: 'Cormorant Garamond', 'Playfair Display', serif;
-      font-style: normal;
-      font-weight: 700;
-      font-size: 1.15rem;
-      letter-spacing: 0.16em;
-      color: #0A192F;
-      background: linear-gradient(135deg, #0A192F 0%, #C59B27 50%, #0F172A 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      padding: 0;
-      margin: 0;
-      border: none;
-      background-color: transparent;
-      box-shadow: none;
-    }
-
     /* ── Right: Header Actions (CTA + Mobile menu) ── */
     .tf-nav-right {
       display: flex;
@@ -665,24 +618,9 @@
         height: 44px;
       }
 
-      .tf-nav-links {
-        display: none;
-      }
-
-      .tf-liquid-btn.desktop-only {
-        display: none;
-      }
-
-      .tf-hamburger {
-        display: flex;
-      }
-
-      .tf-mobile-drawer {
-        display: flex;
-      }
-
+      .tf-nav-links,
       .tf-nav-row {
-        padding: 4px 16px 8px;
+        display: none !important;
       }
 
       .tf-separator-a {

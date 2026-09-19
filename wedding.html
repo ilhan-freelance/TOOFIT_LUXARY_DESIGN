@@ -87,23 +87,7 @@
       color: #6B4D30; margin-top: -3px; text-transform: uppercase;
       text-align: center; width: 100%; opacity: 0.85;
     }
-    .tf-faded-vdivider {
-      display: inline-block; width: 1px; height: 28px;
-      background: linear-gradient(to bottom, transparent, rgba(139,58,43,0.45), transparent);
-      margin: 0 16px; align-self: center;
-    }
-    .tf-since-column { display: flex; align-items: center; }
-    .tf-since-text {
-      font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 500;
-      font-size: calc(1.08rem + 1px); letter-spacing: 0.12em; color: #6E5F52;
-      line-height: 1; white-space: nowrap; display: inline-flex; align-items: flex-baseline; gap: 4px;
-    }
-    .tf-since-year {
-      font-family: 'Cormorant Garamond', serif; font-style: normal; font-weight: 700;
-      font-size: 1.15rem; letter-spacing: 0.16em;
-      background: linear-gradient(135deg, #0A192F 0%, #C59B27 50%, #0F172A 100%);
-      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-    }
+
     .tf-nav-right { display: flex; align-items: center; justify-content: flex-end; flex: 1; }
     .tf-nav-row {
       display: flex; align-items: center; justify-content: center;
@@ -173,7 +157,8 @@
       .tf-brand-name { font-size: 26px; letter-spacing: 0.18em; }
       .tf-logo-since-text { font-size: 0.78rem; }
       .tf-standalone-logo-img { height: 44px; }
-      .tf-nav-links { display: none; }
+      .tf-nav-links,
+      .tf-nav-row { display: none !important; }
       .tf-liquid-btn.desktop-only { display: none; }
       .tf-hamburger { display: flex; }
       .tf-mobile-drawer { display: flex; }
