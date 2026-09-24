@@ -286,6 +286,8 @@
       width: auto;
       max-width: 240px;
       object-fit: contain;
+      transform: scaleX(1.15);
+      transform-origin: center;
       background: transparent !important;
       border: none !important;
       box-shadow: none !important;
@@ -295,29 +297,43 @@
     }
 
     .tf-logo-group:hover .tf-standalone-logo-img {
-      transform: scale(1.04);
+      transform: scale(1.18, 1.04);
     }
 
     .tf-logo-since-text {
       font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
-      font-style: italic;
+      font-style: normal;
+      text-transform: uppercase;
       font-weight: 700;
-      font-size: 0.88rem;
-      letter-spacing: 0.16em;
+      font-size: 0.82rem;
+      letter-spacing: 0.22em;
       color: #0B212D;
       line-height: 1;
       white-space: nowrap;
-      margin-top: 3px;
+      margin-top: 4px;
       display: inline-flex;
-      align-items: flex-baseline;
+      align-items: center;
       gap: 4px;
+      position: relative;
+    }
+
+    .tf-logo-since-text::after {
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: -6px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      height: 1.5px;
+      background: linear-gradient(90deg, rgba(197, 155, 39, 0) 0%, rgba(197, 155, 39, 0.85) 50%, rgba(197, 155, 39, 0) 100%);
     }
 
     .tf-since-year {
       font-weight: 800;
       font-style: normal;
       color: #D82027;
-      letter-spacing: 0.10em;
+      letter-spacing: 0.12em;
     }
 
     .tf-brand-row-wrapper {
@@ -747,7 +763,7 @@
       <div class="tf-logo-container">
         <a href="index.html" class="tf-logo-group" title="TOOFIT Bespoke Atelier">
           <img src="assets/official_toofit_logo_dark.png" alt="TOOFIT Official Logo" class="tf-standalone-logo-img">
-          <span class="tf-logo-since-text">since <span class="tf-since-year">1969</span></span>
+          <span class="tf-logo-since-text">SINCE <span class="tf-since-year">1969</span></span>
         </a>
       </div>
 
@@ -2149,19 +2165,7 @@
         <span class="text-[10px] font-bold text-[#8B3A2B] uppercase tracking-[0.25em] block mb-1">Toofit Bespoke
           Atelier</span>
         <h3 class="text-2xl font-serif font-bold">Schedule Consultation</h3>
-        <p class="text-xs text-slate-500 mt-1">Select mode & pick your preferred appointment slot</p>
-
-        <!-- TOP TOGGLE BUTTONS: STUDIO VISIT vs VIDEO CALL -->
-        <div class="flex bg-slate-900/80 p-1 rounded-xl mt-4 border border-slate-700/60">
-          <button type="button" id="btn-mode-studio" onclick="setBookingMode('studio')"
-            class="flex-1 py-2.5 px-4 rounded-lg text-xs font-bold uppercase tracking-wider transition-all flex items-center justify-center gap-2 bg-[#8B3A2B] text-white shadow-sm">
-            <span>🏬 Studio Visit</span>
-          </button>
-          <button type="button" id="btn-mode-video" onclick="setBookingMode('video')"
-            class="flex-1 py-2.5 px-4 rounded-lg text-xs font-bold uppercase tracking-wider transition-all flex items-center justify-center gap-2 text-slate-400 hover:text-white">
-            <span>📹 Video Call</span>
-          </button>
-        </div>
+        <p class="text-xs text-slate-500 mt-1">Fill in your details below to schedule your consultation</p>
       </div>
 
       <!-- Modal Form Body -->
@@ -2210,27 +2214,6 @@
           </select>
         </div>
 
-        <!-- Date & Time Slot -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <div>
-            <label class="block text-[11px] font-bold text-slate-700 uppercase tracking-wider mb-1">Preferred Date
-              *</label>
-            <input type="date" id="bm-date" required
-              class="w-full bg-slate-50 border border-slate-300 rounded-xl px-3.5 py-2.5 text-xs text-slate-900 focus:outline-none focus:border-[#8B3A2B] focus:bg-white transition-all">
-          </div>
-          <div>
-            <label class="block text-[11px] font-bold text-slate-700 uppercase tracking-wider mb-1">Preferred Time Slot
-              *</label>
-            <select id="bm-time" required
-              class="w-full bg-slate-50 border border-slate-300 rounded-xl px-3.5 py-2.5 text-xs text-slate-900 focus:outline-none focus:border-[#8B3A2B] focus:bg-white transition-all">
-              <option value="11:00 AM - 01:00 PM">11:00 AM - 01:00 PM (Morning)</option>
-              <option value="02:00 PM - 04:00 PM">02:00 PM - 04:00 PM (Afternoon)</option>
-              <option value="05:00 PM - 07:00 PM">05:00 PM - 07:00 PM (Evening)</option>
-              <option value="07:30 PM - 09:00 PM">07:30 PM - 09:00 PM (Late Night)</option>
-            </select>
-          </div>
-        </div>
-
         <!-- Message -->
         <div>
           <label class="block text-[11px] font-bold text-slate-700 uppercase tracking-wider mb-1">Message</label>
@@ -2243,7 +2226,7 @@
         <div class="pt-2">
           <button type="submit"
             class="w-full bg-gradient-to-r from-[#8B3A2B] to-[#B87333] hover:from-[#753023] hover:to-[#A06229] text-white py-3.5 rounded-xl font-bold text-xs uppercase tracking-wider shadow-lg hover:shadow-xl transition-all flex items-center justify-center gap-2">
-            <span id="bm-submit-text">Confirm Studio Appointment</span>
+            <span id="bm-submit-text">Submit Consultation Request</span>
             <span>&rarr;</span>
           </button>
         </div>
@@ -2389,13 +2372,9 @@
       const name = document.getElementById('bm-name').value;
       const phone = document.getElementById('bm-phone').value;
       const service = document.getElementById('bm-service').value;
-      const mode = document.getElementById('booking-mode-input').value;
-      const date = document.getElementById('bm-date').value;
-      const time = document.getElementById('bm-time').value;
-      const message = document.getElementById('bm-message').value;
+      const message = document.getElementById('bm-message') ? document.getElementById('bm-message').value : '';
 
-      const modeTitle = mode === 'video' ? 'Virtual Video Call' : 'Studio Fitting Visit';
-      alert(`Thank you ${name}!\n\nYour ${modeTitle} appointment for "${service}" has been confirmed for ${date} (${time}).\n\nOur personal stylist will call you at ${phone} shortly.${message ? '\n\nYour message: ' + message : ''}`);
+      alert(`Thank you ${name}!\n\nYour consultation request for "${service}" has been received.\n\nOur personal stylist will contact you at ${phone} shortly.${message ? '\n\nYour note: ' + message : ''}`);
 
       closeBookingModal();
     }
