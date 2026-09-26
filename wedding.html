@@ -288,7 +288,7 @@
       <a href="index.html#story">Our Story</a>
       <a href="bespoke.html">Bespoke</a>
       <a href="wedding.html" class="text-[#C59B27]">Wedding</a>
-      <a href="corporate.html">Corporate</a>
+      <a href="index.html#corporate">Corporate</a>
       <a href="index.html#booking" class="tf-liquid-btn text-center mt-4">
         <span>Book Consultant</span>
       </a>
@@ -299,29 +299,29 @@
   <!-- HERO HEADER — WEDDING PAGE                   -->
   <!-- ============================================ -->
   <main class="flex-grow">
-    <section class="relative bg-[#0A192F] text-white px-6 md:px-12 text-center overflow-hidden flex flex-col justify-center items-center min-h-[calc(100vh-105px)] py-12">
-      <div class="absolute inset-0 bg-cover bg-center filter brightness-[0.70] transition-transform duration-1000 scale-105"
-        style="background-image: url('assets/hero_wedding_user_hands.jpg'); background-position: center top;"></div>
-      <div class="absolute inset-0 bg-gradient-to-t from-[#0A192F] via-[#0A192F]/60 to-[#0A192F]/30"></div>
+    <section class="relative w-full flex items-end justify-start overflow-hidden bg-[#0A192F]"
+      id="wedding-hero"
+      style="height: calc(100vh - 105px); min-height: 520px; max-height: 900px;">
       
-      <div class="relative z-10 max-w-4xl mx-auto space-y-4">
-        <div class="flex items-center justify-center gap-2">
-          <span class="w-8 h-px bg-[#C59B27]"></span>
-          <span class="text-[#C59B27] text-xs sm:text-sm font-semibold tracking-[0.35em] uppercase">SACRED UNIONS & ROYAL HERITAGE</span>
-          <span class="w-8 h-px bg-[#C59B27]"></span>
-        </div>
-        <h1 class="text-3xl sm:text-5xl md:text-6xl font-serif font-light text-white tracking-wide leading-tight drop-shadow-lg">
-          Crafted for Your Forever Moment
-        </h1>
-      </div>
+      <div class="relative w-full h-full">
+        <!-- Original HD PNG Wedding Hero Image -->
+        <img src="assets/wedding_page_hero_image.png" alt="TOOFIT Wedding Couture & Royal Sherwanis" class="w-full h-full object-cover"
+          style="object-position: left center;">
 
-      <!-- Scroll Indicator -->
-      <a href="#gallery-section" class="absolute bottom-6 left-1/2 -translate-x-1/2 z-10 text-center flex flex-col items-center gap-1 opacity-80 hover:opacity-100 transition-opacity cursor-pointer">
-        <span class="text-[9px] uppercase tracking-[0.3em] text-[#C59B27] font-semibold">Explore Collection</span>
-        <svg class="w-4 h-4 text-[#C59B27] animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-        </svg>
-      </a>
+        <!-- Button 1: EXPLORE WEDDING COLLECTION (Exact positioning over golden button in image) -->
+        <a href="#gallery-section" id="tf-wedding-btn-explore"
+          class="absolute z-50 cursor-pointer block rounded-lg bg-transparent"
+          style="left: 2.5%; top: 58.0%; width: 13.5%; height: 9.5%;"
+          aria-label="Explore Wedding Collection">
+        </a>
+
+        <!-- Button 2: CALL US / BOOK CONSULTANT (Exact positioning over call button in image) -->
+        <a href="tel:+919829000000" onclick="openBookingModal('studio'); return false;" id="tf-wedding-btn-call"
+          class="absolute z-50 cursor-pointer block rounded-lg bg-transparent"
+          style="left: 16.5%; top: 57.5%; width: 12.0%; height: 10.0%;"
+          aria-label="Call Us / Book Consultant">
+        </a>
+      </div>
     </section>
 
     <!-- ============================================ -->
@@ -348,7 +348,6 @@
         <!-- ── MOBILE ONLY: Clean Category Dropdown ── -->
         <div class="lg:hidden mb-2">
           <select class="mobile-cat-select" onchange="filterCategoryMobile(this.value)">
-            <option value="all">All Wedding Wear</option>
             <option value="sherwanis">Sherwani / Achkan</option>
             <option value="jodhpuris">Jodhpuri Bandgala Suits</option>
             <option value="designer-coat">Designer Coats &amp; Blazers</option>
@@ -364,12 +363,7 @@
           </h3>
           <ul class="flex flex-col gap-1 text-xs">
             <li>
-              <button onclick="filterCategory('all', this)" class="cat-item active w-full text-left px-3 py-2.5 rounded-lg flex items-center justify-between text-slate-700 hover:text-[#C59B27] hover:bg-[#FAF6EF] transition-all">
-                <span class="flex items-center gap-2"><span class="cat-arrow text-slate-400">▸</span><span>All Wedding Wear</span></span>
-              </button>
-            </li>
-            <li>
-              <button onclick="filterCategory('sherwanis', this)" class="cat-item w-full text-left px-3 py-2.5 rounded-lg flex items-center justify-between text-slate-700 hover:text-[#C59B27] hover:bg-[#FAF6EF] transition-all">
+              <button onclick="filterCategory('sherwanis', this)" class="cat-item active w-full text-left px-3 py-2.5 rounded-lg flex items-center justify-between text-slate-700 hover:text-[#C59B27] hover:bg-[#FAF6EF] transition-all">
                 <span class="flex items-center gap-2"><span class="cat-arrow text-slate-400">▸</span><span>Sherwani / Achkan</span></span>
               </button>
             </li>

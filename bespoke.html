@@ -269,15 +269,15 @@
       <ul class="tf-nav-links flex items-center justify-center gap-12 sm:gap-20 md:gap-24 lg:gap-28 mx-auto text-center">
         <li><a href="index.html#story">Our Story</a></li>
         <li><a href="bespoke.html" class="active text-[#C59B27] border-b-2 border-[#C59B27] pb-1">Bespoke</a></li>
-        <li><a href="wedding.html">Wedding</a></li>
-        <li><a href="corporate.html">Corporate</a></li>
+        <li><a href="index.html#wedding">Wedding</a></li>
+        <li><a href="index.html#corporate">Corporate</a></li>
       </ul>
     </div>
     <div class="tf-mobile-drawer" id="tf-mobile-drawer">
       <a href="index.html#story">Our Story</a>
       <a href="bespoke.html" class="text-[#C59B27]">Bespoke</a>
-      <a href="wedding.html">Wedding</a>
-      <a href="corporate.html">Corporate</a>
+      <a href="index.html#wedding">Wedding</a>
+      <a href="index.html#corporate">Corporate</a>
       <a href="index.html#booking" class="tf-liquid-btn text-center mt-4">
         <span>Book Consultant</span>
       </a>
@@ -338,7 +338,6 @@
         <!-- ── MOBILE ONLY: Clean Category Dropdown ── -->
         <div class="lg:hidden mb-2">
           <select class="mobile-cat-select" onchange="filterCategoryMobile(this.value)">
-            <option value="all">All Bespoke Creations</option>
             <option value="3piece">3-Piece Suits</option>
             <option value="2button">2-Button Classic Suits</option>
             <option value="tuxedo">Tuxedos</option>
@@ -356,14 +355,8 @@
 
           <ul class="flex flex-wrap gap-2 lg:flex-col lg:gap-1 text-xs pb-1 lg:pb-0">
             <li>
-              <button onclick="filterCategory('all', this)" class="cat-item active whitespace-nowrap lg:whitespace-normal text-left px-3 py-2 rounded-full lg:rounded-lg lg:w-full flex items-center gap-1.5 text-slate-700 bg-[#FAF6EF] lg:bg-transparent border border-[#E5DFD5] lg:border-0 hover:text-[#C59B27] hover:bg-[#FAF6EF] transition-all text-[11px] lg:text-xs">
+              <button onclick="filterCategory('3piece', this)" class="cat-item active whitespace-nowrap lg:whitespace-normal text-left px-3 py-2 rounded-full lg:rounded-lg lg:w-full flex items-center gap-1.5 text-slate-700 bg-[#FAF6EF] lg:bg-transparent border border-[#E5DFD5] lg:border-0 hover:text-[#C59B27] hover:bg-[#FAF6EF] transition-all text-[11px] lg:text-xs">
                 <span class="cat-arrow transition-transform text-[#C59B27] lg:text-slate-400">▸</span>
-                <span>All Creations</span>
-              </button>
-            </li>
-            <li>
-              <button onclick="filterCategory('3piece', this)" class="cat-item whitespace-nowrap lg:whitespace-normal text-left px-3 py-2 rounded-full lg:rounded-lg lg:w-full flex items-center gap-1.5 text-slate-700 border border-[#E5DFD5] lg:border-0 hover:text-[#C59B27] hover:bg-[#FAF6EF] transition-all text-[11px] lg:text-xs">
-                <span class="cat-arrow transition-transform text-slate-400">▸</span>
                 <span>3-Piece Suits</span>
               </button>
             </li>
